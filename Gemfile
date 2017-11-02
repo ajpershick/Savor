@@ -60,3 +60,6 @@ gem 'bootstrap'
 
 # jquery for rails
 gem 'jquery-rails'
+
+# font aweomse
+gem 'font-awesome-sass', '~> 4.7.0'
