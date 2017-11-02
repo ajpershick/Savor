@@ -1,5 +1,7 @@
 {
   "name": "Project276",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "webpack": "^3.8.1"
+  }
 }
