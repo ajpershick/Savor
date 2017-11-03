@@ -1,8 +1,10 @@
 # README
-
-Jeremy Fell
-Vinson Ly
-Darien Flamont
+[![Build Status](https://semaphoreci.com/api/v1/ajpershick/276-project/branches/staging/badge.svg)](https://semaphoreci.com/ajpershick/276-project)
+<br>
+<br>
+Jeremy Fell,
+Vinson Ly,
+Darien Flamont,
 Alec Pershick
 
 Project Proposal - Group 14
