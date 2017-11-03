@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  margin: 0
+}
+
+.test {
+   height: 50px;
+   background-color: #FF00FF;
+   margin: 0;
+   padding: 0;
+}
+
+.menu-button {
+  height: 50px;
+  width: 50px;
+}
+
+.menu-icon {
+  height: 50px;
+  width: 50px;
+}
+
+.menu-button:hover {
+
+}

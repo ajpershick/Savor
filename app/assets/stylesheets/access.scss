@@ -1,0 +1,200 @@
+// Place all the styles related to the Access controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div#login-page {
+  background-color: #4aa272;
+  height: 100vh;
+  width: 100vw;
+}
+
+div.entry-right {
+  width: 50%;
+  float: right;
+}
+
+.entry-hidden {
+  display: none;
+}
+
+div.entry {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25%;
+  background-color: #F0F0F0;
+  width: 450px;
+  height: 475px;
+}
+
+div#login-entry {
+  padding-top: 100px;
+}
+
+div.entry-container {
+  margin-bottom: 50px;
+}
+
+button.entry-button {
+  font-family: Helvetica;
+  font-size: 20px;
+  border: 0;
+  float: left;
+  margin: 0;
+  padding: 0;
+  background-color: #E1E1E1;
+  width: 225px;
+  height: 50px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+button.entry-selected {
+  background-color: #F0F0F0;
+}
+
+input.entry-submit-button {
+  font-family: Helvetica;
+  font-size: 18px;
+  width: 350px;
+  height: 50px;
+  border: 0;
+  background-color: #3598DC;
+  color: #FFFFFF;
+}
+
+input.entry-submit-button:hover {
+  background-color: #49ACF0;
+  transition: 0.1s;
+}
+
+div.entry-input-container {
+  height: 52px;
+  width: 356px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  overflow: auto;
+}
+
+input.entry-input {
+  font-family: Helvetica;
+  font-size: 18px;
+  float: left;
+  width: 290px;
+  height: 44px;
+  padding-left: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-left-width: 0px;
+  border-color: #E1E1E1;
+}
+
+div.entry-icon-container {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background-color: #E1E1E1;
+}
+
+img.entry-icon {
+  float: left;
+  width: 25px;
+  height: 25px;
+  margin: 12.5px;
+  color: white;
+}
+
+a.entry-link {
+  margin-left: auto;
+  margin-right: auto;
+  color: #3598DC;
+  text-decoration: none;
+  text-align: center;
+}
+
+div.entry-valid {
+  background-color: #00A65D;
+}
+
+div.entry-invalid {
+  background-color: #ED1C24;
+}
+
+div.entry-invalid-gain {
+  transition: background-color 10s;
+  background-color: red;
+}
+
+div.entry-invalid-fade {
+  transition: background-color 10s;
+}
+
+/* Tooltip css generated with http://www.cssportal.com/css-tooltip-generator/*/
+
+div.entry-tooltip {
+  position: fixed; /* If regenerating tooltip code, will have to change position: relative to position:fixed*/
+  height: 50px;
+  width: 50px;
+}
+div.entry-tooltip span {
+  font-family: Helvetica;
+  font-size: 16px;
+  white-space: pre; /* Needed */
+  position: absolute;
+  width: auto;
+  color: #FFFFFF;
+  background: #ED1C24;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+  opacity: 0.8;
+}
+div.entry-tooltip span:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -8px;
+  width: 0; height: 0;
+  border-left: 8px solid #ED1C24;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+div.entry-tooltip:hover span, div.entry-tooltip-temporary span {
+  visibility: visible;
+  opacity: 0.8;
+  right: 100%;
+  top: 50%;
+  margin-top: -25px;
+  margin-right: 15px;
+  z-index: 999;
+}
+
+div.entry-tooltip-temporary span {
+  opacity: 0;
+  transition: opacity;
+  transition-duration: 0.5s;
+  transition-delay: 1s;
+}
+
+#entry-flash-hidden {
+  height: 50px;
+}
+
+#entry-flash-invalid {
+  font-family: Helvetica;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  background-color: red;
+  opacity: 0.5;
+  height: 50px;
+  line-height: 50px;
+  margin: 0;
+  vertical-align: middle;
+}
