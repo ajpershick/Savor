@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
+  get 'welcome/subpage'
+
   match	':controller(/:action(/:id))',	:via	=>	:get
   match	':controller(/:action(/:id))',	:via	=>	:post
-
-  get 'welcome/index'
 
   root 'welcome#index'
 

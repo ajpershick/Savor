@@ -6,4 +6,9 @@ class WelcomeControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get subpage" do
+    get welcome_subpage_url
+    assert_response :success
+  end
+
 end
