@@ -11,10 +11,10 @@
   <header>
     <nav class ="side-navigation" role='navigation' id="mySideNav">
       <ul>
-        <li><a href="/welcome/index">Home</a></li> //add icons next to links later
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="/welcome/subpage">Subpage</a></li>
+        <li><a onclick="linkDelay('/welcome/index')">Home</a></li> <!--add icons next to links later -->
+        <li><a onclick="linkDelay('https://plaid.com/')">Records</a></li>
+        <li><a onclick="linkDelay('http://www.chartjs.org/')">Charts</a></li>
+        <li><a onclick="linkDelay('/welcome/subpage')">Subpage</a></li>
       </ul>
     </nav>
   </header>
@@ -22,9 +22,9 @@
   <body>
     <div class="topnav" id="myTopnav">
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-        <a href="/welcome/index">Home</a> //add icons next to links later, using font-awesome
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
+        <a href="/welcome/index">Home</a> <!--add icons next to links later, using font-awesome -->
+        <a href="https://plaid.com/">Records</a> <!-- collapse the side bar, then go to link, make js link to the link. -->
+        <a href="http://www.chartjs.org/">Charts</a>
         <a href="/welcome/subpage">Subpage</a>
     </div>
 

@@ -131,7 +131,7 @@ nav li{ //removes the bullets from side nav
   width: 80%;
   text-align: center;
   transform: translateX(-100%);
-  transition: 0.6s;
+  transition: 0.6s ease;
 }
 
 .side-navigation ul {//CAN BE REFORMATTED
@@ -163,7 +163,7 @@ nav li{ //removes the bullets from side nav
   width: 80%;
   text-align: center;
   transform: translateX(0%);
-  transition: 0.6s;
+  transition: 0.6s ease;
 }
 
 .side-navigation.open ul {
