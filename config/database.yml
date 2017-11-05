@@ -3,7 +3,7 @@ development:
   encoding: utf-8
   username: postgres
   password: newpassword
-  database: development #Originally 276_development, but databases cannot start with a number
+  database: 276_development #Originally 276_development, but databases cannot start with a number
   pool: 5
   host: localhost
   port: 5432
@@ -14,7 +14,7 @@ test: &test
   username: postgres
   password: newpassword
   encoding: utf-8
-  database: test
+  database: 276_test
   pool: 5
   host: localhost
   port: 5432
