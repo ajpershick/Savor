@@ -14,7 +14,7 @@ test: &test
   username: postgres
   password: newpassword
   encoding: utf-8
-  database: 276_test
+  database: test
   pool: 5
   host: localhost
   port: 5432
