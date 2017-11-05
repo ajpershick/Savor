@@ -8,16 +8,26 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-<!-- custom navbar -->
+  <header>
+    <nav class ="side-navigation" role='navigation' id="mySideNav">
+      <ul>
+        <li><a href="/welcome/index">Home</a></li> //add icons next to links later
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="/welcome/subpage">Subpage</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<div class="topnav" id="myTopnav">
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-  <a href="/welcome/index">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="/welcome/subpage">Subpage</a>
-</div>
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        <a href="/welcome/index">Home</a> //add icons next to links later, using font-awesome
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="/welcome/subpage">Subpage</a>
+    </div>
+
 
 <!--bootstrap navbar -->
 <!--

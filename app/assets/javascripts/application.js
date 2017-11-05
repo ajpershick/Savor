@@ -17,11 +17,11 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
+function myFunction() { //toggles the side-nav
+    var x = document.getElementById("mySideNav");
+    if (x.className === "side-navigation") {
+        x.className += " open";
     } else {
-        x.className = "topnav";
+        x.className = "side-navigation";
     }
 }
