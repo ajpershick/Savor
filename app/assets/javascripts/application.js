@@ -12,4 +12,27 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
 //= require_tree .
+
+function myFunction() { //toggles the side-nav
+    var x = document.getElementById("mySideNav");
+    if (x.className === "side-navigation") {
+        x.className += " open";
+    } else {
+        x.className = "side-navigation";
+    }
+}
+
+function linkDelay(URL) { //collapses side-nav, then goes to link
+  console.log("started link delay");
+  myFunction();
+  console.log("executed myFunction");
+  gotoLink(URL);
+}
+
+function gotoLink(URL) { //opens URL after 0.5 s
+  setTimeout(function() {window.location = URL}, 500);
+}

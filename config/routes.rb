@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+
+  match	':controller(/:action(/:id))',	:via	=>	:get
+  match	':controller(/:action(/:id))',	:via	=>	:post
+
+  get 'spending_history/charts' => "spending_history"
+
+  get 'spending_history/index' => "spending_history#index"
+
+  get 'recommendations/index' => "recommendations#index"
+
+  root 'home#index'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   #resources :admin
   #resources :home
@@ -15,6 +27,8 @@ Rails.application.routes.draw do
   post "admin/create_admin" => "admin#create_admin"
   get "admin/delete" => "admin#delete"
   post "admin/destroy" => "admin#destroy"
+  get "admin/edit" => "admin#edit"
+  post "admin/make_edit" => "admin#make_edit"
 
   get "home/index" =>"home#index"
 

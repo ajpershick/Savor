@@ -2,6 +2,8 @@ class AccessController < ApplicationController
 
   before_action :confirm_logged_out, only: [:login]
 
+  layout "loginpage";
+
   def login
 
   end

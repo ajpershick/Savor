@@ -13,6 +13,39 @@ div.entry-right {
   float: right;
 }
 
+
+div.title{
+  font-family: Helvetica;
+  font-size: 100px;
+  margin-top: 9%;
+  margin-left: 30%;
+}
+
+div.writeup {
+  font-family: Helvetica;
+  font-size: 17px;
+  color: #FFFFFF; 
+  float:right;
+  width: 30%;
+  height: 25%;
+  padding-top: 17%;
+  padding-right: 10%;
+}
+
+div.entry-left{
+  width: 50%;
+  float: left;
+}
+
+img.login-logo{
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+  padding-left: 20%;
+  padding-top: 10%;
+}
+
 .entry-hidden {
   display: none;
 }
@@ -20,7 +53,7 @@ div.entry-right {
 div.entry {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 25%;
+  margin-top: 10%;
   background-color: #F0F0F0;
   width: 450px;
   height: 475px;
