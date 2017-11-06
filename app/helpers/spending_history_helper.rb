@@ -1,0 +1,2 @@
+module SpendingHistoryHelper
+end

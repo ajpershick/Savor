@@ -38,6 +38,7 @@
      text-decoration: none;
      font-size: 17px; //change to percentages
      cursor: pointer;
+     font-family: Helvetica;
      //background-color: blue; //TESTING
  }
 
@@ -78,41 +79,6 @@
 }
 
 
-/*Response nav-bar sizing done with media queries
-Initially, the contents are held offscreen
-When the button is pressed, it slides out */
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-//@media screen and (max-width: 600px) {
-//remove this part, replace with slide out bar
-//start
-/*
-  .topnav.responsive {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    //transform: translateX(-20%);
-    //transition: transform 0.6s;
-  }
-  .topnav.responsive a.icon {
-    position: relative; //fixed also works
-    left: 0;
-    top: 0;
-    display: inline-block;
-  }
-  .topnav.responsive a { //change this part to make items slide out
-    float: none;
-    display: block;
-    text-align: center;
-  }
-  */
-//end
-
-
-//}
-
 body { //added
   margin: 0;
 }
@@ -141,6 +107,7 @@ nav li{ //removes the bullets from side nav
 }
 
 .side-navigation ul a{ //CAN BE REFORMATTED
+  font-family: Helvetica;
   padding: 14px 16px; //change to percentages
   display: block;
   background-color: inherit; //change this
@@ -173,6 +140,7 @@ nav li{ //removes the bullets from side nav
 }
 
 .side-navigation.open ul a{
+  font-family: Helvetica;
   padding: 14px 16px; //change to percentages
   display: block;
   //background-color: pink; //TESTING COLOUR
@@ -189,7 +157,8 @@ nav li{ //removes the bullets from side nav
 
 // from jeremy's branch
 body {
-  margin: 0
+  margin: 0;
+  background-color: #f2f5f9; //offwhite
 }
 
 .test {

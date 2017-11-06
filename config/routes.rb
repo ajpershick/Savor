@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'spending_history/charts'
+
+  get 'spending_history/index'
+
+  get 'recommendations/index'
+
   get 'welcome/index'
 
   get 'welcome/subpage'
