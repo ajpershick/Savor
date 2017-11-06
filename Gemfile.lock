@@ -41,8 +41,7 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
-    autoprefixer-rails (7.1.6)
-      execjs
+    bcrypt (3.1.11)
     bindex (0.5.0)
     bootstrap (4.0.0.beta2.1)
       autoprefixer-rails (>= 6.0.3)
@@ -192,7 +191,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+<<<<<<< HEAD
   bootstrap
+=======
+  bcrypt (~> 3.1.7)
+>>>>>>> origin/feature/logo-writeup-login
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
@@ -214,4 +217,8 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
+<<<<<<< HEAD
    1.16.0
+=======
+   1.16.0.pre.3
+>>>>>>> origin/feature/logo-writeup-login
