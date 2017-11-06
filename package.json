@@ -2,6 +2,7 @@
   "name": "Project276",
   "private": true,
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "webpack": "^3.8.1"
   }
 }
