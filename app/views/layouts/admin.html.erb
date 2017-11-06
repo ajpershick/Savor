@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Savor</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <header>
+    <nav class ="side-navigation" role='navigation' id="mySideNav">
+      <ul>
+        <li><a onclick="linkDelay('/admin/index')">Manage Users</a></li> <!--add icons next to links later -->
+        <li><a onclick="linkDelay('/admin/new_admin')">New Admin</a></li>
+        <!--<li><a onclick="linkDelay('/spending_history/charts')">Charts</a></li>-->
+        <!--<li><a onclick="linkDelay('/recommendations/index')">Recommendations</a></li>-->
+        <li><a onclick="linkDelay('/access/logout')">Sign Out</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        <a href="/admin/index">Manage Users</a> <!--add icons next to links later, using font-awesome -->
+        <a href="/admin/new_admin">New Admin</a> <!-- collapse the side bar, then go to link, make js link to the link. -->
+        <!-- <a href="/spending_history/charts">Charts</a> -->
+        <!-- <a href="/recommendations/index">Recommendations</a> -->
+        <a href="/access/logout" style="float:right;">Sign Out</a> <!-- float this to the right -->
+    </div>
+
+
+
+    <%= yield %>
+  </body>
+
+</html>
