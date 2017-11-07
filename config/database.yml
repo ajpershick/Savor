@@ -4,9 +4,8 @@ production:
   encoding: utf-8
   username: postgres
   password: newpassword
-  database: 276_development #Originally 276_development, but databases cannot start with a number
+  database: 276_production #Originally 276_development, but databases cannot start with a number
   pool: 5
-  host: localhost
   port: 5432
   schema_search_path: "public"
 
