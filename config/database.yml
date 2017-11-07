@@ -1,3 +1,15 @@
+production:
+  url: <%= ENV['DATABASE_URL'] %>
+  adapter: postgresql
+  encoding: utf-8
+  username: postgres
+  password: newpassword
+  database: 276_production 
+  pool: 5
+  port: 5432
+  schema_search_path: "public"
+
+
 development:
   adapter: postgresql
   encoding: utf-8
