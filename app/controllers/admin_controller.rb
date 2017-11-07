@@ -5,7 +5,7 @@ class AdminController < ApplicationController
   layout "admin";
 
   def index # list of all users, where admin can select users to perform operations
-    @users = Users.all
+    @allUsers = User.all;
   end
 
   def show # lists the details of the user in a more viewable fashion
