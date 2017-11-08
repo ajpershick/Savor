@@ -1,0 +1,183 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+ //@import "bootstrap";
+ @import "/\*";
+
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+
+
+ /* Add a black background color to the top navigation */
+ .topnav {
+     background-color: #333;
+     overflow: hidden;
+     width: 100%; //added
+     padding: 0;
+     margin: 0;
+     border: 0;
+ }
+
+ /* Style the links inside the navigation bar */
+ .topnav a {
+     float: left;
+     display: block;
+     color: #f2f2f2;
+     text-align: center;
+     padding: 14px 16px; //change to percentages
+     text-decoration: none;
+     font-size: 17px; //change to percentages
+     cursor: pointer;
+     font-family: Helvetica;
+     //background-color: blue; //TESTING
+ }
+
+ /* Change the color of links on hover */
+ .topnav a:hover { // when links are hovered over, change color
+     background-color: #ddd;
+     color: black;
+ }
+
+ /* Hide the link that should open and close the topnav on small screens */
+ .topnav .icon { //discription: dont display the icon on default
+     display: none;
+ }
+
+ .topnav li { //dont need, but keep
+   list-style:none;
+ }
+
+ .topnav ul { //dont need, but keep
+   margin: 0;
+   border: 0;
+   padding: 0;
+ }
+
+ /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+//top navbar for mobile
+// need to change to adapt for lists
+//keep this part
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;} //hide all other elements except for hamburger button.
+  .topnav a.icon {
+    position: relative;
+    left: 0;
+    top: 0;
+    float: left;
+    display: block;
+  }
+}
+
+
+body { //added
+  margin: 0;
+}
+
+nav li{ //removes the bullets from side nav
+  list-style:none;
+  display: block;
+}
+
+//styling when button toggled OFF
+.side-navigation{//CAN BE REFORMATTED
+  float: left;
+  position: fixed;
+  background-color: #333;
+  height: 100%;
+  width: 80%;
+  text-align: center;
+  transform: translateX(-100%);
+  transition: 0.6s ease;
+}
+
+.side-navigation ul {//CAN BE REFORMATTED
+  margin: 0;
+  padding: 47.5px 0 0 0; //change to percentages
+  border: 0;
+}
+
+.side-navigation ul a{ //CAN BE REFORMATTED
+  font-family: Helvetica;
+  padding: 14px 16px; //change to percentages
+  display: block;
+  background-color: inherit; //change this
+  font-size: 17px; //change to percentages
+  text-decoration: none; //removes underlines
+  color: #f2f2f2;
+}
+
+.side-navigation a:hover{ //working
+  background-color: #ddd;
+  color: black;
+}
+
+//styling when button toggled ON
+.side-navigation.open{
+  //background-color: #333;
+  position: fixed;
+  background-color: #333;
+  height: 100%;
+  width: 80%;
+  text-align: center;
+  transform: translateX(0%);
+  transition: 0.6s ease;
+}
+
+.side-navigation.open ul {
+  margin: 0;
+  padding: 47.5px 0 0 0; //change to percentages
+  border: 0;
+}
+
+.side-navigation.open ul a{
+  font-family: Helvetica;
+  padding: 14px 16px; //change to percentages
+  display: block;
+  //background-color: pink; //TESTING COLOUR
+  background-color: inherit;
+  font-size: 17px; //change to percentages
+  text-decoration: none; //removes underlines
+  color: #f2f2f2;
+}
+
+.side-navigation.open a:hover{ //working
+  background-color: #ddd;
+  color: black;
+}
+
+// from jeremy's branch
+body {
+  margin: 0;
+  background-color: #f2f5f9; //offwhite
+}
+
+.test {
+   height: 50px;
+   background-color: #FF00FF;
+   margin: 0;
+   padding: 0;
+}
+
+.menu-button {
+  height: 50px;
+  width: 50px;
+}
+
+.menu-icon {
+  height: 50px;
+  width: 50px;
+}
+
+.menu-button:hover {
+
+}

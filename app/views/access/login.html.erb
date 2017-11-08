@@ -1,0 +1,132 @@
+<div id="login-page">
+
+<div class="entry-left">
+
+  <div class="title">Savor</div>
+  <img id="login-logo" src="<%= asset_path('loginlogobag.png') %>" class ="login-logo"></img>
+  <div class="writeup">Live your life on a budget.<br><br>Plan.<br>Set Goals.<br>Event Notifications<br><br>To see the view for admin users,<br>username = admintest<br>password = admintest<br> is an admin account</div>
+
+</div>
+
+<div class="entry-right">
+
+  <div class="entry">
+
+    <button id="login-entry-button" class="entry-button entry-selected" onclick="tabToggle(false)">Log in</button>
+    <button id="signup-entry-button" class="entry-button" onclick="tabToggle(true)">Sign up</button>
+
+    <div id="login-entry">
+
+      <div id="<%= flash[:invalid].blank? ? "entry-flash-hidden" : "entry-flash-invalid"%>" ><%= flash[:invalid] unless flash[:invalid].blank? %></div>
+
+      <%= form_tag({controller: "access", action: "attempt_login"}, method: "post") do %>
+
+      <div class="entry-container">
+        <div class="entry-input-container">
+          <div class="entry-icon-container">
+            <img id="username-icon" src="<%= asset_path("username.svg") %>" class="entry-icon"></img>
+          </div>
+          <%= text_field_tag(:username, params[:username], class: "entry-input", placeholder: "Username") %>
+        </div>
+
+        <div class="entry-input-container">
+          <div class="entry-icon-container">
+            <img id="password-icon" src="<%= asset_path("password.svg") %>" class="entry-icon"></img>
+          </div>
+          <%= password_field_tag(:password, nil, class: "entry-input", placeholder: "Password") %>
+        </div>
+
+      </div>
+
+        <div class="entry-input-container">
+        <!-- <%= link_to("Forgot your password?", {controller: "access", action: "login"}, class: "entry-link") %> -->
+        </div>
+
+        <div class="entry-input-container">
+          <%= submit_tag("Log In", class: "entry-submit-button") %>
+        </div>
+
+      <% end %>
+    </div>
+
+    <div id="signup-entry" class="entry-hidden">
+
+      <%= form_tag({controller: "access", action: "sign_up"}, method: "post", onsubmit:"return verify()") do %>
+
+
+        <div class="entry-input-container">
+
+          <div class="entry-icon-container">
+            <div class="entry-tooltip">
+              <span id="entry-tooltip-username" class="entry-hidden"></span>
+            </div>
+            <img id="username-icon" src="<%= asset_path("username.svg") %>" class="entry-icon"></img>
+          </div>
+
+          <%= text_field_tag(:username, nil, id: "entry-input-username", class: "entry-input", placeholder: "Username", onchange: "validateInput(this, 'username')", onkeyup: "delayedValidateInput(this, 'username')") %>
+
+        </div>
+
+        <div class="entry-input-container">
+
+          <div class="entry-icon-container">
+            <div class="entry-tooltip">
+              <span id="entry-tooltip-name" class="entry-hidden"></span>
+            </div>
+            <img id="name-icon" src="<%= asset_path("username.svg") %>" class="entry-icon"></img>
+          </div>
+
+          <%= text_field_tag(:name, nil, id: "entry-input-name", class: "entry-input", placeholder: "First Name", onchange: "validateInput(this, 'name')", onkeyup: "delayedValidateInput(this, 'name')") %>
+
+        </div>
+
+        <div class="entry-input-container">
+
+          <div class="entry-icon-container">
+            <div class="entry-tooltip">
+              <span id="entry-tooltip-email" class="entry-hidden"></span>
+            </div>
+            <img id="email-icon" src="<%= asset_path("email.svg") %>" class="entry-icon"></img>
+          </div>
+
+          <%= text_field_tag(:email, nil, id: "entry-input-email", class: "entry-input", placeholder: "Email", onchange: "validateInput(this, 'email')", onkeyup: "delayedValidateInput(this, 'email')") %>
+
+        </div>
+
+        <div class="entry-input-container">
+          <div class="entry-icon-container">
+            <div class="entry-tooltip">
+              <span id="entry-tooltip-password" class="entry-hidden"></span>
+            </div>
+            <img id="password-icon" src="<%= asset_path("password.svg") %>" class="entry-icon"></img>
+          </div>
+
+
+          <%= password_field_tag(:password, nil, id: "entry-input-password", class: "entry-input", placeholder: "Password", onchange: "validateInput(this, 'password')", onkeyup: "delayedValidateInput(this, 'password')") %>
+
+        </div>
+
+        <div class="entry-input-container">
+
+          <div class="entry-icon-container">
+            <div class="entry-tooltip">
+              <span id="entry-tooltip-confirm-password" class="entry-hidden"></span>
+            </div>
+            <img id="password-confirm-icon" src="<%= asset_path("password.svg") %>" class="entry-icon"></img>
+          </div>
+
+          <%= password_field_tag(:password_confirm, nil, id: "entry-input-confirm-password", class: "entry-input", placeholder: "Confirm password", onchange: "validateInput(this, 'confirm-password')", onkeyup: "delayedValidateInput(this, 'confirm-password')") %>
+
+        </div>
+
+        <div class="entry-input-container">
+          <input type="submit" name="commit" value="Sign up" id="entry-signup-button" class="entry-submit-button"></input>
+        </div>
+
+      <% end %>
+    </div>
+
+  </div>
+
+</div>
+</div>

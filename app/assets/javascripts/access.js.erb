@@ -1,0 +1,216 @@
+// Place all the behaviors and hooks related to the matching controller here.
+// All this logic will automatically be available in application.js.
+
+// Switches between the login and sign up tabs
+function tabToggle(signup) {
+  var login_button = document.getElementById("login-entry-button");
+  var signup_button = document.getElementById("signup-entry-button");
+  var login_entry = document.getElementById("login-entry");
+  var signup_entry = document.getElementById("signup-entry");
+
+  if (signup) {
+
+    login_button.classList.remove("entry-selected");
+    signup_button.classList.add("entry-selected");
+    login_entry.classList.add("entry-hidden");
+    signup_entry.classList.remove("entry-hidden");
+
+  } else {
+
+    signup_button.classList.remove("entry-selected");
+    login_button.classList.add("entry-selected");
+    signup_entry.classList.add("entry-hidden");
+    login_entry.classList.remove("entry-hidden");
+
+  }
+
+}
+
+function tooltipToggle(id, tip) {
+  var tooltip = document.getElementById("entry-tooltip-" + id);
+  if (tip === undefined) {
+    tooltip.classList.add("entry-hidden");
+  } else {
+    tooltip.innerHTML = tip;
+    tooltip.classList.remove("entry-hidden");
+  }
+}
+
+// Username must be greater than 6 characters
+// Username must contain only letters, numbers, underscores, and hyphens
+// Username cannot already exist
+function validateUsername(input) {
+  if (input.length < 6) {
+    tooltipToggle("username", "Username must contain at least 6 characters");
+    return false;
+  }
+
+  if (!(/^[a-zA-Z0-9_-]+$/.test(input))) {
+    tooltipToggle("username", "Username must consist of letters, numbers, underscores, and hyphens only");
+    return false;
+  }
+
+  <%
+    users = User.all
+    usernames = []
+    users.each do |user| usernames << user.username end
+
+  %>
+  usernames = <%= usernames.to_json %>;
+
+  for (var i = 0; i < usernames.length; i++) {
+    if (input === usernames[i]) {
+      tooltipToggle("username", "Username already in use");
+      return false;
+    }
+  }
+
+  tooltipToggle("username");
+  return true;
+}
+
+// Name must consist only of letters and hyphens
+function validateName(input) {
+  if (!(/^[-a-zA-Z]+$/.test(input))) {
+    tooltipToggle("name", "Name must consist only of letters and hyphens");
+    return false;
+  } else {
+    tooltipToggle("name");
+    return true;
+  }
+}
+
+// Email must be of valid format
+function validateEmail(input) {
+  if (!(/^.+@.+\..+$/.test(input))) {
+    tooltipToggle("email", "Email must be a valid format");
+    return false;
+  } else {
+    tooltipToggle("email");
+    return true;
+  }
+}
+
+// Password must be greater than 6 characters
+// Password must consist only of letters, numbers, underscores, and hyphens
+function validatePassword(input) {
+  if (input.length < 6) {
+    tooltipToggle("password", "Password must contain at least 6 characters");
+    return false;
+  }
+  if (!(/^[a-zA-Z0-9_-]+$/.test(input))) {
+    tooltipToggle("password", "Password must consist only of letters, numbers, underscores and hyphens");
+    return false;
+  }
+
+  tooltipToggle("password");
+  return true;
+}
+
+// Password confirmation must be same as password
+function validatePasswordConfirmation(input) {
+  if (document.getElementById("entry-input-password").value !== input) {
+    tooltipToggle("confirm-password", "Password confirmation must match the password above");
+    return false;
+  } else {
+    tooltipToggle("confirm-password");
+    return true;
+  }
+}
+
+var delay = (function(){
+  var timer = 0;
+  return function(callback, ms){
+    clearTimeout(timer);
+    timer = setTimeout(callback, ms);
+  };
+})();
+
+// Validate the input 1 second after the user has finished typing
+function delayedValidateInput(item, type) {
+  delay(function() {
+    validateInput(item, type);
+  }, 1000)
+}
+
+
+// Validates whether the input from the input box is valid
+// Handles styling of input box depending on if the input is valid
+function validateInput(item, type) {
+  input = item.value;
+
+  // When there is no input, make the input box the default gray
+  if (input.length === 0) {
+    item.parentNode.childNodes[1].className = "entry-icon-container";
+    return;
+  }
+
+  validInput = false;
+  switch (type) {
+    case "username":
+      validInput = validateUsername(input);
+      break;
+
+    case "name":
+      validInput = validateName(input);
+      break;
+
+    case "email":
+      validInput = validateEmail(input);
+      break;
+
+    case "password":
+      validInput = validatePassword(input);
+      break;
+
+    case "confirm-password":
+      validInput = validatePasswordConfirmation(input);
+      break;
+  }
+
+  // Makes the input box green or red depending on if the input is valid
+  if (validInput) {
+    item.parentNode.childNodes[1].className = "entry-icon-container entry-valid";
+  } else {
+    item.parentNode.childNodes[1].className = "entry-icon-container entry-invalid";
+  }
+
+  return validInput;
+}
+
+function verify() {
+  var check = 5;
+
+  if (validateInput(document.getElementById("entry-input-username"), "username")) check--;
+  if (validateInput(document.getElementById("entry-input-name"), "name")) check--;
+  if (validateInput(document.getElementById("entry-input-email"), "email")) check--;
+  if (validateInput(document.getElementById("entry-input-password"), "password")) check--;
+  if (validateInput(document.getElementById("entry-input-confirm-password"), "confirm-password")) check--;
+
+  if (check == 0) {
+
+    return true;
+
+  } else {
+
+    var invalid_inputs = document.getElementsByClassName("entry-invalid");
+    var errors = [];
+
+    for (var i = 0; i < invalid_inputs.length; i++) {
+      errors[i] = invalid_inputs[i].childNodes[1];
+    }
+
+    for (var i = 0; i < errors.length; i++) {
+      errors[i].classList.remove("entry-tooltip-temporary");
+      errors[i].classList.add("entry-tooltip-temporary");
+    }
+
+    delay(function() {
+      for (var i = 0; i < errors.length; i++) {
+        errors[i].classList.remove("entry-tooltip-temporary");
+      }
+    }, 1500);
+
+    return false;
+  }
+}

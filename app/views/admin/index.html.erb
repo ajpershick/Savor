@@ -1,0 +1,32 @@
+<h1>Manage Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created At</th>
+      <th>Updated At</th>
+      <th>Username</th>
+      <th>Name</th>
+      <th>Hashed Password </th>
+      <th>Email</th>
+      <th>isAdmin</th>
+      <th colspan="2">Operations</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <% @allUsers.each do |user| %>
+        <tr>
+          <td><%= user.created_at %></td>
+          <td><%= user.updated_at %></td>
+          <td><%= user.username %></td>
+          <td><%= user.name %></td>
+          <td><%= user.password_digest %></td>
+          <td><%= user.email %></td>
+          <td><%= user.admin %></td>
+          <td><%= link_to 'Edit User', admin_edit_path(@user) %></td>
+          <td><%= link_to 'Delete', admin_delete_path(@user)%></td>
+        </tr>
+      <% end %>
+  </tbody>
+</table>
