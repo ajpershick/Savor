@@ -1,2 +1,21 @@
-<h1>Admin#edit</h1>
-<p>Find me in app/views/admin/edit_admin.html.erb</p>
+<h1>Edit User [User ID: <%=@user_id%>]</h1>
+
+<%= form_tag admin_confirm_edit_path do %>
+  <%= hidden_field_tag :user_id, @user_id %>
+  <%= hidden_field_tag :username_old, @username %>
+  <%= hidden_field_tag :first_name_old, @first_name %>
+  <%= hidden_field_tag :email_old, @email %>
+  <%= hidden_field_tag :admin_old, @admin %>
+
+  <label for="username">Username: </label>
+    <div class="field"><%= text_field_tag :username, @username%></div>  <!--name = id -->
+  <label for="first_name">First Name: </label>
+    <div class="field"><%= text_field_tag :first_name, @first_name%></div>   <!--name = id -->
+  <label for="email">Email: </label>
+    <div class="field"><%= text_field_tag :email, @email%></div>  <!--name = id -->
+  <label for="admin">Admin: </label>
+    <div class="field"><%= text_field_tag :admin, @admin%></div>   <!--name = id -->
+
+
+  <%= submit_tag "Submit", data: {confirm: "Are you sure?"}%>
+<% end %>
