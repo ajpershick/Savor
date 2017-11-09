@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   get 'recommendations/index' => "recommendations#index"
 
+  root 'home#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   #resources :admin
@@ -27,6 +28,7 @@ Rails.application.routes.draw do
   get "admin/delete" => "admin#delete"
   post "admin/destroy" => "admin#destroy"
   get "admin/edit" => "admin#edit"
+  get "admin/confirm_edit" => "admin#confirm_edit"
   post "admin/make_edit" => "admin#make_edit"
 
   get "home/index" =>"home#index"
