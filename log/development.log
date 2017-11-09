@@ -426,3 +426,617 @@ Started GET "/assets/password-a55c84468b62cd631c68a8cf7d8e82709dabaca02695f1140d
 Started GET "/assets/username-686326ae7f493b2b638b3bbc83e8757142f1f820161a6fc218e04244f3412f4c.svg" for 127.0.0.1 at 2017-11-07 00:02:07 -0800
 Started GET "/assets/email-4eefe4d7555c0422fc566285dfe5fdaf51d8625fcc43f385175aed6934adbfeb.svg" for 127.0.0.1 at 2017-11-07 00:02:07 -0800
 Started GET "/assets/loginlogobag-5874104bbffc3f9f26a7c9c027ec4a477a4da6d76e12c5019f082b5e861e84cf.png" for 127.0.0.1 at 2017-11-07 00:02:07 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
+Started GET "/" for 127.0.0.1 at 2017-11-08 18:07:35 -0800
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6647856843517106280)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateWidgets (20140707111715)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE "widgets" ("id" bigserial primary key, "name" character varying, "description" text, "stock" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20140707111715"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20171026001550)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying(30) NOT NULL, "name" character varying NOT NULL, "password_digest" character varying, "email" character varying(255) NOT NULL, "admin" boolean DEFAULT 'f' NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171026001550"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-11-09 02:07:51.468333"], ["updated_at", "2017-11-09 02:07:51.468333"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6647856843517106280)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
+Started GET "/" for 127.0.0.1 at 2017-11-08 18:08:08 -0800
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_access_login_html_erb___3098352290191045927_47169516255840 at /home/vinsonly/CMPT276/276-project/app/views/access/login.html.erb:6)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/theme.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/theme.scss. (called from _app_views_access_login_html_erb___3098352290191045927_47169516255840 at /home/vinsonly/CMPT276/276-project/app/views/access/login.html.erb:6)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/welcome.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/welcome.scss. (called from _app_views_access_login_html_erb___3098352290191045927_47169516255840 at /home/vinsonly/CMPT276/276-project/app/views/access/login.html.erb:6)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/widgets.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/widgets.scss. (called from _app_views_access_login_html_erb___3098352290191045927_47169516255840 at /home/vinsonly/CMPT276/276-project/app/views/access/login.html.erb:6)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_access_login_html_erb___3098352290191045927_47169516255840 at /home/vinsonly/CMPT276/276-project/app/views/access/login.html.erb:6)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/theme.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/theme.scss. (called from _app_views_access_login_html_erb___3098352290191045927_47169516255840 at /home/vinsonly/CMPT276/276-project/app/views/access/login.html.erb:6)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/welcome.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/welcome.scss. (called from _app_views_access_login_html_erb___3098352290191045927_47169516255840 at /home/vinsonly/CMPT276/276-project/app/views/access/login.html.erb:6)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/widgets.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/widgets.scss. (called from _app_views_access_login_html_erb___3098352290191045927_47169516255840 at /home/vinsonly/CMPT276/276-project/app/views/access/login.html.erb:6)
+  Rendered access/login.html.erb within layouts/application (3853.6ms)
+Completed 200 OK in 3967ms (Views: 3954.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/application.self-2d66231afc810bc7f03315f76d2990714ac463b2d3a389f3c199fa622b5aef6c.css?body=1" for 127.0.0.1 at 2017-11-08 18:08:13 -0800
+Started GET "/assets/access.self-42c76cb8046e6c076c945abdb64fb5ace2804a927907d0305db9f0efbe208409.js?body=1" for 127.0.0.1 at 2017-11-08 18:08:13 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-11-08 18:08:13 -0800
+Started GET "/assets/cable.self-8484513823f404ed0c0f039f75243bfdede7af7919dda65f2e66391252443ce9.js?body=1" for 127.0.0.1 at 2017-11-08 18:08:13 -0800
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-11-08 18:08:13 -0800
+Started GET "/assets/spending_history.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-11-08 18:08:13 -0800
+Started GET "/assets/recommendations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-11-08 18:08:13 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-11-08 18:08:13 -0800
+Started GET "/assets/action_cable.self-69fddfcddf4fdef9828648f9330d6ce108b93b82b0b8d3affffc59a114853451.js?body=1" for 127.0.0.1 at 2017-11-08 18:08:13 -0800
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (74.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/assets/loginlogobag-5874104bbffc3f9f26a7c9c027ec4a477a4da6d76e12c5019f082b5e861e84cf.png" for 127.0.0.1 at 2017-11-08 18:08:14 -0800
+Started GET "/assets/username-686326ae7f493b2b638b3bbc83e8757142f1f820161a6fc218e04244f3412f4c.svg" for 127.0.0.1 at 2017-11-08 18:08:14 -0800
+Started GET "/assets/password-a55c84468b62cd631c68a8cf7d8e82709dabaca02695f1140dae61dbe7361e19.svg" for 127.0.0.1 at 2017-11-08 18:08:14 -0800
+Started GET "/assets/email-4eefe4d7555c0422fc566285dfe5fdaf51d8625fcc43f385175aed6934adbfeb.svg" for 127.0.0.1 at 2017-11-08 18:08:14 -0800
+Started GET "/serviceworker.js" for 127.0.0.1 at 2017-11-08 18:08:15 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/serviceworker.js"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-08 18:08:20 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9PXew4kcpFVsHsBvkYMf5FwY33bScTZ9ZMyi+5sjBbVy36uaRqlHHDxLwn7p+iIQK6+X7PfyoGp1mp0asgWfFg==", "username"=>"vinsonly", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "vinsonly"], ["LIMIT", 1]]
+Redirected to http://localhost:5000/access/login?username=vinsonly
+Completed 302 Found in 18ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/access/login?username=vinsonly" for 127.0.0.1 at 2017-11-08 18:08:20 -0800
+Processing by AccessController#login as HTML
+  Parameters: {"username"=>"vinsonly"}
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (49.2ms)
+Completed 200 OK in 140ms (Views: 139.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2017-11-08 18:08:22 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/serviceworker.js"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/access/sign_up" for 127.0.0.1 at 2017-11-08 18:08:49 -0800
+Processing by AccessController#sign_up as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PJEUJeJ4RuLd+iXrTPnhoRRe0+wg34ontMH7OapRIDG6u2F8Lc2lq42vJ/o0gNxVY+mbdgVcHDCll8TYg3e6kg==", "username"=>"Vinson", "name"=>"Ly", "email"=>"vinsonly@live.ca", "password"=>"[FILTERED]", "password_confirm"=>"[FILTERED]", "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Vinson"], ["name", "Ly"], ["password_digest", "$2a$10$5WYI7qxlfbYA30BlXVlYF.kKBw6krHpYsBKDUBHEa519AYo5fKRHW"], ["email", "vinsonly@live.ca"], ["created_at", "2017-11-09 02:08:49.335612"], ["updated_at", "2017-11-09 02:08:49.335612"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:5000/home/index
+Completed 302 Found in 72ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-11-08 18:08:49 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (0.5ms)
+Completed 200 OK in 34ms (Views: 26.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2017-11-08 18:08:51 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/serviceworker.js"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/spending_history/index" for 127.0.0.1 at 2017-11-08 18:09:01 -0800
+Processing by SpendingHistoryController#index as HTML
+  Rendering spending_history/index.html.erb within layouts/menu
+  Rendered spending_history/index.html.erb within layouts/menu (0.8ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/spending_history/index" for 127.0.0.1 at 2017-11-08 18:09:01 -0800
+Processing by SpendingHistoryController#index as HTML
+  Rendering spending_history/index.html.erb within layouts/menu
+  Rendered spending_history/index.html.erb within layouts/menu (0.4ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/spending_history/charts" for 127.0.0.1 at 2017-11-08 18:09:02 -0800
+Processing by SpendingHistoryController#charts as HTML
+  Rendering spending_history/charts.html.erb within layouts/menu
+  Rendered spending_history/charts.html.erb within layouts/menu (0.4ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recommendations/index" for 127.0.0.1 at 2017-11-08 18:09:02 -0800
+Processing by RecommendationsController#index as HTML
+  Rendering recommendations/index.html.erb within layouts/menu
+  Rendered recommendations/index.html.erb within layouts/menu (0.5ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-11-08 18:09:03 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (0.5ms)
+Completed 200 OK in 63ms (Views: 43.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-08 18:09:03 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:5000/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-08 18:09:03 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
+Started GET "/" for 127.0.0.1 at 2017-11-08 18:51:12 -0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_access_login_html_erb___2552624976061343638_70247950173600 at /home/vinsonly/CMPT276/276-project/app/views/access/login.html.erb:6)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_access_login_html_erb___2552624976061343638_70247950173600 at /home/vinsonly/CMPT276/276-project/app/views/access/login.html.erb:6)
+  Rendered access/login.html.erb within layouts/application (2580.6ms)
+Completed 200 OK in 2706ms (Views: 2696.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-11-08 18:51:15 -0800
+Started GET "/assets/application.self-85a3df08aab34bc6a22c0cf18bd349b5a3fda5edca3e6dead5e0390446173b12.js?body=1" for 127.0.0.1 at 2017-11-08 18:51:15 -0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-11-08 18:51:15 -0800
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-08 18:51:23 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YimVjO7Qje23obc6lSJRX0HS4S4MJ1mc5b1k5Jlq7yg55J9yZxj93dhU/HbmAScLayaR+L8ereXpoqqCNfxZfw==", "username"=>"vinsonly", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "vinsonly"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/access/login?username=vinsonly
+Completed 302 Found in 29ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/access/login?username=vinsonly" for 127.0.0.1 at 2017-11-08 18:51:23 -0800
+Processing by AccessController#login as HTML
+  Parameters: {"username"=>"vinsonly"}
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (99.5ms)
+Completed 200 OK in 148ms (Views: 146.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-08 18:51:32 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dgnlpO9a9MTbFAorONN9HwKowmA+wzRtM1wY+9hP9DstxO9aZpKE9LThQWdL8AtLKFyyto36wBQ/Q9addNlCbA==", "username"=>"vinsonly", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "vinsonly"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/access/login?username=vinsonly
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/access/login?username=vinsonly" for 127.0.0.1 at 2017-11-08 18:51:32 -0800
+Processing by AccessController#login as HTML
+  Parameters: {"username"=>"vinsonly"}
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-08 18:51:58 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Urlj+WVkPgYXJldL/pCANj86HGIE7FruwiYInLHM9pAJdGkH7KxONnjTHAeNs/ZiFc5stLfVrpfOOcb6HVpAxw==", "username"=>"admintest", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "admintest"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/access/login?username=admintest
+Completed 302 Found in 31ms (ActiveRecord: 13.2ms)
+
+
+Started GET "/access/login?username=admintest" for 127.0.0.1 at 2017-11-08 18:51:58 -0800
+Processing by AccessController#login as HTML
+  Parameters: {"username"=>"admintest"}
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/sign_up" for 127.0.0.1 at 2017-11-08 18:52:31 -0800
+Processing by AccessController#sign_up as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VM0739baDEoVJvPsTKM+1R+if0g/1HL/JHVzGK74NCwPADEhXxJ8enrTuKA/gEiBNVYPnozthoYoar1+Am6Cew==", "username"=>"KDTrey5", "name"=>"Kevin", "email"=>"kd35@gmail.com", "password"=>"[FILTERED]", "password_confirm"=>"[FILTERED]", "commit"=>"Sign up"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "KDTrey5"], ["name", "Kevin"], ["password_digest", "$2a$10$TKKA1eZfZVZNfgj0U8rVvuIEqyIK9Lhba.R3AtRDkMse07Mt6dip."], ["email", "kd35@gmail.com"], ["created_at", "2017-11-09 02:52:31.834614"], ["updated_at", "2017-11-09 02:52:31.834614"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/home/index
+Completed 302 Found in 92ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-11-08 18:52:31 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (1.1ms)
+Completed 200 OK in 44ms (Views: 36.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-08 18:52:35 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-08 18:52:35 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 53ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-08 18:52:45 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GtAgt7Uuh4p7FygyrkJiZQsGXWVnyiaPy/17i1Q768fWYW5vDYNGWQPkpnKumHLb6M8JqT7/eOjJ8W1Kbf4OMQ==", "username"=>"KDTrey5", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "KDTrey5"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home/index
+Completed 302 Found in 62ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-11-08 18:52:45 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (1.5ms)
+Completed 200 OK in 75ms (Views: 67.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-08 18:52:48 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-08 18:52:48 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 68ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
+Started GET "/access/attempt_login" for 127.0.0.1 at 2017-11-08 18:53:03 -0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AccessController#attempt_login as HTML
+Redirected to http://localhost:5000/access/login
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-08 18:53:04 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (279.7ms)
+Completed 200 OK in 321ms (Views: 319.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-ae3159ce0d2918618b55bd266d38d0b9a17c86eec974056c39759f0619a33cf2.css?body=1" for 127.0.0.1 at 2017-11-08 18:53:04 -0800
+Started GET "/serviceworker.js" for 127.0.0.1 at 2017-11-08 18:53:05 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/serviceworker.js"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-08 18:53:16 -0800
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IOvYUJUG7kb1nS7Totfzp28KTPLYtM5yA/YwIeu/eX34de8KSYIZ74adYIZLu7l8AVnlI5lyk3foH+hn0QwPeQ==", "username"=>"KDTrey5", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "KDTrey5"], ["LIMIT", 1]]
+Redirected to http://localhost:5000/home/index
+Completed 302 Found in 95ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-11-08 18:53:16 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (1.4ms)
+Completed 200 OK in 367ms (Views: 362.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2017-11-08 18:53:18 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/serviceworker.js"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-08 18:53:20 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:5000/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-08 18:53:20 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/sign_up" for 127.0.0.1 at 2017-11-08 18:53:43 -0800
+Processing by AccessController#sign_up as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3UyTi+gow0FXD3t5UXDnMXIdFqW7Ba2EV4wCQ4Nt0q/V/9vH0U+hMxB1ZYR4o1+omPKUDKQ7+b6SZ3AUq8CKPg==", "username"=>"vinsonly", "name"=>"Vinson", "email"=>"vinsonly@live.ca", "password"=>"[FILTERED]", "password_confirm"=>"[FILTERED]", "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "vinsonly"], ["name", "Vinson"], ["password_digest", "$2a$10$V3U0UWEZN3B89BM0bC5Y2.fvrg.vNVFobApqflpOx3kqMhnQvKU6u"], ["email", "vinsonly@live.ca"], ["created_at", "2017-11-09 02:53:43.961669"], ["updated_at", "2017-11-09 02:53:43.961669"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:5000/home/index
+Completed 302 Found in 108ms (ActiveRecord: 13.2ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-11-08 18:53:43 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (0.7ms)
+Completed 200 OK in 94ms (Views: 87.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2017-11-08 18:53:46 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/serviceworker.js"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/spending_history/index" for 127.0.0.1 at 2017-11-08 18:53:46 -0800
+Processing by SpendingHistoryController#index as HTML
+  Rendering spending_history/index.html.erb within layouts/menu
+  Rendered spending_history/index.html.erb within layouts/menu (0.4ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/spending_history/charts" for 127.0.0.1 at 2017-11-08 18:53:46 -0800
+Processing by SpendingHistoryController#charts as HTML
+  Rendering spending_history/charts.html.erb within layouts/menu
+  Rendered spending_history/charts.html.erb within layouts/menu (0.4ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recommendations/index" for 127.0.0.1 at 2017-11-08 18:53:47 -0800
+Processing by RecommendationsController#index as HTML
+  Rendering recommendations/index.html.erb within layouts/menu
+  Rendered recommendations/index.html.erb within layouts/menu (0.5ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-11-08 18:53:47 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (0.5ms)
+Completed 200 OK in 51ms (Views: 31.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-08 18:53:51 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:5000/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-08 18:53:51 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 47ms (Views: 45.9ms | ActiveRecord: 0.0ms)
+
+
