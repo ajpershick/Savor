@@ -1,2 +1,20 @@
-<h1>Admin#delete</h1>
-<p>Find me in app/views/admin/delete.html.erb</p>
+<h1>Delete User [User ID: <%=@user_id%>]</h1>
+<div class="admin_show" >
+  <p>User ID: <%=@user_id%></p>
+  <p>Username: <%=@username%></p>
+  <p>First Name: <%=@first_name%></p>
+  <p>Email: <%=@email%></p>
+  <p>Admin: <%=@admin ? true : false %></p> <!-- displays true if user is admin, else false -->
+  <p>Created at: <%=@created_at%></p>
+  <p>Updated at: <%=@updated_at%></p>
+</div>
+
+<%= form_tag admin_destroy_path do %>
+  <% this_id = @user_id %>
+  <label for="confirm">Deleting a user is irreversible. Enter the user's username below to confirm you want to permanently delete it: </label>
+    <div class="field"><%= text_field_tag(:confirm)%></div>  <!-- send user_id to admin_destroy -->
+    <%= hidden_field_tag(:user_id, @user_id)%> <!-- a hidden_field_tag to send the user_id to from the delete controller to destroy controller -->
+  <%= submit_tag "Delete", data: {confirm: "Are you sure?"} %> <!-- executes the admin_destroy controller and view -->
+  <p><%=@message%></p>
+  <!--<p>confirm: <%=@confirm%></p> --> <!-- for test -->
+<% end %>

@@ -1239,3 +1239,1217 @@ DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated an
   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
+Started GET "/" for 127.0.0.1 at 2017-11-09 12:05:38 -0800
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (313.4ms)
+Completed 200 OK in 401ms (Views: 391.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-09 12:05:51 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"661CnucghiMs85n5UH4kL9a07I0bUkLpGLANdUWG7T7w6ZSVd9NXAb7SUC8cQ2BWNdzYjFrWL7032E+ZrKzJgA==", "username"=>"admintest", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "admintest"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 86ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:05:51 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (8.7ms)
+Completed 200 OK in 65ms (Views: 62.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/edit" for 127.0.0.1 at 2017-11-09 12:05:53 -0800
+Processing by AdminController#edit as HTML
+  Rendering admin/edit.html.erb within layouts/admin
+  Rendered admin/edit.html.erb within layouts/admin (0.5ms)
+Completed 200 OK in 85ms (Views: 82.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-09 12:05:56 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 12:05:56 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 97ms (Views: 95.7ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
+Started GET "/" for 127.0.0.1 at 2017-11-09 12:34:24 -0800
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (2384.2ms)
+Completed 200 OK in 2497ms (Views: 2483.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-09 12:34:30 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qtc1igqFoxC+WGyHqwdmvjg8gCtBYkjy/imnxOo9zuKKVqUpeozVdGOCfte92fh07Gli+j1S+kZhf+AVyCR8Jg==", "username"=>"admintest", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "admintest"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 98ms (ActiveRecord: 11.5ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:34:30 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (5.5ms)
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/edit?admin=true&created_at=2017-11-09+06%3A04%3A39+UTC&email=admintest%40gmail.com&first_name=admintest&updated_at=2017-11-09+06%3A05%3A20+UTC&user_id=1&username=admintest" for 127.0.0.1 at 2017-11-09 12:34:36 -0800
+Processing by AdminController#edit as HTML
+  Parameters: {"admin"=>"true", "created_at"=>"2017-11-09 06:04:39 UTC", "email"=>"admintest@gmail.com", "first_name"=>"admintest", "updated_at"=>"2017-11-09 06:05:20 UTC", "user_id"=>"1", "username"=>"admintest"}
+  Rendering admin/edit.html.erb within layouts/admin
+  Rendered admin/edit.html.erb within layouts/admin (488.7ms)
+Completed 500 Internal Server Error in 492ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_confirm_edit_path' for #<#<Class:0x00007f943de221a0>:0x00007f943e053410>
+Did you mean?  admin_edit_path):
+    1: <h1>Edit User [User ID: <%=@user_id%>]</h1>
+    2: 
+    3: <%= form_tag admin_confirm_edit_path do %>
+    4:   <%= hidden_field_tag :user_id, @user_id %>
+    5:   <%= hidden_field_tag :username_old, @username %>
+    6:   <%= hidden_field_tag :first_name_old, @first_name %>
+  
+app/views/admin/edit.html.erb:3:in `_app_views_admin_edit_html_erb__3562165066231481711_70137336210040'
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Started GET "/" for 127.0.0.1 at 2017-11-09 12:36:13 -0800
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AccessController#login as HTML
+Redirected to http://localhost:3000/admin/index
+Filter chain halted as :confirm_logged_out rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:36:13 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (4414.1ms)
+Completed 200 OK in 4787ms (Views: -3999.2ms | ActiveRecord: 4394.5ms)
+
+
+Started GET "/admin/edit?admin=true&created_at=2017-11-09+06%3A04%3A39+UTC&email=admintest%40gmail.com&first_name=admintest&updated_at=2017-11-09+06%3A05%3A20+UTC&user_id=1&username=admintest" for 127.0.0.1 at 2017-11-09 12:36:19 -0800
+Processing by AdminController#edit as HTML
+  Parameters: {"admin"=>"true", "created_at"=>"2017-11-09 06:04:39 UTC", "email"=>"admintest@gmail.com", "first_name"=>"admintest", "updated_at"=>"2017-11-09 06:05:20 UTC", "user_id"=>"1", "username"=>"admintest"}
+  Rendering admin/edit.html.erb within layouts/admin
+  Rendered admin/edit.html.erb within layouts/admin (485.5ms)
+Completed 500 Internal Server Error in 489ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_confirm_edit_path' for #<#<Class:0x000055f756691d30>:0x00007f94459e9a18>
+Did you mean?  admin_edit_path):
+    1: <h1>Edit User [User ID: <%=@user_id%>]</h1>
+    2: 
+    3: <%= form_tag admin_confirm_edit_path do %>
+    4:   <%= hidden_field_tag :user_id, @user_id %>
+    5:   <%= hidden_field_tag :username_old, @username %>
+    6:   <%= hidden_field_tag :first_name_old, @first_name %>
+  
+app/views/admin/edit.html.erb:3:in `_app_views_admin_edit_html_erb__3562165066231481711_70137399956200'
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:37:16 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (5.0ms)
+Completed 200 OK in 73ms (Views: 70.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/delete?admin=true&created_at=2017-11-09+06%3A04%3A39+UTC&email=admintest%40gmail.com&first_name=admintest&updated_at=2017-11-09+06%3A05%3A20+UTC&user_id=1&username=admintest" for 127.0.0.1 at 2017-11-09 12:37:18 -0800
+Processing by AdminController#delete as HTML
+  Parameters: {"admin"=>"true", "created_at"=>"2017-11-09 06:04:39 UTC", "email"=>"admintest@gmail.com", "first_name"=>"admintest", "updated_at"=>"2017-11-09 06:05:20 UTC", "user_id"=>"1", "username"=>"admintest"}
+  Rendering admin/delete.html.erb within layouts/admin
+  Rendered admin/delete.html.erb within layouts/admin (2.8ms)
+Completed 200 OK in 65ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/delete?admin=false&created_at=2017-11-09+06%3A06%3A26+UTC&email=vinsonly%40live.ca&first_name=Vinson&updated_at=2017-11-09+06%3A06%3A26+UTC&user_id=2&username=vinsonly" for 127.0.0.1 at 2017-11-09 12:37:21 -0800
+Processing by AdminController#delete as HTML
+  Parameters: {"admin"=>"false", "created_at"=>"2017-11-09 06:06:26 UTC", "email"=>"vinsonly@live.ca", "first_name"=>"Vinson", "updated_at"=>"2017-11-09 06:06:26 UTC", "user_id"=>"2", "username"=>"vinsonly"}
+  Rendering admin/delete.html.erb within layouts/admin
+  Rendered admin/delete.html.erb within layouts/admin (10.4ms)
+Completed 200 OK in 82ms (Views: 79.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_admin" for 127.0.0.1 at 2017-11-09 12:37:24 -0800
+Processing by AdminController#new_admin as HTML
+  Rendering admin/new_admin.html.erb within layouts/admin
+  Rendered admin/new_admin.html.erb within layouts/admin (0.4ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:37:32 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (4.3ms)
+Completed 200 OK in 44ms (Views: 41.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/new_admin" for 127.0.0.1 at 2017-11-09 12:37:32 -0800
+Processing by AdminController#new_admin as HTML
+  Rendering admin/new_admin.html.erb within layouts/admin
+  Rendered admin/new_admin.html.erb within layouts/admin (0.4ms)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:37:33 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (7.0ms)
+Completed 200 OK in 60ms (Views: 57.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/edit?admin=false&created_at=2017-11-09+06%3A06%3A26+UTC&email=vinsonly%40live.ca&first_name=Vinson&updated_at=2017-11-09+06%3A06%3A26+UTC&user_id=2&username=vinsonly" for 127.0.0.1 at 2017-11-09 12:37:34 -0800
+Processing by AdminController#edit as HTML
+  Parameters: {"admin"=>"false", "created_at"=>"2017-11-09 06:06:26 UTC", "email"=>"vinsonly@live.ca", "first_name"=>"Vinson", "updated_at"=>"2017-11-09 06:06:26 UTC", "user_id"=>"2", "username"=>"vinsonly"}
+  Rendering admin/edit.html.erb within layouts/admin
+  Rendered admin/edit.html.erb within layouts/admin (519.4ms)
+Completed 500 Internal Server Error in 523ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_confirm_edit_path' for #<#<Class:0x000055f756691d30>:0x00007f9445e7bc98>
+Did you mean?  admin_edit_path):
+    1: <h1>Edit User [User ID: <%=@user_id%>]</h1>
+    2: 
+    3: <%= form_tag admin_confirm_edit_path do %>
+    4:   <%= hidden_field_tag :user_id, @user_id %>
+    5:   <%= hidden_field_tag :username_old, @username %>
+    6:   <%= hidden_field_tag :first_name_old, @first_name %>
+  
+app/views/admin/edit.html.erb:3:in `_app_views_admin_edit_html_erb__3562165066231481711_70137402360960'
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:40:22 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (10.6ms)
+Completed 200 OK in 64ms (Views: 60.8ms | ActiveRecord: 0.6ms)
+
+
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Started GET "/admin/edit?admin=true&created_at=2017-11-09+06%3A04%3A39+UTC&email=admintest%40gmail.com&first_name=admintest&updated_at=2017-11-09+06%3A05%3A20+UTC&user_id=1&username=admintest" for 127.0.0.1 at 2017-11-09 12:40:47 -0800
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminController#edit as HTML
+  Parameters: {"admin"=>"true", "created_at"=>"2017-11-09 06:04:39 UTC", "email"=>"admintest@gmail.com", "first_name"=>"admintest", "updated_at"=>"2017-11-09 06:05:20 UTC", "user_id"=>"1", "username"=>"admintest"}
+  Rendering admin/edit.html.erb within layouts/admin
+  Rendered admin/edit.html.erb within layouts/admin (4.1ms)
+Completed 200 OK in 345ms (Views: 334.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:40:50 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (35.8ms)
+Completed 200 OK in 80ms (Views: 59.0ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/admin/new_admin" for 127.0.0.1 at 2017-11-09 12:40:52 -0800
+Processing by AdminController#new_admin as HTML
+  Rendering admin/new_admin.html.erb within layouts/admin
+  Rendered admin/new_admin.html.erb within layouts/admin (0.5ms)
+Completed 200 OK in 80ms (Views: 78.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:40:52 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (8.9ms)
+Completed 200 OK in 88ms (Views: 85.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/delete?admin=true&created_at=2017-11-09+06%3A04%3A39+UTC&email=admintest%40gmail.com&first_name=admintest&updated_at=2017-11-09+06%3A05%3A20+UTC&user_id=1&username=admintest" for 127.0.0.1 at 2017-11-09 12:40:53 -0800
+Processing by AdminController#delete as HTML
+  Parameters: {"admin"=>"true", "created_at"=>"2017-11-09 06:04:39 UTC", "email"=>"admintest@gmail.com", "first_name"=>"admintest", "updated_at"=>"2017-11-09 06:05:20 UTC", "user_id"=>"1", "username"=>"admintest"}
+  Rendering admin/delete.html.erb within layouts/admin
+  Rendered admin/delete.html.erb within layouts/admin (5.8ms)
+Completed 200 OK in 62ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:40:54 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (6.1ms)
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/delete?admin=false&created_at=2017-11-09+06%3A06%3A26+UTC&email=vinsonly%40live.ca&first_name=Vinson&updated_at=2017-11-09+06%3A06%3A26+UTC&user_id=2&username=vinsonly" for 127.0.0.1 at 2017-11-09 12:40:55 -0800
+Processing by AdminController#delete as HTML
+  Parameters: {"admin"=>"false", "created_at"=>"2017-11-09 06:06:26 UTC", "email"=>"vinsonly@live.ca", "first_name"=>"Vinson", "updated_at"=>"2017-11-09 06:06:26 UTC", "user_id"=>"2", "username"=>"vinsonly"}
+  Rendering admin/delete.html.erb within layouts/admin
+  Rendered admin/delete.html.erb within layouts/admin (1.2ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:40:55 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (8.0ms)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/edit?admin=false&created_at=2017-11-09+06%3A06%3A26+UTC&email=vinsonly%40live.ca&first_name=Vinson&updated_at=2017-11-09+06%3A06%3A26+UTC&user_id=2&username=vinsonly" for 127.0.0.1 at 2017-11-09 12:40:56 -0800
+Processing by AdminController#edit as HTML
+  Parameters: {"admin"=>"false", "created_at"=>"2017-11-09 06:06:26 UTC", "email"=>"vinsonly@live.ca", "first_name"=>"Vinson", "updated_at"=>"2017-11-09 06:06:26 UTC", "user_id"=>"2", "username"=>"vinsonly"}
+  Rendering admin/edit.html.erb within layouts/admin
+  Rendered admin/edit.html.erb within layouts/admin (1.6ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:40:57 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (5.5ms)
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-09 12:40:59 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 12:40:59 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-09 12:41:07 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vx0cJmpyMuNQDUXkEodft5qeHI1gEBT9co0WUNJgxuSDC2DUI+XAU+GSG5XYanW21Jar+eBhUPyQWJQOKEZZeQ==", "username"=>"admintest", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "admintest"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 60ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:41:07 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (4.4ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-09 12:41:10 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 12:41:10 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 61ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-11-09 12:41:12 -0800
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/access/login
+Filter chain halted as :confirm_user_logged_in rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 12:41:12 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 57ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/spending_history/index" for 127.0.0.1 at 2017-11-09 12:41:13 -0800
+Processing by SpendingHistoryController#index as HTML
+Redirected to http://localhost:3000/access/login
+Filter chain halted as :confirm_user_logged_in rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 12:41:13 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/spending_history/charts" for 127.0.0.1 at 2017-11-09 12:41:14 -0800
+Processing by SpendingHistoryController#charts as HTML
+Redirected to http://localhost:3000/access/login
+Filter chain halted as :confirm_user_logged_in rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 12:41:14 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 67ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recommendations/index" for 127.0.0.1 at 2017-11-09 12:41:14 -0800
+Processing by RecommendationsController#index as HTML
+Redirected to http://localhost:3000/access/login
+Filter chain halted as :confirm_user_logged_in rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 12:41:14 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 48ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-09 12:41:22 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UEgjmJbLMl0kZsKFw+ani9hCmWOb0JFL0JnelJ6Ta8KLsykoQ0jzTF4JPckCiUH6H/WSDNJc9k5MV5jO0Na2oQ==", "username"=>"vinsonly", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "vinsonly"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/access/login?username=vinsonly
+Completed 302 Found in 59ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/access/login?username=vinsonly" for 127.0.0.1 at 2017-11-09 12:41:22 -0800
+Processing by AccessController#login as HTML
+  Parameters: {"username"=>"vinsonly"}
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-09 12:41:25 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tKTreSp0ry1NTEEin0l8KCh9zhRTi5EWXxqYmo7LQGtvX+HJ//duPDcjvm5eJppZ78rFexoH9hPD1N7AwI6dCA==", "username"=>"vinsonly", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "vinsonly"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/access/login?username=vinsonly
+Completed 302 Found in 63ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/access/login?username=vinsonly" for 127.0.0.1 at 2017-11-09 12:41:25 -0800
+Processing by AccessController#login as HTML
+  Parameters: {"username"=>"vinsonly"}
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 49ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/sign_up" for 127.0.0.1 at 2017-11-09 12:41:56 -0800
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AccessController#sign_up as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y14WMhtAmI5+hhvLl7UC4CAYFtCgKAPO5MSP7rmLOUW4pRyCzsNZnwTp5IdW2uSR568dv+mkZMt4Csm0987kJg==", "username"=>"vinsonly", "name"=>"Vinson", "email"=>"vinsonl@sfu.ca", "password"=>"[FILTERED]", "password_confirm"=>"[FILTERED]", "commit"=>"Sign up"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "vinsonly"], ["name", "Vinson"], ["password_digest", "$2a$10$5QW2II/AAy08YePC0Fm7q.5ORL3jau.o4peUIsXVU12OhF8QBHBo."], ["email", "vinsonl@sfu.ca"], ["created_at", "2017-11-09 20:41:56.899413"], ["updated_at", "2017-11-09 20:41:56.899413"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 90ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-09 12:41:56 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (2.2ms)
+Completed 200 OK in 341ms (Views: 333.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/spending_history/index" for 127.0.0.1 at 2017-11-09 12:42:16 -0800
+Processing by SpendingHistoryController#index as HTML
+  Rendering spending_history/index.html.erb within layouts/menu
+  Rendered spending_history/index.html.erb within layouts/menu (0.4ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-11-09 12:42:17 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (2.2ms)
+Completed 200 OK in 77ms (Views: 71.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/spending_history/index" for 127.0.0.1 at 2017-11-09 12:42:18 -0800
+Processing by SpendingHistoryController#index as HTML
+  Rendering spending_history/index.html.erb within layouts/menu
+  Rendered spending_history/index.html.erb within layouts/menu (0.4ms)
+Completed 200 OK in 88ms (Views: 86.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-11-09 12:42:19 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (1.5ms)
+Completed 200 OK in 96ms (Views: 91.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/spending_history/index" for 127.0.0.1 at 2017-11-09 12:42:20 -0800
+Processing by SpendingHistoryController#index as HTML
+  Rendering spending_history/index.html.erb within layouts/menu
+  Rendered spending_history/index.html.erb within layouts/menu (0.5ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/spending_history/charts" for 127.0.0.1 at 2017-11-09 12:42:20 -0800
+Processing by SpendingHistoryController#charts as HTML
+  Rendering spending_history/charts.html.erb within layouts/menu
+  Rendered spending_history/charts.html.erb within layouts/menu (0.7ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recommendations/index" for 127.0.0.1 at 2017-11-09 12:42:21 -0800
+Processing by RecommendationsController#index as HTML
+  Rendering recommendations/index.html.erb within layouts/menu
+  Rendered recommendations/index.html.erb within layouts/menu (0.4ms)
+Completed 200 OK in 40ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-11-09 12:42:22 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (1.3ms)
+Completed 200 OK in 43ms (Views: 37.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-09 12:42:31 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 12:42:31 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-09 12:42:40 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q9VQ3d0028LdnAoD1r6cX23Lj0RlEqj15MXKLzv+CsHawyNX4TX1HMY9GIhfWMAxsDgUYCEahq79MMEOgf2N3Q==", "username"=>"admintest", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "admintest"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 57ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:42:40 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (6.4ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/delete?admin=false&created_at=2017-11-09+06%3A06%3A26+UTC&email=vinsonly%40live.ca&first_name=Vinson&updated_at=2017-11-09+06%3A06%3A26+UTC&user_id=2&username=vinsonly" for 127.0.0.1 at 2017-11-09 12:42:55 -0800
+Processing by AdminController#delete as HTML
+  Parameters: {"admin"=>"false", "created_at"=>"2017-11-09 06:06:26 UTC", "email"=>"vinsonly@live.ca", "first_name"=>"Vinson", "updated_at"=>"2017-11-09 06:06:26 UTC", "user_id"=>"2", "username"=>"vinsonly"}
+  Rendering admin/delete.html.erb within layouts/admin
+  Rendered admin/delete.html.erb within layouts/admin (1.3ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/destroy" for 127.0.0.1 at 2017-11-09 12:43:01 -0800
+Processing by AdminController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SZPKHsa5Jo+QyjGuCQ49vGcpZw1NigxggY9Z0l6ZCWHQhbmU+rgIUYtrIyWA6GHSutr8KQmCIjuYelLz5JqOfQ==", "confirm"=>"vinsonly", "user_id"=>"2", "commit"=>"Delete"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/index?message=%5BUser+ID%3A2%5D+deleted.
+Completed 302 Found in 15ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/admin/index?message=%5BUser+ID%3A2%5D+deleted." for 127.0.0.1 at 2017-11-09 12:43:01 -0800
+Processing by AdminController#index as HTML
+  Parameters: {"message"=>"[User ID:2] deleted."}
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (6.0ms)
+Completed 200 OK in 64ms (Views: 61.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/index?message=%5BUser+ID%3A2%5D+deleted." for 127.0.0.1 at 2017-11-09 12:43:13 -0800
+Processing by AdminController#index as HTML
+  Parameters: {"message"=>"[User ID:2] deleted."}
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (7.5ms)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2017-11-09 12:43:17 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (6.2ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-09 12:44:03 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 12:44:03 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 54ms (Views: 52.7ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Started GET "/" for 127.0.0.1 at 2017-11-09 12:44:42 -0800
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/access/login
+Filter chain halted as :confirm_user_logged_in rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 12:44:42 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (247.4ms)
+Completed 200 OK in 288ms (Views: 286.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/sign_up" for 127.0.0.1 at 2017-11-09 12:44:57 -0800
+Processing by AccessController#sign_up as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"siJAFxNmvUVLzu5hImjtytqVfWoet/pBnna2a6z71g96KNFXyrCOs9VDz+Q35QvUMLOG2ljrJQ4XwDqvj9425g==", "username"=>"vinsonly", "name"=>"Vinson", "email"=>"vinsonly@live.ca", "password"=>"[FILTERED]", "password_confirm"=>"[FILTERED]", "commit"=>"Sign up"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "vinsonly"], ["name", "Vinson"], ["password_digest", "$2a$10$hhHTNwlJzr61ViWzNnPAveHtd0727N0MOqZ4T6YzZTO9rpvIumRIS"], ["email", "vinsonly@live.ca"], ["created_at", "2017-11-09 20:44:58.079615"], ["updated_at", "2017-11-09 20:44:58.079615"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 87ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-09 12:44:58 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (1.2ms)
+Completed 200 OK in 93ms (Views: 84.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-09 12:45:00 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 12:45:00 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-09 12:45:04 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U8gWc9OWZjB/h9gWpefhmUo7sQaCXNDqPQsPk/Ucgq3V2GtlUDD8xB9fLm6a7UocqJ9GVYENbBffnKzpQTLZjA==", "username"=>"admintest", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "admintest"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 60ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:45:04 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (6.6ms)
+Completed 200 OK in 48ms (Views: 45.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/delete?admin=false&created_at=2017-11-09+20%3A44%3A58+UTC&email=vinsonly%40live.ca&first_name=Vinson&updated_at=2017-11-09+20%3A44%3A58+UTC&user_id=4&username=vinsonly" for 127.0.0.1 at 2017-11-09 12:45:09 -0800
+Processing by AdminController#delete as HTML
+  Parameters: {"admin"=>"false", "created_at"=>"2017-11-09 20:44:58 UTC", "email"=>"vinsonly@live.ca", "first_name"=>"Vinson", "updated_at"=>"2017-11-09 20:44:58 UTC", "user_id"=>"4", "username"=>"vinsonly"}
+  Rendering admin/delete.html.erb within layouts/admin
+  Rendered admin/delete.html.erb within layouts/admin (2.6ms)
+Completed 200 OK in 75ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/destroy" for 127.0.0.1 at 2017-11-09 12:45:17 -0800
+Processing by AdminController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xlKKWO+BfzmRKLx7PjkdNR4fncpTwXWVfyL2gUMrpX5AQvdObCflzfHwSgMBM7aw/LtqmVCQyWidtVX79wX+Xw==", "confirm"=>"vinsonly", "user_id"=>"4", "commit"=>"Delete"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/index?message=%5BUser+ID%3A4%5D+deleted.
+Completed 302 Found in 27ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/admin/index?message=%5BUser+ID%3A4%5D+deleted." for 127.0.0.1 at 2017-11-09 12:45:17 -0800
+Processing by AdminController#index as HTML
+  Parameters: {"message"=>"[User ID:4] deleted."}
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (10.4ms)
+Completed 200 OK in 79ms (Views: 74.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-09 12:45:19 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 12:45:19 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 98ms (Views: 96.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 12:46:46 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 47ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-09 12:46:50 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dxhQx2K+xl23JL9Svepx4uf/aKkNS4rtbuy29w+/wXidEv9ThfTG3qN4pOdbsRxjtvEjQ40YSmmcnzDKfmvvsg==", "username"=>"admintest", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "admintest"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 74ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:46:50 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (9.0ms)
+Completed 200 OK in 52ms (Views: 49.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:46:55 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (12.8ms)
+Completed 200 OK in 50ms (Views: 47.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/new_admin" for 127.0.0.1 at 2017-11-09 12:46:56 -0800
+Processing by AdminController#new_admin as HTML
+  Rendering admin/new_admin.html.erb within layouts/admin
+  Rendered admin/new_admin.html.erb within layouts/admin (0.4ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:46:57 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (7.0ms)
+Completed 200 OK in 61ms (Views: 58.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-09 12:46:57 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 12:46:57 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 12:49:51 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (500.2ms)
+Completed 200 OK in 684ms (Views: 675.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-11-09 12:49:52 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-11-09 12:49:52 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-11-09 12:49:52 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-11-09 12:49:52 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-11-09 12:49:52 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-11-09 12:49:52 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-11-09 12:49:52 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-11-09 12:49:52 -0800
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-11-09 12:49:52 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-11-09 12:49:52 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-11-09 12:49:52 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-11-09 12:49:52 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-09 12:49:56 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U/oQHfgjnNnOWqnHMX2KgnPE6bw/oElM5Qv9jJHY3+KqU0S06i60YCyDQ+WvIhLEkkZaA9nEWttY5OmhhHrCXw==", "username"=>"admintest", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "admintest"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 90ms (ActiveRecord: 11.2ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:49:56 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (7.0ms)
+Completed 200 OK in 111ms (Views: 108.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/new_admin" for 127.0.0.1 at 2017-11-09 12:50:12 -0800
+Processing by AdminController#new_admin as HTML
+  Rendering admin/new_admin.html.erb within layouts/admin
+  Rendered admin/new_admin.html.erb within layouts/admin (0.5ms)
+Completed 200 OK in 63ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:50:13 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (4.1ms)
+Completed 200 OK in 75ms (Views: 73.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/new_admin" for 127.0.0.1 at 2017-11-09 12:50:18 -0800
+Processing by AdminController#new_admin as HTML
+  Rendering admin/new_admin.html.erb within layouts/admin
+  Rendered admin/new_admin.html.erb within layouts/admin (0.4ms)
+Completed 200 OK in 76ms (Views: 74.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:50:20 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (5.8ms)
+Completed 200 OK in 61ms (Views: 58.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-09 12:50:33 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 12:50:33 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 79ms (Views: 77.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-09 12:50:54 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y4UBO9oerFOnBKMSa7rxW09n82DHSxwF5kVCaGzhfxOljNsot+wpV0g+7v0m1Rzz0VOUcNnZ88V9JkLYl1Btag==", "username"=>"vinsonly", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "vinsonly"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/access/login?username=vinsonly
+Completed 302 Found in 62ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/access/login?username=vinsonly" for 127.0.0.1 at 2017-11-09 12:50:54 -0800
+Processing by AccessController#login as HTML
+  Parameters: {"username"=>"vinsonly"}
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 80ms (Views: 76.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-09 12:50:57 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zpFj+Hvekhh4HkWlFnGobXm2kApFBIryJZe+orieQzKgmLnrFiwXHJckCEpbHkXF54L3GluWZTK+9L4SQy9RSw==", "username"=>"vinsonly", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "vinsonly"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/access/login?username=vinsonly
+Completed 302 Found in 60ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/access/login?username=vinsonly" for 127.0.0.1 at 2017-11-09 12:50:57 -0800
+Processing by AccessController#login as HTML
+  Parameters: {"username"=>"vinsonly"}
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 84ms (Views: 82.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-09 12:51:06 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aZKJf9mrbkSIPUGrTqAV6vC1euAiLaiABOBV9ae6Pc4Hm1NstFnrQGcHDEQDz/hCboEd8Dy/R0Cfg1VFXAsvtw==", "username"=>"vinsonly", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "vinsonly"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/access/login?username=vinsonly
+Completed 302 Found in 59ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/access/login?username=vinsonly" for 127.0.0.1 at 2017-11-09 12:51:06 -0800
+Processing by AccessController#login as HTML
+  Parameters: {"username"=>"vinsonly"}
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 75ms (Views: 73.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-09 12:51:34 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MoOZ54oHzpKFY/2RCsBy6ZGNx71nCrwiQKdq+JqPTu5cikP05/VLlmpZsH5Hr59BD7mgrXmYU+LbxGpIYT5clw==", "username"=>"admintest", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "admintest"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 113ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:51:34 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (6.2ms)
+Completed 200 OK in 68ms (Views: 64.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-09 12:51:44 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 12:51:44 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 100ms (Views: 98.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-09 12:51:52 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2ujdgGmKdn5ax6CVDAgYN0R0OQcg59bgjNb+EAKbp3aEypNWjZk57UCsL94fPNU0QMrQYLIKoxtNVV7ek2CS9A==", "username"=>"vinsonly", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "vinsonly"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/access/login?username=vinsonly
+Completed 302 Found in 65ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/access/login?username=vinsonly" for 127.0.0.1 at 2017-11-09 12:51:53 -0800
+Processing by AccessController#login as HTML
+  Parameters: {"username"=>"vinsonly"}
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 90ms (Views: 88.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-09 12:52:04 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DCQ7Z9xUok5dGuBY1W4MSrqL7N8P+8nljgBuDOzMUK9SBnWxOEft3UdxbxPGWsFJvjUFuJ0WvB5Pg87CfTdlLQ==", "username"=>"admintest", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "admintest"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 71ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:52:04 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (6.2ms)
+Completed 200 OK in 66ms (Views: 63.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/delete?admin=false&created_at=2017-11-09+20%3A41%3A56+UTC&email=vinsonl%40sfu.ca&first_name=Vinson&updated_at=2017-11-09+20%3A41%3A56+UTC&user_id=3&username=vinsonly" for 127.0.0.1 at 2017-11-09 12:52:09 -0800
+Processing by AdminController#delete as HTML
+  Parameters: {"admin"=>"false", "created_at"=>"2017-11-09 20:41:56 UTC", "email"=>"vinsonl@sfu.ca", "first_name"=>"Vinson", "updated_at"=>"2017-11-09 20:41:56 UTC", "user_id"=>"3", "username"=>"vinsonly"}
+  Rendering admin/delete.html.erb within layouts/admin
+  Rendered admin/delete.html.erb within layouts/admin (1.4ms)
+Completed 200 OK in 83ms (Views: 82.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/destroy" for 127.0.0.1 at 2017-11-09 12:52:19 -0800
+Processing by AdminController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M9KtIPnANw+HAtN4BAOI5IAbwsxBo3EC720h47iUe7Bt8OP2HdN4nJ1pXDMXN0XnhKUrq9NOBPku7oEtKW9OMg==", "confirm"=>"vinsonly", "user_id"=>"3", "commit"=>"Delete"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/index?message=%5BUser+ID%3A3%5D+deleted.
+Completed 302 Found in 15ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/admin/index?message=%5BUser+ID%3A3%5D+deleted." for 127.0.0.1 at 2017-11-09 12:52:19 -0800
+Processing by AdminController#index as HTML
+  Parameters: {"message"=>"[User ID:3] deleted."}
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (8.4ms)
+Completed 200 OK in 88ms (Views: 81.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-09 12:52:21 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 12:52:21 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 91ms (Views: 89.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/sign_up" for 127.0.0.1 at 2017-11-09 12:52:40 -0800
+Processing by AccessController#sign_up as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lEgeHHjMf3Wo3S1wYKEcEEyWsiM33sDRrnzD9E2X6XyTDK9D7k9vdBeYTPcjlVxMcd4MnOP+zY2K2MEKNcNnlg==", "username"=>"vinsonly", "name"=>"Vinson", "email"=>"vinsonl@sfu.ca", "password"=>"[FILTERED]", "password_confirm"=>"[FILTERED]", "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "vinsonly"], ["name", "Vinson"], ["password_digest", "$2a$10$4zwd8IX6LIfJPgiWphwnkOc294X3RXcn0YiVAL8DfFr8KZvrCMkiu"], ["email", "vinsonl@sfu.ca"], ["created_at", "2017-11-09 20:52:40.607547"], ["updated_at", "2017-11-09 20:52:40.607547"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 67ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-09 12:52:40 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (1.1ms)
+Completed 200 OK in 55ms (Views: 49.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/spending_history/index" for 127.0.0.1 at 2017-11-09 12:52:44 -0800
+Processing by SpendingHistoryController#index as HTML
+  Rendering spending_history/index.html.erb within layouts/menu
+  Rendered spending_history/index.html.erb within layouts/menu (0.4ms)
+Completed 200 OK in 78ms (Views: 76.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-11-09 12:52:44 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (0.8ms)
+Completed 200 OK in 88ms (Views: 80.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/spending_history/charts" for 127.0.0.1 at 2017-11-09 12:52:45 -0800
+Processing by SpendingHistoryController#charts as HTML
+  Rendering spending_history/charts.html.erb within layouts/menu
+  Rendered spending_history/charts.html.erb within layouts/menu (0.4ms)
+Completed 200 OK in 56ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recommendations/index" for 127.0.0.1 at 2017-11-09 12:52:45 -0800
+Processing by RecommendationsController#index as HTML
+  Rendering recommendations/index.html.erb within layouts/menu
+  Rendered recommendations/index.html.erb within layouts/menu (0.4ms)
+Completed 200 OK in 85ms (Views: 84.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-11-09 12:53:06 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (0.9ms)
+Completed 200 OK in 55ms (Views: 50.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-11-09 12:53:07 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (0.9ms)
+Completed 200 OK in 76ms (Views: 70.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-11-09 12:53:08 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (0.8ms)
+Completed 200 OK in 56ms (Views: 51.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-11-09 12:53:09 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (1.1ms)
+Completed 200 OK in 92ms (Views: 68.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/recommendations/index" for 127.0.0.1 at 2017-11-09 12:53:11 -0800
+Processing by RecommendationsController#index as HTML
+  Rendering recommendations/index.html.erb within layouts/menu
+  Rendered recommendations/index.html.erb within layouts/menu (0.6ms)
+Completed 200 OK in 98ms (Views: 96.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/spending_history/charts" for 127.0.0.1 at 2017-11-09 12:53:12 -0800
+Processing by SpendingHistoryController#charts as HTML
+  Rendering spending_history/charts.html.erb within layouts/menu
+  Rendered spending_history/charts.html.erb within layouts/menu (0.4ms)
+Completed 200 OK in 55ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/spending_history/index" for 127.0.0.1 at 2017-11-09 12:53:12 -0800
+Processing by SpendingHistoryController#index as HTML
+  Rendering spending_history/index.html.erb within layouts/menu
+  Rendered spending_history/index.html.erb within layouts/menu (0.4ms)
+Completed 200 OK in 73ms (Views: 71.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-11-09 12:53:12 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (1.0ms)
+Completed 200 OK in 55ms (Views: 51.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-09 12:53:48 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 12:53:48 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 80ms (Views: 78.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-09 12:53:53 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8GauQ4i6EIHNKHcbEw24qBDSAA4ERbh0YMaSVWqp2Cc2LrKRvGP8j3iaoryjkc2FBHKqAcaMw5U4+4kl3sZdYA==", "username"=>"vinsonly", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "vinsonly"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 55ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-09 12:53:53 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (0.9ms)
+Completed 200 OK in 52ms (Views: 46.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-09 12:53:55 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 12:53:55 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 88ms (Views: 86.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-09 12:54:00 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UCBhk6ZPu1zoyXg4lcCth5ZoPnx3A2XQXUyvQS4nyEA4VYzae4bI/CJTM4FiqsHN/FYOfyLJZQ1WULIfeXdm/g==", "username"=>"admintest", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "admintest"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 70ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 12:54:00 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (5.0ms)
+Completed 200 OK in 56ms (Views: 54.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-09 12:54:01 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 12:54:02 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 86ms (Views: 84.1ms | ActiveRecord: 0.0ms)
+
+

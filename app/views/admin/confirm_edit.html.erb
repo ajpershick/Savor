@@ -1,0 +1,24 @@
+<h1>Confirm Edits to be made to [User ID: <%=@user_id%>]</h1>
+
+<p>User ID: <%=@user_id%></p>
+<p>Username: <%=@username_old%> --> <%=@username%></p>
+<p>First Name: <%=@first_name_old%> --> <%=@first_name%></p>
+<p>Email: <%=@email_old%> --> <%=@email%></p>
+<p>Admin: <%=@admin_old%> --> <%=@admin%></p>
+
+<%= form_tag admin_make_edit_path do %>
+  <!-- old values -->
+  <%= hidden_field_tag :user_id, @user_id %>
+  <%= hidden_field_tag :username_old, @username_old %>
+  <%= hidden_field_tag :first_name_old, @first_name_old %>
+  <%= hidden_field_tag :email_old, @email_old %>
+  <%= hidden_field_tag :admin_old, @admin_old %>
+
+  <!-- new values -->
+  <%= hidden_field_tag :username, @username %>
+  <%= hidden_field_tag :first_name, @first_name %>
+  <%= hidden_field_tag :email, @email %>
+  <%= hidden_field_tag :admin, @admin %>
+
+  <%= submit_tag "Make Edits", data: {confirm: "Are you sure?"} %>
+<% end %>
