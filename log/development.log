@@ -1519,3 +1519,52 @@ DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecate
 DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
 DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
 DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:36)
+Started GET "/" for 127.0.0.1 at 2017-11-09 13:09:25 -0800
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (281.9ms)
+Completed 200 OK in 332ms (Views: 322.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-09 13:09:33 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XQK8gaZAW7a5+jVgicDj9zdhn8qFsQPoL4A+3/lqZwIDzMoplxFoPNmEZfh50cdh5mgoTBOeyjJUaE6PjXg8qg==", "username"=>"admintest", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "admintest"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 79ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-09 13:09:33 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (6.9ms)
+Completed 200 OK in 81ms (Views: 78.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-09 13:09:39 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-09 13:09:39 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 55ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
