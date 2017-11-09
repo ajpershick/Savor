@@ -21,12 +21,13 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
   host: localhost
+  username: postgres
+  password: newpassword
 
 development:
   <<: *default
   database: developmentdb
-  username: postgres
-  password: newpassword
+
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -61,6 +62,8 @@ development:
 test:
   <<: *default
   database: ruby-getting-started_test
+  #username: postgres
+  #password: newpassword
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -83,6 +86,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>s
   database: ruby-getting-started_production
-  username: ruby-getting-started
-  password: <%= ENV['RUBY-GETTING-STARTED_DATABASE_PASSWORD'] %>
+  #username: ruby-getting-started
+  #password: <%= ENV['RUBY-GETTING-STARTED_DATABASE_PASSWORD'] %>
