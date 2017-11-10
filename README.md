@@ -10,7 +10,7 @@ Darien Flamont,
 Alec Pershick
 
 Project Proposal - Group 14
-Git: https://github.com/ajpershick/276-Project
+Git: https://github.com/ajpershick/Savor
 
 
 Overview
