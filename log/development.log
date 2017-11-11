@@ -3750,3 +3750,388 @@ Processing by AdminController#index as HTML
 Completed 200 OK in 89ms (Views: 82.0ms | ActiveRecord: 5.0ms)
 
 
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:33:33 -0800
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (33.1ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_47248651774640 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_47248651774640 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 2501ms (Views: 2477.5ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/assets/application.self-64130a97064d921436d4b63b6110b8996089403445723800d9ebd1134bd96e71.css?body=1" for 127.0.0.1 at 2017-11-10 23:33:36 -0800
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:33:52 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (9.1ms)
+Completed 200 OK in 69ms (Views: 66.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:34:31 -0800
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (32.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_47248651755380 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_47248651755380 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 2523ms (Views: 2501.6ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/assets/application.self-7d6ce9df210b867a151b9b0f83017886cbf22110158b6bfd800f008a65f6b9dd.css?body=1" for 127.0.0.1 at 2017-11-10 23:34:34 -0800
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:34:46 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (10.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006289224460 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006289224460 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 1412ms (Views: 1408.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-42339b58cb579bbc0d1e9d0d950f6f6b4143509a23dc5a912f37b0078d1f364d.css?body=1" for 127.0.0.1 at 2017-11-10 23:34:48 -0800
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:35:23 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (10.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006130594380 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006130594380 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 1402ms (Views: 1399.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-d73cfdbdffe4e2c55e27fcafecbe82691e03b495621c92165f942a523a8756d6.css?body=1" for 127.0.0.1 at 2017-11-10 23:35:25 -0800
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:35:42 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (7.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006139795860 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006139795860 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 1368ms (Views: 1365.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:36:01 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (8.1ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006289383480 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006289383480 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 1340ms (Views: 1337.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-09f8d311c469318adb0ce9aed13c5b37eb9ba6f1a20b016f4548006f90e55da2.css?body=1" for 127.0.0.1 at 2017-11-10 23:36:03 -0800
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:36:32 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (7.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006190856960 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006190856960 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 1332ms (Views: 1329.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-15dd8b9d8eb97f8ddebe60603b114ff24ef628b541b13e290cc7ee947b4e6034.css?body=1" for 127.0.0.1 at 2017-11-10 23:36:34 -0800
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:36:57 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (5.5ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006137116160 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006137116160 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 1342ms (Views: 1340.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-2b057559bbe4e5a9e184180858e1396b7915e5818b15dfe3cfc0e1c52a9e3337.css?body=1" for 127.0.0.1 at 2017-11-10 23:36:58 -0800
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:37:07 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (6.9ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006139035520 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006139035520 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 1494ms (Views: 1490.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-19dd8281c8142fa818f891beef73a75a831d491bd6d568329c17198d4282f36d.css?body=1" for 127.0.0.1 at 2017-11-10 23:37:09 -0800
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:37:56 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (8.7ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006189521260 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006189521260 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 1312ms (Views: 1309.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-cef2fa0fb5421c08156aad2464eeabec75038dc898750c0b00e17744e0cd2e17.css?body=1" for 127.0.0.1 at 2017-11-10 23:37:57 -0800
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:38:27 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (6.6ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006149746760 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006149746760 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 1286ms (Views: 1284.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-f985eca7d959b7059dd89d828beda1101a160fdf59efa0c547167dc9530430eb.css?body=1" for 127.0.0.1 at 2017-11-10 23:38:28 -0800
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:39:18 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (12.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006136223380 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006136223380 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 1552ms (Views: 1549.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-f129679580ca868133073f1902021f57e50a26abb8e95c32a49893b0de020d35.css?body=1" for 127.0.0.1 at 2017-11-10 23:39:19 -0800
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:39:27 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (9.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006140116040 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006140116040 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 1533ms (Views: 1530.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-9d683e1fc0cd94caedd8bb6ee116b6c1a1a961d49b098426886bd01d05d9aacf.css?body=1" for 127.0.0.1 at 2017-11-10 23:39:29 -0800
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:40:44 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (5.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006146982540 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006146982540 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 1336ms (Views: 1333.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-4c4c65de757960ea3a7f210d3a95cab920d5a893facdc5f1257a07edb2a42e27.css?body=1" for 127.0.0.1 at 2017-11-10 23:40:46 -0800
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:41:19 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (6.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006137229520 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006137229520 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 1362ms (Views: 1360.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-7bd0edb35aa6dca1508e330b35148e771c600718c5ed1e90d40236fb51cd82e1.css?body=1" for 127.0.0.1 at 2017-11-10 23:41:21 -0800
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:42:02 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (9.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006139877000 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006139877000 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 5001ms (Views: 1429.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-e0052156198d5cd8e818a45c4bf0677e58359620bf991d89b12eab2fb983fb5f.css?body=1" for 127.0.0.1 at 2017-11-10 23:42:07 -0800
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:42:20 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (7.1ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006142335700 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006142335700 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 1417ms (Views: 1414.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-6cdaa7b8d57f75aca04ee2592a0ce944550abab6ae62019fe299e2fa1516ed40.css?body=1" for 127.0.0.1 at 2017-11-10 23:42:22 -0800
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:43:07 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (15.6ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "  margin-right": expected ";", was ": 2.5%"):
+    4:     <title>Savor</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/admin.scss:23
+app/assets/stylesheets:2
+app/assets/stylesheets/application.css.scss:15
+app/views/layouts/admin.html.erb:7:in `_app_views_layouts_admin_html_erb__4582760283910514755_70006144904380'
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:43:18 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (10.8ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006138796840 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006138796840 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 1301ms (Views: 1298.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-1c3620ec6e7e73d633e4d3768a6d0af50d73c4000e55ad6042b3ea2cc3aec9e1.css?body=1" for 127.0.0.1 at 2017-11-10 23:43:20 -0800
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:44:37 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (10.1ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006190756900 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006190756900 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 1284ms (Views: 1281.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-f98b015d54ad56f3dacb79c44499b9a62b466dd9165a89515fc913b40871d685.css?body=1" for 127.0.0.1 at 2017-11-10 23:44:39 -0800
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 23:44:47 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.3ms)
+Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 23:45:08 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.7ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006145982740 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006145982740 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 1394ms (Views: 1392.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-31a0dc1c8c4650725712605efacb890a808b652c85f268bce9c89f9ff6aa7356.css?body=1" for 127.0.0.1 at 2017-11-10 23:45:10 -0800
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 23:45:20 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (1.8ms)
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:45:27 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (7.2ms)
+Completed 200 OK in 78ms (Views: 76.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 23:45:28 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.8ms)
+Completed 200 OK in 87ms (Views: 80.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:45:29 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (6.5ms)
+Completed 200 OK in 66ms (Views: 64.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/edit?admin=true&created_at=2017-11-09+06%3A04%3A39+UTC&email=admintest%40gmail.com&first_name=admintest&updated_at=2017-11-09+06%3A05%3A20+UTC&user_id=1&username=admintest" for 127.0.0.1 at 2017-11-10 23:45:30 -0800
+Processing by AdminController#edit as HTML
+  Parameters: {"admin"=>"true", "created_at"=>"2017-11-09 06:04:39 UTC", "email"=>"admintest@gmail.com", "first_name"=>"admintest", "updated_at"=>"2017-11-09 06:05:20 UTC", "user_id"=>"1", "username"=>"admintest"}
+  Rendering admin/edit.html.erb within layouts/admin
+  Rendered admin/edit.html.erb within layouts/admin (1.6ms)
+Completed 200 OK in 64ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:45:32 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (7.0ms)
+Completed 200 OK in 75ms (Views: 73.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/edit?admin=true&created_at=2017-11-09+06%3A04%3A39+UTC&email=admintest%40gmail.com&first_name=admintest&updated_at=2017-11-09+06%3A05%3A20+UTC&user_id=1&username=admintest" for 127.0.0.1 at 2017-11-10 23:45:59 -0800
+Processing by AdminController#edit as HTML
+  Parameters: {"admin"=>"true", "created_at"=>"2017-11-09 06:04:39 UTC", "email"=>"admintest@gmail.com", "first_name"=>"admintest", "updated_at"=>"2017-11-09 06:05:20 UTC", "user_id"=>"1", "username"=>"admintest"}
+  Rendering admin/edit.html.erb within layouts/admin
+  Rendered admin/edit.html.erb within layouts/admin (1.5ms)
+Completed 200 OK in 81ms (Views: 79.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/edit?admin=true&created_at=2017-11-09+06%3A04%3A39+UTC&email=admintest%40gmail.com&first_name=admintest&updated_at=2017-11-09+06%3A05%3A20+UTC&user_id=1&username=admintest" for 127.0.0.1 at 2017-11-10 23:46:58 -0800
+Processing by AdminController#edit as HTML
+  Parameters: {"admin"=>"true", "created_at"=>"2017-11-09 06:04:39 UTC", "email"=>"admintest@gmail.com", "first_name"=>"admintest", "updated_at"=>"2017-11-09 06:05:20 UTC", "user_id"=>"1", "username"=>"admintest"}
+  Rendering admin/edit.html.erb within layouts/admin
+  Rendered admin/edit.html.erb within layouts/admin (1.4ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006137080560 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006137080560 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 1304ms (Views: 1301.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-bb79e0997690d481d898ac51efaffe5ac003fcc69c5b67b0d874964f4e72113d.css?body=1" for 127.0.0.1 at 2017-11-10 23:46:59 -0800
+Started GET "/admin/edit?admin=true&created_at=2017-11-09+06%3A04%3A39+UTC&email=admintest%40gmail.com&first_name=admintest&updated_at=2017-11-09+06%3A05%3A20+UTC&user_id=1&username=admintest" for 127.0.0.1 at 2017-11-10 23:47:14 -0800
+Processing by AdminController#edit as HTML
+  Parameters: {"admin"=>"true", "created_at"=>"2017-11-09 06:04:39 UTC", "email"=>"admintest@gmail.com", "first_name"=>"admintest", "updated_at"=>"2017-11-09 06:05:20 UTC", "user_id"=>"1", "username"=>"admintest"}
+  Rendering admin/edit.html.erb within layouts/admin
+  Rendered admin/edit.html.erb within layouts/admin (2.0ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006140107700 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb__4582760283910514755_70006140107700 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 1348ms (Views: 1346.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-9baac32811de30fe402dcc1ce26d5f08974f9f78fbe072571788e3e04c9b9033.css?body=1" for 127.0.0.1 at 2017-11-10 23:47:15 -0800
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:47:37 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (6.6ms)
+Completed 200 OK in 62ms (Views: 59.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:47:37 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (6.8ms)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 23:47:39 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.0ms)
+Completed 200 OK in 72ms (Views: 70.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:47:40 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (13.6ms)
+Completed 200 OK in 69ms (Views: 64.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 23:47:42 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (1.6ms)
+Completed 200 OK in 63ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:47:53 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (9.9ms)
+Completed 200 OK in 65ms (Views: 62.7ms | ActiveRecord: 1.2ms)
+
+

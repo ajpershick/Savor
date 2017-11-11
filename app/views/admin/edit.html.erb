@@ -1,5 +1,7 @@
 <h1>Edit User [User ID: <%=@user_id%>]</h1>
 
+<div class="admin_class">
+
 <%= form_tag admin_confirm_edit_path do %>
   <%= hidden_field_tag :user_id, @user_id %>
   <%= hidden_field_tag :username_old, @username %>
@@ -19,3 +21,5 @@
 
   <%= submit_tag "Submit", data: {confirm: "Are you sure?"}%>
 <% end %>
+
+</div>
