@@ -1993,3 +1993,1545 @@ Processing by AccessController#login as HTML
 Completed 200 OK in 88ms (Views: 86.7ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-10 16:53:18 -0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"geK6oCIyxUJOy6iz0GAE1VfuegwThr+VeXx9OKZ/AQMjwv0n0Hsz9IAI/poFUVgfDdHZ4sqho6onUl8Y+urTqA==", "username"=>"admintest", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "admintest"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 95ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 16:53:18 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (13.6ms)
+Completed 200 OK in 377ms (Views: 371.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/admin/new_admin" for 127.0.0.1 at 2017-11-10 16:53:23 -0800
+Processing by AdminController#new_admin as HTML
+  Rendering admin/new_admin.html.erb within layouts/admin
+  Rendered admin/new_admin.html.erb within layouts/admin (0.4ms)
+Completed 200 OK in 106ms (Views: 104.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 16:53:24 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (23.3ms)
+Completed 200 OK in 170ms (Views: 168.3ms | ActiveRecord: 0.6ms)
+
+
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 17:25:54 -0800
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (31.4ms)
+Completed 200 OK in 586ms (Views: 557.6ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/admin/new_admin" for 127.0.0.1 at 2017-11-10 17:25:58 -0800
+Processing by AdminController#new_admin as HTML
+  Rendering admin/new_admin.html.erb within layouts/admin
+  Rendered admin/new_admin.html.erb within layouts/admin (579.3ms)
+Completed 500 Internal Server Error in 584ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_create_edit_path' for #<#<Class:0x0000562b51385e50>:0x00007fd4f4008220>
+Did you mean?  admin_create_admin_path
+               admin_make_edit_path
+               admin_confirm_edit_path):
+    1: <h1>Create Account</h1>
+    2: 
+    3: <%= form_tag admin_create_edit_path do %>
+    4:   <label for="username">Username: </label>
+    5:     <div class="field"><%= text_field_tag :username%></div>  <!--name = id -->
+    6:   <label for="first_name">First Name: </label>
+  
+app/views/admin/new_admin.html.erb:3:in `_app_views_admin_new_admin_html_erb__3254351923292785806_70276301735380'
+Started GET "/admin/new_admin" for 127.0.0.1 at 2017-11-10 17:26:22 -0800
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminController#new_admin as HTML
+  Rendering admin/new_admin.html.erb within layouts/admin
+  Rendered admin/new_admin.html.erb within layouts/admin (5.1ms)
+Completed 200 OK in 560ms (Views: 546.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/create_admin" for 127.0.0.1 at 2017-11-10 17:27:15 -0800
+Processing by AdminController#create_admin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V2en8W+et5rEswc0B562sJKAKKOB9RQPE5jKn2As3m71R+B2nddBLApwUR3Sr+p6yL+LTVjSCDBNtui/PLkMxQ==", "username"=>"boogiecousins", "first_name"=>"Demarcus", "email"=>"DMC0@gmail.com", "password"=>"[FILTERED]", "admin"=>"false", "commit"=>"Submit"}
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 9.1ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/admin_controller.rb:59:in `create_admin'
+Started POST "/admin/create_admin" for 127.0.0.1 at 2017-11-10 17:29:03 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Processing by AdminController#create_admin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V2en8W+et5rEswc0B562sJKAKKOB9RQPE5jKn2As3m71R+B2nddBLApwUR3Sr+p6yL+LTVjSCDBNtui/PLkMxQ==", "username"=>"boogiecousins", "first_name"=>"Demarcus", "email"=>"DMC0@gmail.com", "password"=>"[FILTERED]", "admin"=>"false", "commit"=>"Submit"}
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 7.3ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/admin_controller.rb:59:in `create_admin'
+Started GET "/admin/" for 127.0.0.1 at 2017-11-10 17:29:14 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (8.2ms)
+Completed 200 OK in 79ms (Views: 73.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/new_admin" for 127.0.0.1 at 2017-11-10 17:29:16 -0800
+Processing by AdminController#new_admin as HTML
+  Rendering admin/new_admin.html.erb within layouts/admin
+  Rendered admin/new_admin.html.erb within layouts/admin (3.6ms)
+Completed 200 OK in 79ms (Views: 76.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/create_admin" for 127.0.0.1 at 2017-11-10 17:29:26 -0800
+Processing by AdminController#create_admin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/olyjDf0BedHBkngcVpRFIM3JNFH5/nUN2+klR2U2+NcqTULxb3zUYnFH8mkaw3e2QiHP57A5etpQYa1QQEJSA==", "username"=>"sdasf", "first_name"=>"asfsad", "email"=>"asfsad", "password"=>"[FILTERED]", "admin"=>"false", "commit"=>"Submit"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/admin_controller.rb:59:in `create_admin'
+Started GET "/admin/" for 127.0.0.1 at 2017-11-10 17:32:38 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (51.0ms)
+Completed 200 OK in 123ms (Views: 108.8ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/admin/new_admin" for 127.0.0.1 at 2017-11-10 17:32:44 -0800
+Processing by AdminController#new_admin as HTML
+  Rendering admin/new_admin.html.erb within layouts/admin
+  Rendered admin/new_admin.html.erb within layouts/admin (1.1ms)
+Completed 200 OK in 66ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/create_admin" for 127.0.0.1 at 2017-11-10 17:32:49 -0800
+Processing by AdminController#create_admin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5RmJjkPwIwDDcFP8v4m7HTec0iJkov+xsOxTKrhBGPZHOc4JsbnVtg2zBdVquOfXbaNxzL2F447uwnEK5NTKXQ==", "username"=>"fasd", "first_name"=>"asfsad", "email"=>"asfsd", "password"=>"[FILTERED]", "admin"=>"asfsd", "commit"=>"Submit"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/admin_controller.rb:59:in `create_admin'
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Started GET "/" for 127.0.0.1 at 2017-11-10 17:36:49 -0800
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/admin/index
+Filter chain halted as :confirm_user_logged_in rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 17:36:49 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (26.7ms)
+Completed 200 OK in 531ms (Views: 502.4ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/admin/new_admin" for 127.0.0.1 at 2017-11-10 17:36:51 -0800
+Processing by AdminController#new_admin as HTML
+  Rendering admin/new_admin.html.erb within layouts/admin
+  Rendered admin/new_admin.html.erb within layouts/admin (1.7ms)
+Completed 200 OK in 121ms (Views: 119.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/create_admin" for 127.0.0.1 at 2017-11-10 17:36:58 -0800
+Processing by AdminController#create_admin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f6AaHp/kUI5NZiwqcAaJ2ny+m5bVYiz0MfBk88oJb+vdgF2Zba2mOIOlegOlN9UQJoE4eAxFMMtv3kbTlpy9QA==", "username"=>"afsad", "first_name"=>"asdasd", "email"=>"asfsad", "password"=>"[FILTERED]", "admin"=>"true", "commit"=>"Submit"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/admin_controller.rb:59:in `create_admin'
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Started GET "/admin/" for 127.0.0.1 at 2017-11-10 17:49:48 -0800
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (72.9ms)
+Completed 200 OK in 669ms (Views: 624.1ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/admin/new_admin" for 127.0.0.1 at 2017-11-10 17:49:55 -0800
+Processing by AdminController#new_admin as HTML
+  Rendering admin/new_admin.html.erb within layouts/admin
+  Rendered admin/new_admin.html.erb within layouts/admin (1.5ms)
+Completed 200 OK in 195ms (Views: 194.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/create_admin" for 127.0.0.1 at 2017-11-10 17:50:01 -0800
+Processing by AdminController#create_admin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zZRc6sxJ5ZHhkUYXNWwldnSlW5VQFgC9Y8Zzmiy5fGBvtBttPgATJy9SED7gXXm8Lpr4e4kxHII96FG6cCyuyw==", "username"=>"afasd", "first_name"=>"asdas", "email"=>"sasad", "password"=>"[FILTERED]", "admin"=>"asdsad", "commit"=>"Submit"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/admin_controller.rb:58:in `create_admin'
+Started GET "/admin" for 127.0.0.1 at 2017-11-10 17:52:01 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (99.5ms)
+Completed 200 OK in 221ms (Views: 185.9ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/admin/new_admin" for 127.0.0.1 at 2017-11-10 17:52:04 -0800
+Processing by AdminController#new_admin as HTML
+  Rendering admin/new_admin.html.erb within layouts/admin
+  Rendered admin/new_admin.html.erb within layouts/admin (2.5ms)
+Completed 200 OK in 99ms (Views: 97.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/create_admin" for 127.0.0.1 at 2017-11-10 17:52:14 -0800
+Processing by AdminController#create_admin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bkdk0oYtLZk4RreyHO4ntDiYsp68IHjvcYBPjmCMGqCkZyNVdGTbL/aF4ZvJ33t+YqcRcGUHZNAvrm2uPBnICw==", "username"=>"asfsad", "first_name"=>"assadafsad", "email"=>"asfasdsa", "password"=>"[FILTERED]", "admin"=>"asfasd", "commit"=>"Submit"}
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass):
+  
+app/controllers/admin_controller.rb:74:in `create_admin'
+Started POST "/admin/create_admin" for 127.0.0.1 at 2017-11-10 17:52:26 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Processing by AdminController#create_admin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bkdk0oYtLZk4RreyHO4ntDiYsp68IHjvcYBPjmCMGqCkZyNVdGTbL/aF4ZvJ33t+YqcRcGUHZNAvrm2uPBnICw==", "username"=>"asfsad", "first_name"=>"assadafsad", "email"=>"asfasdsa", "password"=>"[FILTERED]", "admin"=>"asfasd", "commit"=>"Submit"}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "asfsad"], ["password_digest", "$2a$10$vhYJ3F.QIbZtx5GFVbPjY.i5GF3qp6Uhhh87CU8m5ZeOT8dRpTTni"], ["email", "asfasdsa"], ["created_at", "2017-11-11 01:52:26.348897"], ["updated_at", "2017-11-11 01:52:26.348897"]]
+  [1m[35m (2.5ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 160ms (ActiveRecord: 29.9ms)
+
+
+  
+ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "name" violates not-null constraint
+DETAIL:  Failing row contains (7, asfsad, null, $2a$10$vhYJ3F.QIbZtx5GFVbPjY.i5GF3qp6Uhhh87CU8m5ZeOT8dRpTTni, asfasdsa, f, 2017-11-11 01:52:26.348897, 2017-11-11 01:52:26.348897).
+: INSERT INTO "users" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"):
+  
+app/controllers/admin_controller.rb:74:in `create_admin'
+Started GET "/admin/" for 127.0.0.1 at 2017-11-10 17:52:38 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (9.6ms)
+Completed 200 OK in 107ms (Views: 100.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/new_admin" for 127.0.0.1 at 2017-11-10 17:52:40 -0800
+Processing by AdminController#new_admin as HTML
+  Rendering admin/new_admin.html.erb within layouts/admin
+  Rendered admin/new_admin.html.erb within layouts/admin (3.8ms)
+Completed 200 OK in 138ms (Views: 136.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/create_admin" for 127.0.0.1 at 2017-11-10 17:52:46 -0800
+Processing by AdminController#create_admin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BbicSVExyOArhOBcaoeOFzUBMnqSWQ7DGf6WFC3mA5SnmNvOo3g+VuVHtnW/ttLdbz6RlEt+EvxH0LQ0cXPRPw==", "username"=>"fsad", "first_name"=>"asdsd", "email"=>"assd", "password"=>"[FILTERED]", "admin"=>"asdsa", "commit"=>"Submit"}
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "fsad"], ["password_digest", "$2a$10$QQ3kMIWNjh9xedZXWLS/4uc5zyFUCLa/tXsrSHmEnNf3JQdF/Gdlu"], ["email", "assd"], ["created_at", "2017-11-11 01:52:46.430847"], ["updated_at", "2017-11-11 01:52:46.430847"]]
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 5.3ms)
+
+
+  
+ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "name" violates not-null constraint
+DETAIL:  Failing row contains (8, fsad, null, $2a$10$QQ3kMIWNjh9xedZXWLS/4uc5zyFUCLa/tXsrSHmEnNf3JQdF/Gdlu, assd, f, 2017-11-11 01:52:46.430847, 2017-11-11 01:52:46.430847).
+: INSERT INTO "users" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"):
+  
+app/controllers/admin_controller.rb:74:in `create_admin'
+Started POST "/admin/create_admin" for 127.0.0.1 at 2017-11-10 17:53:11 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Processing by AdminController#create_admin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BbicSVExyOArhOBcaoeOFzUBMnqSWQ7DGf6WFC3mA5SnmNvOo3g+VuVHtnW/ttLdbz6RlEt+EvxH0LQ0cXPRPw==", "username"=>"fsad", "first_name"=>"asdsd", "email"=>"assd", "password"=>"[FILTERED]", "admin"=>"asdsa", "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "fsad"], ["name", "asdsd"], ["password_digest", "$2a$10$Y.qhXh/mpv21Qtw5ybDvqOVYPdK3r3XjfERRMnCAVRKA5QdRz7L7m"], ["email", "assd"], ["created_at", "2017-11-11 01:53:11.784641"], ["updated_at", "2017-11-11 01:53:11.784641"]]
+  [1m[35m (12.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering admin/create_admin.html.erb within layouts/admin
+  Rendered admin/create_admin.html.erb within layouts/admin (0.6ms)
+Completed 200 OK in 268ms (Views: 118.6ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/admin/new_admin" for 127.0.0.1 at 2017-11-10 17:53:14 -0800
+Processing by AdminController#new_admin as HTML
+  Rendering admin/new_admin.html.erb within layouts/admin
+  Rendered admin/new_admin.html.erb within layouts/admin (10.0ms)
+Completed 200 OK in 102ms (Views: 99.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/create_admin" for 127.0.0.1 at 2017-11-10 17:53:25 -0800
+Processing by AdminController#create_admin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cOkG2dukQfBqaQaYcwtmzJubIvKnwxd5DH5Te7818vbSyUFeKe23RqSqULGmOjoGwaSBHH7kC0ZSUHFb46AgXQ==", "username"=>"asfd", "first_name"=>"assad", "email"=>"asdsad", "password"=>"[FILTERED]", "admin"=>"asdsa", "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "asfd"], ["name", "assad"], ["password_digest", "$2a$10$bqItFkxwk4NYsOoSzCTNru4HqoVtuUGMQlsjf8.R0shHnT2Z0v.R2"], ["email", "asdsad"], ["created_at", "2017-11-11 01:53:25.191077"], ["updated_at", "2017-11-11 01:53:25.191077"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering admin/create_admin.html.erb within layouts/admin
+  Rendered admin/create_admin.html.erb within layouts/admin (0.6ms)
+Completed 200 OK in 200ms (Views: 101.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:03:50 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/vinsonly/CMPT276/276-project/app/controllers/admin_controller.rb:138: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/admin_controller.rb:138: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:04:00 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (22.6ms)
+Completed 200 OK in 379ms (Views: 370.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/admin/new_admin" for 127.0.0.1 at 2017-11-10 18:04:04 -0800
+Processing by AdminController#new_admin as HTML
+  Rendering admin/new_admin.html.erb within layouts/admin
+  Rendered admin/new_admin.html.erb within layouts/admin (1.9ms)
+Completed 200 OK in 130ms (Views: 129.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/create_admin" for 127.0.0.1 at 2017-11-10 18:04:13 -0800
+Processing by AdminController#create_admin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AUHOBzMSZEmV4v0+yxE1jj9iyu9+aZXgr83h042KRsejYYmAwVuS/1shqxceIGlEZV1pAadOid/x48Pz0R+UbA==", "username"=>"asfsad", "first_name"=>"asasfsd", "email"=>"asdasd", "password"=>"[FILTERED]", "admin"=>"asdsad", "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "asfsad"], ["name", "asasfsd"], ["password_digest", "$2a$10$ybfr8E2DXFe2nlYq4oxI8Ol2icybrrhQppT.zk/v9dykyZBMp5AXm"], ["email", "asdasd"], ["created_at", "2017-11-11 02:04:13.850455"], ["updated_at", "2017-11-11 02:04:13.850455"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 71ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:04:13 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (12.8ms)
+Completed 200 OK in 137ms (Views: 133.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/delete?admin=false&created_at=2017-11-11+01%3A53%3A11+UTC&email=assd&first_name=asdsd&updated_at=2017-11-11+01%3A53%3A11+UTC&user_id=9&username=fsad" for 127.0.0.1 at 2017-11-10 18:04:19 -0800
+Processing by AdminController#delete as HTML
+  Parameters: {"admin"=>"false", "created_at"=>"2017-11-11 01:53:11 UTC", "email"=>"assd", "first_name"=>"asdsd", "updated_at"=>"2017-11-11 01:53:11 UTC", "user_id"=>"9", "username"=>"fsad"}
+  Rendering admin/delete.html.erb within layouts/admin
+  Rendered admin/delete.html.erb within layouts/admin (1.5ms)
+Completed 200 OK in 71ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/destroy" for 127.0.0.1 at 2017-11-10 18:04:25 -0800
+Processing by AdminController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bv1nq5jEolQrTwqG9k1IACfUkrvg8HRoZEIJBzXiYVnM3SAsao1U4uWMXK8jfBTKfesxVTnXaFc6bCsnaXez8g==", "confirm"=>"fsad", "user_id"=>"9", "commit"=>"Delete"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/index?message=%5BUser+ID%3A9%5D+deleted.
+Completed 302 Found in 17ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/admin/index?message=%5BUser+ID%3A9%5D+deleted." for 127.0.0.1 at 2017-11-10 18:04:25 -0800
+Processing by AdminController#index as HTML
+  Parameters: {"message"=>"[User ID:9] deleted."}
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (11.6ms)
+Completed 200 OK in 90ms (Views: 86.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/delete?admin=false&created_at=2017-11-11+01%3A53%3A25+UTC&email=asdsad&first_name=assad&updated_at=2017-11-11+01%3A53%3A25+UTC&user_id=10&username=asfd" for 127.0.0.1 at 2017-11-10 18:04:28 -0800
+Processing by AdminController#delete as HTML
+  Parameters: {"admin"=>"false", "created_at"=>"2017-11-11 01:53:25 UTC", "email"=>"asdsad", "first_name"=>"assad", "updated_at"=>"2017-11-11 01:53:25 UTC", "user_id"=>"10", "username"=>"asfd"}
+  Rendering admin/delete.html.erb within layouts/admin
+  Rendered admin/delete.html.erb within layouts/admin (1.3ms)
+Completed 200 OK in 60ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/destroy" for 127.0.0.1 at 2017-11-10 18:04:33 -0800
+Processing by AdminController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hsm//fE7YsP7f/NJ+5hufhixwUrR5V1bW8NDu9VTPhgk6fh6A3KUdTW8pWAuqTK0Qo5ipAjCQWQF7WGbicbssw==", "confirm"=>"asfd", "user_id"=>"10", "commit"=>"Delete"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/index?message=%5BUser+ID%3A10%5D+deleted.
+Completed 302 Found in 10ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/index?message=%5BUser+ID%3A10%5D+deleted." for 127.0.0.1 at 2017-11-10 18:04:33 -0800
+Processing by AdminController#index as HTML
+  Parameters: {"message"=>"[User ID:10] deleted."}
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (6.8ms)
+Completed 200 OK in 85ms (Views: 82.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/delete?admin=false&created_at=2017-11-11+02%3A04%3A13+UTC&email=asdasd&first_name=asasfsd&updated_at=2017-11-11+02%3A04%3A13+UTC&user_id=11&username=asfsad" for 127.0.0.1 at 2017-11-10 18:04:36 -0800
+Processing by AdminController#delete as HTML
+  Parameters: {"admin"=>"false", "created_at"=>"2017-11-11 02:04:13 UTC", "email"=>"asdasd", "first_name"=>"asasfsd", "updated_at"=>"2017-11-11 02:04:13 UTC", "user_id"=>"11", "username"=>"asfsad"}
+  Rendering admin/delete.html.erb within layouts/admin
+  Rendered admin/delete.html.erb within layouts/admin (1.4ms)
+Completed 200 OK in 66ms (Views: 64.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/destroy" for 127.0.0.1 at 2017-11-10 18:04:45 -0800
+Processing by AdminController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IJfpy8gY3p1MzXi59ezWrDeDsLduG9wUz6+iHGl58YmCt65MOlEoK4IOLpAg3YpmbbwTWbc8wCuRgYA8NewjIg==", "confirm"=>"asfsad", "user_id"=>"11", "commit"=>"Delete"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 11]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/index?message=%5BUser+ID%3A11%5D+deleted.
+Completed 302 Found in 12ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/admin/index?message=%5BUser+ID%3A11%5D+deleted." for 127.0.0.1 at 2017-11-10 18:04:45 -0800
+Processing by AdminController#index as HTML
+  Parameters: {"message"=>"[User ID:11] deleted."}
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (8.1ms)
+Completed 200 OK in 92ms (Views: 84.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/new_admin" for 127.0.0.1 at 2017-11-10 18:04:58 -0800
+Processing by AdminController#new_admin as HTML
+  Rendering admin/new_admin.html.erb within layouts/admin
+  Rendered admin/new_admin.html.erb within layouts/admin (1.7ms)
+Completed 200 OK in 74ms (Views: 72.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:05:04 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (6.4ms)
+Completed 200 OK in 81ms (Views: 78.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/edit?admin=true&created_at=2017-11-09+06%3A04%3A39+UTC&email=admintest%40gmail.com&first_name=admintest&updated_at=2017-11-09+06%3A05%3A20+UTC&user_id=1&username=admintest" for 127.0.0.1 at 2017-11-10 18:05:06 -0800
+Processing by AdminController#edit as HTML
+  Parameters: {"admin"=>"true", "created_at"=>"2017-11-09 06:04:39 UTC", "email"=>"admintest@gmail.com", "first_name"=>"admintest", "updated_at"=>"2017-11-09 06:05:20 UTC", "user_id"=>"1", "username"=>"admintest"}
+  Rendering admin/edit.html.erb within layouts/admin
+  Rendered admin/edit.html.erb within layouts/admin (1.9ms)
+Completed 200 OK in 129ms (Views: 127.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:05:09 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (15.0ms)
+Completed 200 OK in 103ms (Views: 101.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/new_admin" for 127.0.0.1 at 2017-11-10 18:05:09 -0800
+Processing by AdminController#new_admin as HTML
+  Rendering admin/new_admin.html.erb within layouts/admin
+  Rendered admin/new_admin.html.erb within layouts/admin (2.7ms)
+Completed 200 OK in 98ms (Views: 96.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:05:10 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (11.1ms)
+Completed 200 OK in 154ms (Views: 150.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:05:33 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (32.6ms)
+Completed 200 OK in 99ms (Views: 85.1ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/admin/new_admin" for 127.0.0.1 at 2017-11-10 18:05:35 -0800
+Processing by AdminController#new_admin as HTML
+  Rendering admin/new_admin.html.erb within layouts/admin
+  Rendered admin/new_admin.html.erb within layouts/admin (1.7ms)
+Completed 200 OK in 61ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:05:39 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (10.4ms)
+Completed 200 OK in 105ms (Views: 102.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:07:59 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (20.9ms)
+Completed 200 OK in 83ms (Views: 70.8ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/admin/new_admin" for 127.0.0.1 at 2017-11-10 18:08:00 -0800
+  
+AbstractController::ActionNotFound (The action 'new_admin' could not be found for AdminController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/admin/" for 127.0.0.1 at 2017-11-10 18:08:38 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (28.2ms)
+Completed 200 OK in 100ms (Views: 85.5ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 18:08:40 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (453.7ms)
+Completed 500 Internal Server Error in 464ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_create_admin_path' for #<#<Class:0x00007f10e97d5360>:0x00007f10e80783e8>
+Did you mean?  admin_create_user_path):
+    1: <h1>Create Account</h1>
+    2: 
+    3: <%= form_tag admin_create_admin_path do %>
+    4:   <label for="username">Username: </label>
+    5:     <div class="field"><%= text_field_tag :username%></div>  <!--name = id -->
+    6:   <label for="first_name">First Name: </label>
+  
+app/views/admin/new_user.html.erb:3:in `_app_views_admin_new_user_html_erb___4128475198322242476_69855294513060'
+Started GET "/admin/" for 127.0.0.1 at 2017-11-10 18:09:11 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (4.6ms)
+Completed 200 OK in 57ms (Views: 55.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 18:09:12 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (1.4ms)
+Completed 200 OK in 62ms (Views: 60.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/create_user" for 127.0.0.1 at 2017-11-10 18:09:20 -0800
+Processing by AdminController#create_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"it8Qk8i0lH5BcxGIVuK8Snr+d3eUlJWJjrictvp1baoo/1cUOv1iyI+wR6GD0+CAIMHUmU2zibbQlr6WpuC/AQ==", "username"=>"adasd", "first_name"=>"asdasd", "email"=>"asdasd", "password"=>"[FILTERED]", "admin"=>"asdsad", "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "adasd"], ["name", "asdasd"], ["password_digest", "$2a$10$qtlgsCgCPL6JrMwPuyidY.4XRKBpzn792YoSomzf.hexPQer87cT."], ["email", "asdasd"], ["created_at", "2017-11-11 02:09:20.243485"], ["updated_at", "2017-11-11 02:09:20.243485"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 78ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:09:20 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (10.6ms)
+Completed 200 OK in 96ms (Views: 92.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/edit?admin=false&created_at=2017-11-11+02%3A09%3A20+UTC&email=asdasd&first_name=asdasd&updated_at=2017-11-11+02%3A09%3A20+UTC&user_id=12&username=adasd" for 127.0.0.1 at 2017-11-10 18:09:29 -0800
+Processing by AdminController#edit as HTML
+  Parameters: {"admin"=>"false", "created_at"=>"2017-11-11 02:09:20 UTC", "email"=>"asdasd", "first_name"=>"asdasd", "updated_at"=>"2017-11-11 02:09:20 UTC", "user_id"=>"12", "username"=>"adasd"}
+  Rendering admin/edit.html.erb within layouts/admin
+  Rendered admin/edit.html.erb within layouts/admin (1.5ms)
+Completed 200 OK in 57ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/confirm_edit" for 127.0.0.1 at 2017-11-10 18:09:37 -0800
+Processing by AdminController#confirm_edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DXmCXsEV14tVvXMZOoY35W/irf2153Zz+NbW3dIA8R2vWcXZM1whPZt+JTDvt2svNd0OE2zAakym+PT9jpUjtg==", "user_id"=>"12", "username_old"=>"adasd", "first_name_old"=>"asdasd", "email_old"=>"asdasd", "admin_old"=>"false", "username"=>"adasd", "first_name"=>"asdasd", "email"=>"asdasd", "admin"=>"false", "commit"=>"Submit"}
+  Rendering admin/confirm_edit.html.erb within layouts/admin
+  Rendered admin/confirm_edit.html.erb within layouts/admin (2.5ms)
+Completed 200 OK in 67ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/make_edit" for 127.0.0.1 at 2017-11-10 18:09:40 -0800
+Processing by AdminController#make_edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NOavkDvuXFrUZTkBXA4FnQjd825ELGPq9ZnOcYpSjoGWxugXyaeq7BqmbyiJP1lXUuJQgJ0Lf9Wrt+xR1sdcKg==", "user_id"=>"12", "username_old"=>"adasd", "first_name_old"=>"asdasd", "email_old"=>"asdasd", "admin_old"=>"false", "username"=>"adasd", "first_name"=>"asdasd", "email"=>"asdasd", "admin"=>"false", "commit"=>"Make Edits"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "users" SET "admin" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["admin", "t"], ["updated_at", "2017-11-11 02:09:40.581131"], ["id", 12]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 24ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:09:40 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (7.8ms)
+Completed 200 OK in 80ms (Views: 78.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/delete?admin=true&created_at=2017-11-11+02%3A09%3A20+UTC&email=asdasd&first_name=asdasd&updated_at=2017-11-11+02%3A09%3A40+UTC&user_id=12&username=adasd" for 127.0.0.1 at 2017-11-10 18:09:48 -0800
+Processing by AdminController#delete as HTML
+  Parameters: {"admin"=>"true", "created_at"=>"2017-11-11 02:09:20 UTC", "email"=>"asdasd", "first_name"=>"asdasd", "updated_at"=>"2017-11-11 02:09:40 UTC", "user_id"=>"12", "username"=>"adasd"}
+  Rendering admin/delete.html.erb within layouts/admin
+  Rendered admin/delete.html.erb within layouts/admin (3.5ms)
+Completed 200 OK in 68ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/destroy" for 127.0.0.1 at 2017-11-10 18:10:02 -0800
+Processing by AdminController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+Eeduu8E9XfUpz9ipRq7slK06yAVfjHQCpT/SWynziFaZ9o9HU0DwRpkaUtwK+d4CItIzsxZLe9Uut1pMDIcig==", "confirm"=>"adasd", "user_id"=>"12", "commit"=>"Delete"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/index?message=%5BUser+ID%3A12%5D+deleted.
+Completed 302 Found in 10ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/index?message=%5BUser+ID%3A12%5D+deleted." for 127.0.0.1 at 2017-11-10 18:10:02 -0800
+Processing by AdminController#index as HTML
+  Parameters: {"message"=>"[User ID:12] deleted."}
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (7.0ms)
+Completed 200 OK in 78ms (Views: 75.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/index?message=%5BUser+ID%3A12%5D+deleted." for 127.0.0.1 at 2017-11-10 18:10:27 -0800
+Processing by AdminController#index as HTML
+  Parameters: {"message"=>"[User ID:12] deleted."}
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (18.7ms)
+Completed 200 OK in 72ms (Views: 70.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:10:36 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (11.2ms)
+Completed 200 OK in 81ms (Views: 77.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 18:10:52 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (1.4ms)
+Completed 200 OK in 92ms (Views: 90.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:11:00 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (41.1ms)
+Completed 200 OK in 109ms (Views: 105.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 18:11:02 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (1.9ms)
+Completed 200 OK in 71ms (Views: 69.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/create_user" for 127.0.0.1 at 2017-11-10 18:11:52 -0800
+Processing by AdminController#create_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9w8ueVdWjOIZcepK1jAd8d35mQgMN6OXNlgYY+TPu+pVL2n+pR96VNeyvGMDAUE7h8Y65tUQv6hodjpDuFppQQ==", "username"=>"KDTrey5", "first_name"=>"Kevin", "email"=>"kd35@gmail.com", "password"=>"[FILTERED]", "admin"=>"false", "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "KDTrey5"], ["name", "Kevin"], ["password_digest", "$2a$10$/bGXPnjW.JfJu0hzpHBmHuk6wo4.oONKV2NcDHpDWPfXnu0IPPfGe"], ["email", "kd35@gmail.com"], ["created_at", "2017-11-11 02:11:52.462101"], ["updated_at", "2017-11-11 02:11:52.462101"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 66ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:11:52 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (19.4ms)
+Completed 200 OK in 154ms (Views: 148.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-10 18:11:56 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-10 18:11:56 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 72ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-10 18:12:01 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I8fJ9zPlnJTzo4gznYefB/XzIpZYjJU9mZ+UlDL4MvSdBqg0uoSPttUKAC5U7kKVKShGnSRd59viUcWCthJG7A==", "username"=>"KDTrey5", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "KDTrey5"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 63ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-10 18:12:01 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (1.0ms)
+Completed 200 OK in 80ms (Views: 73.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-10 18:12:03 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-10 18:12:03 -0800
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 74ms (Views: 72.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-10 18:12:06 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tdhd7cha7MePeNIJGnl86zvwkYqpPx87SeMMPFSUWQ9QRuzDw95FCFXwLyepRrObRl+SAdsa8KneWqEABP1ANA==", "username"=>"admintest", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "admintest"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 77ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:12:06 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (8.3ms)
+Completed 200 OK in 93ms (Views: 89.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:12:33 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (4.9ms)
+Completed 200 OK in 71ms (Views: 68.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 18:12:36 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (1.2ms)
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 18:14:01 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (1.7ms)
+Completed 200 OK in 88ms (Views: 87.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/create_user" for 127.0.0.1 at 2017-11-10 18:17:38 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Processing by AdminController#create_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DN5AmK0ZpTD+UryFzreCYlYILJWGzu6S7jsdX0EK+wERQPG2pp0M/yTaQat9iE0SK6cvHvTrAQB5grBjEWPiOg==", "username"=>"boogiecousins", "first_name"=>"Demarcus", "email"=>"DMC0@gmail.com", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "admin"=>"no", "commit"=>"Submit"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "boogiecousins"], ["name", "Demarcus"], ["password_digest", "$2a$10$jXb9YoNMrEp2LmWskAmOs.m2dBzVhqCUAElLel6csDjmJHjdR6Zge"], ["email", "DMC0@gmail.com"], ["created_at", "2017-11-11 02:17:38.799789"], ["updated_at", "2017-11-11 02:17:38.799789"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 118ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:17:38 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (9.8ms)
+Completed 200 OK in 71ms (Views: 69.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 18:17:49 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (1.5ms)
+Completed 200 OK in 96ms (Views: 94.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/create_user" for 127.0.0.1 at 2017-11-10 18:17:59 -0800
+Processing by AdminController#create_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mc/kiO7oYd9mZoZljDvkxKapAHxNeXCR9cADE0JrRb+EUVWm5WzIELzue0s/BCu02wYD9z9cnwNiea4vEgJchA==", "username"=>"asdasf", "first_name"=>"asdsad", "email"=>"asdsad", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "admin"=>"asdsd", "commit"=>"Submit"}
+Redirected to http://localhost:3000/admin/new_user
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "asdasf"], ["name", "asdsad"], ["password_digest", "$2a$10$M1FyP8lodt4Jh2ExcywduuQw4BzhRyKGmCutP5Mg.usk3Ymyjb3TS"], ["email", "asdsad"], ["created_at", "2017-11-11 02:17:59.326695"], ["updated_at", "2017-11-11 02:17:59.326695"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to 
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 2.2ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/admin_controller.rb:81:in `create_user'
+Started POST "/admin/create_user" for 127.0.0.1 at 2017-11-10 18:18:58 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Processing by AdminController#create_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mc/kiO7oYd9mZoZljDvkxKapAHxNeXCR9cADE0JrRb+EUVWm5WzIELzue0s/BCu02wYD9z9cnwNiea4vEgJchA==", "username"=>"asdasf", "first_name"=>"asdsad", "email"=>"asdsad", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "admin"=>"asdsd", "commit"=>"Submit"}
+Redirected to http://localhost:3000/admin/new_user
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 18:18:58 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.9ms)
+Completed 200 OK in 93ms (Views: 88.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:19:14 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (40.4ms)
+Completed 200 OK in 124ms (Views: 106.5ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 18:19:17 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.8ms)
+Completed 200 OK in 71ms (Views: 69.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/create_user" for 127.0.0.1 at 2017-11-10 18:19:26 -0800
+Processing by AdminController#create_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"djFvP7DC09jBoPuzR5WY8+PGtEvq+2JEzVNRTRZsVU1rr94Ru0Z6FxsoBp30qleDnmm3wJjejdZa6vxxRgVMdg==", "username"=>"asdasd", "first_name"=>"asfsad", "email"=>"asdsd", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "admin"=>"asdds", "commit"=>"Submit"}
+Redirected to http://localhost:3000/admin/new_user
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 18:19:26 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (1.9ms)
+Completed 200 OK in 83ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/create_user" for 127.0.0.1 at 2017-11-10 18:20:24 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Processing by AdminController#create_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zZoCINDskhlUfOuIfctQZ2NJEg8cL7MNfkRsTVwnU0/QBLMO22g71o70FqbO9J8XHuYRhG4KXJ/p/cFxDE5KdA==", "username"=>"asfsad", "first_name"=>"asdsd", "email"=>"asdsad", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "admin"=>"asdsd", "commit"=>"Submit"}
+Redirected to http://localhost:3000/admin/new_user
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 18:20:25 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (1.9ms)
+Completed 200 OK in 81ms (Views: 78.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 18:22:31 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.8ms)
+Completed 200 OK in 108ms (Views: 105.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 18:27:49 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (3.1ms)
+Completed 200 OK in 109ms (Views: 94.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:27:52 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (47.4ms)
+Completed 200 OK in 113ms (Views: 98.8ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 18:27:53 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (3.7ms)
+Completed 200 OK in 62ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:36:24 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (35.6ms)
+Completed 200 OK in 132ms (Views: 113.8ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 18:36:26 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (1.8ms)
+Completed 200 OK in 94ms (Views: 92.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/create_user" for 127.0.0.1 at 2017-11-10 18:36:33 -0800
+Processing by AdminController#create_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1vX7N7TyHueTFnrLaQc1nz/VZrBzjj9lMA5ZBjmEv6rLa0oZv3a3KEmeh+XaOPrvQnplOwGr0Pent/Q6ae2mkQ==", "username"=>"asdsa", "first_name"=>"asdsa", "email"=>"asdasd", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "admin"=>"asd", "commit"=>"Submit"}
+Redirected to http://localhost:3000/admin/new_user?message=Error%21+Passwords+do+not+match.
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user?message=Error%21+Passwords+do+not+match." for 127.0.0.1 at 2017-11-10 18:36:33 -0800
+Processing by AdminController#new_user as HTML
+  Parameters: {"message"=>"Error! Passwords do not match."}
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.2ms)
+Completed 200 OK in 91ms (Views: 86.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:39:00 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:38)
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (39.9ms)
+Completed 200 OK in 118ms (Views: 99.0ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 18:39:01 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (1.4ms)
+Completed 200 OK in 96ms (Views: 94.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 18:39:19 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.4ms)
+Completed 200 OK in 77ms (Views: 74.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:39:46 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (16.4ms)
+Completed 200 OK in 109ms (Views: 106.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 18:39:47 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.6ms)
+Completed 200 OK in 64ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/create_user" for 127.0.0.1 at 2017-11-10 18:39:58 -0800
+Processing by AdminController#create_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t9asduAi9g8/iQdMXr/cVaIxo0n1jzdyZqPbXHa8eGuqSB1Y66ZfwOUB+mLtgBMl356gwoeq2ODxGnZgJtVhUA==", "username"=>"sadasad", "first_name"=>"asdsad", "email"=>"asdsad", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "admin"=>"asdasd", "commit"=>"Submit"}
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "name", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "sadasad"], ["name", "asdsad"], ["password_digest", "$2a$10$uwnknBIfVE6U5B3.sqpef.ML3l0QotdwQc/rWUFoKXB5pao6oo7Gm"], ["email", "asdsad"], ["created_at", "2017-11-11 02:39:58.428331"], ["updated_at", "2017-11-11 02:39:58.428331"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 85ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:39:58 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (17.0ms)
+Completed 200 OK in 113ms (Views: 107.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/delete?admin=false&created_at=2017-11-11+02%3A39%3A58+UTC&email=asdsad&first_name=asdsad&updated_at=2017-11-11+02%3A39%3A58+UTC&user_id=16&username=sadasad" for 127.0.0.1 at 2017-11-10 18:40:03 -0800
+Processing by AdminController#delete as HTML
+  Parameters: {"admin"=>"false", "created_at"=>"2017-11-11 02:39:58 UTC", "email"=>"asdsad", "first_name"=>"asdsad", "updated_at"=>"2017-11-11 02:39:58 UTC", "user_id"=>"16", "username"=>"sadasad"}
+  Rendering admin/delete.html.erb within layouts/admin
+  Rendered admin/delete.html.erb within layouts/admin (3.1ms)
+Completed 200 OK in 100ms (Views: 97.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/destroy" for 127.0.0.1 at 2017-11-10 18:40:10 -0800
+Processing by AdminController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ejm9t9JcbbMf+Wpoyi9+RlmMtmtZtGxOl3SeniNetwdnpwyZ2djEfMVxl0Z5ELE2JCO14CuRg9wAzTOiczeuPA==", "confirm"=>"sadasad", "user_id"=>"16", "commit"=>"Delete"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 16]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/index?message=%5BUser+ID%3A16%5D+deleted.
+Completed 302 Found in 18ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/admin/index?message=%5BUser+ID%3A16%5D+deleted." for 127.0.0.1 at 2017-11-10 18:40:10 -0800
+Processing by AdminController#index as HTML
+  Parameters: {"message"=>"[User ID:16] deleted."}
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (12.4ms)
+Completed 200 OK in 86ms (Views: 82.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/delete?admin=false&created_at=2017-11-11+02%3A17%3A59+UTC&email=asdsad&first_name=asdsad&updated_at=2017-11-11+02%3A17%3A59+UTC&user_id=15&username=asdasf" for 127.0.0.1 at 2017-11-10 18:40:12 -0800
+Processing by AdminController#delete as HTML
+  Parameters: {"admin"=>"false", "created_at"=>"2017-11-11 02:17:59 UTC", "email"=>"asdsad", "first_name"=>"asdsad", "updated_at"=>"2017-11-11 02:17:59 UTC", "user_id"=>"15", "username"=>"asdasf"}
+  Rendering admin/delete.html.erb within layouts/admin
+  Rendered admin/delete.html.erb within layouts/admin (1.3ms)
+Completed 200 OK in 66ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/destroy" for 127.0.0.1 at 2017-11-10 18:40:22 -0800
+Processing by AdminController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RmUshZiv1CrNWSYkdvOU/lXuIz2ViqLJcMFq82cG8TNb+52rkyt95RfR2wrFzFuOKEEgtuevTVvneMfPN2/oCA==", "confirm"=>"asdasf", "user_id"=>"15", "commit"=>"Delete"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 15]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/index?message=%5BUser+ID%3A15%5D+deleted.
+Completed 302 Found in 10ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/index?message=%5BUser+ID%3A15%5D+deleted." for 127.0.0.1 at 2017-11-10 18:40:22 -0800
+Processing by AdminController#index as HTML
+  Parameters: {"message"=>"[User ID:15] deleted."}
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (8.1ms)
+Completed 200 OK in 82ms (Views: 79.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 18:40:25 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (1.7ms)
+Completed 200 OK in 86ms (Views: 84.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:40:28 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (12.3ms)
+Completed 200 OK in 98ms (Views: 95.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 18:57:35 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (13.5ms)
+Completed 200 OK in 93ms (Views: 88.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 18:57:37 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (8.8ms)
+Completed 200 OK in 76ms (Views: 73.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 19:00:05 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (3.6ms)
+Completed 200 OK in 72ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 19:00:25 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (4.9ms)
+Completed 200 OK in 78ms (Views: 76.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 19:00:31 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (3.9ms)
+Completed 200 OK in 98ms (Views: 94.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 19:00:50 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.0ms)
+Completed 200 OK in 70ms (Views: 68.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 19:09:03 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (4.9ms)
+Completed 200 OK in 75ms (Views: 72.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 19:11:37 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (1.9ms)
+Completed 200 OK in 66ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 19:11:54 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (3.2ms)
+Completed 200 OK in 65ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 19:12:33 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (3.0ms)
+Completed 200 OK in 78ms (Views: 70.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 19:13:37 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (4.7ms)
+Completed 200 OK in 99ms (Views: 97.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 19:13:50 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.9ms)
+Completed 200 OK in 69ms (Views: 66.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 22:44:41 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (6.3ms)
+Completed 200 OK in 111ms (Views: 106.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 22:44:58 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (4.3ms)
+Completed 200 OK in 88ms (Views: 86.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 22:45:07 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.5ms)
+Completed 200 OK in 80ms (Views: 76.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 22:45:22 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (5.0ms)
+Completed 200 OK in 111ms (Views: 107.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 22:45:35 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.7ms)
+Completed 200 OK in 69ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 22:45:55 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.9ms)
+Completed 200 OK in 68ms (Views: 64.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 22:46:05 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.4ms)
+Completed 200 OK in 73ms (Views: 70.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 22:46:34 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (4.8ms)
+Completed 200 OK in 89ms (Views: 84.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 22:46:58 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.4ms)
+Completed 200 OK in 68ms (Views: 65.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 22:49:11 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (5.0ms)
+Completed 200 OK in 82ms (Views: 79.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 22:49:33 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (9.3ms)
+Completed 200 OK in 104ms (Views: 100.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 22:59:37 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (3.3ms)
+Completed 200 OK in 92ms (Views: 89.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 22:59:47 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.5ms)
+Completed 200 OK in 67ms (Views: 62.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 23:03:04 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.9ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb___1843800091815974549_69855500792240 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_admin_html_erb___1843800091815974549_69855500792240 at /home/vinsonly/CMPT276/276-project/app/views/layouts/admin.html.erb:7)
+Completed 200 OK in 2280ms (Views: 2277.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-02439e9404fd9b5302392dc9b58a8844e08f3f95640429081744817787cb5c11.css?body=1" for 127.0.0.1 at 2017-11-10 23:03:06 -0800
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 23:03:48 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (1.9ms)
+Completed 200 OK in 75ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 23:04:08 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.7ms)
+Completed 200 OK in 84ms (Views: 82.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 23:04:30 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (4.4ms)
+Completed 200 OK in 75ms (Views: 73.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 23:04:45 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (4.7ms)
+Completed 200 OK in 68ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:05:08 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (18.9ms)
+Completed 200 OK in 160ms (Views: 153.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 23:05:09 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (3.5ms)
+Completed 200 OK in 115ms (Views: 113.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:05:12 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (11.0ms)
+Completed 200 OK in 135ms (Views: 132.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 23:05:12 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.4ms)
+Completed 200 OK in 73ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:05:15 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (5.4ms)
+Completed 200 OK in 91ms (Views: 88.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 23:05:16 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (1.7ms)
+Completed 200 OK in 58ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:05:17 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (7.8ms)
+Completed 200 OK in 114ms (Views: 112.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/edit?admin=false&created_at=2017-11-09+22%3A50%3A19+UTC&email=vinsonl%40sfu.ca&first_name=Vinson&updated_at=2017-11-09+22%3A50%3A19+UTC&user_id=6&username=vinsonly" for 127.0.0.1 at 2017-11-10 23:05:18 -0800
+Processing by AdminController#edit as HTML
+  Parameters: {"admin"=>"false", "created_at"=>"2017-11-09 22:50:19 UTC", "email"=>"vinsonl@sfu.ca", "first_name"=>"Vinson", "updated_at"=>"2017-11-09 22:50:19 UTC", "user_id"=>"6", "username"=>"vinsonly"}
+  Rendering admin/edit.html.erb within layouts/admin
+  Rendered admin/edit.html.erb within layouts/admin (2.2ms)
+Completed 200 OK in 70ms (Views: 67.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:05:21 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (20.3ms)
+Completed 200 OK in 110ms (Views: 107.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2017-11-10 23:06:24 -0800
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/admin
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered admin/index.html.erb within layouts/admin (10.3ms)
+Completed 200 OK in 89ms (Views: 87.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 23:06:25 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.3ms)
+Completed 200 OK in 98ms (Views: 96.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/edit?admin=false&created_at=2017-11-09+22%3A50%3A19+UTC&email=vinsonl%40sfu.ca&first_name=Vinson&updated_at=2017-11-09+22%3A50%3A19+UTC&user_id=6&username=vinsonly" for 127.0.0.1 at 2017-11-10 23:06:28 -0800
+Processing by AdminController#edit as HTML
+  Parameters: {"admin"=>"false", "created_at"=>"2017-11-09 22:50:19 UTC", "email"=>"vinsonl@sfu.ca", "first_name"=>"Vinson", "updated_at"=>"2017-11-09 22:50:19 UTC", "user_id"=>"6", "username"=>"vinsonly"}
+  Rendering admin/edit.html.erb within layouts/admin
+  Rendered admin/edit.html.erb within layouts/admin (1.6ms)
+Completed 200 OK in 67ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/delete?admin=false&created_at=2017-11-11+02%3A11%3A52+UTC&email=kd35%40gmail.com&first_name=Kevin&updated_at=2017-11-11+02%3A11%3A52+UTC&user_id=13&username=KDTrey5" for 127.0.0.1 at 2017-11-10 23:06:31 -0800
+Processing by AdminController#delete as HTML
+  Parameters: {"admin"=>"false", "created_at"=>"2017-11-11 02:11:52 UTC", "email"=>"kd35@gmail.com", "first_name"=>"Kevin", "updated_at"=>"2017-11-11 02:11:52 UTC", "user_id"=>"13", "username"=>"KDTrey5"}
+  Rendering admin/delete.html.erb within layouts/admin
+  Rendered admin/delete.html.erb within layouts/admin (2.4ms)
+Completed 200 OK in 99ms (Views: 96.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/new_user" for 127.0.0.1 at 2017-11-10 23:06:34 -0800
+Processing by AdminController#new_user as HTML
+  Rendering admin/new_user.html.erb within layouts/admin
+  Rendered admin/new_user.html.erb within layouts/admin (2.5ms)
+Completed 200 OK in 92ms (Views: 90.3ms | ActiveRecord: 0.0ms)
+
+

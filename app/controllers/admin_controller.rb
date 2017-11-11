@@ -51,10 +51,39 @@ class AdminController < ApplicationController
     end
   end
 
-  def new_admin #the new admin page
+  def new_user #the new admin page
+    @message = params[:message]
   end
 
-  def create_admin #creates a new admin and posts to databse
+  def create_user #creates a new admin and posts to databse
+    @username = params[:username]
+    @name = params[:first_name]
+    @password = params[:password]
+    @confirm_password = params[:confirm_password]
+    @email = params[:email]
+    @admin = params[:admin]
+
+    if(@password != @confirm_password)
+      @message = "Error! Passwords do not match."
+      redirect_to :action => "new_user", :message => @message and return
+    end
+
+    newUser = User.new()
+    newUser.username = @username
+    newUser.name = @name
+    newUser.password = @password
+    newUser.email = @email
+    if (@admin == "true")
+      newUser.admin = true
+    else
+      newUser.admin = false
+    end
+    if(newUser.save == true)
+      redirect_to({action: "index"}) and return
+    else
+      @message = "Please revise user fields"
+      redirect_to :action => "new_user", :message => @message and return
+    end
   end
 
   def edit #the edit page

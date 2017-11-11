@@ -23,8 +23,8 @@ Rails.application.routes.draw do
 
   get "admin/index" => "admin#index"
   get "admin/show" => "admin#show"
-  get "admin/new_admin" => "admin#new_admin"
-  post "admin/create_admin" => "admin#create_admin"
+  get "admin/new_user" => "admin#new_user"
+  post "admin/create_user" => "admin#create_user"
   get "admin/delete" => "admin#delete"
   post "admin/destroy" => "admin#destroy"
   get "admin/edit" => "admin#edit"
