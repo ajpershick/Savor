@@ -7,7 +7,6 @@
       <th>Updated At</th>
       <th>Username</th>
       <th>Name</th>
-      <th>Hashed Password </th>
       <th>Email</th>
       <th>isAdmin</th>
       <th colspan="2">Operations</th>
@@ -21,7 +20,6 @@
           <td><%= user.updated_at %></td>
           <td><%= user.username %></td>
           <td><%= user.name %></td>
-          <td><%= user.password_digest %></td>
           <td><%= user.email %></td>
           <td><%= user.admin %></td>
           <td><%= link_to 'Edit User', {:action => 'edit', :user_id => user.id, :username => user.username, :first_name => user.name, :email => user.email, :admin => user.admin, :created_at => user.created_at, :updated_at => user.updated_at}%></td> <!--sets the admin field of this user to true -->
