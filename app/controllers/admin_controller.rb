@@ -40,6 +40,11 @@ class AdminController < ApplicationController
     @updated_at = toBeDeleted.updated_at
     @user_id = toBeDeleted.id
 
+    if(toBeDeleted.id == session[:user_id])
+      @message = "Error: You can not delete yourself."
+      redirect_to(:action => "index", :message => @message) and return
+    end
+
     #check if the user is trying to delete themselves, dont let them
     if (@confirm == @username)
       @message = "[User ID:#{@user_id}] deleted."
