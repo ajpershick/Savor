@@ -8048,3 +8048,81 @@ Processing by AccountController#change_password as HTML
 Completed 200 OK in 70ms (Views: 68.0ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:42)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:42)
+Started GET "/" for 127.0.0.1 at 2017-11-12 12:09:07 -0800
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (2.1ms)
+Completed 200 OK in 689ms (Views: 633.7ms | ActiveRecord: 14.0ms)
+
+
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:42)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:42)
+Started GET "/account/index" for 127.0.0.1 at 2017-11-12 12:09:29 -0800
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AccountController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering account/index.html.erb within layouts/menu
+  Rendered account/index.html.erb within layouts/menu (3.2ms)
+Completed 200 OK in 431ms (Views: 391.1ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2017-11-12 12:10:03 -0800
+Processing by AccountController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering account/index.html.erb within layouts/menu
+  Rendered account/index.html.erb within layouts/menu (1.6ms)
+Completed 200 OK in 64ms (Views: 60.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recommendations/index" for 127.0.0.1 at 2017-11-12 12:10:04 -0800
+Processing by RecommendationsController#index as HTML
+  Rendering recommendations/index.html.erb within layouts/menu
+  Rendered recommendations/index.html.erb within layouts/menu (1.9ms)
+Completed 200 OK in 78ms (Views: 65.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2017-11-12 12:10:04 -0800
+Processing by AccountController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering account/index.html.erb within layouts/menu
+  Rendered account/index.html.erb within layouts/menu (1.5ms)
+Completed 200 OK in 63ms (Views: 59.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/account/edit" for 127.0.0.1 at 2017-11-12 12:10:06 -0800
+Processing by AccountController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0vA/Vz4H3zMusl79ilHVzibIQNWUnp/AkPLGzuFS4ePLlWnUEUvBEgUz2aX9IppQOk1UsigKZUqBGqnEk549Dw==", "nothing"=>"0", "commit"=>"Edit"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering account/edit.html.erb within layouts/menu
+  Rendered account/edit.html.erb within layouts/menu (2.1ms)
+Completed 200 OK in 64ms (Views: 57.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2017-11-12 12:10:09 -0800
+Processing by AccountController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering account/index.html.erb within layouts/menu
+  Rendered account/index.html.erb within layouts/menu (4.0ms)
+Completed 200 OK in 86ms (Views: 82.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/account/change_password" for 127.0.0.1 at 2017-11-12 12:10:10 -0800
+Processing by AccountController#change_password as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zN1C127fTxaWNequJGGncKKPqb1Kf+BGCKjA+Pxxr8XVuBRUQZNRN720bfZTEujuvgq92vbrGswZQK/yjr1zKQ==", "nothing"=>"0", "commit"=>"Change Password"}
+  Rendering account/change_password.html.erb within layouts/menu
+  Rendered account/change_password.html.erb within layouts/menu (1.1ms)
+Completed 200 OK in 57ms (Views: 55.5ms | ActiveRecord: 0.0ms)
+
+
