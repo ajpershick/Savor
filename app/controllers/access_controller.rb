@@ -3,7 +3,9 @@ class AccessController < ApplicationController
   before_action :confirm_logged_out, only: [:login]
 
   def login
-
+    users = User.all
+    @usernames = []
+    users.each do |user| @usernames << user.username end
   end
 
   def attempt_login

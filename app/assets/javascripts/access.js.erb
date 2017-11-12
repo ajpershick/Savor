@@ -50,14 +50,6 @@ function validateUsername(input) {
     return false;
   }
 
-  <%
-    users = User.all
-    usernames = []
-    users.each do |user| usernames << user.username end
-
-  %>
-  usernames = <%= usernames.to_json %>;
-
   for (var i = 0; i < usernames.length; i++) {
     if (input === usernames[i]) {
       tooltipToggle("username", "Username already in use");
