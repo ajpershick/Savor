@@ -10,10 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171026001550) do
+ActiveRecord::Schema.define(version: 20171112210941) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "transactions", force: :cascade do |t|
+    t.integer "user_id"
+    t.decimal "amount", precision: 8, scale: 2, null: false
+    t.date "date", null: false
+    t.string "category", default: "Unknown", null: false
+    t.string "type", null: false
+    t.string "unique_id", null: false
+    t.boolean "location", default: false, null: false
+    t.string "location_name"
+    t.string "address"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.string "latitude"
+    t.string "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_transactions_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username", limit: 30, null: false
