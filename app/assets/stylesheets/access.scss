@@ -13,6 +13,17 @@ div.entry-right {
   float: right;
 }
 
+div.entry-outer-wrapper {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 50%;
+}
+
+div.entry-inner-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
 
 div.title{
   font-family: Helvetica;
@@ -24,7 +35,7 @@ div.title{
 div.writeup {
   font-family: Helvetica;
   font-size: 17px;
-  color: #FFFFFF; 
+  color: #FFFFFF;
   float:right;
   width: 30%;
   height: 25%;
@@ -53,7 +64,6 @@ img.login-logo{
 div.entry {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10%;
   background-color: #F0F0F0;
   width: 450px;
   height: 475px;
