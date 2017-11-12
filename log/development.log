@@ -6815,3 +6815,138 @@ Started GET "/assets/application.self-2c63885506c7f03d3b8ddcd87a0bc9a4132d3ac06c
 Started GET "/assets/recommendations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-11-11 22:28:50 -0800
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (117.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:3)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:4)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:42)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:42)
+Started GET "/account/index" for 127.0.0.1 at 2017-11-12 13:11:16 -0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AccountController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering account/index.html.erb within layouts/menu
+  Rendered account/index.html.erb within layouts/menu (8.4ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__4595341385493136964_47239657551100 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__4595341385493136964_47239657551100 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 6490ms (Views: 4718.8ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2017-11-12 13:11:23 -0800
+Processing by AccountController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering account/index.html.erb within layouts/menu
+  Rendered account/index.html.erb within layouts/menu (1.8ms)
+Completed 200 OK in 59ms (Views: 53.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-7744b1e9c3bf48c5a1d32b558620a72c38b5489e8cde24e3b4d915b8570cb5e0.css?body=1" for 127.0.0.1 at 2017-11-12 13:11:23 -0800
+Started GET "/assets/access.self-2b8637b3e3ea20258951ad1064198adb74f031fb75e7a4ed81e46324319efaaf.js?body=1" for 127.0.0.1 at 2017-11-12 13:11:23 -0800
+Started POST "/account/edit" for 127.0.0.1 at 2017-11-12 13:11:25 -0800
+Processing by AccountController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X8UTHLjBIelJmhn/OnhE0l4H4Qq3rQuXxw3C0QnjBY5GoEWfl40/yGIbnqdNCwtMQoL1bQs58R3W5a3bey/ZYg==", "nothing"=>"0", "commit"=>"Edit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering account/edit.html.erb within layouts/menu
+  Rendered account/edit.html.erb within layouts/menu (1.2ms)
+Completed 200 OK in 76ms (Views: 72.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-11-12 13:11:27 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (3.4ms)
+Completed 200 OK in 77ms (Views: 71.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2017-11-12 13:11:28 -0800
+Processing by AccountController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering account/index.html.erb within layouts/menu
+  Rendered account/index.html.erb within layouts/menu (1.6ms)
+Completed 200 OK in 131ms (Views: 127.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/account/change_password" for 127.0.0.1 at 2017-11-12 13:11:29 -0800
+Processing by AccountController#change_password as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tnLD6ghNpFuZsI/AAuv29RyF0TsY9OGwTffcHBjHmPKvF5VpJwG6erIxCJh1mLlrAADFXKRgGzpcH7MWagtEHg==", "nothing"=>"0", "commit"=>"Change Password"}
+  Rendering account/change_password.html.erb within layouts/menu
+  Rendered account/change_password.html.erb within layouts/menu (3.2ms)
+Completed 200 OK in 120ms (Views: 118.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-11-12 13:11:30 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (0.8ms)
+Completed 200 OK in 113ms (Views: 101.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-11-12 13:11:37 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (1.9ms)
+Completed 200 OK in 81ms (Views: 74.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/spending_history/index" for 127.0.0.1 at 2017-11-12 13:11:38 -0800
+Processing by SpendingHistoryController#index as HTML
+  Rendering spending_history/index.html.erb within layouts/menu
+  Rendered spending_history/index.html.erb within layouts/menu (0.9ms)
+Completed 200 OK in 67ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/spending_history/charts" for 127.0.0.1 at 2017-11-12 13:11:39 -0800
+Processing by SpendingHistoryController#charts as HTML
+  Rendering spending_history/charts.html.erb within layouts/menu
+  Rendered spending_history/charts.html.erb within layouts/menu (0.7ms)
+Completed 200 OK in 92ms (Views: 86.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recommendations/index" for 127.0.0.1 at 2017-11-12 13:11:39 -0800
+Processing by RecommendationsController#index as HTML
+  Rendering recommendations/index.html.erb within layouts/menu
+  Rendered recommendations/index.html.erb within layouts/menu (0.5ms)
+Completed 200 OK in 70ms (Views: 68.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2017-11-12 13:11:40 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (0.9ms)
+Completed 200 OK in 79ms (Views: 73.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2017-11-12 13:11:41 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-11-12 13:11:41 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 101ms (Views: 93.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-11-12 13:12:44 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mrY00zjleJmQzY3U4wDSeOrUMP+GQvT2qN47ySM61rVg1D9pBclezTKBD6kQW2T9NDtbFznO2kYzbuXJla903Q==", "username"=>"vinsonly", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "vinsonly"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 67ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-12 13:12:44 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (5.6ms)
+Completed 200 OK in 92ms (Views: 81.3ms | ActiveRecord: 1.3ms)
+
+
