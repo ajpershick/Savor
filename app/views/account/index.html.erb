@@ -1,2 +1,20 @@
-<h1>Account#index</h1>
-<p>Find me in app/views/account/index.html.erb</p>
+<h1>Account Details</h1>
+<p><%=@message%></p>
+
+<p>Username: <%=@username%> </p>
+<p>First Name: <%=@first_name%> </p>
+<p>Email: <%=@email%> </p>
+
+<div style="display:inline-block; margin-right: 1%;" >
+<%= form_tag account_edit_path do %>
+  <%= hidden_field_tag :nothing, 0 %>
+<%= submit_tag "Edit" %>
+<% end %>
+</div>
+
+<div style="display:inline-block">
+<%= form_tag account_change_password_path do %>
+  <%= hidden_field_tag :nothing, 0 %>
+<%= submit_tag "Change Password" %>
+<% end %>
+</div>

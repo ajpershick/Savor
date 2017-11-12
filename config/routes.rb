@@ -1,18 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'account/edit'
-
-  get 'account/make_edit'
-
-  get 'account/index'
-
   match	':controller(/:action(/:id))',	:via	=>	:get
   match	':controller(/:action(/:id))',	:via	=>	:post
 
   get 'spending_history/charts' => "spending_history"
-
   get 'spending_history/index' => "spending_history#index"
-
   get 'recommendations/index' => "recommendations#index"
 
   root 'home#index'
@@ -36,6 +28,12 @@ Rails.application.routes.draw do
   get "admin/edit" => "admin#edit"
   get "admin/confirm_edit" => "admin#confirm_edit"
   post "admin/make_edit" => "admin#make_edit"
+
+  get 'account/edit'
+  post 'account/make_edit'
+  get 'account/index'
+  get 'account/change_password'
+  post 'account/make_password_change'
 
   get "home/index" =>"home#index"
 
