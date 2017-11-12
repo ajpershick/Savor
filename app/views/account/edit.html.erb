@@ -10,6 +10,9 @@
     <div class="field"><%= text_field_tag :first_name, @first_name%></div>
   <label for="email">Email: </label>
     <div class="field"><%= text_field_tag :email, @email%></div>
+  <label for="password">Please enter your password to validate edits: </label>
+    <div class="field"><%= password_field_tag :password%></div>
+
 
   <%= hidden_field_tag :userID, @id %>
 

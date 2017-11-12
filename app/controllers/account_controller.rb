@@ -13,17 +13,28 @@ class AccountController < ApplicationController
 
   def make_edit
     @id = params[:userID]
+    user = User.find(@id)
     @newUsername = params[:username]
     @newFirstName = params[:first_name]
     @newEmail = params[:email]
+    @authenticated_user = user.authenticate(params[:password])
+      #returns user or false
 
-    toEdit = User.find(@id)
-    toEdit.username = @newUsername
-    toEdit.name = @newFirstName
-    toEdit.email = @newEmail
-    toEdit.save
-    @message = "Account details editted"
-    redirect_to(:action => "index", :message => @message) and return
+    if((@newUsername.present? && @newFirstName.present? && @newEmail.present? && params[:password].present?) == false)
+      @message = "Please fill in all fields"
+      redirect_to(:action => "edit", :message => @message) and return
+    elsif(@authenticated_user == false)
+      @message = "Password Incorrect"
+      redirect_to(:action => "edit", :message => @message) and return
+    else
+      toEdit = User.find(@id)
+      toEdit.username = @newUsername
+      toEdit.name = @newFirstName
+      toEdit.email = @newEmail
+      toEdit.save
+      @message = "Account details editted"
+      redirect_to(:action => "index", :message => @message) and return
+    end
 
   end
 
