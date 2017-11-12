@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'account/edit'
+
+  get 'account/make_edit'
+
+  get 'account/index'
+
   match	':controller(/:action(/:id))',	:via	=>	:get
   match	':controller(/:action(/:id))',	:via	=>	:post
 

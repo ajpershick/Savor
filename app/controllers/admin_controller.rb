@@ -138,7 +138,7 @@ class AdminController < ApplicationController
     toEdit.username = @username
     toEdit.name = @first_name
     toEdit.email = @email
-    if (@admin = "true")
+    if (@admin == "true")
       toEdit.admin = true
     else
       toEdit.admin = false
