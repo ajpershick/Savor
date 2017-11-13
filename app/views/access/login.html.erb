@@ -3,12 +3,14 @@
 
 <%= javascript_tag "usernames = #{@usernames.to_json.html_safe};" %>
 
-<div class="mobile-title">Savor</div>
+<div class="mobile-title-container">
+  <div class="mobile-title">Savor</div>
+</div>
 <div class="entry-left">
   <div class = "subsection-left">
     <div class="title">Savor</div>
     <img id="login-logo" src="<%= asset_path('loginlogobag.png') %>" class ="login-logo"></img>
-    <div class="writeup">Live your life on a budget.<br><br>Plan.<br>Set Goals.<br>Event Notifications<br><br>To see the view for admin users,<br>username = admintest<br>password = admintest<br> is an admin account</div>
+    <div class="writeup"><span>Live your life on a budget.</span><span>Plan.</span><span>Set Goals.</span><span>Be Notified for Events.</span><br><span>Admin Account:</span><span>username = "admintest"</span><span>password = "admintest"</span></div>
   </div>
 </div>
 
