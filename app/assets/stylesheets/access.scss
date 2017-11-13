@@ -6,11 +6,14 @@ div#login-page {
   background-color: #4aa272;
   height: 100vh;
   width: 100vw;
+  position: relative;
 }
 
 div.entry-right {
   width: 50%;
+  height: 100%;
   float: right;
+  //background-color: red;
 }
 
 div.entry-outer-wrapper {
@@ -18,45 +21,76 @@ div.entry-outer-wrapper {
   position: absolute;
   height: 100%;
   width: 50%;
-
-  
 }
 
 div.entry-inner-wrapper {
   display: table-cell;
   vertical-align: middle;
+  //padding-bottom: 6%;
 }
 
 div.title{
   font-family: Helvetica;
-  font-size: 100px;
-  margin-top: 9%;
-  margin-left: 30%;
+  font-size: 1000%;
+  //margin-top: 25%;
+  //margin-left: 30%;
+  font-weight: normal;
+  //background-color: purple;
+  display: inline-block ;
+  text-align: center;
+  margin-top: 10%;
 }
 
 div.writeup {
   font-family: Helvetica;
-  font-size: 17px;
+  font-size: 150%;
   color: #FFFFFF;
   float:right;
-  width: 30%;
-  height: 25%;
-  padding-top: 17%;
-  padding-right: 10%;
+  width: 45%;
+  height: 40%;
+  //padding-top: 17%;
+  //padding-right: 10%;
+  //background-color: blue;
+  text-align: left;
+  top: 45%;
+  position: absolute;
+  left: 55%;
 }
 
-div.entry-left{
+div.entry-left{ //left section of the screen
   width: 50%;
+  height: 100%;
   float: left;
+  //background-color: pink;
+}
+
+div.subsection-left{ //the middle of the left sectui
+  position: absolute;
+  width: 50%;
+  height: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  //margin-top: 20%;
+  //margin-bottom: 20%;
+  top: 20%;
+  //background-color: green;
+  text-align: center;
+  display:block;
 }
 
 img.login-logo{
+  display: inline-block;
   height: auto;
   width: auto;
-  max-width: 300px;
-  max-height: 300px;
-  padding-left: 20%;
-  padding-top: 10%;
+  //max-width: 300px;
+  //max-height: 300px;
+  min-width: 40%;
+  min-height: 40%;
+  //background-color: blue;
+  text-align: center;
+  position: absolute;
+  top: 35%;
+  left: 15%;
 }
 
 .entry-hidden {
@@ -67,8 +101,11 @@ div.entry {
   margin-left: auto;
   margin-right: auto;
   background-color: #F0F0F0;
-  width: 450px;
-  height: 475px;
+  //width: 450px;
+  //height: 475px;
+  width: 65%;
+  padding-bottom: 6%;
+  min-width: 365px;
 }
 
 div#login-entry {
@@ -77,6 +114,7 @@ div#login-entry {
 
 div.entry-container {
   margin-bottom: 50px;
+  text-align:center;
 }
 
 button.entry-button {
@@ -87,7 +125,7 @@ button.entry-button {
   margin: 0;
   padding: 0;
   background-color: #E1E1E1;
-  width: 225px;
+  width: 50%;
   height: 50px;
   margin-bottom: 25px;
   cursor: pointer;
@@ -100,7 +138,7 @@ button.entry-selected {
 input.entry-submit-button {
   font-family: Helvetica;
   font-size: 18px;
-  width: 350px;
+  width: 100%;
   height: 50px;
   border: 0;
   background-color: #3598DC;
@@ -120,6 +158,7 @@ div.entry-input-container {
   margin-right: auto;
   margin-top: 10px;
   overflow: auto;
+  text-align: center;
 }
 
 input.entry-input {
@@ -133,6 +172,7 @@ input.entry-input {
   border-width: 2px;
   border-left-width: 0px;
   border-color: #E1E1E1;
+  position: relative;
 }
 
 div.entry-icon-container {
@@ -242,4 +282,14 @@ div.entry-tooltip-temporary span {
   line-height: 50px;
   margin: 0;
   vertical-align: middle;
+}
+
+@media only screen and (max-width: 600px) {
+  div#login-page {
+    background-color: pink;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+  }
+
 }
