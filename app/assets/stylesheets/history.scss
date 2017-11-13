@@ -1,3 +1,59 @@
 // Place all the styles related to the History controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.center {
+  margin: auto;
+  width: 50%;
+  background-color: #FFFFFF;
+}
+
+
+div.month-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+button.month-dropdown-button {
+  font-family: Helvetica;
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  width: 200px;
+  border: none;
+  cursor: pointer;
+}
+
+div.month-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  max-height: 300px;
+  overflow: auto;
+}
+
+div.month-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+div.month-dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+/* Show the dropdown menu on hover */
+div.month-dropdown:hover div.month-dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+div.month-dropdown:hover button.month-dropdown-button {
+    background-color: #3e8e41;
+}

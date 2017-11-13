@@ -1,1 +1,35 @@
 <h1>Transaction History</h1>
+
+<div class="month-dropdown">
+  <button class="month-dropdown-button"><%= @formatted_month %></button>
+  <div class="month-dropdown-content">
+    <% @month_range.each do |month| %>
+      <%
+      current_formatted_month = Date::MONTHNAMES[month[:month]] + " " + month[:year].to_s
+      if current_formatted_month == @formatted_month then
+        next
+      end
+      %>
+      <%= link_to current_formatted_month, {controller: "history", action: "index", month: month[:month], year: month[:year]}%>
+    <% end %>
+  </div>
+</div>
+
+<div class="center">
+  <div class="list">
+    <h1><%= @transaction_days.length %></h1>
+    <% @transaction_days.each do |day| %>
+      <h2><%= day[:date].strftime("%A, %B %d").sub(/ 0/, ' ') %></h2>
+      <table>
+        <% day[:transactions].each do |transaction| %>
+          <tr>
+            <td><%= transaction.category %></td>
+            <td><%= number_to_currency(transaction.amount) %></td>
+          </tr>
+        <% end %>
+
+      <table>
+    <% end %>
+  </div>
+
+</div>
