@@ -44,6 +44,10 @@ div.title{
   margin-top: 10%;
 }
 
+div.mobile-title{
+  display: none;
+}
+
 div.writeup {
   font-family: Helvetica;
   font-size: 150%;
@@ -317,6 +321,8 @@ div.entry-tooltip-temporary span {
     //background-color: pink;
     text-align: center;
     position: fixed;
+    background-color: #4aa272;
+    z-index: -999;
   }
 
   div.entry-outer-wrapper {
@@ -406,6 +412,7 @@ div.entry-tooltip-temporary span {
     height: 100%;
     width: 100%;
     //margin-top: 10%;
+    display: none;
   }
 
   div.entry-input-container {
@@ -451,5 +458,18 @@ div.entry-tooltip-temporary span {
     margin: auto;
   }
 
+  div.mobile-title{
+    display: block;
+    font-family: Helvetica;
+    font-size: 700%;
+    //margin-top: 25%;
+    //margin-left: 30%;
+    font-weight: normal;
+    //background-color: purple;
+    text-align: center;
+    margin-top: 10%;
+    position: absolute;
+    width: 100%;
+  }
 
 }
