@@ -6,8 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
+categories = ["food", "clothing", "groceries", "gas"]
 
 (0..1000).each do
-  Transaction.create(user_id: 1, amount: 12.3, date: Date.today-rand(1000), category: "test", transaction_type: "place", location: false, unique_id: "1")
+  Transaction.create(
+    user_id: 1,
+    amount: (rand * 1000).round(2),
+    date: Date.today-rand(1000),
+    category: categories[rand(0..3)],
+    location_name: (0...3).map { (97 + rand(26)).chr }.join,
+    transaction_type: "place",
+    location: false,
+    unique_id: "1")
 end

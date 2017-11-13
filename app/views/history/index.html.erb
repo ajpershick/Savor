@@ -1,5 +1,4 @@
 <h1>Transaction History</h1>
-
 <div class="month-dropdown">
   <button class="month-dropdown-button"><%= @formatted_month %></button>
   <div class="month-dropdown-content">
@@ -17,14 +16,19 @@
 
 <div class="center">
   <div class="list">
-    <h1><%= @transaction_days.length %></h1>
     <% @transaction_days.each do |day| %>
       <h2><%= day[:date].strftime("%A, %B %d").sub(/ 0/, ' ') %></h2>
-      <table>
+      <table class="transactions-day">
         <% day[:transactions].each do |transaction| %>
           <tr>
-            <td><%= transaction.category %></td>
-            <td><%= number_to_currency(transaction.amount) %></td>
+            <td class="icon-data">
+              <div class="category-icon" style="background-color: <%= @categories[transaction.category][:color] %>">
+                <span class="icon fa fa-<%= @categories[transaction.category][:icon]%> " aria-hidden="true"></span>
+              </div>
+            </td>
+            <td><div class="location-data"><%= transaction.location_name %></div></td>
+            <td><div class="category-data"><%= transaction.category.capitalize %></div></td>
+            <td><div class="amount-data"><%= number_to_currency(transaction.amount) %></div></td>
           </tr>
         <% end %>
 

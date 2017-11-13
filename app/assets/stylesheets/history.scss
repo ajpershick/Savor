@@ -57,3 +57,54 @@ div.month-dropdown:hover div.month-dropdown-content {
 div.month-dropdown:hover button.month-dropdown-button {
     background-color: #3e8e41;
 }
+
+.transactions-day {
+  border-style: none;
+}
+
+.transactions-day tbody {
+  border-style: none;
+}
+
+.transactions-day tr {
+  border-style: none;
+}
+
+.transactions-day tr:nth-child(odd) {
+  background-color: #EEEEEE;
+}
+
+.transactions-day td {
+  border-style: none;
+}
+
+.icon-data {
+  width: 0;
+}
+
+.location-data {
+  width: 50px;
+}
+
+.category-data {
+  width: 50px;
+}
+
+.amount-data {
+  width: 50px;
+}
+
+.category-icon {
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+  text-align: center;
+  line-height: 45px;
+}
+
+.icon {
+  display: inline-block;
+  color: #FFFFFF;
+  vertical-align: middle;
+}

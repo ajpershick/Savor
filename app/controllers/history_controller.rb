@@ -3,6 +3,16 @@ class HistoryController < ApplicationController
   before_action :confirm_user_logged_in
 
   def index
+    @categories = {
+      "food"      => {icon: "cutlery",       color: "#2980b9"},
+      "clothing"  => {icon: "shopping-bag",  color: "#27ae60"},
+      "groceries" => {icon: "shopping-cart",       color: "#f1c40f"},
+      "gas"       => {icon: "car",           color: "#e74c3c"},
+
+    }
+
+
+
     if params[:month].blank? || params[:year].blank? then
       today = Date.today
       @formatted_month = Date::MONTHNAMES[today.month] + " " + today.year.to_s
