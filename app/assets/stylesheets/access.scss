@@ -3,8 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-
-
 div#login-page {
   background-color: #4aa272;
   height: 100vh;
@@ -297,30 +295,58 @@ div.entry-tooltip-temporary span {
     position: relative;
   }
 
+  div#login-entry {
+    padding-top: 33px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    min-height: 354px;
+  }
 
   div.entry-right {
     width: 100%;
     height: 100%;
     //background-color: red;
+    min-width: 200px;
+
   }
 
   div.entry-left{ //left section of the screen
-    width: 0%;
-    height: 0%;
+    width: 100%;
+    height: 100%;
     //background-color: pink;
     text-align: center;
+    position: fixed;
+  }
+
+  div.entry-outer-wrapper {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    min-width: 200px;
+
+  }
+
+
+  div.entry-inner-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    min-width: 200px;
   }
 
   div.entry {
     margin-left: auto;
     margin-right: auto;
     background-color: #F0F0F0;
-    //width: 450px;
-    //height: 475px;
-    width: 65%;
+    height: 60%;
+    width: 85%;
     padding-bottom: 6%;
-    min-width: 400px;
+    min-height: 390px;
     margin-top: 20%;
+    min-width: 200px;
   }
 
   div.subsection-left{ //the middle of the left sectui
@@ -335,13 +361,7 @@ div.entry-tooltip-temporary span {
     //background-color: green;
     text-align: center;
     display:block;
-  }
-
-  div.entry-outer-wrapper {
-    display: table;
-    position: absolute;
-    height: 100%;
-    width: 100%;
+    margin-top: 15%;
   }
 
   img.login-logo{
@@ -378,13 +398,58 @@ div.entry-tooltip-temporary span {
 
   div.title{
     font-family: Helvetica;
-    font-size: 700%;
-    display: inline-block;
+    font-size: 550%;
+    display: inline;
     text-align: center;
     margin-top: 15%;
     //background-color: blue;
     height: 100%;
     width: 100%;
+    //margin-top: 10%;
   }
+
+  div.entry-input-container {
+    height: 52px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    overflow: auto;
+    text-align: center;
+  }
+
+  div.entry-icon-container {
+    float: left;
+    width: 14.04%;
+    height: 83%;
+    max-width: 50px;
+    max-height: 50px;
+    background-color: #E1E1E1;
+  }
+
+  img.entry-icon {
+    float: left;
+    width: 50%;
+    height: 50%;
+    margin: 25%;
+    color: white;
+  }
+
+  input.entry-input {
+    font-family: Helvetica;
+    font-size: 18px;
+    float: right;
+    width: 83.6%;
+    height: 44px;
+    padding-left: 2.27%;
+    border-style: solid;
+    border-width: 2px;
+    //border-left-width: 0px;
+    border-color: #E1E1E1;
+    position: relative;
+    box-sizing: border-box;
+    margin: auto;
+  }
+
 
 }
