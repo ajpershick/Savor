@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'history/index'
+
   match	':controller(/:action(/:id))',	:via	=>	:get
   match	':controller(/:action(/:id))',	:via	=>	:post
 

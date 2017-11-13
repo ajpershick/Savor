@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+
+(0..1000).each do
+  Transaction.create(user_id: 1, amount: 12.3, date: Date.today-rand(1000), category: "test", transaction_type: "place", location: false, unique_id: "1")
+end
