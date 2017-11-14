@@ -63,7 +63,10 @@ gem 'bootstrap'
 # jquery for rails
 gem 'jquery-rails'
 
-# font aweomse
+# font awesome
 gem 'font-awesome-sass', '~> 4.7.0'
 
 gem 'rails-ujs'
+
+#serviceworker rails gem
+gem 'serviceworker-rails'

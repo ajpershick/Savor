@@ -36,3 +36,4 @@ function linkDelay(URL) { //collapses side-nav, then goes to link
 function gotoLink(URL) { //opens URL after 0.5 s
   setTimeout(function() {window.location = URL}, 500);
 }
+//= require serviceworker-companion
