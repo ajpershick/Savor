@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   match	':controller(/:action(/:id))',	:via	=>	:get
   match	':controller(/:action(/:id))',	:via	=>	:post
 
+  get 'maps/index' => "maps#index"
+
   get 'spending_history/charts' => "spending_history"
   get 'spending_history/index' => "spending_history#index"
   get 'recommendations/index' => "recommendations#index"
