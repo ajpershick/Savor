@@ -1,1 +1,17 @@
 <h1>The future home of your recommendations... coming soon</h1>
+
+<h1>Map of Recommendations</h1>
+
+<div id="googleMap" style="width:75%;height:400px;"></div>
+
+<script>
+    function myMap() {
+        var mapProp= {
+            center:new google.maps.LatLng(49.246254,-123.013861),
+            zoom:10,
+        };
+        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ3wyaZIOpGodrpSDMQ5WGLDLTNgHibcI&callback=myMap"></script>
