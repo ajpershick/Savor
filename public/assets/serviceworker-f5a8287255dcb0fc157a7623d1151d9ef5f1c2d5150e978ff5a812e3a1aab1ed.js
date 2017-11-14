@@ -11,9 +11,9 @@ function onInstall(event) {
 
         // make sure serviceworker.js is not required by application.js
         // if you want to reference application.js from here
-        '<%= asset_path "application.js" %>',
+        '',
 
-        '<%= asset_path "application.css" %>',
+        '/assets/application-35b98cbf7cdcba72c7d7514f8e7a4e6c823296da56c610de136d04c16f24bdad.css',
 
         '/offline.html',
 

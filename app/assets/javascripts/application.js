@@ -15,7 +15,12 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
-//= require_tree .
+//= require ./access
+//= require ./account
+//= require ./admin
+//= require ./home
+//= require ./recommendations
+//= require ./spending_history.coffee
 
 function myFunction() { //toggles the side-nav
     var x = document.getElementById("mySideNav");
