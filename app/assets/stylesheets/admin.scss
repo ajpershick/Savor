@@ -21,9 +21,9 @@ p, ol, ul, td {
 }
 
 table {
-  width: 95%;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
+  width: 100%;
+  //margin-left: 2.5%;
+  //margin-right: 2.5%;
 }
 
 table, thead, tr, th, tbody, td{
@@ -117,4 +117,18 @@ div {
 
 label {
   display: inline-block;
+}
+
+div.table-container {
+  height: 90%;
+  width: 95%;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  position: relative;
+  top: 5%;
+  left: 2.5%;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
 }
