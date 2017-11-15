@@ -1,4 +1,5 @@
 class AccountController < ApplicationController
+
   layout "menu"
 
   def edit
@@ -9,6 +10,13 @@ class AccountController < ApplicationController
     @first_name = thisUser.name
     @email = thisUser.email
     @message = params[:message]
+
+    if (session[:admin])
+      render :layout => 'admin'
+    else
+      render :layout => "menu"
+    end
+
   end
 
   def make_edit
@@ -39,17 +47,33 @@ class AccountController < ApplicationController
   end
 
   def index
+
     @id = session[:user_id]
+
     thisUser = User.find(@id)
     @username = thisUser.username
     @first_name = thisUser.name
     @email = thisUser.email
     @message = params[:message]
+
+    if (session[:admin])
+      render :layout => 'admin'
+    else
+      render :layout => "menu"
+    end
+
   end
 
   def change_password
     @message = params[:message]
     @authenticated_user = params[:authenticated_user]
+
+    if (session[:admin])
+      render :layout => 'admin'
+    else
+      render :layout => "menu"
+    end
+
   end
 
   def make_password_change
