@@ -67,7 +67,7 @@
 //top navbar for mobile
 // need to change to adapt for lists
 //keep this part
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 680px) {
   .topnav a:not(:first-child) {display: none;} //hide all other elements except for hamburger button.
   .topnav a.icon {
     position: relative;
