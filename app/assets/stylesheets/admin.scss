@@ -2,9 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+div.material-container {
+  margin: 2.5%;
+}
+
+
 h1{
   margin-left: 2.5%;
 }
+
 body {
   background-color: #fff;
   color: #333;
@@ -129,6 +135,8 @@ div.table-container {
   left: 2.5%;
 }
 
-::-webkit-scrollbar {
-  width: 0px;
+@media screen and (min-width: 700px) {
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
 }

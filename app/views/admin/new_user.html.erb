@@ -1,25 +1,27 @@
 <h1>Create Account</h1>
 
-<%= form_tag admin_create_user_path do %>
-  <label for="username">Username: </label>
-    <div class="field"><%= text_field_tag :username%></div>  <!--name = id -->
-  <label for="first_name">First Name: </label>
-    <div class="field"><%= text_field_tag :first_name%></div>   <!--name = id -->
-  <label for="email">Email: </label>
-    <div class="field"><%= text_field_tag :email%></div>  <!--name = id -->
-  <label for="password">Password: </label><br>
-    <%= password_field_tag(:password, nil) %><br>
-    <!--<div class="field"><%= text_field_tag :password%></div> -->  <!--name = id -->
-  <label for="confirm_password">Confirm Password: </label><br>
-    <%= password_field_tag(:confirm_password, nil) %><br>
-    <!--<div class="field"><%= text_field_tag :confirm_password%></div> -->  <!--name = id -->
-    <%= label_tag "Admin: " %>
+<div class="material-container">
+  <%= form_tag admin_create_user_path do %>
+    <label for="username">Username: </label>
+      <div class="field"><%= text_field_tag :username%></div>  <!--name = id -->
+    <label for="first_name">First Name: </label>
+      <div class="field"><%= text_field_tag :first_name%></div>   <!--name = id -->
+    <label for="email">Email: </label>
+      <div class="field"><%= text_field_tag :email%></div>  <!--name = id -->
+    <label for="password">Password: </label><br>
+      <%= password_field_tag(:password, nil) %><br>
+      <!--<div class="field"><%= text_field_tag :password%></div> -->  <!--name = id -->
+    <label for="confirm_password">Confirm Password: </label><br>
+      <%= password_field_tag(:confirm_password, nil) %><br>
+      <!--<div class="field"><%= text_field_tag :confirm_password%></div> -->  <!--name = id -->
+      <%= label_tag "Admin: " %>
 
-    <%= label_tag :admin_label, "False", :value => "false" %>
-    <%= radio_button_tag(:admin, "false", checked = true) %>
-    <%= label_tag :admin_label, "True", :value => "true"  %>
-    <%= radio_button_tag(:admin, "true", checked = false) %>
+      <%= label_tag :admin_label, "False", :value => "false" %>
+      <%= radio_button_tag(:admin, "false", checked = true) %>
+      <%= label_tag :admin_label, "True", :value => "true"  %>
+      <%= radio_button_tag(:admin, "true", checked = false) %>
 
-    <p><%=@message%></p>
-  <%= submit_tag "Submit", data: {confirm: "Are you sure?"}%>
-<% end %>
+      <p><%=@message%></p>
+    <%= submit_tag "Submit", data: {confirm: "Are you sure?"}%>
+  <% end %>
+</div>
