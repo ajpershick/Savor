@@ -51,6 +51,7 @@
  /* Hide the link that should open and close the topnav on small screens */
  .topnav .icon { //discription: dont display the icon on default
      display: none;
+     z-index: 100;
  }
 
  .topnav li { //dont need, but keep
@@ -98,6 +99,7 @@ nav li{ //removes the bullets from side nav
   text-align: center;
   transform: translateX(-100%);
   transition: 0.6s ease;
+  z-index: 99;
 }
 
 .side-navigation ul {//CAN BE REFORMATTED
