@@ -5,3 +5,54 @@
 html {
   background-color: black !important;
 }
+
+div.element-container {
+  position: relative;
+  display: block;
+  width: 95%;
+  height: 300px;
+  margin: 2.5%;
+  background-color: transparent;
+  resize: vertical;
+  overflow: auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+div#account_balance {
+  height: 100px;
+}
+
+div#last_records {
+  height: 400px;
+}
+
+
+div#element1 {
+  width: 100%;
+  height: 100%;
+  background-color: #bee2cf;
+}
+
+div#element2 {
+  width: 100%;
+  height: 100%;
+  background-color: #c6daef;
+  opacity: 0.5;
+}
+
+div#element3 {
+  width: 100%;
+  height: 100%;
+  background-color: #efd1c6;
+}
+
+div#element4 {
+  width: 100%;
+  height: 100%;
+  background-color: #d7c6ef;
+}
+
+[draggable] {
+user-select: none;
+}

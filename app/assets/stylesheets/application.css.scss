@@ -51,6 +51,7 @@
  /* Hide the link that should open and close the topnav on small screens */
  .topnav .icon { //discription: dont display the icon on default
      display: none;
+     z-index: 100;
  }
 
  .topnav li { //dont need, but keep
@@ -67,7 +68,7 @@
 //top navbar for mobile
 // need to change to adapt for lists
 //keep this part
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 680px) {
   .topnav a:not(:first-child) {display: none;} //hide all other elements except for hamburger button.
   .topnav a.icon {
     position: relative;
@@ -88,6 +89,16 @@ nav li{ //removes the bullets from side nav
   display: block;
 }
 
+li.subpage-button {
+  display: none;
+  padding-left: 50px;
+}
+
+li.subpage-button.open {
+  display: block;
+  padding-left: 50px;
+}
+
 //styling when button toggled OFF
 .side-navigation{//CAN BE REFORMATTED
   float: left;
@@ -95,9 +106,10 @@ nav li{ //removes the bullets from side nav
   background-color: #333;
   height: 100%;
   width: 80%;
-  text-align: center;
+  text-align: left;
   transform: translateX(-100%);
   transition: 0.6s ease;
+  z-index: 99;
 }
 
 .side-navigation ul {//CAN BE REFORMATTED
@@ -128,7 +140,7 @@ nav li{ //removes the bullets from side nav
   background-color: #333;
   height: 100%;
   width: 80%;
-  text-align: center;
+  text-align: left;
   transform: translateX(0%);
   transition: 0.6s ease;
 }
