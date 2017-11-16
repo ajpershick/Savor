@@ -35,6 +35,10 @@ Rails.application.routes.draw do
   get 'account/change_password'
   post 'account/make_password_change'
 
+  get 'bank_sync/index'
+  get 'bank_sync/create_item'
+  get 'bank_sync/add_account'
+
   get "home/index" =>"home#index"
 
 
