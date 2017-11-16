@@ -41,4 +41,48 @@ function linkDelay(URL) { //collapses side-nav, then goes to link
 function gotoLink(URL) { //opens URL after 0.5 s
   setTimeout(function() {window.location = URL}, 500);
 }
+
+//start of sidenav dropdown menu
+function showSubpages(subpage1, subpage2, subpage3, subpage4, subpage5, subpage6) {
+  var subpages = [subpage1, subpage2, subpage3, subpage4, subpage5, subpage6];
+  var i = 0;
+  var x;
+  for(var i = 0; i < subpages.length; i++) {
+    if(subpages[i] == null) {
+      break;
+    }
+    x = document.getElementById(subpages[i]);
+    if (x.className === "subpage-button") {
+      x.className += " open";
+    }
+    else {
+      x.className = "subpage-button";
+    }
+  }
+}
+//end of sidenav dropdown menu
+
+/*
+//start of top nav dropdown menu
+function myFunction(id) {
+    document.getElementById(id).classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+//end of top nav dropdown menu
+*/
+
 //= require serviceworker-companion

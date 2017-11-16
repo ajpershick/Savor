@@ -89,6 +89,16 @@ nav li{ //removes the bullets from side nav
   display: block;
 }
 
+li.subpage-button {
+  display: none;
+  padding-left: 50px;
+}
+
+li.subpage-button.open {
+  display: block;
+  padding-left: 50px;
+}
+
 //styling when button toggled OFF
 .side-navigation{//CAN BE REFORMATTED
   float: left;
@@ -96,7 +106,7 @@ nav li{ //removes the bullets from side nav
   background-color: #333;
   height: 100%;
   width: 80%;
-  text-align: center;
+  text-align: left;
   transform: translateX(-100%);
   transition: 0.6s ease;
   z-index: 99;
@@ -130,7 +140,7 @@ nav li{ //removes the bullets from side nav
   background-color: #333;
   height: 100%;
   width: 80%;
-  text-align: center;
+  text-align: left;
   transform: translateX(0%);
   transition: 0.6s ease;
 }

@@ -8,7 +8,7 @@ div.element-container {
   width: 95%;
   height: 300px;
   margin: 2.5%;
-  background-color: pink;
+  background-color: transparent;
   resize: vertical;
   overflow: auto;
   text-align: center;
@@ -34,6 +34,7 @@ div#element2 {
   width: 100%;
   height: 100%;
   background-color: #c6daef;
+  opacity: 0.5;
 }
 
 div#element3 {
