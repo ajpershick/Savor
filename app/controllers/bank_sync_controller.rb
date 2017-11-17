@@ -1,4 +1,7 @@
 class BankSyncController < ApplicationController
+
+  layout "menu"
+
   def index
   end
 
