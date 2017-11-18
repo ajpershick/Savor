@@ -122,9 +122,10 @@ div.month-dropdown:hover button.month-dropdown-button {
 }
 
 .transactions-header th {
-  border-style: none;
+  border-style: solid;
   font-family: Helvetica;
-  font-size: 22px;
+  font-size: 18px;
+  text-align: left;
 }
 
 .icon-data {

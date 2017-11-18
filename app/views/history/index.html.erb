@@ -1,5 +1,4 @@
-<h1>Transaction History</h1>
-
+<br></br>
 
 <div class="center">
 
@@ -48,11 +47,10 @@
               total += t.amount
               items += 1
             end
-
           %>
 
-          <th><%= day[:date].strftime("%A, %B %d").sub(/ 0/, ' ') %> </th>
-          <th>Items: <%= items %><th>
+          <th style="width: 300px;"><%= day[:date].strftime("%A, %B %d").sub(/ 0/, ' ') %> </th>
+          <th>Items: <%= items %></th>
           <th>Total: <%= number_to_currency(total)%></th>
         </tr>
       </table>

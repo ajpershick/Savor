@@ -56,8 +56,6 @@ class HistoryController < ApplicationController
 
     current_index =  @month_range.each_index.detect{|i| @month_range[i][:year].to_s == @selected_year && @month_range[i][:month].to_s == @selected_month}
 
-    puts @month_range[0]
-    puts current_index
     if current_index == @month_range.length - 1 then
       @previous_month = nil
       @previous_year = nil
