@@ -8,13 +8,6 @@ div.center {
   background-color: #FFFFFF;
 }
 
-
-div.month-dropdown {
-  position: relative;
-  display: inline-block;
-  width: 33.3333333%;
-}
-
 .centered {
   margin-left: 33.3333333%;
 }
@@ -52,6 +45,12 @@ div.month-dropdown {
 
 .link-button:visited, .link-button:active {
   color: #FFFFFF;
+}
+
+div.month-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 33.3333333%;
 }
 
 button.month-dropdown-button {
@@ -107,7 +106,7 @@ div.month-dropdown:hover button.month-dropdown-button {
   border-style: none;
 }
 
-.transactions-day tr, .transactions-header tbody {
+.transactions-day tr, .transactions-header tr {
   border-style: none;
 }
 
@@ -121,27 +120,48 @@ div.month-dropdown:hover button.month-dropdown-button {
   font-size: 18px;
 }
 
-.transactions-header th {
-  border-style: solid;
+.transactions-header td {
+  border-style: none;
   font-family: Helvetica;
   font-size: 18px;
+  font-weight: bold;
   text-align: left;
 }
 
+
+.transactions-header td:nth-child(1) {
+  width: 40%;
+}
+.transactions-header td:nth-child(2) {
+  width: 30%;
+}
+.transactions-header td:nth-child(3) {
+  width: 30%;
+}
+
+.transactions-day td:nth-child(1) {
+  width: 10%;
+}
+.transactions-day td:nth-child(2) {
+  width: 30%;
+}
+.transactions-day td:nth-child(3) {
+  width: 30%;
+}
+.transactions-day td:nth-child(4) {
+  width: 30%;
+}
+
 .icon-data {
-  width: 0;
 }
 
 .location-data {
-  width: 50px;
 }
 
 .category-data {
-  width: 50px;
 }
 
 .amount-data {
-  width: 50px;
 }
 
 .category-icon {
