@@ -75,6 +75,20 @@ class HistoryController < ApplicationController
     if @order == "earliest" then
       @transaction_days.reverse!
     end
+
+    @total_amount = 0
+    @total_items = 0
+
+    @transaction_days.each do |day|
+      day[:transactions].each do |t|
+        @total_amount += t.amount
+        @total_items += 1
+      end
+    end
+
+    puts @total_amount
+    puts @total_items
+
   end
 
 end
