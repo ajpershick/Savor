@@ -1,25 +1,66 @@
 <h1>Transaction History</h1>
-<div class="month-dropdown">
-  <button class="month-dropdown-button"><%= @formatted_month %></button>
-  <div class="month-dropdown-content">
-    <% @month_range.each do |month| %>
-      <%
-      current_formatted_month = Date::MONTHNAMES[month[:month]] + " " + month[:year].to_s
-      if current_formatted_month == @formatted_month then
-        next
-      end
-      %>
-      <%= link_to current_formatted_month, {controller: "history", action: "index", month: month[:month], year: month[:year]}%>
-    <% end %>
-  </div>
-</div>
+
 
 <div class="center">
+
+  <table>
+  <tr>
+
+  <div class="month-dropdown">
+    <button class="month-dropdown-button"><%= @formatted_month %></button>
+    <div class="month-dropdown-content">
+      <% @month_range.each do |month| %>
+        <%
+        current_formatted_month = Date::MONTHNAMES[month[:month]] + " " + month[:year].to_s
+        if current_formatted_month == @formatted_month then
+          next
+        end
+        %>
+        <%= link_to current_formatted_month, {controller: "history", action: "index", month: month[:month], year: month[:year], order: @order}%>
+      <% end %>
+    </div>
+  </div>
+
+  <% if @order == "latest" then %>
+    <% if @next_month.present? then %>
+      <%= link_to "Next month", {controller: "history", action: "index", month: @next_month, year: @next_year, order: @order}, class: "link-button other-month"%>
+    <% end %>
+    <%= link_to "Latest transactions", {controller: "history", action: "index", month: @selected_month, year: @selected_year, order: "earliest"}, class: "link-button change-order" %>
+  <% else %>
+    <% if @previous_month.present? then %>
+      <%= link_to "Previous month", {controller: "history", action: "index", month: @previous_month, year: @previous_year, order: @order}, class: "link-button other-month" %>
+    <% end %>
+    <%= link_to "Earliest transactions", {controller: "history", action: "index", month: @selected_month, year: @selected_year, order: "latest"}, class: "link-button change-order" %>
+  <% end %>
+
+  </tr>
+  </table>
+
   <div class="list">
     <% @transaction_days.each do |day| %>
-      <h2><%= day[:date].strftime("%A, %B %d").sub(/ 0/, ' ') %></h2>
+      <h2></h2>
+      <table class="transactions-header">
+        <tr>
+          <%
+            total = 0
+            items = 0
+            day[:transactions].each do |t|
+              total += t.amount
+              items += 1
+            end
+
+          %>
+
+          <th><%= day[:date].strftime("%A, %B %d").sub(/ 0/, ' ') %> </th>
+          <th>Items: <%= items %><th>
+          <th>Total: <%= number_to_currency(total)%></th>
+        </tr>
+      </table>
+
       <table class="transactions-day">
         <% day[:transactions].each do |transaction| %>
+
+
           <tr>
             <td class="icon-data">
               <div class="category-icon" style="background-color: <%= @categories[transaction.category][:color] %>">
@@ -35,5 +76,16 @@
       <table>
     <% end %>
   </div>
+  <br></br>
+
+  <% if @order == "earliest" then %>
+    <% if @next_month.present? then %>
+      <%= link_to "Next month", {controller: "history", action: "index", month: @next_month, year: @next_year, order: @order}, class: "centered link-button other-month "%>
+    <% end %>
+  <% else %>
+    <% if @previous_month.present? then %>
+      <%= link_to "Previous month", {controller: "history", action: "index", month: @previous_month, year: @previous_year, order: @order}, class: "centered link-button other-month" %>
+    <% end %>
+  <% end %>
 
 </div>

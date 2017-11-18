@@ -12,15 +12,56 @@ div.center {
 div.month-dropdown {
   position: relative;
   display: inline-block;
+  width: 33.3333333%;
+}
+
+.centered {
+  margin-left: 33.3333333%;
+}
+
+.link-button {
+  font-family: Helvetica;
+  height: 50px;
+  line-height: 50px;
+  padding: 0px;
+  font-size: 16px;
+  text-decoration: none;
+  width: 33.3333333%;
+  background-color: #2980b9;
+  color: #FFFFFF;
+  display: inline-block;
+  text-align: center;
+}
+
+.other-month {
+  background-color: #2B74F2;
+}
+
+.other-month:hover {
+  background-color: #4386FA;
+}
+
+.change-order {
+  float: right;
+  background-color: #ED1C24;
+}
+
+.change-order:hover {
+  background-color: #F04E4D;
+}
+
+.link-button:visited, .link-button:active {
+  color: #FFFFFF;
 }
 
 button.month-dropdown-button {
   font-family: Helvetica;
   background-color: #4CAF50;
   color: white;
-  padding: 16px;
+  height: 50px;
+  // padding: 16px;
   font-size: 16px;
-  width: 200px;
+  width: 100%;
   border: none;
   cursor: pointer;
 }
@@ -58,15 +99,15 @@ div.month-dropdown:hover button.month-dropdown-button {
     background-color: #3e8e41;
 }
 
-.transactions-day {
+.transactions-day, .transactions-header {
   border-style: none;
 }
 
-.transactions-day tbody {
+.transactions-day tbody, .transactions-header tbody {
   border-style: none;
 }
 
-.transactions-day tr {
+.transactions-day tr, .transactions-header tbody {
   border-style: none;
 }
 
@@ -76,6 +117,14 @@ div.month-dropdown:hover button.month-dropdown-button {
 
 .transactions-day td {
   border-style: none;
+  font-family: Helvetica;
+  font-size: 18px;
+}
+
+.transactions-header th {
+  border-style: none;
+  font-family: Helvetica;
+  font-size: 22px;
 }
 
 .icon-data {
