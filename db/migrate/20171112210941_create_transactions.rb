@@ -6,7 +6,7 @@ class CreateTransactions < ActiveRecord::Migration[5.1]
       t.decimal "amount", precision: 8, scale: 2, null:false
       t.date "date", null:false
       t.string "category", null:false, default:"Unknown"
-      t.string "type", null:false
+      t.string "transaction_type", null:false
       t.string "unique_id", null:false
 
       t.boolean "location", null:false, default: false
