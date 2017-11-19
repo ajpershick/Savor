@@ -26,19 +26,27 @@ div.transaction-input-container {
   text-align: center;
 }
 
-input.transaction-input {
+input.transaction-amount-input, input.transaction-name-input {
   font-family: Helvetica;
   font-size: 26px;
   float: left;
-  width: 270px;
   height: 44px;
-  padding-right: 30px;
   border-style: solid;
   border-width: 2px;
   border-left-width: 0px;
   border-color: #E1E1E1;
   position: relative;
+}
+
+input.transaction-amount-input {
+  width: 270px;
+  padding-right: 30px;
   text-align: right;
+}
+
+input.transaction-name-input {
+  width: 290px;
+  padding-left: 10px;
 }
 
 div.transaction-icon-container {

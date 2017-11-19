@@ -9,7 +9,7 @@
       <div class="transaction-icon-container">
         <i class="fa fa-usd transaction-icon"></i>
       </div>
-      <%= text_field_tag(:amount, "" , class: "transaction-input", placeholder: "0.00", onkeyup: "validateAmount(event.which, this)") %>
+      <%= text_field_tag(:amount, "" , class: "transaction-amount-input", placeholder: "0.00", onkeyup: "validateAmount(event.which, this)") %>
     </div>
 
     <br></br>
@@ -38,11 +38,13 @@
 
     </table>
 
+    <br></br>
+
     <div class="transaction-input-container">
       <div class="transaction-icon-container">
         <i class="fa fa-map-marker transaction-icon"></i>
       </div>
-      <%= text_field_tag(:location_name, "" , class: "transaction-input", placeholder: "0.00", onkeyup: "validateAmount(event.which, this)") %>
+      <%= text_field_tag(:location_name, "" , class: "transaction-name-input", placeholder: "Location name") %>
     </div>
 
     <br></br>
