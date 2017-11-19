@@ -31,9 +31,9 @@ require 'plaid'
 set :public_folder, File.dirname(__FILE__) + '/public'
 
 client = Plaid::Client.new(env: :sandbox,
-                           client_id: '5a0dea97bdc6a46838fe624f',
-                           secret: 'e8b3c50b3b19285d6e288827e5558',
-                           public_key: '596188d345ee7774752317766e108c')
+                           client_id: Rails.application.secrets.plaid_client_id,
+                           secret: Rails.application.secrets.plaid_secret,
+                           public_key: Rails.application.secrets.plaid_public_key)
 
 access_token = nil
 
