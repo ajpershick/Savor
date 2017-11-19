@@ -49,6 +49,24 @@
 
     <br></br>
 
+    <table class="transaction-example">
+
+
+        <tr>
+          <td class="icon-data">
+            <div class="category-icon-container" style="background-color: #AAAAAA">
+              <span class="category-icon fa fa-question" aria-hidden="true"></span>
+            </div>
+          </td>
+          <td><div class="location-data">Location name</div></td>
+          <td><div class="category-data">Category</div></td>
+          <td><div class="amount-data"><%= number_to_currency(0) %></div></td>
+        </tr>
+
+    <table>
+
+    <br></br>
+
     <%= submit_tag("Record Transaction", class: "transaction-submit-button") %>
 
   <% end %>
