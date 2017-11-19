@@ -70,8 +70,8 @@
 
           <tr>
             <td class="icon-data">
-              <div class="category-icon" style="background-color: <%= @categories[transaction.category][:color] %>">
-                <span class="icon fa fa-<%= @categories[transaction.category][:icon]%> " aria-hidden="true"></span>
+              <div class="category-icon-container" style="background-color: <%= @categories[transaction.category][:color] %>">
+                <span class="category-icon fa fa-<%= @categories[transaction.category][:icon]%> " aria-hidden="true"></span>
               </div>
             </td>
             <td><div class="location-data"><%= transaction.location_name %></div></td>
