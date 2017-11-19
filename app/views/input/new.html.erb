@@ -1,0 +1,41 @@
+
+<div class="center">
+
+  <h1 class="transaction-title">New Transaction Input</h1>
+
+  <%= form_tag({controller: "input", action: "create"}, method: "post") do %>
+
+    <div class="transaction-input-container">
+      <div class="transaction-icon-container">
+        <i class="fa fa-usd transaction-icon"></i>
+      </div>
+      <%= text_field_tag(:amount, "" , class: "transaction-input", placeholder: "0.00", onkeyup: "validateAmount(event.which, this)") %>
+    </div>
+
+
+    <table class="category-table">
+      <tr>
+
+
+      </tr>
+
+      <tr>
+
+
+      </tr>
+
+
+      <tr>
+
+
+      </tr>
+
+
+    </table>
+
+
+    <%= submit_tag("Record Transaction", class: "transaction-submit-button") %>
+
+  <% end %>
+
+</div>
