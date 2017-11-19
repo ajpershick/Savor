@@ -45,7 +45,7 @@ categories = [
     unique_id: "1")
 end
 
-(0..10000).each do
+(0..100).each do
   Transaction.create(
     user_id: 1,
     amount: (rand * 1000).round(2),
