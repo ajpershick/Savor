@@ -76,3 +76,47 @@ div.transaction-valid {
 div.transaction-invalid {
   background-color: #e74c3c;
 }
+
+table.transaction-category-table {
+  width: 0;
+  margin: auto;
+  border-style: none;
+}
+
+table.transaction-category-table tbody {
+  border-style: none;
+}
+
+tr.transaction-category-row {
+  border-style: none;
+}
+
+.transaction-icon-data {
+  border-style: none;
+  border-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.transaction-category-icon-container {
+  padding: 10px;
+  width: 75px;
+  height: 75px;
+  font-size: 45px;
+  text-align: center;
+  //line-height: 45px;
+}
+
+.transaction-category-icon {
+  display: inline-block;
+  color: #FFFFFF;
+  vertical-align: middle;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.transaction-category-char {
+  font-family: Helvetica;
+  font-size: 16px;
+  color: white;
+}

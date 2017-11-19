@@ -12,27 +12,40 @@
       <%= text_field_tag(:amount, "" , class: "transaction-input", placeholder: "0.00", onkeyup: "validateAmount(event.which, this)") %>
     </div>
 
+    <br></br>
 
-    <table class="category-table">
-      <tr>
+    <table class="transaction-category-table">
+
+      <% (0..@category_order.length - 1).each do |index| %>
+
+        <% if index % 8 == 0 then %>
+          <tr class="transaction-category-row">
+        <% end %>
+
+        <td class="transaction-icon-data" title="<%= @category_order[index].capitalize %>">
+          <div class="transaction-category-icon-container" style="background-color: <%= @categories[@category_order[index]][:color] %>" data-color="<%= @categories[@category_order[index]][:color] %>" onmouseover="lightenUp(this)" onmouseout="revertColor(this)">
+            <span class="transaction-category-icon fa fa-<%= @categories[@category_order[index]][:icon]%> " aria-hidden="true"></span>
+            <span class="transaction-category-char">[ <%= @char[index] %> ]</span>
+          </div>
+        </td>
+
+        <% if index % 8 == 7 then %>
+          </tr>
+        <% end %>
 
 
-      </tr>
-
-      <tr>
-
-
-      </tr>
-
-
-      <tr>
-
-
-      </tr>
-
+      <% end %>
 
     </table>
 
+    <div class="transaction-input-container">
+      <div class="transaction-icon-container">
+        <i class="fa fa-map-marker transaction-icon"></i>
+      </div>
+      <%= text_field_tag(:location_name, "" , class: "transaction-input", placeholder: "0.00", onkeyup: "validateAmount(event.which, this)") %>
+    </div>
+
+    <br></br>
 
     <%= submit_tag("Record Transaction", class: "transaction-submit-button") %>
 
