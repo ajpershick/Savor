@@ -75,3 +75,6 @@ gem 'serviceworker-rails'
 gem 'plaid'
 
 gem 'sinatra'
+
+#RestClient gem for API calls
+gem 'rest-client'
