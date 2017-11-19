@@ -35,8 +35,8 @@
   </tr>
   </table>
 
-  <!-- <h1>Month transactions: <%= @total_items %></h2> -->
-  <!-- <h1>Month total: <%= @total_amount %></h2> -->
+  <h1>Month transactions: <%= @total_items %></h2>
+  <h1>Month total: <%= number_to_currency(@total_amount) %></h2>
 
   <div class="list">
     <% @transaction_days.each do |day| %>

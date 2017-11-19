@@ -4,11 +4,20 @@ class HistoryController < ApplicationController
 
   def index
     @categories = {
-      "food"      => {icon: "cutlery",       color: "#2980b9"},
-      "clothing"  => {icon: "shopping-bag",  color: "#27ae60"},
-      "groceries" => {icon: "shopping-cart",       color: "#f1c40f"},
-      "gas"       => {icon: "car",           color: "#e74c3c"},
-
+      "food"          => {icon: "cutlery",       color: "#2980b9"},
+      "clothing"      => {icon: "shopping-bag",  color: "#27ae60"},
+      "groceries"     => {icon: "shopping-cart", color: "#f1c40f"},
+      "gas"           => {icon: "car",           color: "#e74c3c"},
+      "gifts"         => {icon: "gift",          color: "#D2527F"},
+      "entertainment" => {icon: "film",          color: "#8e44ad"},
+      "recreation"    => {icon: "futbol-o",      color: "#16a085"},
+      "transit"       => {icon: "bus",           color: "#59ABE3"},
+      "utilities"     => {icon: "bolt",          color: "#f39c12"},
+      "maintenance"   => {icon: "wrench",        color: "#7f8c8d"},
+      "emergency"     => {icon: "medkit",        color: "#c0392b"},
+      "debt"          => {icon: "usd",           color: "#bdc3c7"},
+      "luxury"        => {icon: "diamond",       color: "#9b59b6"},
+      "education"     => {icon: "book",          color: "#2ecc71"},
     }
 
 
@@ -16,8 +25,8 @@ class HistoryController < ApplicationController
     if params[:month].blank? || params[:year].blank? then
       today = Date.today
       @formatted_month = Date::MONTHNAMES[today.month] + " " + today.year.to_s
-      @selected_month = today.month
-      @selected_year = today.year
+      @selected_month = today.month.to_s
+      @selected_year = today.year.to_s
     else
       @formatted_month = Date::MONTHNAMES[params[:month].to_i] + " " + params[:year].to_s
       @selected_month = params[:month]
