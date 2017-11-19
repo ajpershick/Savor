@@ -2,6 +2,8 @@ class HistoryController < ApplicationController
 
   before_action :confirm_user_logged_in
 
+  layout "menu"
+
   def index
     @categories = {
       "dining"        => {icon: "cutlery",        color: "#2980b9"},
@@ -32,8 +34,28 @@ class HistoryController < ApplicationController
 
 
 
+    if params[:order].blank? then
+      @order = "latest"
+    else
+      @order = params[:order]
+    end
+
+    # Get the current logged in user
+    user = User.find(session[:user_id])
+    # Get all the user's transactions
+    transactions = user.transactions.order(:date => :desc)
+
+    if transactions.length == 0 then
+      @empty = true
+      return
+    end
+    @empty = false
+
+    latest_date = transactions[0].date.to_date
+    earliest_date = transactions[-1].date.to_date
+
     if params[:month].blank? || params[:year].blank? then
-      today = Date.today
+      today = latest_date
       @formatted_month = Date::MONTHNAMES[today.month] + " " + today.year.to_s
       @selected_month = today.month.to_s
       @selected_year = today.year.to_s
@@ -43,18 +65,9 @@ class HistoryController < ApplicationController
       @selected_year = params[:year]
     end
 
-    if params[:order].blank? then
-      @order = "latest"
-    else
-      @order = params[:order]
-    end
-
-    user = User.find(session[:user_id]) # Get the current logged in user
-    transactions = user.transactions.order(:date => :desc) # Get all the user's transactions
-    latest_date = transactions[0].date.to_date
-    earliest_date = transactions[-1].date.to_date
     # Creates an array of all months between the user's first transaction and latest transaction
     @month_range = (earliest_date..latest_date).map{|d| {year: d.year, month: d.month}}.uniq.reverse
+
     # Gets all month with the selected month
     month_transactions = transactions.where('extract(year from date) = ?', @selected_year).where('extract(month from date) = ?', @selected_month)
 
@@ -73,8 +86,10 @@ class HistoryController < ApplicationController
       transaction_index += 1
     end
 
+    # Gets the index of the currently selected month/year combination
     current_index =  @month_range.each_index.detect{|i| @month_range[i][:year].to_s == @selected_year && @month_range[i][:month].to_s == @selected_month}
 
+    # Calculates the next and previous months, if they exist
     if current_index == @month_range.length - 1 then
       @previous_month = nil
       @previous_year = nil
@@ -91,6 +106,7 @@ class HistoryController < ApplicationController
       @next_year = @month_range[current_index - 1][:year]
     end
 
+    # Change the order transactions appear in
     if @order == "earliest" then
       @transaction_days.reverse!
     end
@@ -98,15 +114,13 @@ class HistoryController < ApplicationController
     @total_amount = 0
     @total_items = 0
 
+    # Calculate the total amount of money spent, and total transactions made during the month
     @transaction_days.each do |day|
       day[:transactions].each do |t|
         @total_amount += t.amount
         @total_items += 1
       end
     end
-
-    puts @total_amount
-    puts @total_items
 
   end
 

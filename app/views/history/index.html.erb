@@ -2,6 +2,8 @@
 
 <div class="center">
 
+  <% if !@empty then %>
+
   <table>
   <tr>
 
@@ -34,9 +36,13 @@
 
   </tr>
   </table>
-
-  <h1>Month transactions: <%= @total_items %></h2>
-  <h1>Month total: <%= number_to_currency(@total_amount) %></h2>
+  <% if @transaction_days.length > 0 then %>
+    <h1>Month transactions: <%= @total_items %></h2>
+      <h1>Month total: <%= number_to_currency(@total_amount) %></h2>
+  <% else %>
+    <h1>No transactions recorded for this month</h1>
+    <h1>Add transactions using the input tab, or by syncing with Plaid</h1>
+  <% end %>
 
   <div class="list">
     <% @transaction_days.each do |day| %>
@@ -87,6 +93,11 @@
     <% if @previous_month.present? then %>
       <%= link_to "Previous month", {controller: "history", action: "index", month: @previous_month, year: @previous_year, order: @order}, class: "centered link-button other-month" %>
     <% end %>
+  <% end %>
+
+  <% else %>
+    <h1>No transactions found</h1>
+    <h1>Add transactions using the input tab, or by syncing with Plaid</h1>
   <% end %>
 
 </div>
