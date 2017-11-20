@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'spending_history/charts' => "spending_history"
   get 'spending_history/index' => "spending_history#index"
   get 'recommendations/index' => "recommendations#index"
+  get 'recommendations/restaurants' => "recommendations#restaurants"
+  get 'recommendations/events' => "recommendations#events"
 
   root 'home#index'
 

@@ -6,4 +6,11 @@ class RecommendationsController < ApplicationController
 
   def index
   end
+
+  def restaurants
+  end
+
+  def events
+  end
+  
 end
