@@ -68,8 +68,18 @@ class InputController < ApplicationController
   end
 
   def create
-
-
+    new_transaction = Transaction.new(
+      user_id: session[:user_id],
+      amount: params[:amount],
+      date: Date.today,
+      category: params[:category],
+      transaction_type: "place",
+      unique_id: rand(0..100000).to_s,
+      location_name: params[:location_name]
+    )
+    if new_transaction.save
+      redirect_to({controller: "input", action: "new"})
+    end
   end
 
 

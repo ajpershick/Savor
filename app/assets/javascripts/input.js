@@ -10,10 +10,12 @@ function selectCategory(element) {
   var iconContainer = document.getElementsByClassName("category-icon-container")[0];
   var iconElement = document.getElementsByClassName("category-icon")[0];
   var categoryText = document.getElementsByClassName("category-data")[0];
+  var inputBox = document.getElementById("category")
 
   iconContainer.style.backgroundColor = color;
   iconElement.className = "category-icon fa fa-" + icon;
   categoryText.innerHTML = capitalize(category);
+  inputBox.value = category;
 
   document.getElementsByClassName("transaction-name-input")[0].focus();
   document.getElementsByClassName('transaction-category-table')[0].style.borderColor = "";
@@ -126,14 +128,14 @@ function validateAmount(key, input) {
     container.classList.remove("transaction-invalid");
     input.value = "";
     text.innerHTML = "$0.00";
-    return;
+    return false;
   }
 
   valid = isValidNum(amount);
 
   if (key === 13 && valid) {
     document.getElementsByClassName("transaction-category-table")[0].focus();
-    return;
+    return true;
   }
 
   if (valid) {
@@ -144,10 +146,14 @@ function validateAmount(key, input) {
     input.value = String(decimal);
     text.innerHTML = String(decimal);
 
+    return true;
+
   } else {
     container.classList.remove("transaction-valid");
     container.classList.add("transaction-invalid");
     text.innerHTML = "$0.00";
+
+    return false;
   }
 
 }
@@ -164,12 +170,14 @@ function validateLocationName(key, input) {
     container.classList.remove("transaction-valid");
     container.classList.remove("transaction-invalid");
     text.innerHTML = "Location name";
+    return false;
 
   } else if (location_name.length > 25) {
 
     container.classList.remove("transaction-valid");
     container.classList.add("transaction-invalid");
     text.innerHTML = "Location name";
+    return false;
 
   } else {
 
@@ -177,6 +185,36 @@ function validateLocationName(key, input) {
     container.classList.add("transaction-valid");
     text.innerHTML = capitalize(location_name);
 
+    if (key === 13) {
+      document.getElementById("transaction-form").submit();
+    }
+
+    return true;
+
   }
+
+}
+
+function verifyTransaction() {
+  var check = 7;
+  var amountInput = document.getElementsByClassName("transaction-amount-input")[0];
+  var categoryInput = document.getElementsByClassName("transaction-category-input")[0];
+  var nameInput = document.getElementsByClassName("transaction-name-input")[0];
+
+  if (validateAmount(0, amountInput)) check -= 4;
+  if (categoryInput.value.length > 0) check -= 2;
+  if (validateLocationName(0, nameInput)) check -= 1;
+
+  if (check === 0) {
+    return true;
+  } else if (check >= 4) {
+    amountInput.focus();
+  } else if (check >= 2) {
+    categoryInput.focus();
+  } else {
+    nameInput.focus();
+  }
+
+  return false;
 
 }

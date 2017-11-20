@@ -3,13 +3,14 @@
 
   <h1 class="transaction-title">New Transaction Input</h1>
 
-  <%= form_tag({controller: "input", action: "create"}, method: "post") do %>
+  <%= form_tag({controller: "input", action: "create"}, method: "post", id:"transaction-form", onsubmit:"return verifyTransaction()") do %>
 
     <div class="transaction-input-container">
       <div class="transaction-icon-container">
         <i class="fa fa-usd transaction-icon"></i>
       </div>
-      <%= text_field_tag(:amount, "" , class: "transaction-amount-input", placeholder: "0.00", onkeyup: "validateAmount(event.which, this)", autofocus: true) %>
+      <%= text_field_tag(
+        :amount, "" , class: "transaction-amount-input", placeholder: "0.00", onkeydown: "if (event.which === 13) return false", onkeyup: "validateAmount(event.which, this)", autofocus: true) %>
     </div>
 
     <br></br>
@@ -61,7 +62,7 @@
       <div class="transaction-icon-container">
         <i class="fa fa-map-marker transaction-icon"></i>
       </div>
-      <%= text_field_tag(:location_name, "" , class: "transaction-name-input", placeholder: "Location name", onkeyup: "validateLocationName(event.which, this)") %>
+      <%= text_field_tag(:location_name, "" , class: "transaction-name-input", placeholder: "Location name", onkeydown: "if (event.which === 13) return false", onkeyup: "validateLocationName(event.which, this)") %>
     </div>
 
     <br></br>
@@ -85,7 +86,7 @@
     <br></br>
 
     <div class="transaction-submit-container">
-      <%= submit_tag("Record Transaction", class: "transaction-submit-button") %>
+      <input type="submit" name="commit" value="Save transaction" id="entry-signup-button" class="transaction-submit-button"></input>
     </div>
 
     <br></br>
