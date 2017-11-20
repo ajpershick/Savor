@@ -38,8 +38,11 @@ Rails.application.routes.draw do
   get 'bank_sync/index'
   get 'bank_sync/create_item'
   get 'bank_sync/add_account'
+  post 'bank_sync/get_access_token'
 
   get "home/index" =>"home#index"
+
+  match '/get_access_token' => 'bank_sync#get_access_token', via: :post
 
 
   root 'access#login'
