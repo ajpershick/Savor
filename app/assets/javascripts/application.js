@@ -21,6 +21,7 @@
 //= require ./home
 //= require ./recommendations
 //= require ./spending_history.coffee
+//= require ./input
 
 function myFunction() { //toggles the side-nav
     var x = document.getElementById("mySideNav");
