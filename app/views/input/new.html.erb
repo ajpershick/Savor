@@ -9,12 +9,12 @@
       <div class="transaction-icon-container">
         <i class="fa fa-usd transaction-icon"></i>
       </div>
-      <%= text_field_tag(:amount, "" , class: "transaction-amount-input", placeholder: "0.00", onkeyup: "validateAmount(event.which, this)") %>
+      <%= text_field_tag(:amount, "" , class: "transaction-amount-input", placeholder: "0.00", onkeyup: "validateAmount(event.which, this)", autofocus: true) %>
     </div>
 
     <br></br>
 
-    <table class="transaction-category-table">
+    <table tabindex="0", class="transaction-category-table" onkeydown="selectCategoryByKey(event.which, 'down')" onkeyup="selectCategoryByKey(event.which, 'up')">
 
       <% (0..@category_order.length - 1).each do |index| %>
 
@@ -23,10 +23,25 @@
         <% end %>
 
         <td class="transaction-icon-data" title="<%= @category_order[index].capitalize %>">
-          <div class="transaction-category-icon-container" style="background-color: <%= @categories[@category_order[index]][:color] %>" data-color="<%= @categories[@category_order[index]][:color] %>" onmouseover="lightenUp(this)" onmouseout="revertColor(this)">
+
+          <div
+            class="transaction-category-icon-container"
+            id="category-type-<%= @category_order[index] %>"
+            style="background-color: <%= @categories[@category_order[index]][:color] %>"
+            data-category="<%= @category_order[index] %>"
+            data-icon="<%= @categories[@category_order[index]][:icon] %>"
+            data-color="<%= @categories[@category_order[index]][:color] %>"
+            onmouseover="lightenUp(this)"
+            onmouseout="revertColor(this)"
+            onmouseup="selectCategory(this)"
+            onmousedown="document.getElementsByClassName('transaction-category-table')[0].style.borderColor = '#FFFFFF'"
+          >
+
             <span class="transaction-category-icon fa fa-<%= @categories[@category_order[index]][:icon]%> " aria-hidden="true"></span>
             <span class="transaction-category-char">[ <%= @char[index] %> ]</span>
+
           </div>
+
         </td>
 
         <% if index % 8 == 7 then %>
@@ -38,13 +53,15 @@
 
     </table>
 
+    <%= text_field_tag(:category, "", class: "transaction-category-input") %>
+
     <br></br>
 
     <div class="transaction-input-container">
       <div class="transaction-icon-container">
         <i class="fa fa-map-marker transaction-icon"></i>
       </div>
-      <%= text_field_tag(:location_name, "" , class: "transaction-name-input", placeholder: "Location name") %>
+      <%= text_field_tag(:location_name, "" , class: "transaction-name-input", placeholder: "Location name", onkeyup: "validateLocationName(event.which, this)") %>
     </div>
 
     <br></br>
@@ -67,7 +84,11 @@
 
     <br></br>
 
-    <%= submit_tag("Record Transaction", class: "transaction-submit-button") %>
+    <div class="transaction-submit-container">
+      <%= submit_tag("Record Transaction", class: "transaction-submit-button") %>
+    </div>
+
+    <br></br>
 
   <% end %>
 

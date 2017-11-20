@@ -49,6 +49,10 @@ input.transaction-name-input {
   padding-left: 10px;
 }
 
+input.transaction-category-input {
+  visibility: hidden;
+}
+
 div.transaction-icon-container {
   float: left;
   width: 50px;
@@ -67,6 +71,11 @@ div.transaction-icon-container {
   margin-bottom: 0;
 }
 
+div.transaction-submit-container {
+  width: 65%;
+  margin: auto;
+}
+
 input.transaction-submit-button {
   font-family: Helvetica;
   font-size: 18px;
@@ -75,6 +84,11 @@ input.transaction-submit-button {
   border: 0;
   background-color: #3598DC;
   color: #FFFFFF;
+}
+
+input.transaction-submit-button:hover {
+  background-color: #49ACF0;
+  transition: 0.1s;
 }
 
 div.transaction-valid {
@@ -88,7 +102,14 @@ div.transaction-invalid {
 table.transaction-category-table {
   width: 0;
   margin: auto;
-  border-style: none;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #FFFFFF;
+  outline: none;
+}
+
+table.transaction-category-table:focus {
+  border-color: #888888;
 }
 
 table.transaction-category-table tbody {
@@ -146,4 +167,18 @@ tr.transaction-category-row {
   border-style: none;
   font-family: Helvetica;
   font-size: 18px;
+}
+
+
+.transaction-example td:nth-child(1) {
+  width: 10%;
+}
+.transaction-example td:nth-child(2) {
+  width: 30%;
+}
+.transaction-example td:nth-child(3) {
+  width: 30%;
+}
+.transaction-example td:nth-child(4) {
+  width: 30%;
 }
