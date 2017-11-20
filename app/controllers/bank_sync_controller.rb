@@ -40,6 +40,13 @@ class BankSyncController < ApplicationController
       else
         redirect_to(:action => "index", :message => "Error, failed to create item") and return
       end
-    end 
+    end
   end
+
+  def delete_access_token
+    #delete item, given access_token
+    client.item.delete(params['access_token']);
+
+  end
+
 end
