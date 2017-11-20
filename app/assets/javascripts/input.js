@@ -1,7 +1,9 @@
+// Capitalizes first letter of the string
 function capitalize(input) {
     return input.charAt(0).toUpperCase() + input.slice(1);
 }
 
+// Chooses the transaction category when a user selects it
 function selectCategory(element) {
   var color = element.dataset.color;
   var category = element.dataset.category;
@@ -22,6 +24,7 @@ function selectCategory(element) {
 
 }
 
+// Transaction category selection for when a keyboard shortcut is used
 function selectCategoryByKey(key, click) {
 
   var key_order = [
@@ -103,7 +106,7 @@ function revertColor(element) {
   element.style.backgroundColor = element.dataset.color;
 }
 
-
+// Number must between 8 or less digits
 function isValidNum(amount) {
   if (amount.length > 8) return false;
 
@@ -195,6 +198,7 @@ function validateLocationName(key, input) {
 
 }
 
+// Validates all inputs before creating a new entry in the transaction table
 function verifyTransaction() {
   var check = 7;
   var amountInput = document.getElementsByClassName("transaction-amount-input")[0];

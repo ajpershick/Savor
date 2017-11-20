@@ -37,7 +37,7 @@ categories = [
   Transaction.create(
     user_id: 1,
     amount: (rand * 1000).round(2),
-    date: Date.today,
+    date: Date.today - 1,
     category: categories[i],
     location_name: (0...3).map { (97 + rand(26)).chr }.join,
     transaction_type: "place",
@@ -49,10 +49,28 @@ end
   Transaction.create(
     user_id: 1,
     amount: (rand * 1000).round(2),
-    date: Date.today - 1 - rand(300),
+    date: Date.today - 2 - rand(300),
     category: categories[rand(0..categories.length - 1)],
     location_name: (0...3).map { (97 + rand(26)).chr }.join,
     transaction_type: "place",
     location: false,
     unique_id: "1")
 end
+
+user = User.new
+user.id = 1
+user.username = "testing"
+user.name = "Test"
+user.password = "testing"
+user.email = "test@test.ca"
+user.admin = false
+user.save
+
+admin = User.new
+admin.id = 2
+admin.username = "admintest"
+admin.name = "Admin"
+admin.password = "admintest"
+admin.email = "admin@test.ca"
+admin.admin = true
+admin.save

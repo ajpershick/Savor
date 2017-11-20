@@ -77,6 +77,7 @@ class InputController < ApplicationController
       unique_id: rand(0..100000).to_s,
       location_name: params[:location_name]
     )
+    
     if new_transaction.save
       redirect_to({controller: "input", action: "new"})
     end
