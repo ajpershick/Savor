@@ -70,3 +70,11 @@ gem 'rails-ujs'
 
 #serviceworker rails gem
 gem 'serviceworker-rails'
+
+#plaid gem
+gem 'plaid'
+
+gem 'sinatra'
+
+#RestClient gem for API calls
+gem 'rest-client'

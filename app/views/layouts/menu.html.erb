@@ -16,16 +16,18 @@
         <li><a onclick="linkDelay('/history/index')">History</a></li>
         <li><a onclick="linkDelay('/spending_history/charts')">Charts</a></li>
         <li><a onclick="showSubpages('restaurants', 'events')">Recommendations</a></li>
-          <li class="subpage-button" id="restaurants"><a onclick= "linkDelay('/')">Restaurants</a></li>
-          <li class="subpage-button" id="events"><a onclick= "linkDelay('/')">Events</a><li>
+          <li class="subpage-button" id="restaurants"><a onclick= "linkDelay('/recommendations/restaurants')">Restaurants</a></li>
+          <li class="subpage-button" id="events"><a onclick= "linkDelay('/recommendations/events')">Events</a><li>
         <li><a onclick="showSubpages('show-account-info', 'edit-account-info', 'change-password')">Account</a></li>
           <li class="subpage-button" id="show-account-info"><a onclick= "linkDelay('/account/index')">Show Account Details</a></li>
           <li class="subpage-button" id="edit-account-info"><a onclick= "linkDelay('/account/edit')">Edit Account Details</a></li>
           <li class="subpage-button" id="change-password"><a onclick= "linkDelay('/account/change_password')">Change Password</a><li>
+        <li><a onclick="linkDelay('/bank_sync/add_account')">Bank Sync</a></li>
         <li><a onclick="linkDelay('/access/logout')">Sign Out</a></li>
       </ul>
     </nav>
   </header>
+
 
   <body>
     <div class="topnav" id="myTopnav">

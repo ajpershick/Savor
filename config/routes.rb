@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'spending_history/charts' => "spending_history"
   get 'spending_history/index' => "spending_history#index"
   get 'recommendations/index' => "recommendations#index"
+  get 'recommendations/restaurants' => "recommendations#restaurants"
+  get 'recommendations/events' => "recommendations#events"
 
   root 'home#index'
 
@@ -37,7 +39,14 @@ Rails.application.routes.draw do
   get 'account/change_password'
   post 'account/make_password_change'
 
+  get 'bank_sync/index'
+  get 'bank_sync/create_item'
+  get 'bank_sync/add_account'
+  post 'bank_sync/get_access_token'
+
   get "home/index" =>"home#index"
+
+  match '/get_access_token' => 'bank_sync#get_access_token', via: :post
 
 
   root 'access#login'

@@ -8,3 +8,4 @@ node_modules/npm/
 tmp/
 /log/*.log
 yarn-error.log
+secrets.yml
