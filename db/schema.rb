@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 20171118045109) do
     t.integer "user_id"
     t.decimal "amount", precision: 8, scale: 2, null: false
     t.date "date", null: false
-    t.string "category", default: "miscellaneous", null: false
-    t.string "transaction_type", null: false
+    t.string "category", default: "Unknown", null: false
+    t.string "type", null: false
     t.string "unique_id", null: false
     t.boolean "location", default: false, null: false
     t.string "location_name"
@@ -49,14 +49,6 @@ ActiveRecord::Schema.define(version: 20171118045109) do
     t.string "password_digest"
     t.string "email", limit: 255, null: false
     t.boolean "admin", default: false, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "widgets", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.integer "stock"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
