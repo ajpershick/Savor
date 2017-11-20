@@ -16,8 +16,9 @@ ActiveRecord::Schema.define(version: 20171118045109) do
   enable_extension "plpgsql"
 
   create_table "items", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "access_token"
+    t.integer "user_id", null: false
+    t.string "access_token", null: false
+    t.string "item_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_items_on_user_id"

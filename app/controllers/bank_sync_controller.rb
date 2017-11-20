@@ -1,5 +1,6 @@
 class BankSyncController < ApplicationController
   skip_before_action :verify_authenticity_token
+
   layout "menu"
 
   $client = Plaid::Client.new(env: :sandbox,
@@ -12,6 +13,7 @@ class BankSyncController < ApplicationController
   def index
     @access_token = params[:access_token]
     @item_id = params[:item_id]
+    @message = params[:message]
   end
 
   def create_item
@@ -27,6 +29,17 @@ class BankSyncController < ApplicationController
     puts "access token: #{access_token}"
     puts "item id: #{item_id}"
     exchange_token_response.to_json
-    redirect_to(:action => "index", :access_token => access_token, :item_id => item_id) and return
+    if(access_token != nil)
+      new_item = Item.new()
+      new_item.user_id = session[:user_id]
+      new_item.access_token = access_token
+      new_item.item_id = item_id
+      new_item.save
+      if(new_item != nil)
+        redirect_to(:action => "index", :access_token => access_token, :item_id => item_id, :message => "Success, item created") and return
+      else
+        redirect_to(:action => "index", :message => "Error, failed to create item") and return
+      end
+    end 
   end
 end

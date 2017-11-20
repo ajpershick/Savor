@@ -5,6 +5,6 @@ class HomeController < ApplicationController
   layout "menu"
 
   def index
-    @name = User.where(id: session[:user_id]).first.name
+    #@name = User.where(id: session[:user_id]).first.name
   end
 end
