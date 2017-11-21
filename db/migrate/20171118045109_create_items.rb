@@ -12,6 +12,6 @@ class CreateItems < ActiveRecord::Migration[5.1]
   end
 
   def down
-    drop_table :transactions
+    #drop_table :transactions
   end
 end
