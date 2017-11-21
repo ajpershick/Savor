@@ -506,6 +506,18 @@ div.entry-tooltip-temporary span {
     background-color: #E1E1E1;
   }
 
+  div.entry-valid {
+    background-color: #00A65D;
+  }
+
+  div.entry-invalid {
+    background-color: #ED1C24;
+  }
+
+  div.entry-tooltip {
+    display: none;
+  }
+
   img.entry-icon {
     float: left;
     width: 50%;
