@@ -191,6 +191,10 @@ tr.transaction-category-row {
 
 @media screen and (max-width: 380px) {
   div.transaction-input-container {
-   width:95%;
+   width: 95%;
+  }
+
+  input.transaction-amount-input, input.transaction-name-input {
+    width: 200px;
   }
 }
