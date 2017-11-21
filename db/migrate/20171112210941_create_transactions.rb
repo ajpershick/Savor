@@ -25,6 +25,5 @@ class CreateTransactions < ActiveRecord::Migration[5.1]
 
   def down
     drop_table :transactions
-    drop_table :items
   end
 end
