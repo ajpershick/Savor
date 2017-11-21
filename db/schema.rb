@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 20171118045109) do
     t.integer "user_id"
     t.decimal "amount", precision: 8, scale: 2, null: false
     t.date "date", null: false
-    t.string "category", default: "Unknown", null: false
-    t.string "type", null: false
+    t.string "category", default: "miscellaneous", null: false
+    t.string "transaction_type", null: false
     t.string "unique_id", null: false
     t.boolean "location", default: false, null: false
     t.string "location_name"
