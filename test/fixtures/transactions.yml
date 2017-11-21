@@ -4,8 +4,21 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
+one:
+    user_id: 1
+    amount: 12.34
+    date: <%= Date.today %>
+    category: "miscellaneous"
+    transaction_type: "place"
+    unique_id: "1"
+    location_name: "Testing"
+
 two: {}
 # column: value
+  user_id: 1
+  amount: 56.78
+  date: <%= Date.today %>
+  category: "dining"
+  transaction_type: "place"
+  unique_id: "2"
+  location_name: "Testing"
