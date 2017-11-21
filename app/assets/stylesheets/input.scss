@@ -187,3 +187,10 @@ tr.transaction-category-row {
 .transaction-example td:nth-child(4) {
   width: 30%;
 }
+
+
+@media screen and (max-width: 380px) {
+  div.transaction-input-container {
+   width:95%;
+  }
+}

@@ -51,6 +51,7 @@ div.month-dropdown {
   position: relative;
   display: inline-block;
   width: 33.3333333%;
+  float: left;
 }
 
 button.month-dropdown-button {
@@ -129,6 +130,7 @@ div.month-dropdown:hover button.month-dropdown-button {
   font-size: 18px;
   font-weight: bold;
   text-align: left;
+  margin-left: 50px;
 }
 
 
