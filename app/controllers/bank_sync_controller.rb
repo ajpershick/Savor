@@ -14,6 +14,7 @@ class BankSyncController < ApplicationController
     @access_token = params[:access_token]
     @item_id = params[:item_id]
     @message = params[:message]
+    @balance = params[:user_balance]
   end
 
   def create_item
@@ -45,8 +46,33 @@ class BankSyncController < ApplicationController
 
   def delete_access_token
     #delete item, given access_token
-    client.item.delete(params['access_token']);
+    $client.item.delete(params['access_token']);
+  end
 
+  def get_account_balance
+    #@access_token = params[:access_token]
+
+#    @item_id = params[:item_id]
+#    @message = params[:message]
+    # returns the current user's item
+#    user_item = Item.find_by user_id: session[:user_id]
+#    @access_token = user_item.access_token
+    #returns the total balance in the bank accounts registered by the user, using their access token
+#    @userBalance = $client.accounts.balance.get(@access_token);
+    #pass @userBalance to a view to display balance
+
+#    @balanceSum = 0
+#    @balanceSum.to_i
+#    #@balanceArray = @userBalance[]
+#    @userBalance["accounts"].each do |i|
+#      @sum = @userBalance['accounts'][i][1][0].to_i
+#      @balanceSum+=@sum
+
+#    end
+
+
+#    redirect_to(:action => "index", :access_token => @access_token, :item_id => @item_id, :message => @message, :user_balance => @balanceSum) and return
+    #redirect_to(:action => "index", :user_balance => @userBalance) and return
   end
 
 end
