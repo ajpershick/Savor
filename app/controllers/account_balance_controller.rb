@@ -4,9 +4,6 @@ class AccountBalanceController < ApplicationController
 
   layout 'menu'
 
-  def index
-  end
-
   def update
     @currentUser = User.find(session[:user_id])
     @message = nil
@@ -45,9 +42,4 @@ class AccountBalanceController < ApplicationController
     end
   end
 
-  def make_update
-  end
-
-  def clear
-  end
 end
