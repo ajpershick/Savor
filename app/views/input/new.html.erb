@@ -1,4 +1,9 @@
 
+<p class="message" id="message">
+  <%=@message%>
+  <i id="close-message" class="fa fa-times" aria-hidden="true" onclick="closeMessage()"></i>
+</p>
+
 <div class="center">
 
   <h1 class="transaction-title">New Transaction Input</h1>
@@ -9,8 +14,7 @@
       <div class="transaction-icon-container">
         <i class="fa fa-usd transaction-icon"></i>
       </div>
-      <%= text_field_tag(
-        :amount, "" , class: "transaction-amount-input", placeholder: "0.00", onkeydown: "if (event.which === 13) return false", onkeyup: "validateAmount(event.which, this)", autofocus: true) %>
+      <%= text_field_tag(:amount, "" , class: "transaction-amount-input", placeholder: "0.00", onkeydown: "if (event.which === 13) return false", onkeyup: "validateAmount(event.which, this)", autofocus: true) %>
     </div>
 
     <br></br>

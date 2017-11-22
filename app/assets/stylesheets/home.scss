@@ -53,3 +53,40 @@ div#element4 {
 [draggable] {
 user-select: none;
 }
+
+p.home-headers {
+  float: left;
+  line-height: auto;
+  display: block;
+  padding: 0;
+  margin: 10px;
+  font-size: 15px;
+  position: absolute;
+}
+
+p#home-account-balance {
+  margins: 0;
+  font-size: 35px;
+  display: inline-block;
+  bottom: 5%;
+  //position: absolute;
+  position:inherit;
+}
+
+div.balance-container {
+  height: 60%;
+  width: 100%;
+  background-color: transparent;
+  //margin-top: 20%;
+  //margin-bottom: 20%;
+  position: relative;
+  top: 20%;
+  text-align: middle;
+  vertical-align:middle;
+}
+
+button#balance-edit {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

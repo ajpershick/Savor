@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'account_balance/index'
+  get 'account_balance/update'
+  get 'account_balance/clear'
+  post 'account_balance/make_update'
+
   get 'input/new'
 
   get 'history/index'

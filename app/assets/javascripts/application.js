@@ -61,6 +61,14 @@ function showSubpages(subpage1, subpage2, subpage3, subpage4, subpage5, subpage6
     }
   }
 }
+
+function closeMessage() { //toggles the side-nav
+  console.log("executed closeMessage")
+    var x = document.getElementById("message");
+    //if (x.className === "message") {
+        x.className += " close";
+    //}
+}
 //end of sidenav dropdown menu
 
 /*

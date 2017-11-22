@@ -5,6 +5,8 @@ class InputController < ApplicationController
   layout "menu"
 
   def new
+    @message = params[:message]
+
     @categories = {
       "dining"        => {icon: "cutlery",        color: "#2980b9"},
       "clothing"      => {icon: "shopping-bag",   color: "#27ae60"},
@@ -77,9 +79,11 @@ class InputController < ApplicationController
       unique_id: rand(0..100000).to_s,
       location_name: params[:location_name]
     )
-    
+    @amount = params[:amount]
+
     if new_transaction.save
-      redirect_to({controller: "input", action: "new"})
+      redirect_to({controller: "account_balance", action: "update", amount: @amount, next_controller:"input", next_action: "new"})
+      #redirect_to({controller: "input", action: "new"})
     end
   end
 

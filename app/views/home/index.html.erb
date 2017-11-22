@@ -17,27 +17,36 @@
   </div>
 </div>
 -->
+<p class="message" id="message">
+  <%=@message%>
+  <i id="close-message" class="fa fa-times" aria-hidden="true" onclick="closeMessage()"></i>
+</p>
 
 <div class="element-container" id="account_balance">
   <div id="element1">
-    <center>Account Balance</center>
+    <p class="home-headers">Account Balance</p>
+    <div class="balance-container">
+      <p id="home-account-balance"> <%=number_to_currency(@account_balance)%><!--<span id="balance-js"><%=@account_balance%></span>--></p>
+    </div>
+    <button id="balance-edit">Edit</button>
+    <!--hide this until the user specifies that they want to edit -->
   </div>
 </div>
 
 <div class="element-container" id="goals">
   <div id="element2">
-    <center>Goals</center>
+    <p class="home-headers">Goals</p>
   </div>
 </div>
 
 <div class="element-container" id="last_records">
   <div id="element3">
-    <center>Recent Spendings</center>
+    <p class="home-headers">Recent Spendings</p>
   </div>
 </div>
 
 <div class="element-container" id="planned_payments">
   <div id="element4">
-    <center>Planned Payments</center>
+    <p class="home-headers">Planned Payments</p>
   </div>
 </div>
