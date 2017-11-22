@@ -68,7 +68,7 @@
 //top navbar for mobile
 // need to change to adapt for lists
 //keep this part
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 970px) {
   .topnav a:not(:first-child) {display: none;} //hide all other elements except for hamburger button.
   .topnav a.icon {
     position: relative;
@@ -105,7 +105,8 @@ li.subpage-button.open {
   position: fixed;
   background-color: #333;
   height: 100%;
-  width: 80%;
+  //width: 75%;
+  width: 300px;
   text-align: left;
   transform: translateX(-100%);
   transition: 0.6s ease;
@@ -139,7 +140,8 @@ li.subpage-button.open {
   position: fixed;
   background-color: #333;
   height: 100%;
-  width: 80%;
+  //width: 75%;
+  width: 300px;
   text-align: left;
   transform: translateX(0%);
   transition: 0.6s ease;

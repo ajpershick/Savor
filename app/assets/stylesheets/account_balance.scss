@@ -43,10 +43,18 @@ p#home-account-balance {
   line-height: 35px;
 }
 
-p.balance-description {
-  float: left;
+div.description-container {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  text-align: center;
+}
+
+p.account-balance-description {
   //background-color: green;
-  margin: 0;
+  margin: auto;
   padding-bottom: 10px;
   display: inline;
+  position: auto;
+  text-align: center;
 }

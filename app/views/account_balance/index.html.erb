@@ -9,13 +9,14 @@
   <h1 class="transaction-title">Account Balances</h1>
 
   <div class="balance-container">
-    <p id="home-account-balance" style="font-weight: bold;"> Total Balance: <%=number_to_currency(@total_balance)%></p>
-    <p id="home-account-balance"> Bank Balance: <%=number_to_currency(@bank_balance)%></p>
-    <p id="home-account-balance"> Cash Balance: <%=number_to_currency(@cash_balance)%></p>
+    <p id="home-account-balance" style="font-weight: bold;"> Total Balance: <%=number_to_currency(@total_balance)%></p><br>
+    <p id="home-account-balance"> Bank Balance: <%=number_to_currency(@bank_balance)%></p><br>
+    <p id="home-account-balance"> Cash Balance: <%=number_to_currency(@cash_balance)%></p><br><br><br>
   </div>
 
-<p class="balance-description">Total Balance: The sum of the balances in your bank balance and cash balance</p>
-<p class="balance-description">Bank Balance: The sum of all balances currently in all your bank accounts</p>
-<p class="balance-description">Cash Balance: The total amount of cash you currently have</p>
-
+  <div class="description-container">
+    <p class="account-balance-description">Total Balance: The sum of the balances in your bank balance and cash balance</p><br><br>
+    <p class="account-balance-description">Bank Balance: The sum of all balances currently in all your bank accounts</p><br><br>
+    <p class="account-balance-description">Cash Balance: The total amount of cash you currently have</p><br><br>
+  </div>
 </div>
