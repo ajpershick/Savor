@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'account_balance/index'
 
   get 'input/new'
+  get "input/income"
 
   get 'history/index'
 
