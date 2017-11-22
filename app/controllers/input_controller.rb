@@ -82,7 +82,8 @@ class InputController < ApplicationController
     @amount = params[:amount]
 
     if new_transaction.save
-      redirect_to({controller: "account_balance", action: "update", amount: @amount, next_controller:"input", next_action: "new"})
+      puts "Cash transaction successfully saved, redirecting to account_balance/update"
+      redirect_to({controller: "account_balance", action: "update", amount: @amount, next_controller:"input", next_action: "new", trans_type: "cash"})
       #redirect_to({controller: "input", action: "new"})
     end
   end

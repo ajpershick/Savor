@@ -3,8 +3,15 @@ class CreateAccountBalances < ActiveRecord::Migration[5.1]
     create_table :account_balances do |t|
       t.integer "user_id" # References the user that the item belongs to
 
-      #item_id is automatically recorded
-      t.decimal "account_balance", :default => 0.00, :precision => 15, :scale => 2, :null => false#used to access product data for an Item
+      #balance in bank account
+      t.decimal "bank_balance", :default => 0.00, :precision => 15, :scale => 2
+      #balance in cash
+      t.decimal "cash_balance", :default => 0.00, :precision => 15, :scale => 2
+      #sum of total and cash balances
+      t.decimal "total_balance", :default => 0.00, :precision => 15, :scale => 2
+
+
+
 
       t.timestamps
     end

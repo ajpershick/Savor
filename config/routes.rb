@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   post 'account_balance/update'
+  get 'account_balance/index'
 
   get 'input/new'
 

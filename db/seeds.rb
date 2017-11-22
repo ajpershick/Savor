@@ -74,3 +74,10 @@ admin.password = "admintest"
 admin.email = "admin@test.ca"
 admin.admin = true
 admin.save
+
+balance = AccountBalance.new
+balance.user_id = 1
+balance.bank_balance = 0 #add up balances in bank account, once user has created item
+balance.cash_balance = 9001.00
+balance.total_balance = balance.cash_balance + balance.bank_balance
+balance.save

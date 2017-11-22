@@ -17,7 +17,9 @@ ActiveRecord::Schema.define(version: 20171121211441) do
 
   create_table "account_balances", force: :cascade do |t|
     t.integer "user_id"
-    t.decimal "account_balance", precision: 15, scale: 2, default: "0.00", null: false
+    t.decimal "bank_balance", precision: 15, scale: 2, default: "0.00"
+    t.decimal "cash_balance", precision: 15, scale: 2, default: "0.00"
+    t.decimal "total_balance", precision: 15, scale: 2, default: "0.00"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_account_balances_on_user_id"

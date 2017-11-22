@@ -16,7 +16,9 @@ class HomeController < ApplicationController
     if(@currentUser.account_balance == nil)
       @new_balance = AccountBalance.new()
       @new_balance.user_id = session[:user_id]
-      @new_balance.account_balance = 0.00
+      @new_balance.cash_balance = 0.00
+      @new_balance.bank_balance = 0.00
+      @new_balance.total_balance = 0.00
       @new_balance.save
 
       if(@currentUser.account_balance != nil)
@@ -25,7 +27,7 @@ class HomeController < ApplicationController
         @message = "Failed to create new account_balance record"
       end
     else
-      @account_balance = @currentUser.account_balance.account_balance
+      @account_balance = @currentUser.account_balance.total_balance
     end
     #account balance block -- end
 

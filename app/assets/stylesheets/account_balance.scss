@@ -1,3 +1,52 @@
 // Place all the styles related to the account_balance controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.center {
+  margin: 5%;
+  width: 90%;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+h1.transaction-title {
+
+  font-family: Helvetica;
+  font-size: 40px;
+  text-align: center;
+  color: #bdc3c7;
+  display: inline-block;
+  line-height: 40px; //added
+  text-align: center;
+  margin:auto;
+}
+
+div.balance-container {
+  height: 60%;
+  width: 100%;
+  background-color: transparent;
+  //margin-top: 20%;
+  //margin-bottom: 20%;
+  position: relative;
+  top: 20%;
+  vertical-align:middle;
+}
+
+p#home-account-balance {
+  margin: 20px;
+  font-size: 35px;
+  display: inline;
+  bottom: 5%;
+  //position: absolute;
+  position:inherit;
+  //background-color: pink;
+  line-height: 35px;
+}
+
+p.balance-description {
+  float: left;
+  //background-color: green;
+  margin: 0;
+  padding-bottom: 10px;
+  display: inline;
+}
