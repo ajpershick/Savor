@@ -37,7 +37,7 @@ class AccountBalanceController < ApplicationController
 
   def update
     @currentUser = User.find(session[:user_id])
-    @transaction_type = params["trans_type"] # "bank" or "cash"
+    @transaction_type = params["trans_type"] # "bank", "cash", "income-cash", "income-bank"
     @message = nil
     if(@currentUser.account_balance == nil)
       @new_balance = AccountBalance.new()
@@ -79,6 +79,29 @@ class AccountBalanceController < ApplicationController
       @currentUser.account_balance.save
       @message = "Transaction saved, successfully updated account balance"
 
+    elsif (@currentUser.account_balance != nil && @transaction_type == "income-cash")
+      puts "Detected income-cash transaction"
+        #save bank_amount parameter into spent
+      income = params['amount']
+        #add the income-cash amount to the cash balance
+      @currentUser.account_balance.cash_balance+=income.to_f
+        #update total_balance
+      @currentUser.account_balance.total_balance = @currentUser.account_balance.cash_balance + @currentUser.account_balance.bank_balance
+        #save changes to database
+      @currentUser.account_balance.save
+      @message = "Transaction saved, successfully updated account balance"
+
+    elsif (@currentUser.account_balance != nil && @transaction_type == "income-bank")
+      puts "Detected income-bank transaction"
+        #save bank_amount parameter into spent
+      income = params['amount']
+        #add the income-cash amount to the bank balance
+      @currentUser.account_balance.bank_balance+=income.to_f
+        #update total_balance
+      @currentUser.account_balance.total_balance = @currentUser.account_balance.cash_balance + @currentUser.account_balance.bank_balance
+        #save changes to database
+      @currentUser.account_balance.save
+      @message = "Transaction saved, successfully updated account balance"
     else
       @message = "Transaction not saved, failed to update account balance"
     end
