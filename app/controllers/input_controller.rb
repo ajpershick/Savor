@@ -88,5 +88,9 @@ class InputController < ApplicationController
     end
   end
 
+#  def create_income
+#    new_income = Income.new()
+#  end
+
 
 end

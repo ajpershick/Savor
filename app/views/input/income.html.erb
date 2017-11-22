@@ -8,14 +8,14 @@
 
   <h1 class="transaction-title">Cash Income Input</h1>
 
+  <%= form_tag({controller: "input", action: "create"}, method: "post", id:"income-form", onsubmit:"return verifyIncome()") do %>
 
-
-    <div class="transaction-submit-container">
+    <div class="income-submit-container">
       <input type="submit" name="commit" value="Save" id="entry-signup-button" class="income-submit-button"></input>
     </div>
 
     <br></br>
 
-  <% end %>
+
 
 </div>
