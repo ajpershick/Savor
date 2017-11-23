@@ -1,0 +1,191 @@
+// Place all the styles related to the History controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.center {
+  margin: auto;
+  width: 50%;
+  background-color: #FFFFFF;
+}
+
+.centered {
+  margin-left: 33.3333333%;
+}
+
+.link-button {
+  font-family: Helvetica;
+  height: 50px;
+  line-height: 50px;
+  padding: 0px;
+  font-size: 16px;
+  text-decoration: none;
+  width: 33.3333333%;
+  background-color: #2980b9;
+  color: #FFFFFF;
+  display: inline-block;
+  text-align: center;
+}
+
+.other-month {
+  background-color: #2B74F2;
+}
+
+.other-month:hover {
+  background-color: #4386FA;
+}
+
+.change-order {
+  float: right;
+  background-color: #ED1C24;
+}
+
+.change-order:hover {
+  background-color: #F04E4D;
+}
+
+.link-button:visited, .link-button:active {
+  color: #FFFFFF;
+}
+
+div.month-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 33.3333333%;
+  float: left;
+}
+
+button.month-dropdown-button {
+  font-family: Helvetica;
+  background-color: #4CAF50;
+  color: white;
+  height: 50px;
+  // padding: 16px;
+  font-size: 16px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+div.month-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100%;
+  // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  max-height: 300px;
+  overflow: auto;
+}
+
+div.month-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    font-family: Helvetica;
+}
+
+/* Change color of dropdown links on hover */
+div.month-dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+/* Show the dropdown menu on hover */
+div.month-dropdown:hover div.month-dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+div.month-dropdown:hover button.month-dropdown-button {
+    background-color: #3e8e41;
+}
+
+.transactions-day, .transactions-header {
+  border-style: none;
+}
+
+.transactions-day tbody, .transactions-header tbody {
+  border-style: none;
+}
+
+.transactions-day tr, .transactions-header tr {
+  border-style: none;
+}
+
+.transactions-day tr:nth-child(odd) {
+  background-color: #EEEEEE;
+}
+
+.transactions-day td {
+  border-style: none;
+  font-family: Helvetica;
+  font-size: 18px;
+}
+
+.transactions-header td {
+  border-style: none;
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: bold;
+  //text-align: left;
+  //margin-left: 50px;
+}
+
+
+.transactions-header td:nth-child(1) {
+  width: 40%;
+}
+.transactions-header td:nth-child(2) {
+  width: 30%;
+}
+.transactions-header td:nth-child(3) {
+  width: 30%;
+}
+
+.transactions-day td:nth-child(1) {
+  width: 10%;
+}
+.transactions-day td:nth-child(2) {
+  width: 30%;
+}
+.transactions-day td:nth-child(3) {
+  width: 30%;
+}
+.transactions-day td:nth-child(4) {
+  width: 30%;
+}
+
+.icon-data {
+}
+
+.location-data {
+}
+
+.category-data {
+}
+
+.amount-data {
+}
+
+.category-icon-container {
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+  text-align: center;
+  line-height: 45px;
+}
+
+.category-icon {
+  display: inline-block;
+  color: #FFFFFF;
+  vertical-align: middle;
+  margin: 0;
+  margin-bottom: 0;
+}
+
+h#income-history{
+  text-align: center;
+}

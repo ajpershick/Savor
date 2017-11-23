@@ -1,9 +1,12 @@
 # README
-Staging branch: [![Build Status](https://semaphoreci.com/api/v1/ajpershick/276-project/branches/staging/badge.svg)](https://semaphoreci.com/ajpershick/276-project)
+Staging: [![Build Status](https://semaphoreci.com/api/v1/ajpershick/savor/branches/staging/badge.svg)](https://semaphoreci.com/ajpershick/savor)
 
-Production branch: [![Build Status](https://semaphoreci.com/api/v1/ajpershick/276-project/branches/production/badge.svg)](https://semaphoreci.com/ajpershick/276-project)
-<br>
-<br>
+Production: [![Build Status](https://semaphoreci.com/api/v1/ajpershick/savor/branches/production/badge.svg)](https://semaphoreci.com/ajpershick/savor)
+
+Check out our Semaphore CI (Continuous integration and Automatic deployment) builds at: https://semaphoreci.com/ajpershick/savor
+
+Git: https://github.com/ajpershick/Savor
+
 Jeremy Fell,
 Vinson Ly,
 Darien Flamont,

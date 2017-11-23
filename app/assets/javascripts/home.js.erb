@@ -28,3 +28,8 @@ function dropped(evt) {
   evt.target.innerHTML = evt.dataTransfer.getData("text/html")
 }
 */
+
+function twoDecimals(x, id) {
+  var x2 = x.toFixed(2);
+  document.getElementById(id).innerHTML = x2;
+}

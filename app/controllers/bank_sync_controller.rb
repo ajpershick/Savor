@@ -1,5 +1,6 @@
 class BankSyncController < ApplicationController
   skip_before_action :verify_authenticity_token
+  before_action :confirm_user_logged_in
 
   layout "menu"
 
@@ -9,6 +10,8 @@ class BankSyncController < ApplicationController
                              public_key: Rails.application.secrets.plaid_public_key)
 
   access_token = nil
+
+  $current_user = User.find(session[:user_id])
 
   def index
     @access_token = params[:access_token]
@@ -23,6 +26,7 @@ class BankSyncController < ApplicationController
   def add_account
   end
 
+  #creates a new item in the database with fields: user_id, item_id, access_token
   def get_access_token
     exchange_token_response = $client.item.public_token.exchange(params['public_token'])
     access_token = exchange_token_response['access_token']
@@ -73,6 +77,11 @@ class BankSyncController < ApplicationController
 
 #    redirect_to(:action => "index", :access_token => @access_token, :item_id => @item_id, :message => @message, :user_balance => @balanceSum) and return
     #redirect_to(:action => "index", :user_balance => @userBalance) and return
+  end
+  before_action :confirm_user_logged_in
+
+  def get_transaction
+    #confirm that user has 
   end
 
 end

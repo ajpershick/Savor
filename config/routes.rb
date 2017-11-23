@@ -1,7 +1,19 @@
 Rails.application.routes.draw do
 
+  post 'account_balance/update'
+  get 'account_balance/index'
+
+  get 'input/new'
+  get "input/income"
+  post "input/create_income"
+
+  get 'history/index'
+  get 'history/income'
+
   match	':controller(/:action(/:id))',	:via	=>	:get
   match	':controller(/:action(/:id))',	:via	=>	:post
+
+  get 'maps/index' => "maps#index"
 
   get 'spending_history/charts' => "spending_history"
   get 'spending_history/index' => "spending_history#index"

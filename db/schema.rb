@@ -10,10 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171118045109) do
+ActiveRecord::Schema.define(version: 20171122231757) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "account_balances", force: :cascade do |t|
+    t.integer "user_id"
+    t.decimal "bank_balance", precision: 15, scale: 2, default: "0.0"
+    t.decimal "cash_balance", precision: 15, scale: 2, default: "0.0"
+    t.decimal "total_balance", precision: 15, scale: 2, default: "0.0"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_account_balances_on_user_id"
+  end
+
+  create_table "incomes", force: :cascade do |t|
+    t.integer "user_id"
+    t.decimal "income_amount", precision: 15, scale: 2, default: "0.0"
+    t.string "source", default: "miscellaneous", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_incomes_on_user_id"
+  end
 
   create_table "items", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -28,8 +47,8 @@ ActiveRecord::Schema.define(version: 20171118045109) do
     t.integer "user_id"
     t.decimal "amount", precision: 8, scale: 2, null: false
     t.date "date", null: false
-    t.string "category", default: "Unknown", null: false
-    t.string "type", null: false
+    t.string "category", default: "miscellaneous", null: false
+    t.string "transaction_type", null: false
     t.string "unique_id", null: false
     t.boolean "location", default: false, null: false
     t.string "location_name"

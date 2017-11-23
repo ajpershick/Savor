@@ -21,6 +21,7 @@
 //= require ./home
 //= require ./recommendations
 //= require ./spending_history.coffee
+//= require ./input
 
 function myFunction() { //toggles the side-nav
     var x = document.getElementById("mySideNav");
@@ -59,6 +60,14 @@ function showSubpages(subpage1, subpage2, subpage3, subpage4, subpage5, subpage6
       x.className = "subpage-button";
     }
   }
+}
+
+function closeMessage() { //toggles the side-nav
+  console.log("executed closeMessage")
+    var x = document.getElementById("message");
+    //if (x.className === "message") {
+        x.className += " close";
+    //}
 }
 //end of sidenav dropdown menu
 
