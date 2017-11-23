@@ -88,9 +88,20 @@ class InputController < ApplicationController
     end
   end
 
-#  def create_income
-#    new_income = Income.new()
-#  end
+#creates a new income in database with params: income_amount, source
+  def create_income
+    new_income = Income.new(
+      user_id: session[:user_id],
+      income_amount: params[:income_amount],
+      source: params[:source]
+    )
 
+    @income_amount = params[:income_amount]
+
+    if new_income.save
+      puts "Cash income successfully saved, redirecting to account_balance/update"
+      redirect_to({controller: "account_balance", action: "update", income_amount: @income_amount, next_controller:"input", next_action: "income", trans_type: "cash"})
+    end
+  end
 
 end

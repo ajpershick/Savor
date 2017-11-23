@@ -10,12 +10,30 @@
 
   <%= form_tag({controller: "input", action: "create"}, method: "post", id:"income-form", onsubmit:"return verifyIncome()") do %>
 
+  <div class="income-input-container">
+    <div class="income-icon-container">
+      <i class="fa fa-usd transaction-icon"></i>
+    </div>
+    <%= text_field_tag(:cash_amount, "" , class: "income-amount-input", placeholder: "0.00", onkeydown: "if (event.which === 13) return false", onkeyup: "validateAmount(event.which, this)", autofocus: true) %>
+  </div>
+
+
+  <div class="income-input-container">
+    <div class="income-icon-container">
+      <i class="fa fa-handshake-o"></i>
+    </div>
+    <%= text_field_tag(:source, "" , class: "income-name-input", placeholder: "Source", onkeydown: "if (event.which === 13) return false", onkeyup: "validateLocationName(event.which, this)") %>
+  </div>
+
+<br>
+<br>
+
     <div class="income-submit-container">
       <input type="submit" name="commit" value="Save" id="entry-signup-button" class="income-submit-button"></input>
     </div>
 
     <br></br>
 
-
+    <%end%>
 
 </div>
