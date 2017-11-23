@@ -1,1 +1,25 @@
+<p><%=@message%></p>
 <center><h1 id="income-history">Income History</h1></center>
+
+<div class="table-container">
+<table>
+  <thead>
+    <tr>
+      <th>Submission Date</th>
+      <th>Amount</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <% @incomes.each do |user| %>
+        <tr>
+          <td><%= user.created_at %></td>
+          <td>$ <%= "%.2f" % user.income_amount %></td>
+          <td><%= user.source %></td>
+
+        </tr>
+      <% end %>
+  </tbody>
+</table>
+</div>
