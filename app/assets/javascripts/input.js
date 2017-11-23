@@ -222,3 +222,5 @@ function verifyTransaction() {
   return false;
 
 }
+
+// Validates all inputs before creating a new entry in the income table.

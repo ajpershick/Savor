@@ -5,8 +5,10 @@ Rails.application.routes.draw do
 
   get 'input/new'
   get "input/income"
+  post "input/create_income"
 
   get 'history/index'
+  get 'history/income'
 
   match	':controller(/:action(/:id))',	:via	=>	:get
   match	':controller(/:action(/:id))',	:via	=>	:post

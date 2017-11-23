@@ -88,5 +88,42 @@ class InputController < ApplicationController
     end
   end
 
+#creates a new income in database with params: income_amount, source
+  def create_income
+    @income_amount = params[:amount]
+    @source = params[:source]
+
+    #check that it was a valid income entry
+    income_float = @income_amount.to_f
+    income_string_round2 = "%0.2f" % income_float #rounds income_float to two decimal places and converts to string form
+    income_is_valid = income_string_round2 == @income_amount.to_s
+
+    #check that source is less than 30 characters
+    source_is_too_big = @source.length > 30
+
+    #if our checks return false, then redirect back to input/income with error message
+    if(income_is_valid == false)
+      puts "income is not a number"
+      redirect_to({controller: "input", action: "income", message: "Failed to enter income entry, income amount is not invalid. Please try again."}) and return
+    elsif (source_is_too_big == true)
+      puts "source is too big"
+      redirect_to({controller: "input", action: "income", message: "Failed to enter income entry. The source must be less than 30 characters. Please try again."}) and return
+    else
+      new_income = Income.new(
+        user_id: session[:user_id],
+        income_amount: params[:amount],
+        source: params[:source]
+      )
+
+      if new_income.save
+        puts "Cash income successfully saved, redirecting to account_balance/update"
+        redirect_to({controller: "account_balance", action: "update", amount: @income_amount, next_controller:"input", next_action: "income", trans_type: "income-cash"}) and return
+      end
+    end
+  end
+
+  def income
+    @message = params[:message]
+  end
 
 end

@@ -188,7 +188,69 @@ tr.transaction-category-row {
   width: 30%;
 }
 
+//Income input
 
+div.income-input-container {
+  height: 52px;
+  width: 350px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  overflow: auto;
+  text-align: center;
+}
+
+div.income-icon-container {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background-color: #E1E1E1;
+  font-size: 35px;
+  text-align: center;
+  line-height: 45px;
+  box-sizing: border-box;
+}
+
+input.income-submit-button {
+  font-family: Helvetica;
+  font-size: 18px;
+  width: 300px;
+  height: 50px;
+  border: 0;
+  background-color: #3598DC;
+  color: #FFFFFF;
+}
+
+input.income-submit-button:hover {
+  background-color: #49ACF0;
+  transition: 0.1s;
+}
+
+input.income-amount-input, input.income-name-input {
+  font-family: Helvetica;
+  font-size: 26px;
+  float: left;
+  height: 50px;
+  border-style: solid;
+  border-width: 2px;
+  border-left-width: 0px;
+  border-color: #E1E1E1;
+  position: auto;
+  margin: auto;
+  padding-right: 10px;
+  width: 300px;
+  text-align: right;
+  box-sizing: border-box;
+}
+
+
+div.income-submit-container {
+  width: 100%;
+  text-align: center;
+}
+
+//media queries for mobile view
 @media screen and (max-width: 380px) {
   div.transaction-input-container {
    width: 95%;
@@ -197,4 +259,32 @@ tr.transaction-category-row {
   input.transaction-amount-input, input.transaction-name-input {
     width: 200px;
   }
+
+  input.income-amount-input, input.income-name-input {
+    width: 100%;
+    border-left-width: 2px;
+  }
+
+  div.income-input-container {
+    width: 95%;
+    text-align: center;
+    position: relative;
+  }
+
+  input.income-submit-button {
+    width: 95%;
+  }
+
+  div.income-icon-container {
+    display: none;
+  }
+
+  div.income-valid {
+    background-color: #27ae60;
+  }
+
+  div.income-invalid {
+    background-color: #e74c3c;
+  }
+
 }

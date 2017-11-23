@@ -5,4 +5,5 @@ class User < ApplicationRecord
   has_many :transactions
   has_many :items
   has_one :account_balance
+  has_many :incomes
 end
