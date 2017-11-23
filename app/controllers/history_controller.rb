@@ -124,4 +124,7 @@ class HistoryController < ApplicationController
 
   end
 
+  def income
+  end 
+
 end

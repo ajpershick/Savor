@@ -17,7 +17,9 @@
         <li><a onclick="showSubpages('cash-transaction', 'cash-income')">Input</a></li>
           <li class="subpage-button" id="cash-transaction"><a onclick= "linkDelay('/input/new')">Cash Transaction</a></li>
           <li class="subpage-button" id="cash-income"><a onclick= "linkDelay('/input/income')">Cash Income</a><li>
-        <li><a onclick="linkDelay('/history/index')">History</a></li>
+        <li><a onclick="showSubpages('transactions', 'income')">History</a></li>
+          <li class="subpage-button" id="transactions"><a onclick= "linkDelay('/history/index')">Transactions</a></li>
+          <li class="subpage-button" id="income"><a onclick= "linkDelay('/history/income')">Income</a></li>
         <li><a onclick="linkDelay('/spending_history/charts')">Charts</a></li>
         <li><a onclick="showSubpages('restaurants', 'events')">Recommendations</a></li>
           <li class="subpage-button" id="restaurants"><a onclick= "linkDelay('/recommendations/restaurants')">Restaurants</a></li>
