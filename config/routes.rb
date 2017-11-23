@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get 'input/new'
   get "input/income"
+  post "input/create_income"
 
   get 'history/index'
 
