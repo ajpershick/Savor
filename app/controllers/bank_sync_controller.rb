@@ -11,7 +11,7 @@ class BankSyncController < ApplicationController
 
   access_token = nil
 
-  $current_user = User.find(session[:user_id])
+  #$current_user = User.find(session[:user_id])
 
   def index
     @access_token = params[:access_token]
@@ -24,6 +24,7 @@ class BankSyncController < ApplicationController
   end
 
   def add_account
+    @user_id = session[:user_id]
   end
 
   #creates a new item in the database with fields: user_id, item_id, access_token
@@ -78,10 +79,9 @@ class BankSyncController < ApplicationController
 #    redirect_to(:action => "index", :access_token => @access_token, :item_id => @item_id, :message => @message, :user_balance => @balanceSum) and return
     #redirect_to(:action => "index", :user_balance => @userBalance) and return
   end
-  before_action :confirm_user_logged_in
 
   def get_transaction
-    #confirm that user has 
+    #confirm that user has
   end
 
 end
