@@ -73,8 +73,8 @@ class ChartsController < ApplicationController
     end
     @empty = false
 
-    latest_date = transactions[0].date.to_date
-    earliest_date = transactions[-1].date.to_date
+    earliest_date = transactions[0].date.to_date
+    latest_date = transactions[-1].date.to_date
 
     # Creates an array of all months, or all years, from the user's first transaction to their latest transaction
     @month_range = (earliest_date..latest_date).map{|d| {year: d.year, month: d.month}}.uniq.reverse
@@ -146,68 +146,82 @@ class ChartsController < ApplicationController
     @year_view = (@selected_month == "Display entire year")
 
 
-    @year_view = true
-    @transaction_set = []
+    #@year_view = true
+
 
     # If showing graph for a single month, find the total days in the month
     if !@yearview then @total_days = days_in_month(@selected_month.to_i, @selected_year.to_i) end
 
+    @transaction_set = []
+    @transaction_set << {}
+    limit = (@year_view) ? 12 : @total_days
+    (1..limit).each do
+      @transaction_set << {
+        "all"           => 0.0,
+        "dining"        => 0.0,
+        "clothing"      => 0.0,
+        "groceries"     => 0.0,
+        "automotive"    => 0.0,
+        "gifts"         => 0.0,
+        "entertainment" => 0.0,
+        "recreation"    => 0.0,
+        "transit"       => 0.0,
+        "utilities"     => 0.0,
+        "maintenance"   => 0.0,
+        "medical"       => 0.0,
+        "debt"          => 0.0,
+        "luxury"        => 0.0,
+        "education"     => 0.0,
+        "pets"          => 0.0,
+        "insurance"     => 0.0,
+        "supplies"      => 0.0,
+        "housing"       => 0.0,
+        "charity"       => 0.0,
+        "savings"       => 0.0,
+        "travel"        => 0.0,
+        "personal care" => 0.0,
+        "taxes"         => 0.0,
+        "miscellaneous" => 0.0,
+      }
+    end
     if @year_view then
       current_transactions = transactions.where('extract(year from date) = ?', @selected_year)
 
-      (1..12).each do
-        category_map = {
-          "dining"        => 0.0,
-          "clothing"      => 0.0,
-          "groceries"     => 0.0,
-          "automotive"    => 0.0,
-          "gifts"         => 0.0,
-          "entertainment" => 0.0,
-          "recreation"    => 0.0,
-          "transit"       => 0.0,
-          "utilities"     => 0.0,
-          "maintenance"   => 0.0,
-          "medical"       => 0.0,
-          "debt"          => 0.0,
-          "luxury"        => 0.0,
-          "education"     => 0.0,
-          "pets"          => 0.0,
-          "insurance"     => 0.0,
-          "supplies"      => 0.0,
-          "housing"       => 0.0,
-          "charity"       => 0.0,
-          "savings"       => 0.0,
-          "travel"        => 0.0,
-          "personal care" => 0.0,
-          "taxes"         => 0.0,
-          "miscellaneous" => 0.0,
-        }
-
-        @transaction_set << category_map
-      end
-
       transaction_index = 0;
-      month_index = 0;
+      month_index = 1;
 
+      # Processes each transaction, adding its amount value to the relevant category in the relevant month
       while (transaction_index < current_transactions.length) do
 
-        if current_transactions[transaction_index].date.month == transaction_index then
-          puts "testinsdfadsf"
-        end
+        transaction_temp = current_transactions[transaction_index]
 
+        if transaction_temp.date.month != month_index then
+          month_index = transaction_temp.date.month
+          puts transaction_temp.date.month
+        end
+        @transaction_set[month_index][transaction_temp.category] += transaction_temp.amount
+        @transaction_set[month_index]["all"] += transaction_temp.amount
         transaction_index += 1
       end
-
 
     else
       current_transactions = transactions.where('extract(year from date) = ?', @selected_year).where('extract(month from date) = ?', @selected_month)
 
-      (1..@total_days - 1).each do |day|
+      transaction_index = 0;
+      day_index = 1;
 
+      # Processes each transaction, adding its amount value to the relevant category in the relevant month
+      while (transaction_index < current_transactions.length) do
 
+        transaction_temp = current_transactions[transaction_index]
 
+        if transaction_temp.date.day != day_index then
+          day_index = transaction_temp.date.day
+        end
+        @transaction_set[day_index][transaction_temp.category] += transaction_temp.amount
+        @transaction_set[day_index]["all"] += transaction_temp.amount
+        transaction_index += 1
       end
-
 
     end
 
@@ -240,11 +254,21 @@ class ChartsController < ApplicationController
       dataset[:border_color] = @categories[category][:color]
       dataset[:background_color] = @categories[category][:color]
       dataset[:data] = []
-      (0.. @total_days - 1).each do |d|
-        dataset[:data] << rand(1..100)
+
+      if @year_view then
+
+        (1..12).each do |m|
+          dataset[:data] << @transaction_set[m][@category_order[index]]
+        end
+
+      else
+
+        (1.. @total_days).each do |d|
+          dataset[:data] << @transaction_set[d][@category_order[index]]
+        end
+        
       end
       @data[:datasets] << dataset
-
 
     end
 
