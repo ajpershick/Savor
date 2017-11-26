@@ -71,9 +71,16 @@ class InputController < ApplicationController
 
   def create
 
-    #checks precondition that the tranasction amount must be a positive value;
+    #checks precondition that the transaction amount must be a positive value;
      if (params[:amount].to_f < 0)
        @message = "Error, please enter a positive transaction value."
+       redirect_to({controller: params[:last_controller], action: params[:last_action], message: @message}) and return
+     end
+
+     #checks the precondition that the user must have sufficient funds before making a transaction
+     current_user = User.find(session[:user_id])
+     if (params[:amount].to_f > current_user.account_balance.cash_balance.to_f)
+       @message = "Error, insufficient funds in your cash account balance to make this transaction"
        redirect_to({controller: params[:last_controller], action: params[:last_action], message: @message}) and return
      end
 
