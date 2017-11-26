@@ -22,10 +22,10 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'user has the correct info' do
-    assert @user.name = 'savor'
-    assert @user.username = 'savortest'
-    assert @user.email = 'savor@savor.com'
-    assert @user.password_digest = 'test'
+    assert_equal(@user.name, 'savor')
+    assert_equal(@user.username, 'savortest')
+    assert_equal(@user.email, 'savor@savor.com')
+    assert_equal(@user.password_digest, 'test')
   end
 
   # test 'name isnt a number' do
