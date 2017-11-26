@@ -2,31 +2,45 @@
 
 <div class="center">
 
+  <%= link_to "", {controller: "charts", action: "index", year: @selected_year, month: @selected_month, categories: @enabled_categories}, visisble: true, id:"hidden-link" %>
+
   <div class="chart-dropdown" id="yeardropdown">
-    <button class="chart-dropdown-button"></button>
+    <button class="chart-dropdown-button"><%= @selected_year.to_s %></button>
     <div class="chart-dropdown-content">
       <% @year_range.each do |year| %>
         <%
-        if year == @current_year then
+        if year == @selected_year then
           next
         end
         %>
-        <%= link_to year, {controller: "history", action: "index", year: year}%>
+        <%= link_to year, {controller: "charts", action: "index", year: year, month: @selected_month, categories: @enabled_categories}%>
       <% end %>
     </div>
   </div>
 
+  <div class="chart-dropdown" id="refresh-button">
+    <button class="chart-dropdown-button" onmouseup="refreshPage()">
+      <span class="chart-category-icon fa fa-refresh" aria-hidden="true"></span>
+    </button>
+
+  </div>
+
   <div class="chart-dropdown" id="monthdropdown">
-    <button class="chart-dropdown-button"></button>
+    <button class="chart-dropdown-button"><%= (@selected_month == "0") ? "Display entire year" : Date::MONTHNAMES[@selected_month.to_i] %></button>
     <div class="chart-dropdown-content">
-      <% (1..12).each do |month| %>
+      <% (0..12).each do |month| %>
         <%
-        current_month = Date::MONTHNAMES[month]
-        if current_month == @formatted_month then
+        if month == 0 then
+          current_month = "Display entire year"
+        else
+          current_month = Date::MONTHNAMES[month]
+        end
+
+        if month == @selected_month.to_i then
           next
         end
         %>
-        <%= link_to current_month, {controller: "history", action: "index", month: month}%>
+        <%= link_to current_month, {controller: "charts", action: "index", year: @selected_year, month: month, categories: @enabled_categories}%>
       <% end %>
     </div>
   </div>
@@ -128,11 +142,11 @@
 <%= line_chart @data, @options %>
 </div>
 
-<!-- <div style="width:500px; height: 500px">
+<!-- <div style="  ">
 <%= bar_chart @data, @options %>
-</div>
+</div> -->
 
-<div style="width:500px; height: 500px">
+<!-- <div style="width:100%; height: 100%">
 <%= pie_chart @data, @options %>
 </div> -->
 

@@ -63,19 +63,29 @@ div.chart-dropdown:hover button.chart-dropdown-button {
 }
 
 #yeardropdown button.chart-dropdown-button {
-  background-color: #4CAF50;
-}
-
-#yeardropdown:hover button.chart-dropdown-button  {
-  background-color: #3e8e41;
-}
-
-#monthdropdown button.chart-dropdown-button {
   background-color: #3498db;
 }
 
-#monthdropdown:hover button.chart-dropdown-button {
+#yeardropdown:hover button.chart-dropdown-button  {
   background-color: #2980b9;
+}
+
+#monthdropdown button.chart-dropdown-button {
+  background-color: #f4d03f;
+}
+
+#monthdropdown:hover button.chart-dropdown-button {
+  background-color: #f1c40f;
+}
+
+#refresh-button button.chart-dropdown-button {
+  font-size: 35px;
+  line-height: 0px;
+  background-color: #4CAF50;
+}
+
+#refresh-button:hover button.chart-dropdown-button {
+  background-color: #3e8e41;
 }
 
 

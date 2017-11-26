@@ -77,17 +77,17 @@ class ChartsController < ApplicationController
     latest_date = transactions[-1].date.to_date
 
     # Creates an array of all months, or all years, from the user's first transaction to their latest transaction
-    @month_range = (earliest_date..latest_date).map{|d| {year: d.year, month: d.month}}.uniq.reverse
-    @year_range = (earliest_date..latest_date).map{|d| d.year}.uniq.reverse
+    @month_range = (earliest_date..latest_date).map{|d| {year: d.year.to_s, month: d.month.to_s}}.uniq.reverse
+    @year_range = (earliest_date..latest_date).map{|d| d.year.to_s}.uniq.reverse
 
 
 
 
     #
     if params[:categories].blank? then
-      categories = 2 ** 24 - 1
+      @enabled_categories = 2 ** 24 - 1
     else
-      categories = params[:categories].to_i
+      @enabled_categories = params[:categories].to_i
     end
 
     if params[:month].blank? then
@@ -104,7 +104,7 @@ class ChartsController < ApplicationController
 
     # Convert number to binary string of length 24
     # Each bit represents a category
-    binary = categories.to_s(2).rjust(24, "0")
+    binary = @enabled_categories.to_s(2).rjust(24, "0")
 
     @enabled = {
       "dining"        => (binary[0] == "1"),
@@ -143,7 +143,7 @@ class ChartsController < ApplicationController
 
 
 
-    @year_view = (@selected_month == "Display entire year")
+    @year_view = (@selected_month == "0")
 
 
     #@year_view = true
@@ -266,7 +266,7 @@ class ChartsController < ApplicationController
         (1.. @total_days).each do |d|
           dataset[:data] << @transaction_set[d][@category_order[index]]
         end
-        
+
       end
       @data[:datasets] << dataset
 
@@ -290,7 +290,18 @@ class ChartsController < ApplicationController
     #
     #   ]
     # }
-    @options = { class: "testing", responsive: true}
+    @options = {
+      class: "chart-canvas",
+      responsive: true,
+      height: 300,
+      maintainAspectRatio: false,
+      animation: false,
+      elements: {
+        line: {
+          tension: 0
+        }
+      }
+    }
 
 
     test = 1234
