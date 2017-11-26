@@ -125,8 +125,8 @@ class HistoryController < ApplicationController
   end
 
   def income
-    @user = User.find(session[:user_id])
-    @incomes = @user.incomes
+    user = User.find(session[:user_id])
+    @incomes = user.incomes
   end
 
 end
