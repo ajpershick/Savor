@@ -6,6 +6,6 @@ node_modules/.bin/npm
 node_modules/.bin/npx
 node_modules/npm/
 tmp/
-/log/*.log
+log/
 yarn-error.log
 secrets.yml
