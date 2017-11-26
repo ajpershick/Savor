@@ -4,8 +4,8 @@ class AccessController < ApplicationController
 
   def login
     users = User.all
-    @usernames = []
-    users.each do |user| @usernames << user.username end
+    usernames = []
+    users.each do |user| usernames << user.username end
   end
 
   def attempt_login
