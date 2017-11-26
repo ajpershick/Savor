@@ -1,0 +1,139 @@
+<h1>The future home of your recommendations... coming soon</h1>
+
+<div class="center">
+
+  <div class="chart-dropdown" id="yeardropdown">
+    <button class="chart-dropdown-button"></button>
+    <div class="chart-dropdown-content">
+      <% @year_range.each do |year| %>
+        <%
+        if year == @current_year then
+          next
+        end
+        %>
+        <%= link_to year, {controller: "history", action: "index", year: year}%>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="chart-dropdown" id="monthdropdown">
+    <button class="chart-dropdown-button"></button>
+    <div class="chart-dropdown-content">
+      <% (1..12).each do |month| %>
+        <%
+        current_month = Date::MONTHNAMES[month]
+        if current_month == @formatted_month then
+          next
+        end
+        %>
+        <%= link_to current_month, {controller: "history", action: "index", month: month}%>
+      <% end %>
+    </div>
+  </div>
+
+
+  <div class="chart-categories">
+    <div class='chart-option-container'>
+      <span class="chart-category-icon fa fa-check" aria-hidden="true"></span>
+    </div>
+
+    <table class="chart-category-table">
+      <% (0..@category_order.length - 1).each do |index| %>
+
+        <% if index % 12 == 0 then %>
+          <tr class="chart-category-row">
+        <% end %>
+
+        <td class="chart-icon-data" title="<%= @category_order[index].capitalize %>">
+
+          <div
+            class="chart-category-icon-container"
+            id="category-type-<%= @category_order[index] %>"
+            style="background-color: <%= @categories[@category_order[index]][:color] %>"
+            data-category="<%= @category_order[index] %>"
+            data-icon="<%= @categories[@category_order[index]][:icon] %>"
+            data-color="<%= @categories[@category_order[index]][:color] %>"
+            data-binary="<%= 2 ** index %>"
+            onmouseover="conditionalLightenUp(this)"
+            onmouseout="conditionalRevertColor(this)"
+            onmouseup="toggleCategory(this)"
+          >
+
+            <span class="chart-category-icon fa fa-<%= @categories[@category_order[index]][:icon]%> " aria-hidden="true"></span>
+
+          </div>
+
+        </td>
+
+        <% if index == 11 then %>
+            <td class="chart-icon-data" title="Enable all">
+
+              <div
+                class="chart-category-icon-container"
+                id="category-type-disable"
+                style="background-color: #27ae60"
+                data-category="enable"
+                data-icon="times"
+                data-color="#27ae60"
+                onmouseover="conditionalLightenUp(this)"
+                onmouseout="conditionalRevertColor(this)"
+                onmouseup="enableAll()"
+              >
+
+                <span class="chart-category-icon fa fa-check" aria-hidden="true"></span>
+
+              </div>
+            </td>
+          </tr>
+        <% end %>
+
+        <% if index == 23 then %>
+            <td class="chart-icon-data" title="Disable all">
+
+              <div
+                class="chart-category-icon-container"
+                id="category-type-disable"
+                style="background-color: #e74c3c"
+                data-category="disable"
+                data-icon="times"
+                data-color="#e74c3c"
+                onmouseover="conditionalLightenUp(this)"
+                onmouseout="conditionalRevertColor(this)"
+                onmouseup="disableAll()"
+              >
+
+                <span class="chart-category-icon fa fa-times" aria-hidden="true"></span>
+
+              </div>
+            </td>
+          </tr>
+        <% end %>
+
+
+      <% end %>
+
+    </table>
+
+    <div class="chart-reset">
+
+    </div>
+
+  </div>
+
+
+
+
+
+<div style="width:100%; height: 500px">
+<%= line_chart @data, @options %>
+</div>
+
+<!-- <div style="width:500px; height: 500px">
+<%= bar_chart @data, @options %>
+</div>
+
+<div style="width:500px; height: 500px">
+<%= pie_chart @data, @options %>
+</div> -->
+
+</div>

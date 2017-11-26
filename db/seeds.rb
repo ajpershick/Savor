@@ -45,11 +45,11 @@ categories = [
     unique_id: "1")
 end
 
-(0..1000).each do
+(0..2000).each do
   Transaction.create(
     user_id: 1,
     amount: (rand * 1000).round(2),
-    date: Date.today - 2 - rand(300),
+    date: Date.today - 2 - rand(900),
     category: categories[rand(0..categories.length - 1)],
     location_name: (0...3).map { (97 + rand(26)).chr }.join,
     transaction_type: "place",

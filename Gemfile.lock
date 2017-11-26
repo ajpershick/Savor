@@ -58,6 +58,8 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    chartjs-ror (3.3.1)
+      rails (>= 3.1)
     childprocess (0.8.0)
       ffi (~> 1.0, >= 1.0.11)
     coffee-rails (4.2.2)
@@ -223,6 +225,7 @@ DEPENDENCIES
   bootstrap
   byebug
   capybara (~> 2.13)
+  chartjs-ror
   coffee-rails (~> 4.2)
   font-awesome-sass (~> 4.7.0)
   foreman

@@ -1,0 +1,125 @@
+// Place all the styles related to the Charts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.center {
+  margin: auto;
+  width: 50%;
+  background-color: #FFFFFF;
+}
+
+div.chart-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 33.3333333%;
+  float: left;
+}
+
+button.chart-dropdown-button {
+  font-family: Helvetica;
+  color: white;
+  height: 50px;
+  // padding: 16px;
+  font-size: 16px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+div.chart-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100%;
+  // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  max-height: 300px;
+  overflow: auto;
+}
+
+div.chart-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    font-family: Helvetica;
+}
+
+/* Change color of dropdown links on hover */
+div.chart-dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+/* Show the dropdown menu on hover */
+div.chart-dropdown:hover div.chart-dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+div.chart-dropdown:hover button.chart-dropdown-button {
+
+}
+
+#yeardropdown button.chart-dropdown-button {
+  background-color: #4CAF50;
+}
+
+#yeardropdown:hover button.chart-dropdown-button  {
+  background-color: #3e8e41;
+}
+
+#monthdropdown button.chart-dropdown-button {
+  background-color: #3498db;
+}
+
+#monthdropdown:hover button.chart-dropdown-button {
+  background-color: #2980b9;
+}
+
+
+table.chart-category-table {
+  width: 0;
+  margin: auto;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #FFFFFF;
+  outline: none;
+}
+
+table.chart-category-table:focus {
+  border-color: #888888;
+}
+
+table.chart-category-table tbody {
+  border-style: none;
+}
+
+tr.chart-category-row {
+  border-style: none;
+}
+
+.chart-icon-data {
+  border-style: none;
+  border-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.chart-category-icon-container {
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.chart-category-icon {
+  display: inline-block;
+  color: #FFFFFF;
+  vertical-align: middle;
+  margin: 0;
+  margin-bottom: 0;
+}
