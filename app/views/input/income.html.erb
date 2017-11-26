@@ -8,7 +8,7 @@
 
   <h1 class="transaction-title">Cash Income Input</h1>
 
-  <%= form_tag({controller: "input", action: "create_income"}, method: "post", id:"income-form", onsubmit:"return verifyIncome()") do %>
+  <%= form_tag({controller: "input", action: "create_income", method: "post", id:"income-form", onsubmit:"return verifyIncome()", last_controller: "input", last_action: "income"}) do %>
 
   <div class="income-input-container">
     <div class="income-icon-container">

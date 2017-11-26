@@ -70,6 +70,13 @@ class InputController < ApplicationController
   end
 
   def create
+
+    #checks precondition that the tranasction amount must be a positive value;
+     if (params[:amount].to_f < 0)
+       @message = "Error, please enter a positive transaction value."
+       redirect_to({controller: params[:last_controller], action: params[:last_action], message: @message}) and return
+     end
+
     new_transaction = Transaction.new(
       user_id: session[:user_id],
       amount: params[:amount],
@@ -90,6 +97,15 @@ class InputController < ApplicationController
 
 #creates a new income in database with params: income_amount, source
   def create_income
+
+    #checks precondition that the income amount must be a positive value;
+     if (params[:amount].to_f < 0)
+       @message = "Error, please enter a positive income value."
+       redirect_to({controller: params[:last_controller], action: params[:last_action], message: @message}) and return
+     end
+
+
+
     @income_amount = params[:amount]
     @source = params[:source]
 
