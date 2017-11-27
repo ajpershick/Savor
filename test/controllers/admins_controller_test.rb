@@ -6,21 +6,27 @@ class AdminsControllerTest < ActionDispatch::IntegrationTest
                       email: 'savor@savor.com', password_digest: 'test', admin: true)
   end
 
-  test "should get index" do
-    get admin_url
+  test 'index redirected to login' do
+    get admin_index_url
+    assert_redirected_to access_login_url
+  end
+
+  test 'new admin redirected to login' do
+    get admin_new_user_url
+    assert_redirected_to access_login_url
+  end
+
+  test 'should get index' do
+    login(@admin)
+    get admin_index_url
     assert_response :success
   end
 
-  # test "should get new" do
-  #   get new_admin_url
-  #   assert_response :success
-  # end
-  #
-  # test "should create admin" do
+  # test 'should create admin' do
   #   assert_difference('Admin.count') do
   #     post admins_url, params: { admin: {  } }
   #   end
-  #
+
   #   assert_redirected_to admin_url(Admin.last)
   # end
   #
@@ -46,4 +52,5 @@ class AdminsControllerTest < ActionDispatch::IntegrationTest
   #
   #   assert_redirected_to admins_url
   # end
+
 end
