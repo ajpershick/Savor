@@ -24,9 +24,9 @@ Rails.application.routes.draw do
   root 'home#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  #resources :admin
-  #resources :home
-  #resources :access
+  resources :admin
+  resources :home
+  resources :access
 
   get "access/login" => "access#login"
   post "access/attempt_login" => "access#attempt_login"
