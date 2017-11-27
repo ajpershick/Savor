@@ -16,11 +16,11 @@ class AdminsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to access_login_url
   end
 
-  test 'should get index' do
-    login(@admin)
-    get admin_index_url
-    assert_response :success
-  end
+  # test 'should get index' do
+  #   login(@admin)
+  #   get admin_index_url
+  #   assert_response :success
+  # end
 
   # test 'should create admin' do
   #   assert_difference('Admin.count') do

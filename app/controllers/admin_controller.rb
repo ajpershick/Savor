@@ -17,6 +17,7 @@ class AdminController < ApplicationController
     @username = params[:username]
     @first_name = params[:first_name]
     # add last_name
+
     #@password = params:[:password]
     @email = params[:email]
     @admin = params[:admin]
