@@ -102,6 +102,12 @@ class ChartsController < ApplicationController
       @selected_year = params[:year]
     end
 
+    if params[:chart].blank? then
+      @chart_type = "line"
+    else
+      @chart_type = params[:chart]
+    end
+
     # Convert number to binary string of length 24
     # Each bit represents a category
     @binary = @enabled_categories.to_s(2).rjust(24, "0")

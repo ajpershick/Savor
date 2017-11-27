@@ -11,7 +11,7 @@ function selectChart(element) {
   var pie_chart = document.getElementById("pie-chart-container");
   var line_chart = document.getElementById("line-chart-container");
   var stats_table = document.getElementById("stats-table-container");
-
+  var replacement;
   switch(element.id) {
     case "pie-chart-button":
       line.classList.remove("chart-type-selected");
@@ -20,6 +20,7 @@ function selectChart(element) {
       line_chart.style.display = "none";
       stats_table.style.display = "none";
       pie_chart.style.display = "block";
+      replacement = "pie";
       break;
 
     case "line-chart-button":
@@ -29,6 +30,7 @@ function selectChart(element) {
       pie_chart.style.display = "none";
       stats_table.style.display = "none";
       line_chart.style.display = "block";
+      replacement = "line";
       break;
 
     case "stats-table-button":
@@ -38,8 +40,15 @@ function selectChart(element) {
       pie_chart.style.display = "none";
       line_chart.style.display = "none";
       stats_table.style.display = "block";
+      replacement = "table";
       break;
   }
+
+  var links = document.getElementsByTagName("a");
+  for (var i = 0; i < links.length; i++) {
+    links[i].href = links[i].href.replace(/&chart=.*&month/, "&chart=" + replacement + "&month");
+  }
+
 }
 
 

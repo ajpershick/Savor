@@ -1,7 +1,7 @@
 <br></br>
 <div class="chart-center">
 
-  <%= link_to "", {controller: "charts", action: "index", year: @selected_year, month: @selected_month, categories: @enabled_categories}, visisble: true, id:"hidden-link" %>
+  <%= link_to "", {controller: "charts", action: "index", year: @selected_year, month: @selected_month, categories: @enabled_categories, chart: @chart_type}, visisble: true, id:"hidden-link" %>
 
   <div class="chart-dropdown" id="yeardropdown">
     <button class="chart-dropdown-button"><%= @selected_year.to_s %></button>
@@ -12,7 +12,7 @@
           next
         end
         %>
-        <%= link_to year, {controller: "charts", action: "index", year: year, month: @selected_month, categories: @enabled_categories}%>
+        <%= link_to year, {controller: "charts", action: "index", year: year, month: @selected_month, categories: @enabled_categories, chart: @chart_type}%>
       <% end %>
     </div>
   </div>
@@ -39,7 +39,7 @@
           next
         end
         %>
-        <%= link_to current_month, {controller: "charts", action: "index", year: @selected_year, month: month, categories: @enabled_categories}%>
+        <%= link_to current_month, {controller: "charts", action: "index", year: @selected_year, month: month, categories: @enabled_categories, chart: @chart_type}%>
       <% end %>
     </div>
   </div>
@@ -127,29 +127,64 @@
   </div>
 
   <div class="chart-type-container">
-    <button class="chart-type-button" id="pie-chart-button" title="Pie Chart" onclick="selectChart(this)">
+    <button class="<%= 'chart-type-button' + ((@chart_type == 'pie') ? ' chart-type-selected' : '') %>" id="pie-chart-button" title="Pie Chart" onclick="selectChart(this)">
       <span class="chart-category-icon fa fa-pie-chart" aria-hidden="true"></span>
     </button><!--
 
-    --><button class="chart-type-button chart-type-selected" id="line-chart-button" title="Line Chart" onclick="selectChart(this)">
+    --><button class="<%= 'chart-type-button' + ((@chart_type == 'line') ? ' chart-type-selected' : '') %>" id="line-chart-button" title="Line Chart" onclick="selectChart(this)">
       <span class="chart-category-icon fa fa-line-chart" aria-hidden="true"></span>
     </button><!--
 
-    --><button class="chart-type-button" title="Stats Table" id="stats-table-button" onclick="selectChart(this)">
+    --><button class="<%= 'chart-type-button' + ((@chart_type == 'table') ? ' chart-type-selected' : '') %>" title="Stats Table" id="stats-table-button" onclick="selectChart(this)">
       <span class="chart-category-icon fa fa-table" aria-hidden="true"></span>
     </button>
 
   </div>
   <br></br>
 
-<div id="stats-table-container" style="display: none">HEY</div>
+<div id="pie-chart-container" style="<%= 'display: ' + ((@chart_type == 'pie') ? 'block' : 'none') %>; width:100%; height: 500px" >
+  <%= pie_chart @pie_data, @pie_options %>
+</div>
 
-<div id="line-chart-container" style="width:100%; height: 500px">
+<div id="line-chart-container" style="<%= 'display: ' + ((@chart_type == 'line') ? 'block' : 'none') %>; width:100%; height: 500px">
 <%= line_chart @line_data, @line_options %>
 </div>
 
-<div id="pie-chart-container" style="display: none; width:100%; height: 500px">
-<%= pie_chart @pie_data, @pie_options %>
+<div id="stats-table-container" style="<%= 'display: ' + ((@chart_type == 'table') ? 'block' : 'none') %>">
+
+  <table id="stats-table">
+
+    <tr>
+      <th></th>
+      <th>Total amount</th>
+      <th>Average per day</th>
+      <th>Max per day</th>
+      <th>% of total</th>
+    </tr>
+
+    <%
+    (0..@category_order.length - 1).each do |index|
+
+      if @binary[index] == "0" then next end
+    %>
+      <tr>
+        <td>
+        <td>
+        <td>
+        <td>
+        <td>
+      </tr>
+
+
+
+    <% end %>
+
+
+  </table>
+
+
 </div>
+
+
 
 </div>
