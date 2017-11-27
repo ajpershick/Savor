@@ -157,22 +157,31 @@
     <tr>
       <th></th>
       <th>Total amount</th>
-      <th>Average per day</th>
-      <th>Max per day</th>
+      <th><%= "Average per " + (@year_view ? "month" : "day") %></th>
+      <th><%= "Max in a " + (@year_view ? "month" : "day") %></th>
       <th>% of total</th>
     </tr>
 
     <%
-    (0..@category_order.length - 1).each do |index|
-
-      if @binary[index] == "0" then next end
+    (1..@category_stats.length - 1).each do |index|
     %>
       <tr>
-        <td>
-        <td>
-        <td>
-        <td>
-        <td>
+        <td class="chart-icon-data" title="<%= @category_stats[index][:category].capitalize %>">
+
+          <div
+            class="<%= 'chart-category-icon-container' %>"
+            style="background-color: <%= @categories[@category_stats[index][:category]][:color] %>"
+          >
+
+            <span class="chart-category-icon fa fa-<%= @categories[@category_stats[index][:category]][:icon]%> " aria-hidden="true"></span>
+
+          </div>
+
+        </td>
+        <td><%= number_to_currency(@category_stats[index][:total]) %></td>
+        <td><%= number_to_currency(@category_stats[index][:total] / (@year_view ? 12 : @total_days)) %></td>
+        <td><%= number_to_currency(@category_stats[index][:max]) %></td>
+        <td><%= number_to_percentage(@category_stats[index][:total] / @category_totals["total"] * 100, precision: 2) %></td>
       </tr>
 
 

@@ -34,7 +34,7 @@ class ChartsController < ApplicationController
       "personal care" => {icon: "bath",           color: "#947CB0"},
       "taxes"         => {icon: "envelope-open-o",color: "#d35400"},
       "miscellaneous" => {icon: "thumb-tack",     color: "#2c3e50"},
-      "total"           => {icon: "calculator",     color: "#1d1d1d"},
+      "total"         => {icon: "calculator",     color: "#1d1d1d"},
     }
 
     @category_order = [
@@ -64,6 +64,34 @@ class ChartsController < ApplicationController
       "miscellaneous",
     ]
 
+    category_counter = {
+      "dining"        => 0.0,
+      "clothing"      => 0.0,
+      "groceries"     => 0.0,
+      "automotive"    => 0.0,
+      "gifts"         => 0.0,
+      "entertainment" => 0.0,
+      "recreation"    => 0.0,
+      "transit"       => 0.0,
+      "utilities"     => 0.0,
+      "maintenance"   => 0.0,
+      "medical"       => 0.0,
+      "debt"          => 0.0,
+      "luxury"        => 0.0,
+      "education"     => 0.0,
+      "pets"          => 0.0,
+      "insurance"     => 0.0,
+      "supplies"      => 0.0,
+      "housing"       => 0.0,
+      "charity"       => 0.0,
+      "savings"       => 0.0,
+      "travel"        => 0.0,
+      "personal care" => 0.0,
+      "taxes"         => 0.0,
+      "miscellaneous" => 0.0,
+      "total"         => 0.0,
+    }
+
     # Get the current logged in user
     user = User.find(session[:user_id])
     # Get all the user's transactions
@@ -83,7 +111,7 @@ class ChartsController < ApplicationController
     @month_range = (earliest_date..latest_date).map{|d| {year: d.year.to_s, month: d.month.to_s}}.uniq.reverse
     @year_range = (earliest_date..latest_date).map{|d| d.year.to_s}.uniq.reverse
 
-    # Get the selected categories, year, and month from the url parameters, or use defaults
+    # Get the selected categories, year, month, and chart type from the url parameters, or use defaults
     if params[:categories].blank? then
       @enabled_categories = 2 ** 24 - 1
     else
@@ -118,43 +146,15 @@ class ChartsController < ApplicationController
     # If showing graph for a single month, find the total days in the month
     if !@yearview then @total_days = days_in_month(@selected_month.to_i, @selected_year.to_i) end
 
-    category_counter = {
-      "total"           => 0.0,
-      "dining"        => 0.0,
-      "clothing"      => 0.0,
-      "groceries"     => 0.0,
-      "automotive"    => 0.0,
-      "gifts"         => 0.0,
-      "entertainment" => 0.0,
-      "recreation"    => 0.0,
-      "transit"       => 0.0,
-      "utilities"     => 0.0,
-      "maintenance"   => 0.0,
-      "medical"       => 0.0,
-      "debt"          => 0.0,
-      "luxury"        => 0.0,
-      "education"     => 0.0,
-      "pets"          => 0.0,
-      "insurance"     => 0.0,
-      "supplies"      => 0.0,
-      "housing"       => 0.0,
-      "charity"       => 0.0,
-      "savings"       => 0.0,
-      "travel"        => 0.0,
-      "personal care" => 0.0,
-      "taxes"         => 0.0,
-      "miscellaneous" => 0.0,
-    }
-
     @category_totals = category_counter.clone
-    puts @category_totals
-    puts "w"
+    @category_maximums = category_counter.clone
     @transaction_set = []
     @transaction_set << {}
     limit = (@year_view) ? 12 : @total_days
     (1..limit).each do
       @transaction_set << category_counter.clone
     end
+
     if @year_view then
       current_transactions = transactions.where('extract(year from date) = ?', @selected_year)
 
@@ -168,11 +168,14 @@ class ChartsController < ApplicationController
 
         if transaction_temp.date.month != month_index then
           month_index = transaction_temp.date.month
-          puts transaction_temp.date.month
         end
         @transaction_set[month_index][transaction_temp.category] += transaction_temp.amount
         @transaction_set[month_index]["total"] += transaction_temp.amount
         @category_totals[transaction_temp.category] += transaction_temp.amount
+        @category_totals["total"] += transaction_temp.amount
+        if transaction_temp.amount > @category_maximums[transaction_temp.category] then
+          @category_maximums[transaction_temp.category] = transaction_temp.amount
+        end
         transaction_index += 1
       end
 
@@ -193,10 +196,28 @@ class ChartsController < ApplicationController
         @transaction_set[day_index][transaction_temp.category] += transaction_temp.amount
         @transaction_set[day_index]["total"] += transaction_temp.amount
         @category_totals[transaction_temp.category] += transaction_temp.amount
+        @category_totals["total"] += transaction_temp.amount
+        if transaction_temp.amount > @category_maximums[transaction_temp.category] then
+          @category_maximums[transaction_temp.category] = transaction_temp.amount
+        end
         transaction_index += 1
       end
 
     end
+
+    @category_stats = []
+
+    total_index = 0
+    @category_totals.each do |key, value|
+      if @binary[total_index] == "0" then
+        total_index += 1
+        next
+      end
+      @category_stats << {category: key, total: value, max: @category_maximums[key]}
+      total_index += 1
+    end
+
+    @category_stats.sort!{|x, y| x[:total] <=> y[:total]}.reverse!
 
     # Set labels to months of the year, or days of the month depending on current selection
     @line_data[:labels] = []
@@ -357,9 +378,6 @@ class ChartsController < ApplicationController
       },
     }
 
-    puts "test"
-    puts @category_totals
-    puts "a"
   end
 
 end
