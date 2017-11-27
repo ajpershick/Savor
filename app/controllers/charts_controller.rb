@@ -1,5 +1,7 @@
 class ChartsController < ApplicationController
 
+  layout "menu"
+
   def days_in_month(month, year)
     days = [nil, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
      if month == 2 && Date.gregorian_leap?(year) then return 29 end
@@ -32,6 +34,7 @@ class ChartsController < ApplicationController
       "personal care" => {icon: "bath",           color: "#947CB0"},
       "taxes"         => {icon: "envelope-open-o",color: "#d35400"},
       "miscellaneous" => {icon: "thumb-tack",     color: "#2c3e50"},
+      "total"           => {icon: "calculator",     color: "#1d1d1d"},
     }
 
     @category_order = [
@@ -80,10 +83,7 @@ class ChartsController < ApplicationController
     @month_range = (earliest_date..latest_date).map{|d| {year: d.year.to_s, month: d.month.to_s}}.uniq.reverse
     @year_range = (earliest_date..latest_date).map{|d| d.year.to_s}.uniq.reverse
 
-
-
-
-    #
+    # Get the selected categories, year, and month from the url parameters, or use defaults
     if params[:categories].blank? then
       @enabled_categories = 2 ** 24 - 1
     else
@@ -104,85 +104,50 @@ class ChartsController < ApplicationController
 
     # Convert number to binary string of length 24
     # Each bit represents a category
-    binary = @enabled_categories.to_s(2).rjust(24, "0")
+    @binary = @enabled_categories.to_s(2).rjust(24, "0")
 
-    @enabled = {
-      "dining"        => (binary[0] == "1"),
-      "clothing"      => (binary[1] == "1"),
-      "groceries"     => (binary[2] == "1"),
-      "automotive"    => (binary[3] == "1"),
-      "gifts"         => (binary[4] == "1"),
-      "entertainment" => (binary[5] == "1"),
-      "recreation"    => (binary[6] == "1"),
-      "transit"       => (binary[7] == "1"),
-      "utilities"     => (binary[8] == "1"),
-      "maintenance"   => (binary[9] == "1"),
-      "medical"       => (binary[10] == "1"),
-      "debt"          => (binary[11] == "1"),
-      "luxury"        => (binary[12] == "1"),
-      "education"     => (binary[13] == "1"),
-      "pets"          => (binary[14] == "1"),
-      "insurance"     => (binary[15] == "1"),
-      "supplies"      => (binary[16] == "1"),
-      "housing"       => (binary[17] == "1"),
-      "charity"       => (binary[18] == "1"),
-      "savings"       => (binary[19] == "1"),
-      "travel"        => (binary[20] == "1"),
-      "personal care" => (binary[21] == "1"),
-      "taxes"         => (binary[22] == "1"),
-      "miscellaneous" => (binary[23] == "1"),
-    }
-
-
-    # year
-    # month
-    # enabled
-    # current_transactions
-
-    @data = {}
-
-
-
+    @line_data = {}
     @year_view = (@selected_month == "0")
-
-
-    #@year_view = true
-
 
     # If showing graph for a single month, find the total days in the month
     if !@yearview then @total_days = days_in_month(@selected_month.to_i, @selected_year.to_i) end
 
+    category_counter = {
+      "total"           => 0.0,
+      "dining"        => 0.0,
+      "clothing"      => 0.0,
+      "groceries"     => 0.0,
+      "automotive"    => 0.0,
+      "gifts"         => 0.0,
+      "entertainment" => 0.0,
+      "recreation"    => 0.0,
+      "transit"       => 0.0,
+      "utilities"     => 0.0,
+      "maintenance"   => 0.0,
+      "medical"       => 0.0,
+      "debt"          => 0.0,
+      "luxury"        => 0.0,
+      "education"     => 0.0,
+      "pets"          => 0.0,
+      "insurance"     => 0.0,
+      "supplies"      => 0.0,
+      "housing"       => 0.0,
+      "charity"       => 0.0,
+      "savings"       => 0.0,
+      "travel"        => 0.0,
+      "personal care" => 0.0,
+      "taxes"         => 0.0,
+      "miscellaneous" => 0.0,
+    }
+
+    @category_totals = category_counter.clone
+    puts @category_totals
+    puts "w"
     @transaction_set = []
     @transaction_set << {}
     limit = (@year_view) ? 12 : @total_days
     (1..limit).each do
-      @transaction_set << {
-        "all"           => 0.0,
-        "dining"        => 0.0,
-        "clothing"      => 0.0,
-        "groceries"     => 0.0,
-        "automotive"    => 0.0,
-        "gifts"         => 0.0,
-        "entertainment" => 0.0,
-        "recreation"    => 0.0,
-        "transit"       => 0.0,
-        "utilities"     => 0.0,
-        "maintenance"   => 0.0,
-        "medical"       => 0.0,
-        "debt"          => 0.0,
-        "luxury"        => 0.0,
-        "education"     => 0.0,
-        "pets"          => 0.0,
-        "insurance"     => 0.0,
-        "supplies"      => 0.0,
-        "housing"       => 0.0,
-        "charity"       => 0.0,
-        "savings"       => 0.0,
-        "travel"        => 0.0,
-        "personal care" => 0.0,
-        "taxes"         => 0.0,
-        "miscellaneous" => 0.0,
-      }
+      @transaction_set << category_counter.clone
     end
     if @year_view then
       current_transactions = transactions.where('extract(year from date) = ?', @selected_year)
@@ -200,7 +165,8 @@ class ChartsController < ApplicationController
           puts transaction_temp.date.month
         end
         @transaction_set[month_index][transaction_temp.category] += transaction_temp.amount
-        @transaction_set[month_index]["all"] += transaction_temp.amount
+        @transaction_set[month_index]["total"] += transaction_temp.amount
+        @category_totals[transaction_temp.category] += transaction_temp.amount
         transaction_index += 1
       end
 
@@ -219,34 +185,38 @@ class ChartsController < ApplicationController
           day_index = transaction_temp.date.day
         end
         @transaction_set[day_index][transaction_temp.category] += transaction_temp.amount
-        @transaction_set[day_index]["all"] += transaction_temp.amount
+        @transaction_set[day_index]["total"] += transaction_temp.amount
+        @category_totals[transaction_temp.category] += transaction_temp.amount
         transaction_index += 1
       end
 
     end
 
     # Set labels to months of the year, or days of the month depending on current selection
-    @data[:labels] = []
+    @line_data[:labels] = []
     if @year_view then
 
       (1..12).each do |month|
-        @data[:labels] << Date::MONTHNAMES[month].to_s
+        @line_data[:labels] << Date::MONTHNAMES[month].to_s
       end
     else
 
       (1..@total_days).each do |day|
-        @data[:labels] << day
+        @line_data[:labels] << day
       end
 
     end
 
     # Generate the datasets for each enabled category
-    @data[:datasets] = []
+    @line_data[:datasets] = []
     (0..@category_order.length - 1).each do |index|
 
-      if binary[index] == "0" then next end
-
-      category = @category_order[index]
+      if @binary == "000000000000000000000000" then
+        category = "total"
+      else
+        if @binary[index] == "0" then next end
+        category = @category_order[index]
+      end
 
       dataset = {}
       dataset[:label] = category.capitalize
@@ -258,40 +228,24 @@ class ChartsController < ApplicationController
       if @year_view then
 
         (1..12).each do |m|
-          dataset[:data] << @transaction_set[m][@category_order[index]]
+          dataset[:data] << @transaction_set[m][category]
         end
 
       else
 
         (1.. @total_days).each do |d|
-          dataset[:data] << @transaction_set[d][@category_order[index]]
+          dataset[:data] << @transaction_set[d][category]
         end
 
       end
-      @data[:datasets] << dataset
-
+      @line_data[:datasets] << dataset
+      if @binary == "000000000000000000000000" then break end
     end
 
-    # @data = {
-    #   labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-    #   datasets: [
-    #     {
-    #         label: "My First dataset",
-    #         background_color: "#F00F0F55",
-    #         border_color: "rgba(220,220,220,1)",
-    #         data: [65, 59, 80, 81, 56, 55, 40, 0, 0, 0, 0, 0]
-    #     },
-    #     {
-    #         label: "My Second dataset",
-    #         background_color: "rgba(151,187,205,0.2)",
-    #         border_color: "rgba(151,187,205,1)",
-    #         data: [28, 48, 40, 19, 86, 0, 0, 0, 0, 0, 0, 0]
-    #     },
-    #
-    #   ]
-    # }
-    @options = {
+
+    @line_options = {
       class: "chart-canvas",
+      id: "line-chart-canvas",
       responsive: true,
       height: 300,
       maintainAspectRatio: false,
@@ -300,13 +254,105 @@ class ChartsController < ApplicationController
         line: {
           tension: 0
         }
+      },
+      legend: {
+        display: false
+      },
+
+      tooltips: {
+        callbacks: {
+          label: "function(tooltipItem, data) {
+                    var indice = tooltipItem.index;
+                    return data.datasets[tooltipItem.datasetIndex].label + ': $' + tooltipItem.yLabel.toString();
+                }"
+        }
+      },
+
+      scales: {
+        yAxes: [
+          {
+            scaleLabel: {
+              display: true,
+              labelString: "Amount",
+            },
+
+            ticks: {
+                    callback: "function(value, index, values) {
+                        return '$' + value;
+                    }"
+                }
+          }
+        ],
+
+        xAxes: [
+          {
+            scaleLabel: {
+              display: true,
+              labelString: (@year_view) ? "Month" : "Day",
+            }
+          }
+        ]
+
       }
+
     }
 
 
-    test = 1234
-    binary = test.to_s(2).rjust(24, '0')
-    puts binary.to_i(2)
+
+    @pie_data = {}
+    @pie_data[:labels] = []
+    @pie_data[:datasets] = []
+    dataset = {}
+    dataset[:data] = []
+    dataset[:background_color] = []
+    dataset[:border_color] = []
+
+    temp_dataset = []
+
+    (0..@category_order.length - 1).each do |index|
+
+      if @binary[index] == "0" then next end
+      category = @category_order[index]
+
+      @pie_data[:labels] << category
+      dataset[:data] << @category_totals[category]
+      dataset[:background_color] << @categories[category][:color]
+      dataset[:border_color] << @categories[category][:color]
+
+    end
+
+    temp_dataset.each do |temp|
+
+      
+    end
+
+
+    @pie_data[:datasets] << dataset
+
+    @pie_options = {
+      class: "chart-canvas",
+      id: "pie-chart-canvas",
+      responsive: true,
+      height: 300,
+      maintainAspectRatio: false,
+      animation: false,
+      legend: {
+        display: false
+      },
+
+      tooltips: {
+        callbacks: {
+          label: "function(tooltipItem, data) {
+                  var indice = tooltipItem.index;
+                  return data.labels[indice][0].toUpperCase() + data.labels[indice].slice(1) +': $'+ data.datasets[0].data[indice] + '';
+                }"
+        }
+      },
+    }
+
+    puts "test"
+    puts @category_totals
+    puts "a"
   end
 
 end

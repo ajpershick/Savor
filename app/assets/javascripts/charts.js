@@ -12,12 +12,11 @@ function toggleCategory(element, full) {
   if (element.classList.contains("disabled-category")) {
     element.style.backgroundColor = element.dataset.color;
     element.classList.remove("disabled-category");
-    document.getElementsByClassName("chart-canvas")[0];
-    value = element.dataset.binary;
+    value = parseInt(element.dataset.binary);
   } else {
     element.style.backgroundColor = "#bdc3c7";
     element.classList.add("disabled-category");
-    value = -1 * element.dataset.binary;
+    value = -1 * parseInt(element.dataset.binary);
   }
 
   for (var i = 0; i < links.length; i++) {
@@ -35,6 +34,9 @@ function toggleCategory(element, full) {
     } else if (full === false) {
       links[i].href = start + String(0) + end;
     } else {
+      //alert(start);
+      //alert(num);
+      //alert(end);
       links[i].href = start + String(parseInt(num) + value) + end;
     }
   }
@@ -51,7 +53,7 @@ function enableAll() {
       categories[i].id !== "category-type-enabled" &&
       categories[i].id !== "category-type-disabled") {
 
-      toggleCategory(categories[i], true);
+      toggleCategory(categories[i]);
     }
   }
 
@@ -67,7 +69,7 @@ function disableAll() {
       categories[i].id !== "category-type-disable" &&
       categories[i].id !== "category-type-enable") {
 
-      toggleCategory(categories[i], false);
+      toggleCategory(categories[i]);
     }
   }
 }
