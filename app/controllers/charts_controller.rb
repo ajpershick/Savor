@@ -314,16 +314,17 @@ class ChartsController < ApplicationController
       if @binary[index] == "0" then next end
       category = @category_order[index]
 
-      @pie_data[:labels] << category
-      dataset[:data] << @category_totals[category]
-      dataset[:background_color] << @categories[category][:color]
-      dataset[:border_color] << @categories[category][:color]
+      temp_dataset << {label: category, data: @category_totals[category], color: @categories[category][:color]}
 
     end
+    
+    temp_dataset.sort!{|x, y| x[:data] <=> y[:data]}.reverse!
 
     temp_dataset.each do |temp|
-
-      
+      @pie_data[:labels] << temp[:label]
+      dataset[:data] << temp[:data]
+      dataset[:background_color] << temp[:color]
+      dataset[:border_color] << temp[:color]
     end
 
 
