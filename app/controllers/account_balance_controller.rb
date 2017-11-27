@@ -24,9 +24,9 @@ class AccountBalanceController < ApplicationController
     end
 
     if(currentUser.account_balance != nil)
-      @total_balance = @currentUser.account_balance.total_balance
-      @cash_balance = @currentUser.account_balance.cash_balance
-      @bank_balance = @currentUser.account_balance.bank_balance
+      @total_balance = currentUser.account_balance.total_balance
+      @cash_balance = currentUser.account_balance.cash_balance
+      @bank_balance = currentUser.account_balance.bank_balance
     else
       @message = "An error occurred, the you have no account balance associated with your account"
     end

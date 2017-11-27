@@ -8,8 +8,6 @@ class CreateBankAccounts < ActiveRecord::Migration[5.1]
       t.string "account_id" #The unique ID of the account
                             # In some instances, account ID's may change
 
-      t.string "institution_id" #The financial institution associated with the Account. (TD, BMO, RBC, etc.)
-
       t.decimal "available_balance", :default => 0.00, :precision => 15, :scale => 2
 
       t.decimal "current_balance", :default => 0.00, :precision => 15, :scale => 2
@@ -26,9 +24,9 @@ class CreateBankAccounts < ActiveRecord::Migration[5.1]
 
       t.string "official_name" #The last four digits of the Account's number.
 
-      t.string "type" #Brokerage, Credit, Depository, Loan, Mortgage, or Other
+      t.string "account_type" #Brokerage, Credit, Depository, Loan, Mortgage, or Other
 
-      t.string "subtype" # Brokerage, Credit, Depository Loan, Mortage, or Other
+      t.string "account_subtype" # Brokerage, Credit, Depository Loan, Mortage, or Other
 
       t.timestamps
     end

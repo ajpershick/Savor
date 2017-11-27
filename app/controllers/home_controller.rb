@@ -27,7 +27,7 @@ class HomeController < ApplicationController
         @message = "Failed to create new account_balance record"
       end
     else
-      account_balance = currentUser.account_balance.total_balance
+      @account_balance = currentUser.account_balance.total_balance
     end
     #account balance block -- end
 
