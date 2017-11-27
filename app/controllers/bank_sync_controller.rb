@@ -169,11 +169,6 @@ class BankSyncController < ApplicationController
 
     currentUser = User.find(session[:user_id])
 
-    response = $client.accounts.get()
-
-
-
-
   end
 
   def get_account_balance
