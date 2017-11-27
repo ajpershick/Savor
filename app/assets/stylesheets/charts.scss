@@ -163,5 +163,40 @@ div#stats-table-container {
   width: 75%;
 }
 
-table#stats-table {
+table#stats-table, table#stats-table thead, tr, td, th, tbody {
+  border-style: none;
+}
+
+table#stats-table th {
+  font-family: Helvetica;
+  font-size: 20px;
+  padding: 10px;
+  text-align: left;
+}
+
+table#stats-table tr:nth-child(odd) {
+}
+
+table#stats-table tr:nth-child(even) {
+  background-color: #EEEEEE;
+}
+
+table#stats-table td:nth-child(1) {
+  width: 0;
+}
+
+table#stats-table td:nth-child(2), table#stats-table td:nth-child(3), table#stats-table td:nth-child(4), table#stats-table td:nth-child(5) {
+  width: 25%;
+  font-family: Helvetica;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.chart-table-icon-container {
+  padding: 5px;
+  width: 35px;
+  height: 35px;
+  font-size: 25px;
+  text-align: center;
+  line-height: 35px;
 }

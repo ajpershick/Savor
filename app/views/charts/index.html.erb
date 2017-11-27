@@ -169,7 +169,7 @@
         <td class="chart-icon-data" title="<%= @category_stats[index][:category].capitalize %>">
 
           <div
-            class="<%= 'chart-category-icon-container' %>"
+            class="<%= 'chart-table-icon-container' %>"
             style="background-color: <%= @categories[@category_stats[index][:category]][:color] %>"
           >
 
@@ -181,19 +181,16 @@
         <td><%= number_to_currency(@category_stats[index][:total]) %></td>
         <td><%= number_to_currency(@category_stats[index][:total] / (@year_view ? 12 : @total_days)) %></td>
         <td><%= number_to_currency(@category_stats[index][:max]) %></td>
-        <td><%= number_to_percentage(@category_stats[index][:total] / @category_totals["total"] * 100, precision: 2) %></td>
+        <td><%= (@category_totals["total"] == 0) ? "0%" : number_to_percentage(@category_stats[index][:total] / @category_totals["total"] * 100, precision: 2) %></td>
       </tr>
 
 
 
     <% end %>
 
-
   </table>
-
-
 </div>
 
-
+<br></br>
 
 </div>
