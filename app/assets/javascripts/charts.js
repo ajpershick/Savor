@@ -1,8 +1,9 @@
-
+// Refreshes the page to the current calculated link
 function refreshPage() {
   window.location.replace(document.getElementById('hidden-link').href);
 }
 
+// Switches the visible chart type
 function selectChart(element) {
   var buttons = document.getElementsByClassName("chart-type-button");
   var pie = buttons[0];
@@ -51,7 +52,7 @@ function selectChart(element) {
 
 }
 
-
+// Toggles the category buttons on and off, and adjusts all links accordingly
 function toggleCategory(element, full) {
 
   links = document.getElementsByTagName("a");
@@ -82,17 +83,13 @@ function toggleCategory(element, full) {
     } else if (full === false) {
       links[i].href = start + String(0) + end;
     } else {
-      //alert(start);
-      //alert(num);
-      //alert(end);
       links[i].href = start + String(parseInt(num) + value) + end;
     }
   }
 }
 
-
+// Enables all categories
 function enableAll() {
-
   categories = document.getElementsByClassName("chart-category-icon-container");
 
   for (var i = 0; i < categories.length; i++) {
@@ -107,7 +104,7 @@ function enableAll() {
 
 }
 
-
+// Disables all categories
 function disableAll() {
   categories = document.getElementsByClassName("chart-category-icon-container");
 
