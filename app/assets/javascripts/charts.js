@@ -3,6 +3,45 @@ function refreshPage() {
   window.location.replace(document.getElementById('hidden-link').href);
 }
 
+function selectChart(element) {
+  var buttons = document.getElementsByClassName("chart-type-button");
+  var pie = buttons[0];
+  var line = buttons[1];
+  var table = buttons[2];
+  var pie_chart = document.getElementById("pie-chart-container");
+  var line_chart = document.getElementById("line-chart-container");
+  var stats_table = document.getElementById("stats-table-container");
+
+  switch(element.id) {
+    case "pie-chart-button":
+      line.classList.remove("chart-type-selected");
+      table.classList.remove("chart-type-selected");
+      pie.classList.add("chart-type-selected");
+      line_chart.style.display = "none";
+      stats_table.style.display = "none";
+      pie_chart.style.display = "block";
+      break;
+
+    case "line-chart-button":
+      pie.classList.remove("chart-type-selected");
+      table.classList.remove("chart-type-selected");
+      line.classList.add("chart-type-selected");
+      pie_chart.style.display = "none";
+      stats_table.style.display = "none";
+      line_chart.style.display = "block";
+      break;
+
+    case "stats-table-button":
+      pie.classList.remove("chart-type-selected");
+      line.classList.remove("chart-type-selected");
+      table.classList.add("chart-type-selected");
+      pie_chart.style.display = "none";
+      line_chart.style.display = "none";
+      stats_table.style.display = "block";
+      break;
+  }
+}
+
 
 function toggleCategory(element, full) {
 

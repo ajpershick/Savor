@@ -263,7 +263,7 @@ class ChartsController < ApplicationController
         callbacks: {
           label: "function(tooltipItem, data) {
                     var indice = tooltipItem.index;
-                    return data.datasets[tooltipItem.datasetIndex].label + ': $' + tooltipItem.yLabel.toString();
+                    return data.datasets[tooltipItem.datasetIndex].label + ': $' + tooltipItem.yLabel.toFixed(2);
                 }"
         }
       },
@@ -317,7 +317,7 @@ class ChartsController < ApplicationController
       temp_dataset << {label: category, data: @category_totals[category], color: @categories[category][:color]}
 
     end
-    
+
     temp_dataset.sort!{|x, y| x[:data] <=> y[:data]}.reverse!
 
     temp_dataset.each do |temp|
@@ -345,7 +345,7 @@ class ChartsController < ApplicationController
         callbacks: {
           label: "function(tooltipItem, data) {
                   var indice = tooltipItem.index;
-                  return data.labels[indice][0].toUpperCase() + data.labels[indice].slice(1) +': $'+ data.datasets[0].data[indice] + '';
+                  return data.labels[indice][0].toUpperCase() + data.labels[indice].slice(1) +': $'+ data.datasets[0].data[indice].toFixed(2);
                 }"
         }
       },

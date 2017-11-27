@@ -2,9 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div.center {
+div.chart-center {
   margin: auto;
-  width: 50%;
+  width: 90%;
   background-color: #FFFFFF;
 }
 
@@ -132,4 +132,28 @@ tr.chart-category-row {
   vertical-align: middle;
   margin: 0;
   margin-bottom: 0;
+}
+
+.chart-type-container {
+  width: 910px;
+  margin: auto;
+}
+
+button.chart-type-button {
+  color: white;
+  height: 50px;
+  font-size: 35px;
+  padding: 0;
+  width: 303px;
+  border: none;
+  background-color: #4183D7;
+  cursor: pointer;
+}
+
+button.chart-type-button:hover {
+  background-color: #5597eb;
+}
+
+button.chart-type-selected, button.chart-type-selected:hover {
+  background-color: #2d6fc3;
 }
