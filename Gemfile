@@ -44,13 +44,14 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'rack_session_access'
 end
 
 group :test do
   gem 'faker'
   gem 'guard-rspec'
   gem 'launchy'
-  gem 'capybara'
 end
 
 group :development do

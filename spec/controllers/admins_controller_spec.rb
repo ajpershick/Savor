@@ -28,7 +28,7 @@ RSpec.describe AdminController, type: :controller do
 
   describe "get index" do
     it "returns a success response" do
-      get :index
+      visit 'admin/index'
       response.should be_success
     end
   end
@@ -59,5 +59,20 @@ RSpec.describe AdminController, type: :controller do
       response.should_not be_success
     end
   end
+
+  # describe "get new_user" do
+  #   it "normal user can't get new_index" do
+  #     get 'new_user'
+  #     response.should render_template(:new_user)
+  #     fill_in 'Username', with: 'Bobby', :match => :prefer_exact
+  #     fill_in 'First Name', with: 'Bob', :match => :prefer_exact
+  #     fill_in 'Email', with: 'Bob@bob.com', :match => :prefer_exact
+  #     fill_in 'Password', with: 'password', :match => :prefer_exact
+  #     fill_in 'confirm_pass', with: 'password', visible: false
+  #     click_button 'Submit', :match => :prefer_exact
+  #     expect(page).to have_current_path(new_user_path, url: true)
+  #     expect(page).to have_css 'Bob'
+  #   end
+  # end
 
 end

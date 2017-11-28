@@ -1,11 +1,11 @@
 module SpecTestHelper
 
   def login_admin
-    request.session[:admin] = true
+    session[:admin] = true
   end
 
   def login(user)
-    request.session[:user_id] = user.id
+    session[:user_id] = user.id
   end
 
   def current_user
