@@ -49,14 +49,14 @@
           <div class="entry-icon-container">
             <img id="username-icon" src="<%= asset_path("username.svg") %>" class="entry-icon"></img>
           </div>
-          <%= text_field_tag(:username, params[:username], class: "entry-input", placeholder: "Username") %>
+          <%= text_field_tag(:username, params[:username], class: "entry-input", placeholder: "Username", id: 'login_username') %>
         </div>
 
         <div class="entry-input-container">
           <div class="entry-icon-container">
             <img id="password-icon" src="<%= asset_path("password.svg") %>" class="entry-icon"></img>
           </div>
-          <%= password_field_tag(:password, nil, class: "entry-input", placeholder: "Password") %>
+          <%= password_field_tag(:password, nil, class: "entry-input", placeholder: "Password", id: 'login_password') %>
         </div>
 
       </div>
@@ -66,7 +66,7 @@
         </div>
 
         <div class="entry-input-container">
-          <%= submit_tag("Log In", class: "entry-submit-button") %>
+          <%= submit_tag("Log In", class: "entry-submit-button", id: 'login_button') %>
         </div>
 
       <% end %>

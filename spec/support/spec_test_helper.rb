@@ -1,8 +1,12 @@
 module SpecTestHelper
 
+  def login_admin
+    login(:admin)
+  end
+
   def login(user)
-    user = User.where(:login => user.to_s).first if user.is_a?(Symbol)
-    request.session[:user] = user.id
+    request.session[:user_id] = user.id
+    request.session[:admin] = true
   end
 
   def current_user
