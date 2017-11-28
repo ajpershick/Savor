@@ -3,7 +3,7 @@ FactoryGirl.define do
   sequence(:username) { |n| "user#{n}" }
 
   factory :user do
-    name 'Savor'
+    name 'User'
     email {FactoryGirl.generate :email}
     username {FactoryGirl.generate :username}
     password_digest BCrypt::Password.create('testpassword')
