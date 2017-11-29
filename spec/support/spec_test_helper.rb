@@ -16,4 +16,14 @@ module SpecTestHelper
     session[:user_id] = nil
     session[:admin] = nil
   end
+
+  def login_feature(user)
+    visit access_login_path
+    expect(page).to have_current_path('/access/login')
+    within('#login-entry', visible: false) do
+      fill_in 'Username', with: user.username
+      fill_in 'Password', with: 'testpassword'
+      click_button 'Log In'
+    end
+  end
 end
