@@ -1,7 +1,7 @@
 FactoryGirl.define do
   sequence(:user_id) { |n| n }
 
-  factory :random_transaction do
+  factory :random_transaction, class: Transaction do
     user_id {FactoryGirl.generate :user_id}
     amount {Faker::Number.number}
     date {Faker::Date.forward}

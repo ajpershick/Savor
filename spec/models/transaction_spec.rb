@@ -12,4 +12,8 @@ RSpec.describe Transaction, type: :model do
   it { should validate_presence_of :location }
   it { should validate_presence_of :latitude }
   it { should validate_presence_of :longitude }
+
+  it "should have valid factory" do
+    FactoryGirl.build(:random_transaction).should be_valid
+  end
 end
