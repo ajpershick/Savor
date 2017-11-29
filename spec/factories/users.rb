@@ -10,6 +10,14 @@ FactoryGirl.define do
     admin false
   end
 
+  factory :random_user, class: User do
+    name {Faker::Name.first_name}
+    email {Faker::Internet.email}
+    username {Faker::Internet.user_name}
+    password_digest BCrypt::Password.create('testpassword')
+    admin false
+  end
+
   # This will use the User class (Admin would have been guessed)
   factory :admin, class: User do
     id 1483
