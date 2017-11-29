@@ -14,13 +14,11 @@ RSpec.describe AdminController, type: :controller do
   let(:valid_session) { {} }
 
   before(:each) do
-    @user = create(:user)
-    @user.name.should eq('User')
+    @user = create(:random_user)
     @user.admin.should eq(false)
-    @admin = create(:admin)
+    @admin = create(:random_admin)
     login(@admin)
     login_admin
-    @admin.name.should eq('Admin')
     session[:admin].should be_truthy
     @admin.admin.should eq(true)
 
