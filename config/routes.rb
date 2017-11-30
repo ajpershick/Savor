@@ -58,7 +58,9 @@ Rails.application.routes.draw do
   get 'bank_sync/get_bank_account_info'
   get 'bank_sync/get_account_balance'
   get 'bank_sync/get_transaction'
-  get 'bank_sync/show_depository_accounts'
+  get 'bank_sync/show_bank_account'
+  get 'bank_sync/show_item'
+  get 'bank_sync/show_account_details'
 
   get "home/index" =>"home#index"
 

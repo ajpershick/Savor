@@ -14,10 +14,26 @@ class BankSyncController < ApplicationController
   #$current_user = User.find(session[:user_id])
 
   def index
+
+    currentUser = User.find(session[:user_id])
+    @items = currentUser.items #an array of the user's items
+
+
+
     @access_token = params[:access_token]
-    @item_id = params[:item_id]
+    @item_id = []
+
+    pos = 0
+    @items.each do |i|
+      @item_id[pos] = i["item_id"]
+      pos+=1
+    end
+
+    @item_id_array = @item_id #converts string to array of item ID's
     @message = params[:message]
     @balance = params[:user_balance]
+
+
   end
 
   def create_item
@@ -65,7 +81,7 @@ class BankSyncController < ApplicationController
     $client.item.delete(params['access_token']);
   end
 
-  def create_bank_account
+  def create_bank_account #working
     #parameters:
       #access_token, item_id
     #precondition:
@@ -86,6 +102,10 @@ class BankSyncController < ApplicationController
       #create an empty message for messages to be appended to it in the loop
     @message = ''
 
+    currentUser = User.find(session[:user_id])
+
+    currentItem = currentUser.items.find_by item_id: params[:item_id]
+
     total_balance = 0
     grand_total_balance = 0
     accounts_array.each do |acc|
@@ -103,42 +123,6 @@ class BankSyncController < ApplicationController
 
       total_balance+=newAccount.current_balance
       if(newAccount.save)
-
-        #update bank balance in database
-        currentUser = User.find(session[:user_id])
-
-        #sum up all the bank_balances of this user.
-          currentItem = currentUser.items.find_by item_id: newAccount.item_id
-          currentItem.total_account_balance = total_balance
-          isCurrentItemSaved = currentItem.save
-        #sum up the total balance in all the banks at this user's item.
-          currentUser.items.each do |i|
-            grand_total_balance += i.total_account_balance
-          end
-
-          #update the bank_balance of the current user with the newly calculated grand_total_balance
-          currentUser.account_balance.bank_balance = grand_total_balance
-          isCurrentAccountBalanceSaved = currentUser.account_balance.save
-
-          #update the total balance
-          currentUser.account_balance.total_balance = currentUser.account_balance.bank_balance + currentUser.account_balance.cash_balance
-          isTotalAccountBalanceSaved = currentUser.account_balance.save
-
-
-          #check preconditions
-          if(isCurrentItemSaved == false)
-            @message += "Failed to update item: #{currentUser.institution_id}. "
-            puts "Failed to update item: #{currentUser.institution_id}. "
-            #redirect_to(controller: "bank_sync", action: "index", message: @message) and return
-          elsif(isCurrentAccountBalanceSaved == false)
-            @message += "Failed to update account balance. "
-            puts "Failed to update account balance. "
-            #redirect_to(controller: "bank_sync", action: "index", message: @message) and return
-          elsif(isTotalAccountBalanceSaved == false)
-            @message += "Failed to update TOTAL account balance. "
-            puts "Failed to update TOTAL account balance. "
-          end
-
         @message += "'#{newAccount.official_name}' successfully saved. "
         puts "#{newAccount.official_name}, successfully saved. "
         #redirect_to(controller: "bank_sync", action: "index", message: @message) and return
@@ -147,12 +131,83 @@ class BankSyncController < ApplicationController
         puts "#{newAccount.official_name}, failed to be saved. "
         #redirect_to(controller: "bank_sync", action: "index", message: @message) and return
       end
-
     end
 
-    redirect_to(controller: "bank_sync", action: "index", message: @message) and return
+    #update bank balance in database
+
+    #sum up all the bank_balances of this user.
+    currentItem.total_account_balance = total_balance
+    isCurrentItemSaved = currentItem.save
+
+    #sum up the total balance in all the banks at this user's item.
+    currentUser.items.each do |i|
+      grand_total_balance += i.total_account_balance
+    end
+
+    #update the bank_balance of the current user with the newly calculated grand_total_balance
+    currentUser.account_balance.bank_balance = grand_total_balance
+    isCurrentAccountBalanceSaved = currentUser.account_balance.save
+
+    #update the total balance
+    currentUser.account_balance.total_balance = currentUser.account_balance.bank_balance + currentUser.account_balance.cash_balance
+    isTotalAccountBalanceSaved = currentUser.account_balance.save
+
+
+    #check preconditions
+    if(isCurrentItemSaved == false)
+      @message += "Failed to update item: #{currentUser.institution_id}. "
+      puts "Failed to update item: #{currentUser.institution_id}. "
+      #redirect_to(controller: "bank_sync", action: "index", message: @message) and return
+    elsif(isCurrentAccountBalanceSaved == false)
+      @message += "Failed to update account balance. "
+      puts "Failed to update account balance. "
+      #redirect_to(controller: "bank_sync", action: "index", message: @message) and return
+    elsif(isTotalAccountBalanceSaved == false)
+      @message += "Failed to update TOTAL account balance. "
+      puts "Failed to update TOTAL account balance. "
+    end
+
+  redirect_to(controller: "bank_sync", action: "index", message: @message) and return
 
   end
+
+  def unsync_bank_accounts
+    # Parameters
+    #   Access_token from database. item_id, institution_name
+    # Precondition
+    #   Access token must be valid
+    # Post condition:
+    #   Delete item from database and deactivate access token in plaid
+    # Description
+    #   Makes an http request to Plaid for the given access key to delete the item.
+    #   Calls $client.item.delete(access_token)
+
+    @message = ''
+    to_delete_access_token = params[:access_token]
+    to_delete_item_id = params[:item_id]
+    to_delete_institution = params[:institution_name]
+
+    #delete item off of database.
+    itemToDelete = Item.find_by item_id: to_delete_item_id
+    isDeletedFromDB = itemToDelete.destroy
+    if isDeletedFromDB
+      response = $client.item.delete(to_delete_access_token)
+      @message+= "'#{to_delete_institution}' successfully deleted from database. "
+    else
+      @message+= "'#{to_delete_institution}' failed to be deleted from database. "
+    end
+
+    if response["deleted"] && isDeletedFromDB
+      @message+= "'#{to_delete_institution}' successfully unsynced with plaid"
+      redirect_to(controller: "bank_sync", action: "index", message: @message) and return
+    else
+      @message+= "'#{to_delete_institution}' failed to unsynced with plaid"
+      redirect_to(controller: "bank_sync", action: "index", message: @message)
+    end
+
+
+  end
+
 
   def get_bank_account_info
     # Parameters
@@ -168,6 +223,8 @@ class BankSyncController < ApplicationController
     #get access token from database
 
     currentUser = User.find(session[:user_id])
+    currentItem = currentUser.items.find_by item_id: newAccount.item_id
+
 
   end
 
@@ -201,11 +258,59 @@ class BankSyncController < ApplicationController
     #confirm that user has
   end
 
-  def show_depository_accounts
+  def show_bank_account
     #params: user_id, item_id, account_id
     currentUser = User.find(session[:user_id])
     item = currentUser.items.find_by item_id: params[:item_id]
     bank_account = item.bank_account
+  end
+
+  def show_item
+    #params: item_id
+    #show show the item information and its corresponding bank accounts
+    currentUser = User.find(session[:user_id])
+    item = currentUser.items.find_by item_id: params[:item_id]
+
+    @institution_name = item.institution_name
+    @total_account_balance = item.total_account_balance
+    @created_at = item.created_at
+    @bank_accounts = item.bank_accounts
+    # @bank_accounts_ids = []
+    #
+    # pos = 0
+    # @bank_accounts.each do |acc|
+    #   @bank_accounts_ids[pos] = acc.id
+    #   pos+=1
+    # end
+    #
+    # pos = 0
+    # @bank_accounts_array = []
+    # @bank_accounts_ids.each do |bank_account_id|
+    #   @bank_accounts_array[pos] = item.bank_accounts.find_by id: bank_account_id
+    #   pos+=1
+    # end
+  end
+
+  def show_account_details
+    #params: bank_account id, institution_name
+    @institution_name = params[:institution_name]
+    this_acc = BankAccount.find(params[:bank_id])
+    @account_id = this_acc.account_id
+    @available_balance = this_acc.available_balance
+    @current_balance = this_acc.current_balance
+    @name = this_acc.name
+    @mask = this_acc.mask
+    @official_name = this_acc.official_name
+    @account_type = this_acc.account_type
+    @account_subtype = this_acc.account_subtype
+    @created_at = this_acc.created_at
+    @updated_at = this_acc.updated_at
+
+    if @available_balance == nil
+      @available_balance = "n/a"
+    end
+
+
   end
 
 end

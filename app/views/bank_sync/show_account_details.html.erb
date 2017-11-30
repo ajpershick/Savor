@@ -1,0 +1,16 @@
+<p class="message" id="message">
+  <%=@message%>
+  <i id="close-message" class="fa fa-times" aria-hidden="true" onclick="closeMessage()"></i>
+</p>
+<h1><%= @institution_name%></h1>
+<h1><%= @official_name%></h1>
+
+<p>account_id: <%=@account_id%></p>
+<p>available balance: <%=@available_balance%></p>
+<p>current_balance: <%=@current_balance%></p>
+<p>name: <%=@name%></p>
+<p>mask: <%=@mask%></p>
+<p>accounttype: <%=@account_type%></p>
+<p>account subtype: <%=@account_subtype%></p>
+<p>created at time: <%=@created_at%></p>
+<p>updated at time: <%=@updated_at%></p>

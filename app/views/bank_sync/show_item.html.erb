@@ -1,0 +1,40 @@
+<p class="message" id="message">
+  <%=@message%>
+  <i id="close-message" class="fa fa-times" aria-hidden="true" onclick="closeMessage()"></i>
+</p>
+<h1><%= @institution_name%></h1>
+<p> total account balance: <%= @total_account_balance %></p>
+<p> created at time: <%= @created_at %></p>
+
+<div class="table-container">
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Mask</th>
+      <th>Current Balance</th>
+      <th>Account Type</th>
+      <th>Account Sub-Type</th>
+      <th>Created At</th>
+      <th>Updated At</th>
+      <th> </th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <% @bank_accounts.each do |acc| %>
+        <tr>
+          <td><%= acc.name %></td>
+          <td><%= acc.mask %></td>
+          <td><%= "%.2f" % acc.current_balance %></td>
+          <td><%= acc.account_type %></td>
+          <td><%= acc.account_subtype %></td>
+          <td><%= acc.created_at %></td>
+          <td><%= acc.updated_at %></td>
+          <td><%= link_to 'More Details', {:action => 'show_account_details', :bank_id => acc.id, :institution_name => @institution_name}%></td>
+
+        </tr>
+      <% end %>
+  </tbody>
+</table>
+</div>
