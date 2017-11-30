@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  # resources :admin
+  # resources :home
+  # resources :access
 
   post 'account_balance/update'
   get 'account_balance/index'
@@ -22,11 +25,6 @@ Rails.application.routes.draw do
   get 'recommendations/events' => "recommendations#events"
 
   root 'home#index'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  #resources :admin
-  #resources :home
-  #resources :access
 
   get "access/login" => "access#login"
   post "access/attempt_login" => "access#attempt_login"
