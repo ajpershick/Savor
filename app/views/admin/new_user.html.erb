@@ -1,6 +1,6 @@
 <h1>Create Account</h1>
 
-<div class="material-container">
+<div class="material-container" id="create_account">
   <%= form_tag admin_create_user_path do %>
     <label for="username">Username: </label>
       <div class="field"><%= text_field_tag :username%></div>  <!--name = id -->
@@ -12,7 +12,7 @@
       <%= password_field_tag(:password, nil) %><br>
       <!--<div class="field"><%= text_field_tag :password%></div> -->  <!--name = id -->
     <label for="confirm_password">Confirm Password: </label><br>
-      <%= password_field_tag(:confirm_password, nil) %><br>
+      <%= password_field_tag(:confirm_password, nil, id: 'confirm_pass') %><br>
       <!--<div class="field"><%= text_field_tag :confirm_password%></div> -->  <!--name = id -->
       <%= label_tag "Admin: " %>
 
