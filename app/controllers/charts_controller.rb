@@ -305,7 +305,7 @@ class ChartsController < ApplicationController
 
             ticks: {
                     callback: "function(value, index, values) {
-                        return '$' + value;
+                        return '$' + String(Math.round(value));
                     }"
                 }
           }

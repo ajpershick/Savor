@@ -34,30 +34,30 @@ categories = [
 ]
 
 examples = [
-  "dining"        => []
-  "clothing"      => []
-  "groceries"     => ["Costco", "Save on Foods", "Walmart", "Superstore", ""]
-  "automotive"    => ["Chevron", "Petro Canada", "Shell", ""]
-  "gifts"         => []
-  "entertainment" => ["Netflix", ""]
-  "recreation"    => []
-  "transit"       => ["Translink", ""]
-  "utilities"     => ["Water bill", "Electricity bill", "Internet bill", "Natural gas bill"]
-  "maintenance"   => []
-  "medical"       => ["Pharmacy"]
-  "debt"          => ["Student loans", "Mastercard", "Visa"]
-  "luxury"        => []
-  "education"     => ["Tuition"]
-  "pets"          => ["Petsmart", "Vet bill"]
-  "insurance"     => ["Car insurance", "Home insurance"]
-  "supplies"      => [""]
-  "housing"       => ["Rent payment"]
-  "charity"       => [""]
-  "savings"       => ["Long term savings"]
-  "travel"        => [""]
-  "personal care" => []
-  "taxes"         => ["Income tax"]
-  "miscellaneous" => [""]
+  "dining"        => ["A&W", "McDonald's", "Tim Hortons", "Whitespot", ""],
+  "clothing"      => ["Amazon"],
+  "groceries"     => ["Costco", "Save on Foods", "Walmart", "Superstore", ""],
+  "automotive"    => ["Chevron", "Petro Canada", "Shell", ""],
+  "gifts"         => ["Birthday"],
+  "entertainment" => ["Netflix", "Cineplex", "Hollywood 3", "Cirque de Soleil", ],
+  "recreation"    => ["Gym pass", "Pool pass"],
+  "transit"       => ["Bus fare", "Westcoast Express", "SkyTrain fare"],
+  "utilities"     => ["Water bill", "Electricity bill", "Internet bill", "Natural gas bill"],
+  "maintenance"   => ["Plumber", "Electrician"],
+  "medical"       => ["Pharmacy"],
+  "debt"          => ["Student loans", "Mastercard", "Visa"],
+  "luxury"        => [""],
+  "education"     => ["Tuition"],
+  "pets"          => ["Petsmart", "Vet bill"],
+  "insurance"     => ["Car insurance", "Home insurance"],
+  "supplies"      => ["Amazon", "Walmart"],
+  "housing"       => ["Rent payment", "Mortgage payment"],
+  "charity"       => [""],
+  "savings"       => ["Long term savings"],
+  "travel"        => ["BC Ferries", "Air Canada", "WestJet"],
+  "personal care" => ["Spa", "Barber Shop"],
+  "taxes"         => ["Income tax"],
+  "miscellaneous" => [""],
 ]
 
 (0..categories.length - 1).each do |i|
