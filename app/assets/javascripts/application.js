@@ -22,6 +22,8 @@
 //= require ./recommendations
 //= require ./spending_history.coffee
 //= require ./input
+//= require ./charts
+//= require Chart.min
 
 function myFunction() { //toggles the side-nav
     var x = document.getElementById("mySideNav");

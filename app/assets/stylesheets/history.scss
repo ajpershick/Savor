@@ -2,10 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div.center {
+div.history-center {
   margin: auto;
   width: 50%;
   background-color: #FFFFFF;
+}
+
+h1.history-empty {
+  text-align: center;
+}
+
+h1.history-header {
+  font-family: Helvetica;
+  font-size: 24px;
+  margin: 10px;
+  line-height: 20px;
 }
 
 .centered {
@@ -102,7 +113,9 @@ div.month-dropdown:hover button.month-dropdown-button {
     background-color: #3e8e41;
 }
 
-.transactions-day, .transactions-header {
+.transactions-day, .transactions-header, .history-button-table {
+  width: 100%;
+  border-collapse: collapse;
   border-style: none;
 }
 
@@ -122,6 +135,7 @@ div.month-dropdown:hover button.month-dropdown-button {
   border-style: none;
   font-family: Helvetica;
   font-size: 18px;
+  line-height: 18px;
 }
 
 .transactions-header td {
@@ -145,6 +159,7 @@ div.month-dropdown:hover button.month-dropdown-button {
 }
 
 .transactions-day td:nth-child(1) {
+  padding: 5px;
   width: 10%;
 }
 .transactions-day td:nth-child(2) {
@@ -155,18 +170,6 @@ div.month-dropdown:hover button.month-dropdown-button {
 }
 .transactions-day td:nth-child(4) {
   width: 30%;
-}
-
-.icon-data {
-}
-
-.location-data {
-}
-
-.category-data {
-}
-
-.amount-data {
 }
 
 .category-icon-container {
@@ -186,6 +189,6 @@ div.month-dropdown:hover button.month-dropdown-button {
   margin-bottom: 0;
 }
 
-h#income-history{
+h1#income-history{
   text-align: center;
 }

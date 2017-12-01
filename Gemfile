@@ -90,3 +90,5 @@ gem 'sinatra'
 
 #RestClient gem for API calls
 gem 'rest-client'
+
+gem 'chartjs-ror'

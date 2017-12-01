@@ -17,7 +17,7 @@ class HistoryController < ApplicationController
       "utilities"     => {icon: "bolt",           color: "#f39c12"},
       "maintenance"   => {icon: "wrench",         color: "#7f8c8d"},
       "medical"       => {icon: "medkit",         color: "#c0392b"},
-      "debt"          => {icon: "university",     color: "#bdc3c7"},
+      "debt"          => {icon: "university",     color: "#95a5a6"},
       "luxury"        => {icon: "diamond",        color: "#9b59b6"},
       "education"     => {icon: "book",           color: "#2ecc71"},
       "pets"          => {icon: "paw",            color: "#795548"},
