@@ -33,6 +33,33 @@ categories = [
   "miscellaneous",
 ]
 
+examples = [
+  "dining"        => []
+  "clothing"      => []
+  "groceries"     => ["Costco", "Save on Foods", "Walmart", "Superstore", ""]
+  "automotive"    => ["Chevron", "Petro Canada", "Shell", ""]
+  "gifts"         => []
+  "entertainment" => ["Netflix", ""]
+  "recreation"    => []
+  "transit"       => ["Translink", ""]
+  "utilities"     => ["Water bill", "Electricity bill", "Internet bill", "Natural gas bill"]
+  "maintenance"   => []
+  "medical"       => ["Pharmacy"]
+  "debt"          => ["Student loans", "Mastercard", "Visa"]
+  "luxury"        => []
+  "education"     => ["Tuition"]
+  "pets"          => ["Petsmart", "Vet bill"]
+  "insurance"     => ["Car insurance", "Home insurance"]
+  "supplies"      => [""]
+  "housing"       => ["Rent payment"]
+  "charity"       => [""]
+  "savings"       => ["Long term savings"]
+  "travel"        => [""]
+  "personal care" => []
+  "taxes"         => ["Income tax"]
+  "miscellaneous" => [""]
+]
+
 (0..categories.length - 1).each do |i|
   Transaction.create(
     user_id: 10000,

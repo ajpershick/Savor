@@ -1,6 +1,8 @@
 <br></br>
 <div class="chart-center">
 
+  <% if !@empty then %>
+
   <%= link_to "", {controller: "charts", action: "index", year: @selected_year, month: @selected_month, categories: @enabled_categories, chart: @chart_type}, visisble: true, id:"hidden-link" %>
 
   <div class="chart-dropdown" id="yeardropdown">
@@ -187,6 +189,12 @@
     <% end %>
 
   </table>
+
+  <% else %>
+    <h1 class="chart-empty">No transactions found</h1>
+    <h1 class="chart-empty">Add transactions using the input tab, or by syncing with Plaid</h1>
+  <% end %>
+
 </div>
 
 <br></br>
