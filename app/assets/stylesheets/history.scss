@@ -12,6 +12,13 @@ h1.history-empty {
   text-align: center;
 }
 
+h1.history-header {
+  font-family: Helvetica;
+  font-size: 24px;
+  margin: 10px;
+  line-height: 20px;
+}
+
 .centered {
   margin-left: 33.3333333%;
 }
@@ -106,7 +113,9 @@ div.month-dropdown:hover button.month-dropdown-button {
     background-color: #3e8e41;
 }
 
-.transactions-day, .transactions-header {
+.transactions-day, .transactions-header, .history-button-table {
+  width: 100%;
+  border-collapse: collapse;
   border-style: none;
 }
 
@@ -126,6 +135,7 @@ div.month-dropdown:hover button.month-dropdown-button {
   border-style: none;
   font-family: Helvetica;
   font-size: 18px;
+  line-height: 18px;
 }
 
 .transactions-header td {
@@ -161,18 +171,6 @@ div.month-dropdown:hover button.month-dropdown-button {
   width: 30%;
 }
 
-.icon-data {
-}
-
-.location-data {
-}
-
-.category-data {
-}
-
-.amount-data {
-}
-
 .category-icon-container {
   padding: 10px;
   width: 50px;
@@ -190,6 +188,6 @@ div.month-dropdown:hover button.month-dropdown-button {
   margin-bottom: 0;
 }
 
-h#income-history{
+h1#income-history{
   text-align: center;
 }
