@@ -17,7 +17,6 @@ feature 'Test login', type: :feature do
       click_button 'Log In'
     end
     expect(page).to have_current_path('/')
-    expect(ApplicationController.any_instance.stub(:confirm_logged_out)).to be_truthy
   end
 
   scenario 'testing login helper' do
