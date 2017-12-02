@@ -43,7 +43,7 @@ function selectCategoryByKey(key, click) {
     "recreation",
     "transit",
     "utilities",
-    "maintenance",
+    "services",
     "medical",
     "debt",
     "luxury",
@@ -53,10 +53,10 @@ function selectCategoryByKey(key, click) {
     "supplies",
     "housing",
     "charity",
-    "savings",
+    "banking",
     "travel",
     "personal care",
-    "taxes",
+    "electronics",
     "miscellaneous",
   ]
 
