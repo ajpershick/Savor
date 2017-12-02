@@ -25,9 +25,9 @@ class MapsController < ApplicationController
       @empty = false
 
 
-      def initialize(lat,long)
-        @latlongArr = Array.new(lat) {Array.new(long)}
-      end
+
+      @latlongArr = (lat..long).map{|d| {latitude: d.latitude, longitude: d.longitude}}
+
 
         return view('viewlatlongArr')->with(@latlongArr)
 
