@@ -11,9 +11,9 @@ class BankTransaction < ApplicationRecord
   validates :transaction_type, presence: true
   validates :amount, presence: true
   validates :date, presence: true
-  validates :location_bool, presence: true
+  #validates :location_bool, presence: true
   validates :location, presence: true
   validates :name, presence: true
-  validates :pending, presence: true
+  #validates :pending, presence: true
   validates :pending_transaction_id, presence: true
 end

@@ -11,10 +11,10 @@ FactoryGirl.define do
     transaction_type {Faker::University.name}
     amount {Faker::Number.number}
     date {Faker::Date.backward}
-    location_bool true
+    location_bool {Faker::Boolean.boolean}
     location [Faker::Address.latitude, Faker::Address.longitude]
     name {Faker::Name.name}
-    pending true
+    pending {Faker::Boolean.boolean}
     pending_transaction_id {Faker::Number.number}
   end
 end
