@@ -1,15 +1,90 @@
-<h1>Maps</h1>
+<br></br>
 
-<div id="googleMap" style="width:95%;height:700px;"></div>
+<div class="map-center">
+  <div class="map-dropdown" id="yeardropdown">
+    <button class="map-dropdown-button"><%= @selected_year.to_s %></button>
+    <div class="map-dropdown-content">
+      <% @year_range.each do |year| %>
+        <%
+        if year == @selected_year then
+          next
+        end
+        %>
+        <%= link_to year, {controller: "maps", action: "index", year: year, month: @selected_month}%>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="map-dropdown" id="monthdropdown">
+    <button class="map-dropdown-button"><%= (@selected_month == "0") ? "Display entire year" : Date::MONTHNAMES[@selected_month.to_i] %></button>
+    <div class="map-dropdown-content">
+      <% (0..12).each do |month| %>
+        <%
+        if month == 0 then
+          current_month = "Display entire year"
+        else
+          current_month = Date::MONTHNAMES[month]
+        end
+
+        if month == @selected_month.to_i then
+          next
+        end
+        %>
+        <%= link_to current_month, {controller: "maps", action: "index", year: @selected_year, month: month}%>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="map-dropdown" id="heatmap-button">
+    <button class="map-dropdown-button" onmouseup="toggleHeatmap()">Toggle Heatmap</button>
+  </div>
+
+  <div class="map-dropdown" id="opacity-button">
+    <button class="map-dropdown-button" onmouseup="changeOpacity()">Change Opacity</button>
+  </div>
+
+
+
+</div>
+
+<div id="map"></div>
 
 <script>
-    function myMap() {
-        var mapProp= {
-            center:new google.maps.LatLng(49.246254,-123.013861),
-            zoom:11,
-        };
-        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    // This example requires the Visualization library. Include the libraries=visualization
+    // parameter when you first load the API. For example:
+    // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=visualization">
+
+    var map, heatmap;
+
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 13,
+            center: {lat: 49.2827, lng: -123.1207},
+            mapTypeId: 'roadmap'
+        });
+
+        heatmap = new google.maps.visualization.HeatmapLayer({
+            data: getPoints(),
+            map: map
+        });
+    }
+
+    function toggleHeatmap() {
+        heatmap.setMap(heatmap.getMap() ? null : map);
+    }
+
+    function changeOpacity() {
+        heatmap.set('opacity', heatmap.get('opacity') ? null : 0.2);
+    }
+
+    function getPoints() {
+        return [
+            <% @locations.each do |location| %>
+            new google.maps.LatLng(<%= location[0] %>, <%= location[1] %>),
+            <% end %>
+        ];
     }
 </script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ3wyaZIOpGodrpSDMQ5WGLDLTNgHibcI&callback=myMap"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ3wyaZIOpGodrpSDMQ5WGLDLTNgHibcI&libraries=visualization&callback=initMap">
+</script>
