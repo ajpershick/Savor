@@ -46,10 +46,10 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'rack_session_access'
+  gem 'faker'
 end
 
 group :test do
-  gem 'faker'
   gem 'guard-rspec'
   gem 'launchy'
   gem 'shoulda-matchers'
