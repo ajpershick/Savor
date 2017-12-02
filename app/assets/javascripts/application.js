@@ -19,8 +19,6 @@
 //= require ./account
 //= require ./admin
 //= require ./home
-//= require ./recommendations
-//= require ./spending_history.coffee
 //= require ./input
 //= require ./charts
 //= require Chart.min
