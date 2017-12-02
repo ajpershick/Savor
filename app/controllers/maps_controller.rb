@@ -48,7 +48,7 @@ class MapsController < ApplicationController
       @locations << [lat, long]
     end
 
-    # 
+    #
     # @locations =  [
     #   [49.2827, -123.1207],
     #   [49.2837, -123.1207],

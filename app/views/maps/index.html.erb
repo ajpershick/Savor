@@ -49,15 +49,7 @@
 
 <div id="map"></div>
 
-
-
-
-
-
-
-
 <script>
-
     // This example requires the Visualization library. Include the libraries=visualization
     // parameter when you first load the API. For example:
     // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=visualization">
@@ -85,9 +77,7 @@
         heatmap.set('opacity', heatmap.get('opacity') ? null : 0.2);
     }
 
-    // Heatmap data: 500 Points
     function getPoints() {
-
         return [
             <% @locations.each do |location| %>
             new google.maps.LatLng(<%= location[0] %>, <%= location[1] %>),

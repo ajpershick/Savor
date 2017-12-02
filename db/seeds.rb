@@ -80,7 +80,9 @@ end
     category: categories[rand(0..categories.length - 1)],
     location_name: (0...3).map { (97 + rand(26)).chr }.join,
     transaction_type: "place",
-    location: false,
+    location: true,
+    longitude: rand * ((-123.0) - (-123.1)) + (-123.1),
+    latitude: rand * (49.27 - 49.23) + 49.23,
     unique_id: "1")
 end
 
