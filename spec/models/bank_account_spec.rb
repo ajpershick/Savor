@@ -6,15 +6,18 @@ RSpec.describe BankAccount, type: :model do
   it { should have_many(:bank_transactions) }
 
   it { should validate_presence_of :user_id }
-  it { should validate_presence_of :amount }
-  it { should validate_presence_of :date }
-  it { should validate_presence_of :category }
-  it { should validate_presence_of :transaction_type }
-  it { should validate_presence_of :location }
-  it { should validate_presence_of :latitude }
-  it { should validate_presence_of :longitude }
+  it { should validate_presence_of :item_id }
+  it { should validate_presence_of :account_id }
+  it { should validate_presence_of :available_balance }
+  it { should validate_presence_of :current_balance }
+  it { should validate_presence_of :name }
+  it { should validate_presence_of :mask }
+  it { should validate_presence_of :official_name }
+  it { should validate_presence_of :account_type }
+  it { should validate_presence_of :account_subtype }
 
   it "should have valid factory" do
-    FactoryGirl.build(:random_transaction).should be_valid
+    @bank_account = FactoryGirl.build(:random_bank_account)
+    @bank_account.should be_valid
   end
 end

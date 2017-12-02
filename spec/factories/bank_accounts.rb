@@ -4,7 +4,6 @@ FactoryGirl.define do
     user_id {FactoryGirl.generate :user_id}
     item_id {Faker::Number.number}
     account_id {Faker::Number.number}
-    amount {Faker::Number.number}
     available_balance {Faker::Number.number}
     current_balance {Faker::Number.number}
     name {Faker::Superhero.prefix}

@@ -6,7 +6,6 @@ class BankAccount < ApplicationRecord
   validates :user_id, presence: true
   validates :item_id, presence: true
   validates :account_id, presence: true
-  validates :amount, presence: true
   validates :available_balance, presence: true
   validates :current_balance, presence: true
   validates :name, presence: true
