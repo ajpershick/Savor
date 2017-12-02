@@ -17,7 +17,7 @@ class InputController < ApplicationController
       "recreation"    => {icon: "futbol-o",       color: "#16a085"},
       "transit"       => {icon: "bus",            color: "#59ABE3"},
       "utilities"     => {icon: "bolt",           color: "#f39c12"},
-      "maintenance"   => {icon: "wrench",         color: "#7f8c8d"},
+      "services"      => {icon: "cog",            color: "#7f8c8d"},
       "medical"       => {icon: "medkit",         color: "#c0392b"},
       "debt"          => {icon: "university",     color: "#95a5a6"},
       "luxury"        => {icon: "diamond",        color: "#9b59b6"},
@@ -27,11 +27,12 @@ class InputController < ApplicationController
       "supplies"      => {icon: "paperclip",      color: "#F4D03F"},
       "housing"       => {icon: "home",           color: "#26A65B"},
       "charity"       => {icon: "heart",          color: "#E08283"},
-      "savings"       => {icon: "usd",            color: "#1E824C"},
+      "banking"       => {icon: "usd",            color: "#1E824C"},
       "travel"        => {icon: "plane",          color: "#e67e22"},
       "personal care" => {icon: "bath",           color: "#947CB0"},
-      "taxes"         => {icon: "envelope-open-o",color: "#d35400"},
+      "electronics"   => {icon: "camera",         color: "#d35400"},
       "miscellaneous" => {icon: "thumb-tack",     color: "#2c3e50"},
+      "total"         => {icon: "calculator",     color: "#1d1d1d"},
     }
 
     @char = [
@@ -50,20 +51,20 @@ class InputController < ApplicationController
       "recreation",
       "transit",
       "utilities",
-      "maintenance",
+      "services",
       "medical",
       "debt",
-      "luxury",       #leisure?
+      "luxury",
       "education",
       "pets",
       "insurance",
       "supplies",
       "housing",
       "charity",
-      "savings",
+      "banking",
       "travel",
       "personal care",
-      "taxes",
+      "electronics",
       "miscellaneous",
     ]
 
