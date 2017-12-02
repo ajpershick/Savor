@@ -1,6 +1,9 @@
 <br></br>
 
 <div class="map-center">
+
+  <% if !@empty then %>
+
   <div class="map-dropdown" id="yeardropdown">
     <button class="map-dropdown-button"><%= @selected_year.to_s %></button>
     <div class="map-dropdown-content">
@@ -43,6 +46,10 @@
     <button class="map-dropdown-button" onmouseup="changeOpacity()">Change Opacity</button>
   </div>
 
+  <% else %>
+  <h1 class="map-empty">No transactions found with location data</h1>
+  <h1 class="map-empty">Add transactions by syncing with Plaid</h1>
+  <% end %>
 
 
 </div>
@@ -79,8 +86,10 @@
 
     function getPoints() {
         return [
+            <% if !@empty then %>
             <% @locations.each do |location| %>
             new google.maps.LatLng(<%= location[0] %>, <%= location[1] %>),
+            <% end %>
             <% end %>
         ];
     }
