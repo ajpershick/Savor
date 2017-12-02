@@ -2,18 +2,18 @@ class BankTransaction < ApplicationRecord
 
   belongs_to :bank_account
 
-  user_id {FactoryGirl.generate :user_id}
-  item_id {Faker::Number.number}
-  bank_account_id {Faker::Number.number}
-  transaction_id {Faker::Number.number}
-  category {Faker::Superhero.prefix}
-  category_id {Faker::Number.number}
-  transaction_type {Faker::University.name}
-  amount {Faker::Number.number}
-  date {Faker::Date.backward}
-  location_bool {Faker::Boolean.boolean}
-  location {Faker::University.name}
-  name {Faker::Name.name}
-  pending {Faker::Boolean.boolean}
-  pending_transaction_id {Faker::Number.number}
+  validates :user_id, presence: true
+  validates :item_id, presence: true
+  validates :bank_account_id, presence: true
+  validates :transaction_id, presence: true
+  validates :category, presence: true
+  validates :category_id, presence: true
+  validates :transaction_type, presence: true
+  validates :amount, presence: true
+  validates :date, presence: true
+  #validates :location_bool, presence: true
+  validates :location, presence: true
+  validates :name, presence: true
+  #validates :pending, presence: true
+  validates :pending_transaction_id, presence: true
 end
