@@ -29,7 +29,7 @@ class MapsController < ApplicationController
       @latlongArr = (lat..long).map{|d| {latitude: d.latitude, longitude: d.longitude}}
 
 
-        return view('viewlatlongArr')->with(@latlongArr)
+        #return view('viewlatlongArr')->with(@latlongArr)
 
     end
   end
