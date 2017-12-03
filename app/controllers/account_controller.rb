@@ -18,6 +18,10 @@ class AccountController < ApplicationController
 
 
   def edit
+    users = User.all
+    @usernames = []
+    users.each do |user| @usernames << user.username end
+
     @id = session[:user_id]
     thisUser = User.find(@id)
 
@@ -26,12 +30,12 @@ class AccountController < ApplicationController
     @email = thisUser.email
     @message = params[:message]
 
-    if (session[:admin])then render :layout => 'admin' end
+    if (session[:admin]) then render :layout => 'admin' end
 
   end
 
   def make_edit
-    id = params[:userID]
+    id = session[:user_id]
     user = User.find(id)
     newUsername = params[:username]
     newFirstName = params[:first_name]
