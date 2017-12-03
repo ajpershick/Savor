@@ -2,7 +2,7 @@
   <%=@message%>
   <i id="close-message" class="fa fa-times" aria-hidden="true" onclick="closeMessage()"></i>
 </p>
-<h1>Linked Bank Accounts</h1>
+<h1>Linked Institutions</h1>
 <p>Please select a bank account</p>
 <p>Automatically syncing Account Balances and Transaction History coming soon!<p>
 
@@ -15,8 +15,15 @@
 
 
 <ul id="bank-accounts">
-  <li class ="bank-accounts-li"><div class="bank-account-container"><%= link_to "TD Bank", controller: "bank_sync", action: "show_depository_accounts", bank_account: @bank_name_accounts%></div></li>
+  <!-- Use an erb for-loop to loop through elements and create list -->
+  <% pos = 0 %>
+  <% @items.each do |i| %> <!-- loop through the user's items and create a link to the item -->
+    <li class ="bank-accounts-li"><div class="bank-account-container"><%= link_to i["institution_name"], controller: "bank_sync", action: "show_item", item_id: @item_id_array[pos] %></div></li>
+    <% pos+=1 %>
+  <% end %>
+<!--
+  <li class ="bank-accounts-li"><div class="bank-account-container"><%= link_to "TD Bank", controller: "bank_sync", action: "show_item"%></div></li>
   <li class ="bank-accounts-li"><div class="bank-account-container">Bank of Montreal</div></li>
   <li class ="bank-accounts-li"><div class="bank-account-container">Royal Bank of Canada</div></li>
-
+-->
 </ul>
