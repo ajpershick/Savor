@@ -71,9 +71,15 @@ ActiveRecord::Schema.define(version: 20171125055838) do
     t.index ["user_id"], name: "index_incomes_on_user_id"
   end
 
-  create_table "items", force: :cascade do |t|
+  create_table "items", id: false, force: :cascade do |t|
     t.integer "user_id"
+    t.string "item_id"
     t.string "access_token"
+    t.string "institution_id"
+    t.string "institution_name"
+    t.string "available_products", array: true
+    t.string "billed_products", array: true
+    t.decimal "total_account_balance", precision: 15, scale: 2, default: "0.0"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_items_on_user_id"
@@ -105,6 +111,14 @@ ActiveRecord::Schema.define(version: 20171125055838) do
     t.string "password_digest"
     t.string "email", limit: 255, null: false
     t.boolean "admin", default: false, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "widgets", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "stock"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

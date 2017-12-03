@@ -43,6 +43,7 @@ class HistoryController < ApplicationController
     user = User.find(session[:user_id])
     # Get all the user's transactions
     transactions = user.transactions.order(:date => :desc)
+    puts transactions.length
 
     if transactions.length == 0 then
       @empty = true
