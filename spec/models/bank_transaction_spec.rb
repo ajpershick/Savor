@@ -13,10 +13,8 @@ RSpec.describe BankTransaction, type: :model do
   it { should validate_presence_of :transaction_type }
   it { should validate_presence_of :amount }
   it { should validate_presence_of :date }
-  #it { should validate_presence_of :location_bool }
   it { should validate_presence_of :location }
   it { should validate_presence_of :name }
-  #it { should validate_presence_of :pending }
   it { should validate_presence_of :pending_transaction_id }
 
   it "should have valid factory" do
