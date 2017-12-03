@@ -2,16 +2,19 @@ class BankSyncController < ApplicationController
   skip_before_action :verify_authenticity_token
   #before_action :confirm_user_logged_in
 
+  require 'date'
+
   layout "menu"
 
   $client = Plaid::Client.new(env: :sandbox,
                              client_id: Rails.application.secrets.plaid_client_id,
                              secret: Rails.application.secrets.plaid_secret,
                              public_key: Rails.application.secrets.plaid_public_key)
-
+                             #webhook: 'https://requestb.in'
   access_token = nil
 
   #$current_user = User.find(session[:user_id])
+
 
   def index
 
@@ -69,7 +72,7 @@ class BankSyncController < ApplicationController
       new_item.save
       if(new_item != nil)
         #redirect_to(:action => "index", :access_token => access_token, :item_id => item_id, :message => "Success, item created") and return
-        redirect_to(:action => "create_bank_account", :access_token => access_token, :item_id => item_id)
+        redirect_to(:action => "create_bank_account", :access_token => access_token, :item_id => item_id) and return
       else
         redirect_to(:action => "index", :message => "Error, failed to create item") and return
       end
@@ -254,10 +257,6 @@ class BankSyncController < ApplicationController
     #redirect_to(:action => "index", :user_balance => @userBalance) and return
   end
 
-  def get_transaction
-    #confirm that user has
-  end
-
   def show_bank_account
     #params: user_id, item_id, account_id
     currentUser = User.find(session[:user_id])
@@ -291,7 +290,7 @@ class BankSyncController < ApplicationController
     # end
   end
 
-  def show_account_details
+  def show_account_details #done
     #params: bank_account id, institution_name
     @institution_name = params[:institution_name]
     this_acc = BankAccount.find(params[:bank_id])
@@ -309,8 +308,342 @@ class BankSyncController < ApplicationController
     if @available_balance == nil
       @available_balance = "n/a"
     end
+  end
+
+  def get_all_transactions
+    #gets transactions from the plaid servers and update savor database
+      #copies the bank_transactions table to the transactions table.
+      #executed after the item is created, to fetch all available transaction data into savor database
+    #params: access_token, account_ids, bank_account_id
+    @access_token = params[:access_token]
+    @account_ids = params[:account_ids] #the account id's associated with plaid
+
+    #check precondition
+    accessTokenIsValid = checkAccessToken(@access_token)
+    if(accessTokenIsValid == false)
+      puts "Error in get_all_transactions, access_token invalid"
+      return false
+    end
+
+    this_item = Item.find_by access_token: @access_token
+    this_item_id = this_item.id
+    this_user_id = this_item.user_id
+
+    #currentUser = User.find(session[:user_id])
+    #start_date = latest date
+    end_date = Date.today.to_date.to_formatted_s #formats the date to YYYY-MM-DD
+
+    start_date = Date.today - 728
+    start_date = start_date.to_date.to_formatted_s #formats the date to YYYY-MM-DD
 
 
+    if(@account_ids == nil)
+      #populate @account_ids array with account_ids
+      a_pos = 0
+      this_item.bank_accounts.each do |i|
+        @account_ids[a_pos] = i["account_id"]
+        pos+=1
+      end
+    end
+
+    @account_ids.each do |acc_id|
+      #check if transactions are available from 24 months since the item creation date.
+      #find the start date
+      # start with (current date - 24 months)
+
+      #check precondition that the accound_id is valid
+      this_account = this_item.bank_accounts.find_by account_id: acc_id
+      if(this_account == nil)
+        puts "Error, no bank_account found with account_id: #{acc_id}"
+        return false
+      end
+
+      this_account_id = this_account.id
+      transactions_new = get_transactions(account_id, @access_token, start_date, end_date)
+      transactions_all = transactions_new
+      bank_accounts = this_item.bank_accounts
+
+      current_bank_account = bank_accounts.find_by account_id: acc_id
+      bank_account_id = current_bank_account.id
+
+
+      # continue fetching for new transactions, until start_date = end_date
+      # AND, the previous transactions fetched are the same as the current transactions fetched.
+
+      # if 500 transactions were fetched (max), then fetch for more transactions
+        # but, make sure to not include duplicate transactions
+      while(transactions_new.length == 500) do
+
+        start_date = transactions_new[0]["date"]
+        transactions_new = get_transactions(acc_id, access_token, start_date, end_date)
+
+        #remove duplicates from the newly fetched transactions_new
+        trans_new_no_dupe = remove_dupilicates(transactions_new, transactions_all)
+
+        #appends new filtered transactions to transactions_all array
+        transactions_all = (transactions_all << trans_new_no_dupe).flatten!
+
+      end
+
+      #save transactions_all into database
+      transactions_all.each do |transaction|
+
+        #save transaction in bank_transactions table
+        isSavedBankTransaction = save_bank_transaction(transaction, bank_account_id, this_item_id, this_user_id)
+
+        if(isSavedBankTransaction == false)
+          puts "failed to save to bank_transactions table"
+        end
+
+        #save transaction into transactions table
+        isSavedTransaction = save_transaction(transaction, this_user_id)
+
+        if(isSavedTransaction == false)
+          puts "failed to save to Transaction"
+        end
+
+      end #end of transactions_all loop
+
+    end #end of @accounts_id loop
+
+  end # end of get_all_transactions
+
+  def get_new_transactions
+  end
+
+  def show_transactions
+  end
+
+  #CONTROLLER FUNCTIONS
+
+  def get_transactions(account_id, access_token, start_date, end_date)
+    #params: account_id, access_token, start_date, end_date
+    #description: fetches all the transaction for the given account_id
+      #and returns an array of transactions fetched.
+    #precondition: access_token is a valid access_token in items table.
+    #postcondition: fetch transactions from plaid and return
+
+    # @account_id = params[:account_id] #the account_id to pull transactions from
+    # @access_token = params[:access_token] #the access_token if the item the transactions belong to (required)
+    # @start_date = params[:start_date] #the oldest date to pull transactions from
+    # @end_date = params[:end_date] #the most recent date to pull transactions from
+
+    #check precondition
+    if(checkAccessToken(access_token) == false)
+      puts "Error in get_transactions function, access_token invalid" and return
+    end
+
+    start_date = start_date.to_date.to_formatted_s #changes format to (YYYY-MM-DD)
+    end_date = end_date.to_date.to_formatted_s
+
+    #check precondition
+    start_date_copy = start_date.to_date
+    end_date_copy = end_date.to_datebank_account_id
+    dateIsValid = start_date_copy < end_date_copy
+
+    if(dateIsValid == false)
+      puts "Error in get_transactions function, start_date must be older than end_date"
+      return false
+    end
+
+
+
+    if(account_id != nil)
+
+      response = $client.transactions.get(access_token,
+                                              start_date,
+                                              end_date,
+                                              account_ids: [account_id], #@account_ids,
+                                              count: 500,
+                                              offset: 0)
+    else
+      response = $client.transactions.get(access_token,
+                                              start_date,
+                                              end_date,
+                                              count: 500,
+                                              offset: 0)
+    end
+
+
+
+    retreived_transactions = []
+
+    retreived_transactions = response["transactions"] #an array with many transactions
+
+    # continue fetching for new transactions, until start_date = end_date
+    # AND, the previous transactions fetched are the same as the current transactions fetched.
+
+    return retreived_transactions
+
+  end
+
+  def remove_dupilicates(transactions_new, transactions_all)
+    #params:
+      #transactions_new: array of transactions, majority of which are new
+      #transactions_old: saved transactions
+    #description: fetches all the transaction for the given account_id
+      #and returns an array of transactions fetched.
+
+      pos = transactions_new.length - 1
+
+      for i in 0..(transactions_new.length - 1)
+        dupe = false
+        #loop through og trans to find the last transaction_id
+        transactions_all.each do |og_trans|
+          if(transactions_new[pos]["transaction_id"] == og_trans["transaction_id"])
+            dupe = true
+            break #exit the loop if a duplicate has been found
+          end
+        end
+
+        if(dupe == false)
+          #if this transaction is not a duplicate, save the position of this transaction
+          new_pos = pos
+          #all transactions after this position will be saved.
+          break #break out of the for loop once new unduped transaction found
+        end
+        pos-=1
+      end
+
+      #truncates the duplicate values in transactions_2 and stores in transasctions_3
+      # i = 0
+      # transactions_3 = []
+      # pos = 0
+      # for i in 0...new_pos
+      #     transactions_3[pos] = transaction_2[pos]
+      #     pos+=1
+      # end
+
+      # truncate all the duplication values in transactions_2
+      # take all values from and including new_pos + 1 to the end of array
+
+      transactions_new_filtered = transactions_new[0..(new_pos+1)]
+      return transactions_new_filtered
+
+  end
+
+  def checkAccessToken(access_token)
+    #params: access_token
+    #description: takes in a string as a paramter and checks whether the string
+      #is a valid access token, returns a boolean
+    item = Item.all.find_by access_token: access_token
+    if(item == nil)
+      return false
+    else
+      return true
+    end
+  end
+
+  def save_bank_transaction(transaction, bank_account_id, item_id, user_id)
+      bank_transaction = BankTransaction.new()
+      bank_transaction.user_id = user_id
+      bank_transaction.item_id = item_id
+      bank_transaction.account_id = transaction["account_id"]
+      bank_transaction.bank_account_id = bank_account_id
+      bank_transaction.transaction_id = transaction["transaction_id"]
+      bank_transaction.category = transaction["category"]
+      bank_transaction.category_id = transaction["category_id"]
+      bank_transaction.transaction_type = transaction["special"]
+      bank_transaction.amount = transaction["amount"]
+      bank_transaction.date = transaction["date"].to_date
+      if(transaction["location"]["address"] == nil && transaction["location"]["lat"] == nil)
+        bank_transaction.location_bool == false
+        bank_transaction.location[0] = transaction["location"]["address"]
+        bank_transaction.location[1] = transaction["location"]["city"]
+        bank_transaction.location[2] = transaction["location"]["lat"]
+        bank_transaction.location[3] = transaction["location"]["lon"]
+        bank_transaction.location[4] = transaction["location"]["state"]
+        bank_transaction.location[5] = transaction["location"]["store_number"]
+        bank_transaction.location[6] = transaction["location"]["zip"]
+      elsif(transaction["location"]["lat"] != nil && transaction["location"]["lon"] != nil)
+        bank_transaction.location_bool = true
+        bank_transaction.location[0] = transaction["location"]["address"]
+        bank_transaction.location[1] = transaction["location"]["city"]
+        bank_transaction.location[2] = transaction["location"]["lat"]
+        bank_transaction.location[3] = transaction["location"]["lon"]
+        bank_transaction.location[4] = transaction["location"]["state"]
+        bank_transaction.location[5] = transaction["location"]["store_number"]
+        bank_transaction.location[6] = transaction["location"]["zip"]
+      elsif(transaction["location"]["address"] != nil)
+        bank_transaction.location_bool = true
+        bank_transaction.location[0] = transaction["location"]["address"]
+        bank_transaction.location[1] = transaction["location"]["city"]
+        bank_transaction.location[2] = transaction["location"]["lat"]
+        bank_transaction.location[3] = transaction["location"]["lon"]
+        bank_transaction.location[4] = transaction["location"]["state"]
+        bank_transaction.location[5] = transaction["location"]["store_number"]
+        bank_transaction.location[6] = transaction["location"]["zip"]
+      else
+        bank_transaction.location_bool == false
+        bank_transaction.location[0] = transaction["location"]["address"]
+        bank_transaction.location[1] = transaction["location"]["city"]
+        bank_transaction.location[2] = transaction["location"]["lat"]
+        bank_transaction.location[3] = transaction["location"]["lon"]
+        bank_transaction.location[4] = transaction["location"]["state"]
+        bank_transaction.location[5] = transaction["location"]["store_number"]
+        bank_transaction.location[6] = transaction["location"]["zip"]
+      end
+      bank_transaction.pending = transaction["pending"]
+      bank_transaction.pending_transaction_id = transaction["pending_transaction_id"]
+      if(bank_transaction.save)
+        puts "tx_id: #{transaction_id} saved successfully in bank_transactions table"
+        return true
+      else
+        puts "tx_id: #{transaction_id} failed to save in bank_transactions table"
+        return false
+      end
+  end
+
+  def save_transaction(transaction, user_id)
+    bank_transaction = Transaction.new()
+    bank_transaction.user_id = user_id
+    bank_transaction.amount = transaction["amount"]
+    bank_transaction.date = transaction["date"].to_date
+    bank_transaction.category = transaction["category"][0]
+    bank_transaction.transaction_type = transaction["transaction_type"]
+    bank_transaction.unique_id = transaction["transaction_id"]
+
+    if(transaction["location"]["address"] == nil && transaction["location"]["lat"] == nil)
+      bank_transaction.location == false
+      bank_transaction.address = nil
+      bank_transaction.city = nil
+      bank_transaction.state = nil
+      bank_transaction.zip = nil
+      bank_transaction.latitude = nil
+      bank_transaction.longitude = nil
+    elsif(transaction["location"]["lat"] != nil && transaction["location"]["lon"] != nil)
+      bank_transaction.location_bool = true
+      bank_transaction.address = transaction["location"]["address"]
+      bank_transaction.city = transaction["location"]["city"]
+      bank_transaction.latitude = transaction["location"]["lat"]
+      bank_transaction.longitude = transaction["location"]["lon"]
+      bank_transaction.state = transaction["location"]["state"]
+      bank_transaction.zip = transaction["location"]["zip"]
+    elsif(transaction["location"]["address"] != nil)
+      bank_transaction.location_bool = true
+      bank_transaction.address = transaction["location"]["address"]
+      bank_transaction.city = transaction["location"]["city"]
+      bank_transaction.latitude = transaction["location"]["lat"]
+      bank_transaction.longitude = transaction["location"]["lon"]
+      bank_transaction.state = transaction["location"]["state"]
+      bank_transaction.zip = transaction["location"]["zip"]
+    else
+      bank_transaction.location == false
+      bank_transaction.address = nil
+      bank_transaction.city = nil
+      bank_transaction.state = nil
+      bank_transaction.zip = nil
+      bank_transaction.latitude = nil
+      bank_transaction.longitude = nil
+    end
+    bank_transaction.location_name = transaction["payment_meta"]["payee"]
+    if(bank_transaction.save)
+      puts "tx_id: #{transaction_id} saved successfully in transactions table"
+      return true
+    else
+      puts "tx_id: #{transaction_id} failed to save in transactions table"
+      return false
+    end
   end
 
 end

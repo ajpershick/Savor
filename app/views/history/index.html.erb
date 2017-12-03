@@ -4,6 +4,8 @@
 
 <div class="center">
 
+  <%= button_to "Update Bank Transactions", {controler: "bank_sync", action: "get_transactions"}
+
   <% if !@empty then %>
 
   <table>
