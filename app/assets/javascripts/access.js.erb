@@ -170,39 +170,6 @@ function validateInput(item, type) {
   return validInput;
 }
 
-// Validate the input 1 second after the user has finished typing
-function delayedValidateExisting(item, username) {
-  delay(function() {
-    validateExisting(item, username);
-  }, 1000)
-}
-
-// Validate a username in the edit account page
-function validateExisting(item, username) {
-
-  input = item.value;
-
-  // When there is no input, make the input box the default gray
-  if (input.length === 0) {
-    item.parentNode.childNodes[1].className = "entry-icon-container";
-    return;
-  }
-
-  if (document.getElementById("entry-input-username").value === username) {
-    validInput = true;
-  } else {
-    validInput = validateUsername(input);
-  }
-
-  // Makes the input box green or red depending on if the input is valid
-  if (validInput) {
-    item.parentNode.childNodes[1].className = "entry-icon-container entry-valid";
-  } else {
-    item.parentNode.childNodes[1].className = "entry-icon-container entry-invalid";
-  }
-
-}
-
 function verify() {
   var check = 5;
 

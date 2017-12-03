@@ -7,7 +7,7 @@
   <h1 class="account-header">Edit Account</h1>
   <br></br>
 
-  <%= form_tag({controller: "account", action: "make_edit"}, method: "post", onsubmit:"return verify_edit()") do %>
+  <%= form_tag({controller: "account", action: "make_edit"}, method: "post", onsubmit:"return verify_edit('" + @username + "')") do %>
 
 
     <div class="entry-input-container">
@@ -53,12 +53,12 @@
 
       <div class="entry-icon-container">
         <div class="entry-tooltip">
-          <span id="entry-tooltip-confirm-password" class="entry-hidden"></span>
+          <span id="entry-tooltip-password" class="entry-hidden"></span>
         </div>
-        <img id="password-confirm-icon" src="<%= asset_path("password.svg") %>" class="entry-icon"></img>
+        <img id="password-icon" src="<%= asset_path("password.svg") %>" class="entry-icon"></img>
       </div>
 
-      <%= password_field_tag(:password, nil, id: "entry-input-confirm-password", class: "entry-input", placeholder: "Enter password to confirm changes", onchange: "validateInput(this, 'confirm-password')", onkeyup: "delayedValidateInput(this, 'confirm-password')") %>
+      <%= password_field_tag(:password, nil, id: "entry-input-password", class: "entry-input", placeholder: "Enter password to confirm changes", onchange: "validateInput(this, 'password')", onkeyup: "delayedValidateInput(this, 'password')") %>
 
     </div>
 
