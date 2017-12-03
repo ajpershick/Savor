@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20171125055838) do
   create_table "bank_accounts", force: :cascade do |t|
     t.integer "user_id"
     t.string "item_id"
-    t.string "account_id" #account_id from plaid
+    t.string "account_id"
     t.decimal "available_balance", precision: 15, scale: 2, default: "0.0"
     t.decimal "current_balance", precision: 15, scale: 2, default: "0.0"
     t.string "name"
@@ -44,8 +44,8 @@ ActiveRecord::Schema.define(version: 20171125055838) do
   create_table "bank_transactions", force: :cascade do |t|
     t.integer "user_id"
     t.string "item_id"
-    t.string "bank_account_id" #savor database bank_account_id that this element is associated to
-    t.string "account_id" #account_id from plaid
+    t.string "bank_account_id"
+    t.string "account_id"
     t.string "transaction_id"
     t.string "category", array: true
     t.string "category_id"
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 20171125055838) do
     t.integer "user_id"
     t.decimal "income_amount", precision: 15, scale: 2, default: "0.0"
     t.string "source", default: "miscellaneous", null: false
+    t.date "date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_incomes_on_user_id"

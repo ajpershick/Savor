@@ -54,13 +54,14 @@ Rails.application.routes.draw do
   get 'bank_sync/add_account'
   post 'bank_sync/get_access_token'
   post 'bank_sync/delete_access_token'
-  post 'bank_sync/create_bank_account'
+  post 'bank_sync/unsync_bank_accounts'
+  get 'bank_sync/load_transactions'
   get 'bank_sync/get_bank_account_info'
   get 'bank_sync/get_account_balance'
-  get 'bank_sync/get_transaction'
   get 'bank_sync/show_bank_account'
   get 'bank_sync/show_item'
   get 'bank_sync/show_account_details'
+  get 'bank_sync/show_transactions'
 
   get "home/index" =>"home#index"
 

@@ -17,6 +17,10 @@ class BankSyncController < ApplicationController
 
 
   def index
+    #the home page of the bank_sync
+    #params:  access_token
+    #         message
+    #         user_balance
 
     currentUser = User.find(session[:user_id])
     @items = currentUser.items #an array of the user's items
@@ -47,7 +51,13 @@ class BankSyncController < ApplicationController
   end
 
   #creates a new item in the database with fields: user_id, item_id, access_token
-  def get_access_token
+  def get_access_token  # (basically does all initial setup stuff for bank-sync)
+                        # get_access_token
+                        # creates item and saves in database
+                        # creates the bank_accounts and saves in database
+                        # loads the transactions on the accounts from Plaid into the database
+
+    @message = ''
     exchange_token_response = $client.item.public_token.exchange(params['public_token'])
     access_token = exchange_token_response['access_token']
     item_id = exchange_token_response['item_id']
@@ -71,107 +81,38 @@ class BankSyncController < ApplicationController
 
       new_item.save
       if(new_item != nil)
+        puts "Successfully created item. "
+        @message += "Successfully created item. "
         #redirect_to(:action => "index", :access_token => access_token, :item_id => item_id, :message => "Success, item created") and return
-        redirect_to(:action => "create_bank_account", :access_token => access_token, :item_id => item_id) and return
+        #redirect_to(:action => "create_bank_account", :access_token => access_token, :item_id => item_id) and return
+        createdBankAccount = create_bank_account(access_token)
+        if(createdBankAccount == false)
+          puts "Error, failed to create bank_accounts for item. "
+          @message += "Error, failed to create bank_accounts for item. "
+          redirect_to(:action => "index", :message => @message) and return
+        else
+          puts "Successfully created bank_accounts for item."
+          @message += "Successfully created bank_accounts for item."
+
+          #pull transactions from Plaid
+          #redirect_to a loading page while transactions are being loaded
+          redirect_to(:action => "load_transactions", :access_token => access_token, :message => @message) and return
+
+          #redirect_to(:action => "index", :message => @message) and return
+        end
+
       else
-        redirect_to(:action => "index", :message => "Error, failed to create item") and return
+        puts "Error, failed to create item. "
+        @message += "Error, failed to create item. "
+        redirect_to(:action => "index", :message => @message) and return
       end
     end
   end
 
   def delete_access_token
+    #params: access_token
     #delete item, given access_token
     $client.item.delete(params['access_token']);
-  end
-
-  def create_bank_account #working
-    #parameters:
-      #access_token, item_id
-    #precondition:
-      #item_id and access_token is not nil
-    #postcondition:
-      #created a bank_account record for each account contained within the item, from plaid
-    #description:
-      #sends an http request to Plaid to get all the accounts associated with the item
-
-    #"access-sandbox-4abdcc4a-d38a-4298-9da9-354fd51009cc"
-
-      #response from plaid servers, in the form of a hash {"accounts", "item", "request_id"}
-    accounts_response = $client.accounts.get(params[:access_token])
-
-      #the accounts array, extracted from the accounts_response
-    accounts_array = accounts_response["accounts"]
-
-      #create an empty message for messages to be appended to it in the loop
-    @message = ''
-
-    currentUser = User.find(session[:user_id])
-
-    currentItem = currentUser.items.find_by item_id: params[:item_id]
-
-    total_balance = 0
-    grand_total_balance = 0
-    accounts_array.each do |acc|
-      newAccount = BankAccount.new()
-      newAccount.user_id = session[:user_id]
-      newAccount.item_id = params[:item_id]
-      newAccount.account_id = acc['account_id']
-      newAccount.available_balance = acc['balances']['available']
-      newAccount.current_balance = acc['balances']['current']
-      newAccount.name = acc['name']
-      newAccount.mask = acc['mask']
-      newAccount.official_name = acc['official_name']
-      newAccount.account_type = acc['type']
-      newAccount.account_subtype = acc['subtype']
-
-      total_balance+=newAccount.current_balance
-      if(newAccount.save)
-        @message += "'#{newAccount.official_name}' successfully saved. "
-        puts "#{newAccount.official_name}, successfully saved. "
-        #redirect_to(controller: "bank_sync", action: "index", message: @message) and return
-      else
-        @message += "'#{newAccount.official_name}' failed to be saved. "
-        puts "#{newAccount.official_name}, failed to be saved. "
-        #redirect_to(controller: "bank_sync", action: "index", message: @message) and return
-      end
-    end
-
-    #update bank balance in database
-
-    #sum up all the bank_balances of this user.
-    currentItem.total_account_balance = total_balance
-    isCurrentItemSaved = currentItem.save
-
-    #sum up the total balance in all the banks at this user's item.
-    currentUser.items.each do |i|
-      grand_total_balance += i.total_account_balance
-    end
-
-    #update the bank_balance of the current user with the newly calculated grand_total_balance
-    currentUser.account_balance.bank_balance = grand_total_balance
-    isCurrentAccountBalanceSaved = currentUser.account_balance.save
-
-    #update the total balance
-    currentUser.account_balance.total_balance = currentUser.account_balance.bank_balance + currentUser.account_balance.cash_balance
-    isTotalAccountBalanceSaved = currentUser.account_balance.save
-
-
-    #check preconditions
-    if(isCurrentItemSaved == false)
-      @message += "Failed to update item: #{currentUser.institution_id}. "
-      puts "Failed to update item: #{currentUser.institution_id}. "
-      #redirect_to(controller: "bank_sync", action: "index", message: @message) and return
-    elsif(isCurrentAccountBalanceSaved == false)
-      @message += "Failed to update account balance. "
-      puts "Failed to update account balance. "
-      #redirect_to(controller: "bank_sync", action: "index", message: @message) and return
-    elsif(isTotalAccountBalanceSaved == false)
-      @message += "Failed to update TOTAL account balance. "
-      puts "Failed to update TOTAL account balance. "
-    end
-
-  redirect_to(controller: "bank_sync", action: "index", message: @message) and return
-
   end
 
   def unsync_bank_accounts
@@ -205,12 +146,26 @@ class BankSyncController < ApplicationController
       redirect_to(controller: "bank_sync", action: "index", message: @message) and return
     else
       @message+= "'#{to_delete_institution}' failed to unsynced with plaid"
-      redirect_to(controller: "bank_sync", action: "index", message: @message)
+      redirect_to(controller: "bank_sync", action: "index", message: @message) and return
     end
-
-
   end
 
+  def load_transactions
+    #params:  access_token, message
+    #description: loading page for when the transactions are being loaded into
+    # the savor database, from plaid
+    # Executes the get_all_transactions function to...get all transactions
+
+    @message = params[:message]
+
+    @access_token = params["access_token"]
+    @account_ids = nil
+    failedCounters = get_all_transactions(@access_token, @account_ids)
+    #returns an array with two values: [bankTransFailedCounter, transFailedCounter]
+    @message += "'#{failedCounters[0]}' failed bank_transactions table submission(s), '#{failedCounters[1]}' failed transactions table submission(s), '#{failedCounters[1]}' failed incomes table submission(s). "
+
+    redirect_to(controller: "bank_sync", action: "index", message: @message) and return
+  end
 
   def get_bank_account_info
     # Parameters
@@ -310,22 +265,134 @@ class BankSyncController < ApplicationController
     end
   end
 
-  def get_all_transactions
+
+  def get_new_transactions
+  end
+
+  def show_transactions
+  end
+
+  #---------------------CONTROLLER FUNCTIONS-----------------------------------------------------------
+
+  def create_bank_account(access_token) #working
+    #parameters:
+      #access_token
+    #precondition:
+      #item_id and access_token is not nil
+    #postcondition:
+      #created a bank_account record for each account contained within the item, from plaid
+    #description:
+      #sends an http request to Plaid to get all the accounts associated with the item
+
+    #"access-sandbox-4abdcc4a-d38a-4298-9da9-354fd51009cc"
+
+      #response from plaid servers, in the form of a hash {"accounts", "item", "request_id"}
+    accounts_response = $client.accounts.get(access_token)
+
+      #the accounts array, extracted from the accounts_response
+    accounts_array = accounts_response["accounts"]
+
+      #create an empty message for messages to be appended to it in the loop
+    @message = ''
+
+    this_item = Item.find_by access_token: access_token
+    this_item_id = this_item.id
+    this_user_id = this_item.user_id
+
+    currentUser = User.find(this_user_id)
+
+    currentItem = this_item
+
+    newAccountSaved = nil
+
+    total_balance = 0
+    grand_total_balance = 0
+    accounts_array.each do |acc|
+      newAccount = BankAccount.new()
+      newAccount.user_id = this_user_id
+      newAccount.item_id = this_item_id
+      newAccount.account_id = acc['account_id']
+      newAccount.available_balance = acc['balances']['available']
+      newAccount.current_balance = acc['balances']['current']
+      newAccount.name = acc['name']
+      newAccount.mask = acc['mask']
+      newAccount.official_name = acc['official_name']
+      newAccount.account_type = acc['type']
+      newAccount.account_subtype = acc['subtype']
+
+      total_balance+=newAccount.current_balance
+      if(newAccount.save)
+        @message += "'#{newAccount.official_name}' successfully saved. "
+        puts "#{newAccount.official_name}, successfully saved. "
+        #redirect_to(controller: "bank_sync", action: "index", message: @message) and return
+        newAccountSaved = true
+      else
+        @message += "'#{newAccount.official_name}' failed to be saved. "
+        puts "#{newAccount.official_name}, failed to be saved. "
+        #redirect_to(controller: "bank_sync", action: "index", message: @message) and return
+        return false
+      end
+    end
+
+    #update bank balance in database
+
+    #sum up all the bank_balances of this user.
+    currentItem.total_account_balance = total_balance
+    isCurrentItemSaved = currentItem.save
+
+    #sum up the total balance in all the banks at this user's item.
+    currentUser.items.each do |i|
+      grand_total_balance += i.total_account_balance
+    end
+
+    #update the bank_balance of the current user with the newly calculated grand_total_balance
+    currentUser.account_balance.bank_balance = grand_total_balance
+    isCurrentAccountBalanceSaved = currentUser.account_balance.save
+
+    #update the total balance
+    currentUser.account_balance.total_balance = currentUser.account_balance.bank_balance + currentUser.account_balance.cash_balance
+    isTotalAccountBalanceSaved = currentUser.account_balance.save
+
+
+    #check preconditions
+    if(isCurrentItemSaved == false)
+      @message += "Failed to update item: #{currentUser.institution_id}. "
+      puts "Failed to update item: #{currentUser.institution_id}. "
+      #redirect_to(controller: "bank_sync", action: "index", message: @message) and return
+      return false
+    elsif(isCurrentAccountBalanceSaved == false)
+      @message += "Failed to update account balance. "
+      puts "Failed to update account balance. "
+      #redirect_to(controller: "bank_sync", action: "index", message: @message) and return
+      return false
+    elsif(isTotalAccountBalanceSaved == false)
+      @message += "Failed to update TOTAL account balance. "
+      puts "Failed to update TOTAL account balance. "
+      return false
+    else
+      return newAccountSaved
+    end
+
+  #redirect_to(controller: "bank_sync", action: "index", message: @message) and return
+
+  end
+
+  def get_all_transactions(access_token, account_ids)
     #gets transactions from the plaid servers and update savor database
       #copies the bank_transactions table to the transactions table.
       #executed after the item is created, to fetch all available transaction data into savor database
-    #params: access_token, account_ids, bank_account_id
-    @access_token = params[:access_token]
-    @account_ids = params[:account_ids] #the account id's associated with plaid
+      #returns an array with two values: [bankTransFailedCounter, transFailedCounter]
+    #params: access_token, account_ids
+      #account_ids: the plaid account_ids associated with all the accounts in the item.
 
     #check precondition
-    accessTokenIsValid = checkAccessToken(@access_token)
+    accessTokenIsValid = checkAccessToken(access_token)
     if(accessTokenIsValid == false)
       puts "Error in get_all_transactions, access_token invalid"
       return false
     end
 
-    this_item = Item.find_by access_token: @access_token
+    this_item = Item.find_by access_token: access_token
     this_item_id = this_item.id
     this_user_id = this_item.user_id
 
@@ -333,20 +400,18 @@ class BankSyncController < ApplicationController
     #start_date = latest date
     end_date = Date.today.to_date.to_formatted_s #formats the date to YYYY-MM-DD
 
-    start_date = Date.today - 728
-    start_date = start_date.to_date.to_formatted_s #formats the date to YYYY-MM-DD
 
-
-    if(@account_ids == nil)
+    if(account_ids == nil)
       #populate @account_ids array with account_ids
       a_pos = 0
+      account_ids = []
       this_item.bank_accounts.each do |i|
-        @account_ids[a_pos] = i["account_id"]
-        pos+=1
+        account_ids[a_pos] = i["account_id"]
+        a_pos+=1
       end
     end
 
-    @account_ids.each do |acc_id|
+    account_ids.each do |acc_id|
       #check if transactions are available from 24 months since the item creation date.
       #find the start date
       # start with (current date - 24 months)
@@ -358,8 +423,12 @@ class BankSyncController < ApplicationController
         return false
       end
 
+      start_date = Date.today - 728
+      start_date = start_date.to_date.to_formatted_s #formats the date to YYYY-MM-DD
+
+
       this_account_id = this_account.id
-      transactions_new = get_transactions(account_id, @access_token, start_date, end_date)
+      transactions_new = get_transactions(acc_id, access_token, start_date, end_date)
       transactions_all = transactions_new
       bank_accounts = this_item.bank_accounts
 
@@ -385,36 +454,49 @@ class BankSyncController < ApplicationController
 
       end
 
+      @bankTransFailedCounter = 0
+      @transFailedCounter = 0
+      @incomeFailedCounter = 0
+
       #save transactions_all into database
+
       transactions_all.each do |transaction|
+        transaction_1 = transaction
 
         #save transaction in bank_transactions table
         isSavedBankTransaction = save_bank_transaction(transaction, bank_account_id, this_item_id, this_user_id)
 
         if(isSavedBankTransaction == false)
           puts "failed to save to bank_transactions table"
+          @bankTransFailedCounter+=1
         end
 
         #save transaction into transactions table
-        isSavedTransaction = save_transaction(transaction, this_user_id)
-
-        if(isSavedTransaction == false)
-          puts "failed to save to Transaction"
-        end
+        if(transaction["amount"] < 0)
+          isSavedIncome = save_income(transaction_1, this_user_id)
+          if(isSavedIncome == false)
+            puts "failed to save to incomes table"
+            @incomeFailedCounter+= 1
+          end
+        else
+          isSavedTransaction = save_transaction(transaction_1, this_user_id)
+          if(isSavedTransaction == false)
+            puts "failed to save to transactions table"
+            @transFailedCounter+= 1
+          end
+        end #end of if/else statement
 
       end #end of transactions_all loop
 
     end #end of @accounts_id loop
 
+    failedTrans = []
+
+    failedTrans = [@bankTransFailedCounter, @transFailedCounter, @incomeFailedCounter]
+
+    return failedTrans
+
   end # end of get_all_transactions
-
-  def get_new_transactions
-  end
-
-  def show_transactions
-  end
-
-  #CONTROLLER FUNCTIONS
 
   def get_transactions(account_id, access_token, start_date, end_date)
     #params: account_id, access_token, start_date, end_date
@@ -438,7 +520,7 @@ class BankSyncController < ApplicationController
 
     #check precondition
     start_date_copy = start_date.to_date
-    end_date_copy = end_date.to_datebank_account_id
+    end_date_copy = end_date.to_date
     dateIsValid = start_date_copy < end_date_copy
 
     if(dateIsValid == false)
@@ -449,6 +531,7 @@ class BankSyncController < ApplicationController
 
 
     if(account_id != nil)
+      puts "account_id = #{account_id}"
 
       response = $client.transactions.get(access_token,
                                               start_date,
@@ -535,113 +618,152 @@ class BankSyncController < ApplicationController
   end
 
   def save_bank_transaction(transaction, bank_account_id, item_id, user_id)
-      bank_transaction = BankTransaction.new()
-      bank_transaction.user_id = user_id
-      bank_transaction.item_id = item_id
-      bank_transaction.account_id = transaction["account_id"]
-      bank_transaction.bank_account_id = bank_account_id
-      bank_transaction.transaction_id = transaction["transaction_id"]
-      bank_transaction.category = transaction["category"]
-      bank_transaction.category_id = transaction["category_id"]
-      bank_transaction.transaction_type = transaction["special"]
-      bank_transaction.amount = transaction["amount"]
-      bank_transaction.date = transaction["date"].to_date
-      if(transaction["location"]["address"] == nil && transaction["location"]["lat"] == nil)
-        bank_transaction.location_bool == false
-        bank_transaction.location[0] = transaction["location"]["address"]
-        bank_transaction.location[1] = transaction["location"]["city"]
-        bank_transaction.location[2] = transaction["location"]["lat"]
-        bank_transaction.location[3] = transaction["location"]["lon"]
-        bank_transaction.location[4] = transaction["location"]["state"]
-        bank_transaction.location[5] = transaction["location"]["store_number"]
-        bank_transaction.location[6] = transaction["location"]["zip"]
-      elsif(transaction["location"]["lat"] != nil && transaction["location"]["lon"] != nil)
-        bank_transaction.location_bool = true
-        bank_transaction.location[0] = transaction["location"]["address"]
-        bank_transaction.location[1] = transaction["location"]["city"]
-        bank_transaction.location[2] = transaction["location"]["lat"]
-        bank_transaction.location[3] = transaction["location"]["lon"]
-        bank_transaction.location[4] = transaction["location"]["state"]
-        bank_transaction.location[5] = transaction["location"]["store_number"]
-        bank_transaction.location[6] = transaction["location"]["zip"]
-      elsif(transaction["location"]["address"] != nil)
-        bank_transaction.location_bool = true
-        bank_transaction.location[0] = transaction["location"]["address"]
-        bank_transaction.location[1] = transaction["location"]["city"]
-        bank_transaction.location[2] = transaction["location"]["lat"]
-        bank_transaction.location[3] = transaction["location"]["lon"]
-        bank_transaction.location[4] = transaction["location"]["state"]
-        bank_transaction.location[5] = transaction["location"]["store_number"]
-        bank_transaction.location[6] = transaction["location"]["zip"]
-      else
-        bank_transaction.location_bool == false
-        bank_transaction.location[0] = transaction["location"]["address"]
-        bank_transaction.location[1] = transaction["location"]["city"]
-        bank_transaction.location[2] = transaction["location"]["lat"]
-        bank_transaction.location[3] = transaction["location"]["lon"]
-        bank_transaction.location[4] = transaction["location"]["state"]
-        bank_transaction.location[5] = transaction["location"]["store_number"]
-        bank_transaction.location[6] = transaction["location"]["zip"]
-      end
-      bank_transaction.pending = transaction["pending"]
-      bank_transaction.pending_transaction_id = transaction["pending_transaction_id"]
-      if(bank_transaction.save)
-        puts "tx_id: #{transaction_id} saved successfully in bank_transactions table"
-        return true
-      else
-        puts "tx_id: #{transaction_id} failed to save in bank_transactions table"
-        return false
-      end
+    bank_transaction = BankTransaction.new()
+    bank_transaction.user_id = user_id
+    bank_transaction.item_id = item_id
+    bank_transaction.account_id = transaction["account_id"]
+    bank_transaction.bank_account_id = bank_account_id
+    bank_transaction.transaction_id = transaction["transaction_id"]
+    bank_transaction.category = transaction["category"]
+    bank_transaction.category_id = transaction["category_id"]
+    bank_transaction.transaction_type = transaction["special"]
+    bank_transaction.amount = transaction["amount"]
+    bank_transaction.date = transaction["date"].to_date
+    if(transaction["location"]["address"] == nil && transaction["location"]["lat"] == nil)
+      bank_transaction.location_bool == false
+      bank_transaction.location = []
+      bank_transaction.location[0] = transaction["location"]["address"]
+      bank_transaction.location[1] = transaction["location"]["city"]
+      bank_transaction.location[2] = transaction["location"]["lat"]
+      bank_transaction.location[3] = transaction["location"]["lon"]
+      bank_transaction.location[4] = transaction["location"]["state"]
+      bank_transaction.location[5] = transaction["location"]["store_number"]
+      bank_transaction.location[6] = transaction["location"]["zip"]
+    elsif(transaction["location"]["lat"] != nil && transaction["location"]["lon"] != nil)
+      bank_transaction.location_bool = true
+      bank_transaction.location = []
+      bank_transaction.location[0] = transaction["location"]["address"]
+      bank_transaction.location[1] = transaction["location"]["city"]
+      bank_transaction.location[2] = transaction["location"]["lat"]
+      bank_transaction.location[3] = transaction["location"]["lon"]
+      bank_transaction.location[4] = transaction["location"]["state"]
+      bank_transaction.location[5] = transaction["location"]["store_number"]
+      bank_transaction.location[6] = transaction["location"]["zip"]
+    elsif(transaction["location"]["address"] != nil)
+      bank_transaction.location_bool = true
+      bank_transaction.location = []
+      bank_transaction.location[0] = transaction["location"]["address"]
+      bank_transaction.location[1] = transaction["location"]["city"]
+      bank_transaction.location[2] = transaction["location"]["lat"]
+      bank_transaction.location[3] = transaction["location"]["lon"]
+      bank_transaction.location[4] = transaction["location"]["state"]
+      bank_transaction.location[5] = transaction["location"]["store_number"]
+      bank_transaction.location[6] = transaction["location"]["zip"]
+    else
+      bank_transaction.location_bool == false
+      bank_transaction.location = []
+      bank_transaction.location[0] = transaction["location"]["address"]
+      bank_transaction.location[1] = transaction["location"]["city"]
+      bank_transaction.location[2] = transaction["location"]["lat"]
+      bank_transaction.location[3] = transaction["location"]["lon"]
+      bank_transaction.location[4] = transaction["location"]["state"]
+      bank_transaction.location[5] = transaction["location"]["store_number"]
+      bank_transaction.location[6] = transaction["location"]["zip"]
+    end
+
+    bank_transaction.pending = transaction["pending"]
+    bank_transaction.pending_transaction_id = transaction["pending_transaction_id"]
+    if(bank_transaction.save)
+      puts "tx_id: #{transaction["transaction_id"]} saved successfully in bank_transactions table"
+      return true
+    else
+      puts "tx_id: #{transaction["transaction_id"]} failed to save in bank_transactions table"
+      return false
+    end
   end
 
   def save_transaction(transaction, user_id)
-    bank_transaction = Transaction.new()
-    bank_transaction.user_id = user_id
-    bank_transaction.amount = transaction["amount"]
-    bank_transaction.date = transaction["date"].to_date
-    bank_transaction.category = transaction["category"][0]
-    bank_transaction.transaction_type = transaction["transaction_type"]
-    bank_transaction.unique_id = transaction["transaction_id"]
+    new_transaction = Transaction.new()
+    new_transaction.user_id = user_id
+    puts "user_id = #{user_id}"
+    new_transaction.amount = transaction["amount"]
+    puts "transaction['amount'] = #{transaction["amount"]}"
+    if(transaction["date.to"] != nil)
+      new_transaction.date = transaction["date"].to_date
+      puts "transaction['date'].to_date = #{transaction["date"].to_date}"
+    else
+      new_transaction.date = Date.today
+      puts "transaction['date'] == nil, new_transaction.date saved as Date.today"
+    end
+
+    if(transaction["category"] != nil)
+      puts "transactions['category'] = #{transaction["category"]}"
+      new_transaction.category = transaction["category"][0]
+    end
+    new_transaction.transaction_type = transaction["transaction_type"]
+    new_transaction.unique_id = transaction["transaction_id"]
 
     if(transaction["location"]["address"] == nil && transaction["location"]["lat"] == nil)
-      bank_transaction.location == false
-      bank_transaction.address = nil
-      bank_transaction.city = nil
-      bank_transaction.state = nil
-      bank_transaction.zip = nil
-      bank_transaction.latitude = nil
-      bank_transaction.longitude = nil
+      new_transaction.location == false
+      new_transaction.address = nil
+      new_transaction.city = nil
+      new_transaction.state = nil
+      new_transaction.zip = nil
+      new_transaction.latitude = nil
+      new_transaction.longitude = nil
     elsif(transaction["location"]["lat"] != nil && transaction["location"]["lon"] != nil)
-      bank_transaction.location_bool = true
-      bank_transaction.address = transaction["location"]["address"]
-      bank_transaction.city = transaction["location"]["city"]
-      bank_transaction.latitude = transaction["location"]["lat"]
-      bank_transaction.longitude = transaction["location"]["lon"]
-      bank_transaction.state = transaction["location"]["state"]
-      bank_transaction.zip = transaction["location"]["zip"]
+      new_transaction.location_bool = true
+      new_transaction.address = transaction["location"]["address"]
+      new_transaction.city = transaction["location"]["city"]
+      new_transaction.latitude = transaction["location"]["lat"]
+      new_transaction.longitude = transaction["location"]["lon"]
+      new_transaction.state = transaction["location"]["state"]
+      new_transaction.zip = transaction["location"]["zip"]
     elsif(transaction["location"]["address"] != nil)
-      bank_transaction.location_bool = true
-      bank_transaction.address = transaction["location"]["address"]
-      bank_transaction.city = transaction["location"]["city"]
-      bank_transaction.latitude = transaction["location"]["lat"]
-      bank_transaction.longitude = transaction["location"]["lon"]
-      bank_transaction.state = transaction["location"]["state"]
-      bank_transaction.zip = transaction["location"]["zip"]
+      new_transaction.location_bool = true
+      new_transaction.address = transaction["location"]["address"]
+      new_transaction.city = transaction["location"]["city"]
+      new_transaction.latitude = transaction["location"]["lat"]
+      new_transaction.longitude = transaction["location"]["lon"]
+      new_transaction.state = transaction["location"]["state"]
+      new_transaction.zip = transaction["location"]["zip"]
     else
-      bank_transaction.location == false
-      bank_transaction.address = nil
-      bank_transaction.city = nil
-      bank_transaction.state = nil
-      bank_transaction.zip = nil
-      bank_transaction.latitude = nil
-      bank_transaction.longitude = nil
+      new_transaction.location == false
+      new_transaction.address = nil
+      new_transaction.city = nil
+      new_transaction.state = nil
+      new_transaction.zip = nil
+      new_transaction.latitude = nil
+      new_transaction.longitude = nil
     end
-    bank_transaction.location_name = transaction["payment_meta"]["payee"]
-    if(bank_transaction.save)
-      puts "tx_id: #{transaction_id} saved successfully in transactions table"
+    new_transaction.location_name = transaction["payment_meta"]["payee"]
+    if(new_transaction.save)
+      puts "tx_id: #{transaction["transaction_id"]} saved successfully in transactions table"
       return true
     else
-      puts "tx_id: #{transaction_id} failed to save in transactions table"
+      puts "tx_id: #{transaction["transaction_id"]} failed to save in transactions table"
+      return false
+    end
+  end
+
+  def save_income(income_entry, user_id)
+    new_income = Income.new()
+    new_income.user_id = user_id
+    puts "user_id = #{user_id}"
+    new_income.income_amount = income_entry["amount"].abs
+    puts "income_entry['amount'].abs = #{income_entry["amount"].abs}"
+    new_income.date = income_entry["date"].to_date
+    puts "income_entry['date'].to_date = #{income_entry["date"].to_date}"
+    if(income_entry["payment_meta"]["payee"] != nil)
+      new_income.source = income_entry["payment_meta"]["payee"]
+      puts "income_entry['payment_meta']['payee'] = #{income_entry["payment_meta"]["payee"]}"
+    end
+
+    if(new_income.save)
+      puts "tx_id: #{income_entry["transaction_id"]} saved successfully in incomes table"
+      return true
+    else
+      puts "tx_id: #{income_entry["transaction_id"]} failed to save in incomes table"
       return false
     end
   end
