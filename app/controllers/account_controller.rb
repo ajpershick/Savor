@@ -2,6 +2,21 @@ class AccountController < ApplicationController
 
   layout "menu"
 
+  def index
+
+    id = session[:user_id]
+    thisUser = User.find(id)
+
+    @username = thisUser.username
+    @first_name = thisUser.name
+    @email = thisUser.email
+    @message = params[:message]
+
+    if (session[:admin]) then render :layout => 'admin' end
+
+  end
+
+
   def edit
     @id = session[:user_id]
     thisUser = User.find(@id)
@@ -11,11 +26,7 @@ class AccountController < ApplicationController
     @email = thisUser.email
     @message = params[:message]
 
-    if (session[:admin])
-      render :layout => 'admin'
-    else
-      render :layout => "menu"
-    end
+    if (session[:admin])then render :layout => 'admin' end
 
   end
 
@@ -40,29 +51,13 @@ class AccountController < ApplicationController
       toEdit.name = newFirstName
       toEdit.email = newEmail
       toEdit.save
-      @message = "Account details editted"
+      @message = "Account details edited"
       redirect_to(:action => "index", :message => @message) and return
     end
 
   end
 
-  def index
 
-    id = session[:user_id]
-
-    thisUser = User.find(id)
-    @username = thisUser.username
-    @first_name = thisUser.name
-    @email = thisUser.email
-    @message = params[:message]
-
-    if (session[:admin])
-      render :layout => 'admin'
-    else
-      render :layout => "menu"
-    end
-
-  end
 
   def change_password
     @message = params[:message]
