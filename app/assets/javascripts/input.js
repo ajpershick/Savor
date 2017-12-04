@@ -204,7 +204,7 @@ function verifyTransaction() {
   var amountInput = document.getElementsByClassName("transaction-amount-input")[0];
   var categoryInput = document.getElementsByClassName("transaction-category-input")[0];
   var nameInput = document.getElementsByClassName("transaction-name-input")[0];
-
+  alert();
   if (validateAmount(0, amountInput)) check -= 4;
   if (categoryInput.value.length > 0) check -= 2;
   if (validateDescription(0, nameInput)) check -= 1;

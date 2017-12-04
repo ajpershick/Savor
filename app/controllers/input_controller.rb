@@ -72,25 +72,30 @@ class InputController < ApplicationController
 
   def create
 
-     #checks the precondition that the user must have sufficient funds before making a transaction
-     current_user = User.find(session[:user_id])
-     if (params[:amount].to_f > current_user.account_balance.cash_balance.to_f)
-       @message = "Error, insufficient funds in your cash account balance to make this transaction"
-       redirect_to({controller: params[:last_controller], action: params[:last_action], message: @message}) and return
-     end
+    #checks the precondition that the user must have sufficient funds before making a transaction
+    current_user = User.find(session[:user_id])
 
-     puts params[:latitude]
-     puts params[:longitude]
+    if (params[:amount].to_f > current_user.account_balance.cash_balance.to_f)
+      @message = "Error, insufficient funds in your cash account balance to make this transaction"
+      redirect_to({controller: params[:last_controller], action: params[:last_action], message: @message}) and return
+    end
 
-     if params[:latitude] == "" || params[:longitude] == "" then
-       lat = nil
-       long = nil
-       location = false
-     else
-       lat = params[:latitude]
-       long = params[:longitude]
-       location = true
-     end
+    if params[:latitude] == "" || params[:longitude] == "" then
+      lat = nil
+      long = nil
+      location = false
+    else
+      lat = params[:latitude]
+      long = params[:longitude]
+      location = true
+    end
+
+    # Guaranteed to have either description, or location filled out
+    if params[:description].present? then
+      location_name = params[:description]
+    else
+      location_name = params[:location].split(/,/).first
+    end
 
     new_transaction = Transaction.new(
       user_id: session[:user_id],
@@ -99,7 +104,7 @@ class InputController < ApplicationController
       category: params[:category],
       transaction_type: "place",
       unique_id: rand(0..100000).to_s,
-      location_name: params[:location_name],
+      location_name: location_name,
       location: location,
       latitude: lat,
       longitude: long

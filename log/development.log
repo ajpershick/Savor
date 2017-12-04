@@ -4396,3 +4396,1398 @@ Processing by MapsController#index as HTML
 Completed 200 OK in 199ms (Views: 75.6ms | ActiveRecord: 9.4ms)
 
 
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 01:16:53 -0800
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (20.3ms)
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 01:16:53 -0800
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (19.0ms)
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (3.1ms)
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.2ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (1.3ms)
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (3.5ms)
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.7ms)
+Completed 200 OK in 378ms (Views: 377.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 619ms (Views: 611.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 106ms (Views: 105.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Completed 200 OK in 530ms (Views: 528.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 953ms (Views: 943.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Completed 200 OK in 390ms (Views: 388.0ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 662ms (Views: 660.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/input.self-10105f207c507fa261e7a7323f7562418007c60dd2bb78e7371fd25b79cd2ebb.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/application.self-a03432b817fab690e04adfa6800d3c385124306fbc63f4ce75821097e4a94487.css?body=1" for 127.0.0.1 at 2017-12-04 01:16:54 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:16:55 -0800
+Started GET "/history/index" for 127.0.0.1 at 2017-12-04 01:25:17 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (6.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  Rendering history/index.html.erb within layouts/menu
+  Rendered history/index.html.erb within layouts/menu (21.5ms)
+Completed 200 OK in 241ms (Views: 69.8ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 01:25:18 -0800
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (6.9ms)
+Completed 200 OK in 84ms (Views: 80.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 01:26:26 -0800
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.8ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138394561560 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138394561560 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1502ms (Views: 1501.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/assets/application.self-aace51d388bb21bebe3976e173c138ed91665497e05f8c73e5e54ece85ef35dd.css?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/assets/input.self-10105f207c507fa261e7a7323f7562418007c60dd2bb78e7371fd25b79cd2ebb.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:28 -0800
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 01:26:49 -0800
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (3.5ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138460301480 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138460301480 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1508ms (Views: 1506.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/application.self-71285b81702d474c4df07d3b5ace66936a24a2b5d64264da8501263bd3b5998a.css?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/input.self-10105f207c507fa261e7a7323f7562418007c60dd2bb78e7371fd25b79cd2ebb.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:26:50 -0800
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 01:27:04 -0800
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.4ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138580433780 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138580433780 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1024ms (Views: 1022.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/application.self-d1e223e6459cd077c6d9ea5f2eee41e523a2200728df6201cbb466b14ba877a8.css?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/input.self-10105f207c507fa261e7a7323f7562418007c60dd2bb78e7371fd25b79cd2ebb.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:05 -0800
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 01:27:08 -0800
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (7.1ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138428643220 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138428643220 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1023ms (Views: 1020.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/application.self-2f2920fe9bcf82372346c5631f3d238fc841acd9b472f79e2b1f9e3f6be8d12d.css?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/input.self-10105f207c507fa261e7a7323f7562418007c60dd2bb78e7371fd25b79cd2ebb.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:09 -0800
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (15.9ms)
+Completed 200 OK in 66ms (Views: 64.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/input.self-10105f207c507fa261e7a7323f7562418007c60dd2bb78e7371fd25b79cd2ebb.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/assets/application.self-d1e223e6459cd077c6d9ea5f2eee41e523a2200728df6201cbb466b14ba877a8.css?body=1" for 127.0.0.1 at 2017-12-04 01:27:15 -0800
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (3.1ms)
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/application.self-d1e223e6459cd077c6d9ea5f2eee41e523a2200728df6201cbb466b14ba877a8.css?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/input.self-10105f207c507fa261e7a7323f7562418007c60dd2bb78e7371fd25b79cd2ebb.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:16 -0800
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 01:27:36 -0800
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.0ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138461393260 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138461393260 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1073ms (Views: 1072.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/application.self-fcbe68ac8ae4e5327fb98084e68b7f42153e520bc868d353f45470de8cbcf36c.css?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/input.self-10105f207c507fa261e7a7323f7562418007c60dd2bb78e7371fd25b79cd2ebb.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:27:37 -0800
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 01:28:50 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vZe6Www/pV/xl4O8ENS20mWtJsjGnSLfh6KhY7U4XgXDRkQKUNoa5+97xMP18YtLoTsK4ZIiBXo/WpPq9jqErg==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.5ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 8.1ms)
+
+
+  
+ArgumentError (invalid date):
+  
+app/controllers/input_controller.rb:102:in `parse'
+app/controllers/input_controller.rb:102:in `create'
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 01:28:59 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vZe6Www/pV/xl4O8ENS20mWtJsjGnSLfh6KhY7U4XgXDRkQKUNoa5+97xMP18YtLoTsK4ZIiBXo/WpPq9jqErg==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.4ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.8ms)
+
+
+  
+ArgumentError (invalid date):
+  
+app/controllers/input_controller.rb:102:in `parse'
+app/controllers/input_controller.rb:102:in `create'
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (3.8ms)
+Completed 200 OK in 140ms (Views: 138.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/input.self-95112bd0f980f54edd532311d4c6c6fcca5bec1e857d9511d7ba7e7b17faba7c.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started GET "/assets/application.self-fcbe68ac8ae4e5327fb98084e68b7f42153e520bc868d353f45470de8cbcf36c.css?body=1" for 127.0.0.1 at 2017-12-04 01:30:43 -0800
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 01:30:45 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QvIyFXEtu5zHpO69t/R0rebhABJ/ki0X6jG5/AXfHqs8I8xELcgEJNlIqcJS0Uk0IncsOystCrJSyYt1Rt3EAA==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 30ms (ActiveRecord: 3.6ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 01:30:47 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QvIyFXEtu5zHpO69t/R0rebhABJ/ki0X6jG5/AXfHqs8I8xELcgEJNlIqcJS0Uk0IncsOystCrJSyYt1Rt3EAA==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.4ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 15ms (ActiveRecord: 1.3ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 01:30:48 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QvIyFXEtu5zHpO69t/R0rebhABJ/ki0X6jG5/AXfHqs8I8xELcgEJNlIqcJS0Uk0IncsOystCrJSyYt1Rt3EAA==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.2ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 13ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (4.4ms)
+Completed 200 OK in 60ms (Views: 57.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/application.self-fcbe68ac8ae4e5327fb98084e68b7f42153e520bc868d353f45470de8cbcf36c.css?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/assets/input.self-95112bd0f980f54edd532311d4c6c6fcca5bec1e857d9511d7ba7e7b17faba7c.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:49 -0800
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (7.4ms)
+Completed 200 OK in 63ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/application.self-fcbe68ac8ae4e5327fb98084e68b7f42153e520bc868d353f45470de8cbcf36c.css?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/input.self-95112bd0f980f54edd532311d4c6c6fcca5bec1e857d9511d7ba7e7b17faba7c.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:30:50 -0800
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 01:30:53 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ujJedO8lg5rufI5RGbXWUwYB4gLMGthFhtSVXXZ2m0LE46Als8A8IvCQyS78kOvKwpfOK5il/+A+LKfUNXRB6Q==", "amount"=>"5.44", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.2ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 13ms (ActiveRecord: 0.8ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 01:30:54 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ujJedO8lg5rufI5RGbXWUwYB4gLMGthFhtSVXXZ2m0LE46Als8A8IvCQyS78kOvKwpfOK5il/+A+LKfUNXRB6Q==", "amount"=>"5.44", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 13ms (ActiveRecord: 0.9ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 01:30:56 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ujJedO8lg5rufI5RGbXWUwYB4gLMGthFhtSVXXZ2m0LE46Als8A8IvCQyS78kOvKwpfOK5il/+A+LKfUNXRB6Q==", "amount"=>"5.44", "category"=>"travel", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.6ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount", "date", "category", "transaction_type", "unique_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 10000], ["amount", "5.44"], ["date", "2017-12-04"], ["category", "travel"], ["transaction_type", "place"], ["unique_id", "70707"], ["created_at", "2017-12-04 09:30:56.505196"], ["updated_at", "2017-12-04 09:30:56.505196"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/account_balance/update?amount=5.44&next_action=new&next_controller=input&trans_type=cash
+Completed 302 Found in 19ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/account_balance/update?amount=5.44&next_action=new&next_controller=input&trans_type=cash" for 127.0.0.1 at 2017-12-04 01:30:56 -0800
+Processing by AccountBalanceController#update as HTML
+  Parameters: {"amount"=>"5.44", "next_action"=>"new", "next_controller"=>"input", "trans_type"=>"cash"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.4ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "account_balances" SET "cash_balance" = $1, "total_balance" = $2, "updated_at" = $3 WHERE "account_balances"."id" = $4[0m  [["cash_balance", "8983.52"], ["total_balance", "8983.52"], ["updated_at", "2017-12-04 09:30:56.541708"], ["id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/input/new?message=Transaction+saved%2C+successfully+updated+account+balance
+Completed 302 Found in 14ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/input/new?message=Transaction+saved%2C+successfully+updated+account+balance" for 127.0.0.1 at 2017-12-04 01:30:56 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Transaction saved, successfully updated account balance"}
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.8ms)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 01:30:57 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KgsKXfvDhWO8IhzVFOF9QckhFSWaXK4p7sEqXix2zFBU2vQMpyY626LOW6rxxEDYDbc5DM7jiYxWORjXb3QW+w==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.2ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/history/index" for 127.0.0.1 at 2017-12-04 01:30:59 -0800
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (9.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  Rendering history/index.html.erb within layouts/menu
+  Rendered history/index.html.erb within layouts/menu (13.7ms)
+Completed 200 OK in 203ms (Views: 51.3ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 01:31:10 -0800
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (5.6ms)
+Completed 200 OK in 52ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 01:31:14 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EnNBRuXYWNQhe+5IqEWOHRlumeksgzvIWhaopQR7eIJsor8XuT3nbD+XqTdNYLOE3fi1wHg8HG3i7posR3miKQ==", "amount"=>"", "category"=>"luxury", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.5ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 22ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/history/index" for 127.0.0.1 at 2017-12-04 01:31:16 -0800
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (17.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  Rendering history/index.html.erb within layouts/menu
+  Rendered history/index.html.erb within layouts/menu (21.3ms)
+Completed 200 OK in 213ms (Views: 64.9ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 01:31:17 -0800
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.7ms)
+Completed 200 OK in 62ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 01:31:21 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1f8VH+3SLGjxz3MR7t9Z6wKSBjazHAhuaCXgkgnaKVWrLutOsTeT0O8jNG4L+mRyxgQqH+ejL8vQ3dIbStjz/g==", "amount"=>"0.45", "category"=>"entertainment", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.5ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount", "date", "category", "transaction_type", "unique_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 10000], ["amount", "0.45"], ["date", "2017-12-04"], ["category", "entertainment"], ["transaction_type", "place"], ["unique_id", "29367"], ["created_at", "2017-12-04 09:31:21.443302"], ["updated_at", "2017-12-04 09:31:21.443302"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/account_balance/update?amount=0.45&next_action=new&next_controller=input&trans_type=cash
+Completed 302 Found in 9ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/account_balance/update?amount=0.45&next_action=new&next_controller=input&trans_type=cash" for 127.0.0.1 at 2017-12-04 01:31:21 -0800
+Processing by AccountBalanceController#update as HTML
+  Parameters: {"amount"=>"0.45", "next_action"=>"new", "next_controller"=>"input", "trans_type"=>"cash"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.2ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "account_balances" SET "cash_balance" = $1, "total_balance" = $2, "updated_at" = $3 WHERE "account_balances"."id" = $4[0m  [["cash_balance", "8983.07"], ["total_balance", "8983.07"], ["updated_at", "2017-12-04 09:31:21.458885"], ["id", 1]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/input/new?message=Transaction+saved%2C+successfully+updated+account+balance
+Completed 302 Found in 10ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/input/new?message=Transaction+saved%2C+successfully+updated+account+balance" for 127.0.0.1 at 2017-12-04 01:31:21 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Transaction saved, successfully updated account balance"}
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (3.0ms)
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/history/index" for 127.0.0.1 at 2017-12-04 01:31:23 -0800
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (23.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  Rendering history/index.html.erb within layouts/menu
+  Rendered history/index.html.erb within layouts/menu (11.1ms)
+Completed 200 OK in 211ms (Views: 48.7ms | ActiveRecord: 25.1ms)
+
+
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 01:31:27 -0800
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (3.0ms)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 01:32:22 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tuj70hQlsZtB1CkdUwCJiWayzwXWj9MQoG7iyxD6eXzIOQWDSMAOI184bmK2JbQQoiTjLIIw9LUYltBCU/ij1w==", "amount"=>"544353.45", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.9ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+Redirected to http://localhost:3000/input/new?message=Error%2C+insufficient+funds+in+your+cash+account+balance+to+make+this+transaction
+Completed 302 Found in 34ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/input/new?message=Error%2C+insufficient+funds+in+your+cash+account+balance+to+make+this+transaction" for 127.0.0.1 at 2017-12-04 01:32:22 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Error, insufficient funds in your cash account balance to make this transaction"}
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.9ms)
+Completed 200 OK in 56ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/input/new?message=Error%2C+insufficient+funds+in+your+cash+account+balance+to+make+this+transaction" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Error, insufficient funds in your cash account balance to make this transaction"}
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.5ms)
+Completed 200 OK in 45ms (Views: 44.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+Started GET "/assets/application.self-fcbe68ac8ae4e5327fb98084e68b7f42153e520bc868d353f45470de8cbcf36c.css?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+Started GET "/assets/input.self-95112bd0f980f54edd532311d4c6c6fcca5bec1e857d9511d7ba7e7b17faba7c.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:32:59 -0800
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=alert%28%29" for 127.0.0.1 at 2017-12-04 01:33:00 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"umck1vbmr3Y+CC+W1q6WPVCFQjKYuuua3OjuA9CeqGTEttqHqgMQziDkaOkzi6uklBNuG8wFzD9kENyKk5xyzw==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"alert()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.4ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 41ms (ActiveRecord: 8.2ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=alert%28%29" for 127.0.0.1 at 2017-12-04 01:33:02 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"umck1vbmr3Y+CC+W1q6WPVCFQjKYuuua3OjuA9CeqGTEttqHqgMQziDkaOkzi6uklBNuG8wFzD9kENyKk5xyzw==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"alert()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 13ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=alert%28%29" for 127.0.0.1 at 2017-12-04 01:33:02 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"umck1vbmr3Y+CC+W1q6WPVCFQjKYuuua3OjuA9CeqGTEttqHqgMQziDkaOkzi6uklBNuG8wFzD9kENyKk5xyzw==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"alert()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.6ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 22ms (ActiveRecord: 2.0ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=alert%28%29" for 127.0.0.1 at 2017-12-04 01:33:03 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"umck1vbmr3Y+CC+W1q6WPVCFQjKYuuua3OjuA9CeqGTEttqHqgMQziDkaOkzi6uklBNuG8wFzD9kENyKk5xyzw==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"alert()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/input/new?message=Error%2C+insufficient+funds+in+your+cash+account+balance+to+make+this+transaction" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Error, insufficient funds in your cash account balance to make this transaction"}
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.3ms)
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/application.self-fcbe68ac8ae4e5327fb98084e68b7f42153e520bc868d353f45470de8cbcf36c.css?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/input.self-95112bd0f980f54edd532311d4c6c6fcca5bec1e857d9511d7ba7e7b17faba7c.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:06 -0800
+Started GET "/input/new?message=Error%2C+insufficient+funds+in+your+cash+account+balance+to+make+this+transaction" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Error, insufficient funds in your cash account balance to make this transaction"}
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.1ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/application.self-fcbe68ac8ae4e5327fb98084e68b7f42153e520bc868d353f45470de8cbcf36c.css?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/input.self-95112bd0f980f54edd532311d4c6c6fcca5bec1e857d9511d7ba7e7b17faba7c.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:33:17 -0800
+Started POST "/input/create/transaction-form?method=post&onsubmit=alert%28%29" for 127.0.0.1 at 2017-12-04 01:33:19 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OoAr+fhkOsl1RXpngP0E7bYD+uOT9WD4rRO6uR1aoZJEUdWopIGFcWupPRhl2Dl0cpXWysdKR10V64gwXlh7OQ==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "method"=>"post", "onsubmit"=>"alert()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.4ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 16ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/input/new?message=Error%2C+insufficient+funds+in+your+cash+account+balance+to+make+this+transaction" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Error, insufficient funds in your cash account balance to make this transaction"}
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (3.4ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/application.self-fcbe68ac8ae4e5327fb98084e68b7f42153e520bc868d353f45470de8cbcf36c.css?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/input.self-95112bd0f980f54edd532311d4c6c6fcca5bec1e857d9511d7ba7e7b17faba7c.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:37:57 -0800
+Started POST "/input/create" for 127.0.0.1 at 2017-12-04 01:38:04 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lbKMhzIVejxZJhdnPS6cTcTSyakotyBbK0ykMMw/pPHrY3LWbvDFhEfKUBjYC6HUAETlgHwIB/6TtJa5jz1+Wg==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.4ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 15ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/input/new?message=Error%2C+insufficient+funds+in+your+cash+account+balance+to+make+this+transaction" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Error, insufficient funds in your cash account balance to make this transaction"}
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.9ms)
+Completed 200 OK in 47ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/application.self-fcbe68ac8ae4e5327fb98084e68b7f42153e520bc868d353f45470de8cbcf36c.css?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/input.self-95112bd0f980f54edd532311d4c6c6fcca5bec1e857d9511d7ba7e7b17faba7c.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:38:34 -0800
+Started POST "/input/create" for 127.0.0.1 at 2017-12-04 01:38:43 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t1VHjB0vU9lWuUDq2i0/gZ0W3uPxf2DHbBZh6zJFoZfJhLndQcrsYUhVB5U/CAIYWYDyyqXAR2LU7lNicUd7PA==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.9ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 64ms (ActiveRecord: 12.2ms)
+
+
+Started POST "/input/create" for 127.0.0.1 at 2017-12-04 01:38:45 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t1VHjB0vU9lWuUDq2i0/gZ0W3uPxf2DHbBZh6zJFoZfJhLndQcrsYUhVB5U/CAIYWYDyyqXAR2LU7lNicUd7PA==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.2ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 15ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/input/new?message=Error%2C+insufficient+funds+in+your+cash+account+balance+to+make+this+transaction" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Error, insufficient funds in your cash account balance to make this transaction"}
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.2ms)
+Completed 200 OK in 47ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/application.self-fcbe68ac8ae4e5327fb98084e68b7f42153e520bc868d353f45470de8cbcf36c.css?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/input.self-95112bd0f980f54edd532311d4c6c6fcca5bec1e857d9511d7ba7e7b17faba7c.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:39:00 -0800
+Started GET "/input/new?message=Error%2C+insufficient+funds+in+your+cash+account+balance+to+make+this+transaction" for 127.0.0.1 at 2017-12-04 01:39:59 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Error, insufficient funds in your cash account balance to make this transaction"}
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (3.1ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138463214260 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138463214260 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1096ms (Views: 1095.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/application.self-9c2f9337b43b3f61a8dc4f91a7f70a9697ffd02515e486374dd845a31093eed6.css?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/input.self-95112bd0f980f54edd532311d4c6c6fcca5bec1e857d9511d7ba7e7b17faba7c.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:00 -0800
+Started GET "/input/new?message=Error%2C+insufficient+funds+in+your+cash+account+balance+to+make+this+transaction" for 127.0.0.1 at 2017-12-04 01:40:11 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Error, insufficient funds in your cash account balance to make this transaction"}
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (5.6ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138577266160 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138577266160 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1049ms (Views: 1046.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/application.self-f5a1cb3fe97c31d75d5be06e3cd322415c543641053ed0fe46c868632d555381.css?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/input.self-95112bd0f980f54edd532311d4c6c6fcca5bec1e857d9511d7ba7e7b17faba7c.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:12 -0800
+Started GET "/input/new?message=Error%2C+insufficient+funds+in+your+cash+account+balance+to+make+this+transaction" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Error, insufficient funds in your cash account balance to make this transaction"}
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.4ms)
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/application.self-f5a1cb3fe97c31d75d5be06e3cd322415c543641053ed0fe46c868632d555381.css?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/input.self-95112bd0f980f54edd532311d4c6c6fcca5bec1e857d9511d7ba7e7b17faba7c.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:40:55 -0800
+Started GET "/input/new?message=Error%2C+insufficient+funds+in+your+cash+account+balance+to+make+this+transaction" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Error, insufficient funds in your cash account balance to make this transaction"}
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.5ms)
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/application.self-f5a1cb3fe97c31d75d5be06e3cd322415c543641053ed0fe46c868632d555381.css?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/input.self-95112bd0f980f54edd532311d4c6c6fcca5bec1e857d9511d7ba7e7b17faba7c.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:01 -0800
+Started GET "/input/new?message=Error%2C+insufficient+funds+in+your+cash+account+balance+to+make+this+transaction" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Error, insufficient funds in your cash account balance to make this transaction"}
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (3.0ms)
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/application.self-f5a1cb3fe97c31d75d5be06e3cd322415c543641053ed0fe46c868632d555381.css?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/input.self-95112bd0f980f54edd532311d4c6c6fcca5bec1e857d9511d7ba7e7b17faba7c.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:13 -0800
+Started GET "/input/new?message=Error%2C+insufficient+funds+in+your+cash+account+balance+to+make+this+transaction" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Error, insufficient funds in your cash account balance to make this transaction"}
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.3ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/application.self-f5a1cb3fe97c31d75d5be06e3cd322415c543641053ed0fe46c868632d555381.css?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/input.self-95112bd0f980f54edd532311d4c6c6fcca5bec1e857d9511d7ba7e7b17faba7c.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:27 -0800
+Started GET "/input/new?message=Error%2C+insufficient+funds+in+your+cash+account+balance+to+make+this+transaction" for 127.0.0.1 at 2017-12-04 01:41:41 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Error, insufficient funds in your cash account balance to make this transaction"}
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.4ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138398908360 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138398908360 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1006ms (Views: 1005.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/application.self-f5935b35e6aa8704ac554900dcc435ab873a6c709faf21005325bbd3edca98de.css?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/input.self-95112bd0f980f54edd532311d4c6c6fcca5bec1e857d9511d7ba7e7b17faba7c.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:42 -0800
+Started GET "/input/new?message=Error%2C+insufficient+funds+in+your+cash+account+balance+to+make+this+transaction" for 127.0.0.1 at 2017-12-04 01:41:56 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Error, insufficient funds in your cash account balance to make this transaction"}
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (4.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138465062180 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138465062180 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1020ms (Views: 1019.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/application.self-c59d1d4f85160e1989d18fac0ab1235bae28871d93b020e3412b1b6c6e00bc5c.css?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/input.self-95112bd0f980f54edd532311d4c6c6fcca5bec1e857d9511d7ba7e7b17faba7c.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:41:57 -0800
+Started GET "/input/new?message=Error%2C+insufficient+funds+in+your+cash+account+balance+to+make+this+transaction" for 127.0.0.1 at 2017-12-04 01:42:09 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Error, insufficient funds in your cash account balance to make this transaction"}
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138433431220 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138433431220 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 991ms (Views: 989.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/application.self-7dcdb3f0c78392a54112512b4eb6e920d3110f4f6b3ab1b20bbfab64f97cc406.css?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/input.self-95112bd0f980f54edd532311d4c6c6fcca5bec1e857d9511d7ba7e7b17faba7c.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:10 -0800
+Started GET "/input/new?message=Error%2C+insufficient+funds+in+your+cash+account+balance+to+make+this+transaction" for 127.0.0.1 at 2017-12-04 01:42:15 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Error, insufficient funds in your cash account balance to make this transaction"}
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.1ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138395141340 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__3097127587282116573_70138395141340 at /home/jeremy/Savor/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1001ms (Views: 999.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-5cfe265ac33ce5aca748084847873c37030acba03807a094984f2b047d06ea6e.css?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/input.self-95112bd0f980f54edd532311d4c6c6fcca5bec1e857d9511d7ba7e7b17faba7c.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 01:42:16 -0800

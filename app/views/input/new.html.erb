@@ -2,16 +2,15 @@
 <script src="https://cdn.jsdelivr.net/npm/pikaday@1.6.1"></script> -->
 
 
-<p class="message" id="message">
+<p class="message green" id="message">
   <%=@message%>
   <i id="close-message" class="fa fa-times" aria-hidden="true" onclick="closeMessage()"></i>
 </p>
 
 <div class="input-center">
-
   <h1 class="transaction-title">New Transaction Input</h1>
 
-  <%= form_tag({controller: "input", action: "create", method: "post", id:"transaction-form", onsubmit:"return verifyTransaction()", last_controller: "input", last_action: "new"}) do %>
+  <%= form_tag({controller: "input", action: "create"}, method: "post", id:"transaction-form", onsubmit:"alert()") do %>
 
     <div class="transaction-input-container">
       <div class="transaction-icon-container">
@@ -64,13 +63,11 @@
 
     <%= text_field_tag(:category, "", class: "transaction-category-input") %>
 
-    <br></br>
-
     <div class="transaction-input-container">
       <div class="transaction-icon-container">
         <i class="fa fa-tag transaction-icon"></i>
       </div>
-      <%= text_field_tag(:location_name, "" , class: "transaction-name-input", placeholder: "Description", onkeydown: "if (event.which === 13) return false", onkeyup: "validateDescription(event.which, this)", autocomplete: "off") %>
+      <%= text_field_tag(:description, "" , class: "transaction-name-input", placeholder: "Description", onkeydown: "if (event.which === 13) return false", onkeyup: "validateDescription(event.which, this)", autocomplete: "off") %>
     </div>
 
     <div class="transaction-location-container">
@@ -117,10 +114,6 @@
     <br></br>
 
   <% end %>
-
-  <div id="locationField">
-    <input id="autocomplete" placeholder="Enter your address" type="text" />
-  </div>
 
 </div>
 

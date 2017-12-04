@@ -2,21 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 div.input-center {
-  margin: 5%;
-  width: 90%;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #FFFFFF;
   text-align: center;
 }
 
 h1.transaction-title {
-  padding: 20px;
   font-family: Helvetica;
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
   color: #95a5a6;
   display: inline-block;
   line-height: 40px; //added
-  padding-top: 0px;
+  margin-top: 30px;
 }
 
 div.transaction-input-container {
