@@ -5,8 +5,22 @@
 </p>
 
 <div class="input-center">
+  <!-- account_balance -->
+  <div class="element-container" id="account_balance">
+    <div id="element1">
+      <p class="home-headers">Account Balance</p>
+      <div class="balance-container">
+        <p id="home-account-balance"> <%=number_to_currency(@account_balance)%><!--<span id="balance-js"><%=@account_balance%></span>--></p>
+      </div>
+      <button id="balance-edit">Edit</button>
+      <!--hide this until the user specifies that they want to edit -->
+    </div>
+  </div>
+  <!-- account_balance -->
 
   <h1 class="transaction-title">New Transaction Input</h1>
+
+
 
   <%= form_tag({controller: "input", action: "create", method: "post", id:"transaction-form", onsubmit:"return verifyTransaction()", last_controller: "input", last_action: "new"}) do %>
 
