@@ -1,18 +1,25 @@
-
-<p><%=@message%></p>
+<p class="message red" id="message">
+  <%=@message%>
+  <i id="close-message" class="fa fa-times" aria-hidden="true" onclick="closeMessage()"></i>
+</p>
 
 <div class="account-center">
   <br></br>
   <h1 class="account-header">Account Details</h1>
+  <br></br>
+  <br></br>
+  <br></br>
   <br></br>
 
   <div class="account-info">Username:</div><div class="account-info"><%= @username %></div>
   <div class="account-info">First Name:</div><div class="account-info"><%= @first_name %></div>
   <div class="account-info">Email:</div><div class="account-info"><%= @email %></div>
 
+  <div style="margin: 200px"></div>
+
   <%= link_to("Edit", {controller: "account", action: "edit"}, class: "account-edit-button") %>
 
-  <%= link_to("Change Password", {controller: "account", action: "edit"}, class: "account-password-button") %>
+  <%= link_to("Change Password", {controller: "account", action: "change_password"}, class: "account-password-button") %>
 
 
 

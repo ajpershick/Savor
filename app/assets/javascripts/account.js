@@ -7,30 +7,13 @@ function verify_edit(username) {
   if (validateInput(document.getElementById("entry-input-password"), "password")) check--;
 
   if (check == 0) {
-
     return true;
 
   } else {
 
-    var invalid_inputs = document.getElementsByClassName("entry-invalid");
-    var errors = [];
-
-    for (var i = 0; i < invalid_inputs.length; i++) {
-      errors[i] = invalid_inputs[i].childNodes[1];
-    }
-
-    for (var i = 0; i < errors.length; i++) {
-      errors[i].classList.remove("entry-tooltip-temporary");
-      errors[i].classList.add("entry-tooltip-temporary");
-    }
-
-    delay(function() {
-      for (var i = 0; i < errors.length; i++) {
-        errors[i].classList.remove("entry-tooltip-temporary");
-      }
-    }, 1500);
-
+    showTooltips();
     return false;
+
   }
 }
 
@@ -49,7 +32,7 @@ function validateExisting(item, username) {
   // When there is no input, make the input box the default gray
   if (input.length === 0) {
     item.parentNode.childNodes[1].className = "entry-icon-container";
-    return;
+    return false;
   }
 
   if (document.getElementById("entry-input-username").value === username) {
@@ -65,4 +48,26 @@ function validateExisting(item, username) {
     item.parentNode.childNodes[1].className = "entry-icon-container entry-invalid";
   }
 
+  return validInput;
+}
+
+
+
+function verify_password() {
+  var check = 3;
+
+  if (validateInput(document.getElementById("entry-input-current-password"), "password")) check--;
+  if (validateInput(document.getElementById("entry-input-password"), "password")) check--;
+  if (validateInput(document.getElementById("entry-input-confirm-password"), "confirm-password")) check--;
+
+  if (check == 0) {
+
+    return true;
+
+  } else {
+
+    showTooltips();
+    return false;
+
+  }
 }

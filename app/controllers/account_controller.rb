@@ -18,6 +18,7 @@ class AccountController < ApplicationController
 
 
   def edit
+
     users = User.all
     @usernames = []
     users.each do |user| @usernames << user.username end
@@ -35,6 +36,7 @@ class AccountController < ApplicationController
   end
 
   def make_edit
+
     id = session[:user_id]
     user = User.find(id)
     newUsername = params[:username]
@@ -43,13 +45,18 @@ class AccountController < ApplicationController
     authenticated_user = user.authenticate(params[:password])
       #returns user or false
 
-    if((newUsername.present? && newFirstName.present? && newEmail.present? && params[:password].present?) == false)
+    if(!(newUsername.present? && newFirstName.present? && newEmail.present? && params[:password].present?)) then
+
       @message = "Please fill in all fields"
       redirect_to(:action => "edit", :message => @message) and return
-    elsif(authenticated_user == false)
+
+    elsif !authenticated_user
+
       @message = "Password Incorrect"
       redirect_to(:action => "edit", :message => @message) and return
+
     else
+
       toEdit = User.find(id)
       toEdit.username = newUsername
       toEdit.name = newFirstName
@@ -57,47 +64,56 @@ class AccountController < ApplicationController
       toEdit.save
       @message = "Account details edited"
       redirect_to(:action => "index", :message => @message) and return
+
     end
 
   end
 
 
-
   def change_password
+
     @message = params[:message]
     authenticated_user = params[:authenticated_user]
 
-    if (session[:admin])
-      render :layout => 'admin'
-    else
-      render :layout => "menu"
-    end
+    if (session[:admin]) then render :layout => 'admin' end
 
   end
 
   def make_password_change
-    current = params[:current]
-    new = params[:new]
-    confirm = params[:confirm]
+
+    current_password = params[:current_password]
+    new_password = params[:new_password]
+    confirm_password = params[:confirm_password]
+    puts current_password
+    puts new_password
+    puts confirm_password
     id = session[:user_id]
     user = User.find(id)
-    authenticated_user = user.authenticate(params[:current])
+    authenticated_user = user.authenticate(params[:current_password])
 
     #redirect_to(:action => "change_password", :message => @message, :authenticated_user => @authenticated_user) and return
-    if ((new.present? && confirm.present? && current.present? ) == false)
+    if !(new_password.present? && confirm_password.present? && current_password.present?) then
+
       @message = "Please fill in all required fields."
-      redirect_to(:action => "change_password", :message => @message, :authenticated_user => authenticated_user) and return
-    elsif(authenticated_user == false)
-      @message = "Please reenter your current password"
-      redirect_to(:action => "change_password", :message => @message, :authenticated_user => authenticated_user) and return
-    elsif (new != confirm)
-      @message = "Please make sure your new passwords are matching"
-      redirect_to(:action => "change_password", :message => @message, :authenticated_user => authenticated_user) and return
+      redirect_to(controller: "account", :action => "change_password", message: @message)
+
+    elsif !authenticated_user
+
+      @message = "Your current password is incorrect"
+      redirect_to(controller: "account", action: "change_password", message: @message)
+
+    elsif new_password != confirm_password
+
+      @message = "Your new password and password confirmation do not match"
+      redirect_to(controller: "account", action: "change_password", message: @message)
+
     else
-      user.password = new
+
+      user.password = new_password
       user.save
       @message = "Password successfully changed"
-      redirect_to(:action => "index", :message => @message, :authenticated_user => authenticated_user) and return
+      redirect_to(controller: "account", action: "index", message: @message) and return
+
     end
 
   end

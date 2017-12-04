@@ -12,6 +12,18 @@ h1.account-header {
   text-align: center
 }
 
+.red {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#account-message {
+  background-color: #27ae60;
+  color: #FFFFFF;
+  position: absolute;
+  width: 100%;
+}
+
 div.account-info {
   text-align: left;
   font-family: Helvetica;

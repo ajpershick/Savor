@@ -1,6 +1,9 @@
 <%= javascript_tag "usernames= #{@usernames.to_json.html_safe};" %>
 
-<p><%=@message%></p>
+<p class="message red" id="message">
+  <%=@message%>
+  <i id="close-message" class="fa fa-times" aria-hidden="true" onclick="closeMessage()"></i>
+</p>
 
 <div class="account-center">
   <br></br>
