@@ -19,13 +19,13 @@ RSpec.feature "ManualInputs", type: :feature do
   scenario 'user inputs something with enough money' do
     @user = create(:random_user)
     @transaction = create(:random_transaction)
-    @income = create(:random_income)
+    # @income = create(:random_income)
     login_feature(@user)
     expect(page).to have_current_path('/')
     visit input_income_path
     expect(page).to have_current_path('/input/income')
     fill_in '0.00', with: @transaction.amount
-    fill_in 'Source', with: @income.source
+    fill_in 'Source', with: 'miscellaneous'
     click_button 'Save'
 
 
