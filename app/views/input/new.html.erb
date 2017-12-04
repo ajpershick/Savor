@@ -1,10 +1,6 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday@1.6.1/pikaday.min.js">
-<script src="https://cdn.jsdelivr.net/npm/pikaday@1.6.1"></script>
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday@1.6.1/pikaday.min.js">
+<script src="https://cdn.jsdelivr.net/npm/pikaday@1.6.1"></script> -->
 
-<input type="text" id="datepicker">
-
-
-<div id="myID"></div>
 
 <p class="message" id="message">
   <%=@message%>
@@ -112,13 +108,53 @@
 
   <% end %>
 
+  <input id="autocomplete"></input>
+
 </div>
 
 <script>
-    var datepicker = new Pikaday({
-        field: document.getElementById('transaction-date-input'),
-        format: 'D MMM YYYY',
-        maxDate: new Date()
+  var datepicker = new Pikaday({
+      field: document.getElementById('transaction-date-input'),
+      format: 'D MMM YYYY',
+      maxDate: new Date()
+  });
+  datepicker.setDate(new Date());
+</script>
+
+<script>
+var placeSearch, autocomplete, geocoder;
+function initAutocomplete() {
+  geocoder = new google.maps.Geocoder();
+  autocomplete = new google.maps.places.Autocomplete(
+    (document.getElementById('autocomplete')), {
+      types: ['geocode']
     });
-    datepicker.setDate(new Date());
+
+  autocomplete.addListener('place_changed', fillInAddress);
+}
+
+function codeAddress(address) {
+  geocoder.geocode({
+    'address': address
+  }, function(results, status) {
+    if (status == 'OK') {
+      // This is the lat and lng results[0].geometry.location
+      alert(results[0].geometry.location);
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+
+initAutocomplete();
+}
+
+function fillInAddress() {
+  var place = autocomplete.getPlace();
+
+  codeAddress(document.getElementById('autocomplete').value);
+}
+
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ3wyaZIOpGodrpSDMQ5WGLDLTNgHibcI&libraries=visualization&callback=initMap">
 </script>
