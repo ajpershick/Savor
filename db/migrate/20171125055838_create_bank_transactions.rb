@@ -5,7 +5,7 @@ class CreateBankTransactions < ActiveRecord::Migration[5.1]
 
       t.string "item_id" #The unique of the item that this account belongs to
 
-      t.string "bank_account_id" #the database primary key for the bank_account_id record that this record is associated to
+      t.integer "bank_account_id" #the database primary key for the bank_account_id record that this record is associated to
 
       t.string "account_id" #The if od the account in which this transaction occurred
                             #The unique ID of the account
