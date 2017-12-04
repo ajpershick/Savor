@@ -72,32 +72,46 @@ class InputController < ApplicationController
 
   def create
 
-    #checks precondition that the transaction amount must be a positive value;
-     if (params[:amount].to_f < 0)
-       @message = "Error, please enter a positive transaction value."
-       redirect_to({controller: params[:last_controller], action: params[:last_action], message: @message}) and return
-     end
+    #checks the precondition that the user must have sufficient funds before making a transaction
+    current_user = User.find(session[:user_id])
 
-     #checks the precondition that the user must have sufficient funds before making a transaction
-     current_user = User.find(session[:user_id])
-     if (params[:amount].to_f > current_user.account_balance.cash_balance.to_f)
-       @message = "Error, insufficient funds in your cash account balance to make this transaction"
-       redirect_to({controller: params[:last_controller], action: params[:last_action], message: @message}) and return
-     end
+    if (params[:amount].to_f > current_user.account_balance.cash_balance.to_f)
+      @message = "Error, insufficient funds in your cash account balance to make this transaction"
+      redirect_to({controller: params[:last_controller], action: params[:last_action], message: @message}) and return
+    end
+
+    if params[:latitude] == "" || params[:longitude] == "" then
+      lat = nil
+      long = nil
+      location = false
+    else
+      lat = params[:latitude]
+      long = params[:longitude]
+      location = true
+    end
+
+    # Guaranteed to have either description, or location filled out
+    if params[:description].present? then
+      location_name = params[:description]
+    else
+      location_name = params[:location].split(/,/).first
+    end
 
     new_transaction = Transaction.new(
       user_id: session[:user_id],
       amount: params[:amount],
-      date: Date.today,
+      date: Date.parse(params[:date]),
       category: params[:category],
       transaction_type: "place",
       unique_id: rand(0..100000).to_s,
-      location_name: params[:location_name]
+      location_name: location_name,
+      location: location,
+      latitude: lat,
+      longitude: long
     )
     @amount = params[:amount]
 
     if new_transaction.save
-      puts "Cash transaction successfully saved, redirecting to account_balance/update"
       redirect_to({controller: "account_balance", action: "update", amount: @amount, next_controller:"input", next_action: "new", trans_type: "cash"})
       #redirect_to({controller: "input", action: "new"})
     end
