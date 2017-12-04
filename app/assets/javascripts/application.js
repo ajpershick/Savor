@@ -22,6 +22,7 @@
 //= require ./input
 //= require ./charts
 //= require Chart.min
+//= require pikaday
 
 function myFunction() { //toggles the side-nav
     var x = document.getElementById("mySideNav");

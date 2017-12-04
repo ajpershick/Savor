@@ -41,7 +41,9 @@ class MapsController < ApplicationController
       current_transactions = transactions.where('extract(year from date) = ?', @selected_year).where('extract(month from date) = ?', @selected_month)
     end
 
-    if !@empty then
+    @none = (current_transactions.length == 0)
+
+    if !@empty && !@none then
       @max_lat = current_transactions[0].latitude.to_f
       @min_lat = current_transactions[0].latitude.to_f
       @max_long = current_transactions[0].longitude.to_f

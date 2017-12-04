@@ -72,32 +72,46 @@ class InputController < ApplicationController
 
   def create
 
-    #checks precondition that the transaction amount must be a positive value;
-     if (params[:amount].to_f < 0)
-       @message = "Error, please enter a positive transaction value."
-       redirect_to({controller: params[:last_controller], action: params[:last_action], message: @message}) and return
-     end
+    #checks the precondition that the user must have sufficient funds before making a transaction
+    current_user = User.find(session[:user_id])
 
-     #checks the precondition that the user must have sufficient funds before making a transaction
-     current_user = User.find(session[:user_id])
-     if (params[:amount].to_f > current_user.account_balance.cash_balance.to_f)
-       @message = "Error, insufficient funds in your cash account balance to make this transaction"
-       redirect_to({controller: params[:last_controller], action: params[:last_action], message: @message}) and return
-     end
+    if (params[:amount].to_f > current_user.account_balance.cash_balance.to_f)
+      @message = "Error, insufficient funds in your cash account balance to make this transaction"
+      redirect_to({controller: params[:last_controller], action: params[:last_action], message: @message}) and return
+    end
+
+    if params[:latitude] == "" || params[:longitude] == "" then
+      lat = nil
+      long = nil
+      location = false
+    else
+      lat = params[:latitude]
+      long = params[:longitude]
+      location = true
+    end
+
+    # Guaranteed to have either description, or location filled out
+    if params[:description].present? then
+      location_name = params[:description]
+    else
+      location_name = params[:location].split(/,/).first
+    end
 
     new_transaction = Transaction.new(
       user_id: session[:user_id],
       amount: params[:amount],
-      date: Date.today,
+      date: Date.parse(params[:date]),
       category: params[:category],
       transaction_type: "place",
       unique_id: rand(0..100000).to_s,
-      location_name: params[:location_name]
+      location_name: location_name,
+      location: location,
+      latitude: lat,
+      longitude: long
     )
     @amount = params[:amount]
 
     if new_transaction.save
-      puts "Cash transaction successfully saved, redirecting to account_balance/update"
       redirect_to({controller: "account_balance", action: "update", amount: @amount, next_controller:"input", next_action: "new", trans_type: "cash"})
       #redirect_to({controller: "input", action: "new"})
     end
@@ -112,21 +126,33 @@ class InputController < ApplicationController
        redirect_to({controller: params[:last_controller], action: params[:last_action], message: @message}) and return
      end
 
-
-
     @income_amount = params[:amount]
+    puts "@income_amount = #{@income_amount}"
+
     @source = params[:source]
 
-    #check that it was a valid income entry
-    income_float = @income_amount.to_f
-    income_string_round2 = "%0.2f" % income_float #rounds income_float to two decimal places and converts to string form
-    income_is_valid = income_string_round2 == @income_amount.to_s
+    #check if @income_amount is a number.
+    amountIsNumber = isNumber(@income_amount)
+    # if (amountIsNumber == false)
+    #   @message = "Error, amount is not a number."
+    #   redirect_to({controller: params[:last_controller], action: params[:last_action], message: @message}) and return
+    # end
+
+    #rounds input to two decimal places
+    #income_float = @income_amount.to_f
+    #puts "income_float = #{income_float}"
+    income_string_round2 = "%0.2f" % @income_amount #rounds income_float to two decimal places and converts to string form
+    puts "income_string_round2 = #{income_string_round2}"
+    #income_is_valid = income_string_round2 == @income_amount.to_s
 
     #check that source is less than 30 characters
     source_is_too_big = @source.length > 30
 
+    #converted rounded number in string form, back to float form.
+    @income_float = income_string_round2.to_f
+
     #if our checks return false, then redirect back to input/income with error message
-    if(income_is_valid == false)
+    if(amountIsNumber == false)
       puts "income is not a number"
       redirect_to({controller: "input", action: "income", message: "Failed to enter income entry, income amount is not invalid. Please try again."}) and return
     elsif (source_is_too_big == true)
@@ -135,19 +161,25 @@ class InputController < ApplicationController
     else
       new_income = Income.new(
         user_id: session[:user_id],
-        income_amount: params[:amount],
-        source: params[:source]
+        income_amount: @income_float,
+        source: params[:source],
+        date: Date.today
       )
 
       if new_income.save
         puts "Cash income successfully saved, redirecting to account_balance/update"
-        redirect_to({controller: "account_balance", action: "update", amount: @income_amount, next_controller:"input", next_action: "income", trans_type: "income-cash"}) and return
+        redirect_to({controller: "account_balance", action: "update", amount: @income_amount, next_controller:"input", next_action: "income", trans_type: "income-cash", message: "Income entry saved successfully."}) and return
       end
     end
   end
 
   def income
     @message = params[:message]
+  end
+
+  def isNumber(string)
+      #takes in a string and checks whether the string contains a numeric
+     true if Float(string) rescue false
   end
 
 end
