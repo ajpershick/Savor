@@ -1,0 +1,536 @@
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+Started GET "/" for 127.0.0.1 at 2017-12-04 13:37:53 -0800
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/access/login
+Filter chain halted as :confirm_user_logged_in rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2017-12-04 13:37:53 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _evaluate_template at /home/jeremy/Savor/app/assets/javascripts/serviceworker.js.erb:16)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/jeremy/Savor/app/assets/stylesheets/scaffolds.css.scss to /home/jeremy/Savor/app/assets/stylesheets/scaffolds.scss. (called from _evaluate_template at /home/jeremy/Savor/app/assets/javascripts/serviceworker.js.erb:16)
+  Rendered access/login.html.erb within layouts/application (3029.7ms)
+Completed 200 OK in 3120ms (Views: 3095.6ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/assets/application.self-3151b6cacfccbbdc0c0290ff269d9c41a85173b2fed9761cd9747b87adab04d2.css?body=1" for 127.0.0.1 at 2017-12-04 13:37:56 -0800
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-04 13:38:00 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KYeStbgfaSIKSOBcNrYPyRw9DS9m5mDqXeLxx+6naWhwLRsTSIPXeC7AaBdmKliq55U6dn96aEx2WYv1pDPWnQ==", "username"=>"testing", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "testing"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/access/login?username=testing
+Completed 302 Found in 67ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/access/login?username=testing" for 127.0.0.1 at 2017-12-04 13:38:00 -0800
+Processing by AccessController#login as HTML
+  Parameters: {"username"=>"testing"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 63ms (Views: 61.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2017-12-04 13:38:04 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7c8bH+FOdOUZqSsG80b/KVasy03jed+1IhyZWjVtMrC0ZZK5EdLKvz0ho02j2qhKrQT8FPrl1xMJp+Nof/mNRQ==", "username"=>"testing", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "testing"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 67ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-04 13:38:04 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (1.4ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (8.8ms)
+Completed 200 OK in 94ms (Views: 66.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2017-12-04 13:38:06 -0800
+Processing by AccountController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  Rendering account/index.html.erb within layouts/menu
+  Rendered account/index.html.erb within layouts/menu (1.7ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2017-12-04 13:38:07 -0800
+Processing by AccountController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  Rendering account/index.html.erb within layouts/menu
+  Rendered account/index.html.erb within layouts/menu (0.8ms)
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/maps/index" for 127.0.0.1 at 2017-12-04 13:38:07 -0800
+Processing by MapsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (25.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  [1m[36mTransaction Load (1.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  Rendering maps/index.html.erb within layouts/menu
+  Rendered maps/index.html.erb within layouts/menu (2.0ms)
+Completed 200 OK in 211ms (Views: 50.0ms | ActiveRecord: 32.9ms)
+
+
+Started GET "/charts" for 127.0.0.1 at 2017-12-04 13:38:08 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (10.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (35.3ms)
+Completed 200 OK in 230ms (Views: 89.8ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/history/index" for 127.0.0.1 at 2017-12-04 13:38:09 -0800
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (7.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 9.2ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/history_controller.rb:88:in `index'
+Started GET "/history/index" for 127.0.0.1 at 2017-12-04 13:38:24 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (6.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+Completed 500 Internal Server Error in 162ms (ActiveRecord: 12.9ms)
+
+
+  
+NoMethodError (undefined method `sort!' for #<Hash:0x00007fac968f4d38>
+Did you mean?  sort):
+  
+app/controllers/history_controller.rb:89:in `block in index'
+app/controllers/history_controller.rb:88:in `each'
+app/controllers/history_controller.rb:88:in `index'
+Started GET "/history/index" for 127.0.0.1 at 2017-12-04 13:39:05 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (6.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 14.7ms)
+
+
+  
+NoMethodError (undefined method `sort!' for #<Hash:0x0000556b92d095f0>
+Did you mean?  sort):
+  
+app/controllers/history_controller.rb:89:in `block in index'
+app/controllers/history_controller.rb:88:in `each'
+app/controllers/history_controller.rb:88:in `index'
+Started GET "/history/index" for 127.0.0.1 at 2017-12-04 13:39:35 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (6.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+Completed 500 Internal Server Error in 165ms (ActiveRecord: 12.4ms)
+
+
+  
+NoMethodError (undefined method `sort!' for #<Hash:0x00007fac96543b80>
+Did you mean?  sort):
+  
+app/controllers/history_controller.rb:89:in `block in index'
+app/controllers/history_controller.rb:88:in `each'
+app/controllers/history_controller.rb:88:in `index'
+Started GET "/history/index" for 127.0.0.1 at 2017-12-04 13:39:36 -0800
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (14.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+Completed 500 Internal Server Error in 165ms (ActiveRecord: 16.5ms)
+
+
+  
+NoMethodError (undefined method `sort!' for #<Hash:0x00007fac884cbbe8>
+Did you mean?  sort):
+  
+app/controllers/history_controller.rb:89:in `block in index'
+app/controllers/history_controller.rb:88:in `each'
+app/controllers/history_controller.rb:88:in `index'
+Started GET "/history/index" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (6.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  Rendering history/index.html.erb within layouts/menu
+  Rendered history/index.html.erb within layouts/menu (14.4ms)
+Completed 200 OK in 194ms (Views: 63.9ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/assets/application.self-3151b6cacfccbbdc0c0290ff269d9c41a85173b2fed9761cd9747b87adab04d2.css?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+Started GET "/assets/input.self-659a0d36f49145444d1cf56bb269bbe4bf5879e5ee762fb7febb815f312dfe98.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:20 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:21 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 13:40:21 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+Started GET "/history/index" for 127.0.0.1 at 2017-12-04 13:40:31 -0800
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (10.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  Rendering history/index.html.erb within layouts/menu
+  Rendered history/index.html.erb within layouts/menu (12.5ms)
+Completed 200 OK in 155ms (Views: 43.3ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 13:40:32 -0800
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.1ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/input/create" for 127.0.0.1 at 2017-12-04 13:40:44 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Us86tifKKkDXbidlPgogxq9JQ64d/Wh2BAGKmG0vexYLZbMQ11aUGvPmry5ulnelVOF09wRhYNAvuvCqJ7vE4w==", "amount"=>"0.51", "category"=>"groceries", "description"=>"dfasd", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount", "date", "category", "transaction_type", "unique_id", "location_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["user_id", 10000], ["amount", "0.51"], ["date", "2017-12-04"], ["category", "groceries"], ["transaction_type", "place"], ["unique_id", "9287"], ["location_name", "dfasd"], ["created_at", "2017-12-04 21:40:44.769936"], ["updated_at", "2017-12-04 21:40:44.769936"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/account_balance/update?amount=0.51&next_action=new&next_controller=input&trans_type=cash
+Completed 302 Found in 26ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/account_balance/update?amount=0.51&next_action=new&next_controller=input&trans_type=cash" for 127.0.0.1 at 2017-12-04 13:40:44 -0800
+Processing by AccountBalanceController#update as HTML
+  Parameters: {"amount"=>"0.51", "next_action"=>"new", "next_controller"=>"input", "trans_type"=>"cash"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.8ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[33mUPDATE "account_balances" SET "cash_balance" = $1, "total_balance" = $2, "updated_at" = $3 WHERE "account_balances"."id" = $4[0m  [["cash_balance", "8982.38"], ["total_balance", "8982.38"], ["updated_at", "2017-12-04 21:40:44.806607"], ["id", 1]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/input/new?message=Transaction+saved%2C+successfully+updated+account+balance
+Completed 302 Found in 20ms (ActiveRecord: 7.5ms)
+
+
+Started POST "/input/create" for 127.0.0.1 at 2017-12-04 13:40:44 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Us86tifKKkDXbidlPgogxq9JQ64d/Wh2BAGKmG0vexYLZbMQ11aUGvPmry5ulnelVOF09wRhYNAvuvCqJ7vE4w==", "amount"=>"0.51", "category"=>"groceries", "description"=>"dfasd", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.4ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount", "date", "category", "transaction_type", "unique_id", "location_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["user_id", 10000], ["amount", "0.51"], ["date", "2017-12-04"], ["category", "groceries"], ["transaction_type", "place"], ["unique_id", "87147"], ["location_name", "dfasd"], ["created_at", "2017-12-04 21:40:44.846274"], ["updated_at", "2017-12-04 21:40:44.846274"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/account_balance/update?amount=0.51&next_action=new&next_controller=input&trans_type=cash
+Completed 302 Found in 9ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/account_balance/update?amount=0.51&next_action=new&next_controller=input&trans_type=cash" for 127.0.0.1 at 2017-12-04 13:40:44 -0800
+Processing by AccountBalanceController#update as HTML
+  Parameters: {"amount"=>"0.51", "next_action"=>"new", "next_controller"=>"input", "trans_type"=>"cash"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.5ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "account_balances" SET "cash_balance" = $1, "total_balance" = $2, "updated_at" = $3 WHERE "account_balances"."id" = $4[0m  [["cash_balance", "8981.87"], ["total_balance", "8981.87"], ["updated_at", "2017-12-04 21:40:44.862653"], ["id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/input/new?message=Transaction+saved%2C+successfully+updated+account+balance
+Completed 302 Found in 9ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/input/new?message=Transaction+saved%2C+successfully+updated+account+balance" for 127.0.0.1 at 2017-12-04 13:40:44 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Transaction saved, successfully updated account balance"}
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (3.0ms)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/history/index" for 127.0.0.1 at 2017-12-04 13:40:48 -0800
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (10.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  Rendering history/index.html.erb within layouts/menu
+  Rendered history/index.html.erb within layouts/menu (13.1ms)
+Completed 200 OK in 179ms (Views: 45.2ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 13:41:09 -0800
+Processing by InputController#new as HTML
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (9.8ms)
+Completed 200 OK in 154ms (Views: 152.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/input/create" for 127.0.0.1 at 2017-12-04 13:41:21 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/5cEkQ8ppwHUoF8L5EZdkuxI8xwEQGIIuY3/AfOrPY2mPY03/7UZW/Ao10C02grxF+DERR3caq6SNoUzuT+CeA==", "amount"=>"1.23", "category"=>"clothing", "description"=>"description", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount", "date", "category", "transaction_type", "unique_id", "location_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["user_id", 10000], ["amount", "1.23"], ["date", "2017-12-04"], ["category", "clothing"], ["transaction_type", "place"], ["unique_id", "54795"], ["location_name", "description"], ["created_at", "2017-12-04 21:41:21.509126"], ["updated_at", "2017-12-04 21:41:21.509126"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/account_balance/update?amount=1.23&next_action=new&next_controller=input&trans_type=cash
+Completed 302 Found in 55ms (ActiveRecord: 10.2ms)
+
+
+Started GET "/account_balance/update?amount=1.23&next_action=new&next_controller=input&trans_type=cash" for 127.0.0.1 at 2017-12-04 13:41:21 -0800
+Processing by AccountBalanceController#update as HTML
+  Parameters: {"amount"=>"1.23", "next_action"=>"new", "next_controller"=>"input", "trans_type"=>"cash"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.5ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "account_balances" SET "cash_balance" = $1, "total_balance" = $2, "updated_at" = $3 WHERE "account_balances"."id" = $4[0m  [["cash_balance", "8980.64"], ["total_balance", "8980.64"], ["updated_at", "2017-12-04 21:41:21.528758"], ["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/input/new?message=Transaction+saved%2C+successfully+updated+account+balance
+Completed 302 Found in 8ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/input/new?message=Transaction+saved%2C+successfully+updated+account+balance" for 127.0.0.1 at 2017-12-04 13:41:21 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Transaction saved, successfully updated account balance"}
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.6ms)
+Completed 200 OK in 69ms (Views: 68.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/history/index" for 127.0.0.1 at 2017-12-04 13:41:23 -0800
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (15.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  Rendering history/index.html.erb within layouts/menu
+  Rendered history/index.html.erb within layouts/menu (19.5ms)
+Completed 200 OK in 223ms (Views: 55.4ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/history/index" for 127.0.0.1 at 2017-12-04 13:42:44 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+  
+SyntaxError (/home/jeremy/Savor/app/controllers/history_controller.rb:136: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/history_controller.rb:136: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/history/index" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (7.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  Rendering history/index.html.erb within layouts/menu
+  Rendered history/index.html.erb within layouts/menu (13.6ms)
+Completed 200 OK in 198ms (Views: 46.3ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/application.self-3151b6cacfccbbdc0c0290ff269d9c41a85173b2fed9761cd9747b87adab04d2.css?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:64)
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/input.self-659a0d36f49145444d1cf56bb269bbe4bf5879e5ee762fb7febb815f312dfe98.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 13:43:03 -0800
+Started GET "/history/index?month=12&order=earliest&year=2017" for 127.0.0.1 at 2017-12-04 13:43:15 -0800
+Processing by HistoryController#index as HTML
+  Parameters: {"month"=>"12", "order"=>"earliest", "year"=>"2017"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (7.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  Rendering history/index.html.erb within layouts/menu
+  Rendered history/index.html.erb within layouts/menu (13.4ms)
+Completed 200 OK in 161ms (Views: 47.1ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/history/index?month=12&order=latest&year=2017" for 127.0.0.1 at 2017-12-04 13:43:19 -0800
+Processing by HistoryController#index as HTML
+  Parameters: {"month"=>"12", "order"=>"latest", "year"=>"2017"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (7.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  Rendering history/index.html.erb within layouts/menu
+  Rendered history/index.html.erb within layouts/menu (11.4ms)
+Completed 200 OK in 170ms (Views: 42.1ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/history/index?month=11&order=latest&year=2017" for 127.0.0.1 at 2017-12-04 13:43:29 -0800
+Processing by HistoryController#index as HTML
+  Parameters: {"month"=>"11", "order"=>"latest", "year"=>"2017"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (6.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '11') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  Rendering history/index.html.erb within layouts/menu
+  Rendered history/index.html.erb within layouts/menu (22.7ms)
+Completed 200 OK in 172ms (Views: 57.2ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/history/get_transactions?controler=bank_sync" for 127.0.0.1 at 2017-12-04 13:43:32 -0800
+  
+AbstractController::ActionNotFound (The action 'get_transactions' could not be found for HistoryController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+serviceworker-rails (0.5.5) lib/serviceworker/middleware.rb:32:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
