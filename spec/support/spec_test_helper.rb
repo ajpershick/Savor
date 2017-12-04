@@ -26,4 +26,6 @@ module SpecTestHelper
       click_button 'Log In'
     end
   end
+
+
 end
