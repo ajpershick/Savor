@@ -27,11 +27,11 @@ module SpecTestHelper
     end
   end
 
-  def getsomemoney(user, income)
+  def getsomemoney()
     # @income = create(:random_income)
     visit input_income_path
     expect(page).to have_current_path('/input/income')
-    fill_in '0.00', with: income.income_amount
+    fill_in '0.00', with: 1000000000
     fill_in 'Source', with: 'miscellaneous'
     click_button 'Save'
     expect(page).to have_current_path('/input/income?message=Transaction+saved%2C+successfully+updated+account+balance')

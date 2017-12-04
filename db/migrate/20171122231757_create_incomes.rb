@@ -7,7 +7,6 @@ class CreateIncomes < ActiveRecord::Migration[5.1]
       t.decimal "income_amount", :default => 0.00, :precision => 15, :scale => 2
       #Where the income came from
       t.string "source", null:false, default:"miscellaneous"
-
       t.date "date", null:false
       t.timestamps
     end

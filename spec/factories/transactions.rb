@@ -5,7 +5,7 @@ FactoryGirl.define do
     user_id {FactoryGirl.generate :user_id}
     unique_id {Faker::Number.number}
     amount {Faker::Number.decimal}
-    date {Date.today}
+    date {Date.today.to_s}
     category {Faker::Team.state}
     transaction_type {Faker::Superhero.prefix}
     location {true}
