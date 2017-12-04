@@ -166,8 +166,21 @@ class BankSyncController < ApplicationController
     @account_ids = nil
     failedCounters = get_all_transactions(@access_token, @account_ids)
     #returns an array with two values: [bankTransFailedCounter, transFailedCounter]
-    @message += "'#{failedCounters[0]}' failed bank_transactions table submission(s), '#{failedCounters[1]}' failed transactions table submission(s), '#{failedCounters[1]}' failed incomes table submission(s). "
+    @message += " '#{failedCounters[0]}' failed bank_transactions table submission(s), '#{failedCounters[1]}' failed transactions table submission(s), '#{failedCounters[2]}' failed incomes table submission(s), '#{failedCounters[3]}' transactions received from Plaid, '#{failedCounters[4]}' transactions saved successfully. "
 
+    redirect_to(controller: "bank_sync", action: "index", message: @message) and return
+  end
+
+  def load_new_transactions
+    @access_token = params["access_token"]
+    @account_ids = params[:account_ids]
+    failedCounters = get_new_transactions(@access_token, @account_ids)
+    puts "failedCounters = #{failedCounters}"
+    if(failedCounters[5] == true)
+      @message = failedCounters[4]
+    else
+      @message += " '#{failedCounters[0]}' failed bank_transactions table submission(s), '#{failedCounters[1]}' failed transactions table submission(s), '#{failedCounters[2]}' failed incomes table submission(s), '#{failedCounters[3]}' transactions received from Plaid, '#{failedCounters[4]}' transactions saved successfully. "
+    end
     redirect_to(controller: "bank_sync", action: "index", message: @message) and return
   end
 
@@ -233,6 +246,16 @@ class BankSyncController < ApplicationController
     @total_account_balance = item.total_account_balance
     @created_at = item.created_at
     @bank_accounts = item.bank_accounts
+
+    @account_ids = []
+    pos = 0
+    @bank_accounts.each do |acc|
+      @account_ids[pos] = acc["account_id"]
+    end
+
+    @access_token = item["access_token"]
+
+    puts "@account_ids = #{@account_ids}"
     # @bank_accounts_ids = []
     #
     # pos = 0
@@ -270,7 +293,162 @@ class BankSyncController < ApplicationController
   end
 
 
-  def get_new_transactions
+  def get_new_transactions(access_token, account_ids)
+
+    #params:  access_token, account_ids (array of account_ids)
+    #description: loading page for when the transactions are being loaded into
+    # the savor database, from plaid
+    # Executes the get_all_transactions function to...get all transactions
+
+    isValidAccessToken = checkAccessToken(access_token)
+    @message = ''
+
+
+    #check preconditions
+    if(isValidAccessToken == false)
+      puts "Error, in 'load_new_transactions', invalid access_token"
+      @message+="Invalid acess token. "
+      return [nil, nil, nil, nil, nil, nil]
+    end
+
+    this_item = Item.find_by access_token: access_token
+    this_item_id = this_item.id
+    this_user_id = this_item.user_id
+
+    if(account_ids[0] == nil)
+      puts "No account id's detected in parameters, fetching all transactions for all items."
+      @message+="No account id's detected in parameters, fetching all transactions for all items. "
+
+      #populate @account_ids array with account_ids
+      a_pos = 0
+      account_ids = []
+      this_item.bank_accounts.each do |i|
+        account_ids[a_pos] = i["account_id"]
+        a_pos+=1
+      end
+
+    else
+      puts "Fetching transactions from account_ids provided."
+      @message+="Fetching transactions from account_ids provided."
+    end
+
+
+    pos = 0
+    account_ids.each do |acc_id|
+      isValidAccountID = checkAccountID(acc_id, access_token)
+      if(isValidAccountID == false)
+        puts "@account_ids[#{pos}] is invalid, exiting. "
+        @message+="@account_ids[#{pos}] is invalid, exiting. "
+        return [nil, nil, nil, nil, nil, nil]
+      end
+
+      #find the account using the account_id
+      this_account =  BankAccount.all.find_by account_id: acc_id
+      if(this_account == nil)
+        puts "Error, no bank_account found with account_id: #{acc_id}"
+        return [nil, nil, nil, nil, nil, nil]
+      end
+      saved_transactions = this_account.bank_transactions.all
+
+      #find start_date
+      if(saved_transactions == nil)
+        start_date = (Date.today - 728).to_formatted_s
+      else
+        start_date = saved_transactions.order(date: :desc).first["date"].to_date.to_formatted_s
+      end
+
+      #set end_date
+      end_date = Date.today.to_formatted_s
+
+      dateIsValid = start_date <= end_date
+
+      if(dateIsValid == false)
+        puts "Error in get_transactions function, start_date must be older than end_date"
+        return [nil, nil, nil, nil, nil, nil]
+      end
+
+      @numberFetched = 0 #the number of transactions received from Plaid.
+
+      #fetch transactions from plaid
+      new_transactions_all = get_transactions(acc_id, access_token, start_date, end_date)
+
+      puts "new_transactions_all = #{new_transactions_all}"
+      @numberFetched = new_transactions_all[1]
+      puts "@numberFetched = #{@numberFetched}"
+
+      new_transactions = new_transactions_all[0]
+
+      puts "In get_new_transactions"
+      puts "saved_transactions = #{saved_transactions}"
+      #remove duplicates
+      filtered_transactions = remove_dupilicates(new_transactions, saved_transactions)
+
+      if(new_transactions != nil && filtered_transactions.length == 0)
+        puts "No new transactions, transactions are up to date."
+        @message = "No new transactions, transactions are up to date. "
+        failedTrans = [ nil, nil,nil , 0, @message, true]
+        return failedTrans
+      end
+
+      #append filtered_transactions to end of saved_transactions
+      saved_transactions = (saved_transactions << filtered_transactions).flatten!
+
+
+      #if max number of transactions fetched, then we need to loop again.
+      while(new_transactions.length == 500) do
+        #fetch for more transactions and append to end
+        start_date = new_transactions.order(date: :desc).first["date"].to_date.to_formatted_s
+        new_transactions = get_transactions(acc_id, access_token, start_date, end_date)
+
+        filtered_transactions = remove_dupilicates(new_transactions, saved_transactions)
+
+        saved_transactions = (saved_transactions << filtered_transactions).flatten!
+
+      end
+
+      @bankTransFailedCounter = 0
+      @transFailedCounter = 0
+      @incomeFailedCounter = 0
+
+      #save transactions_all into database
+
+      @numberSaved = @numberFetched
+      saved_transactions.each do |transaction|
+        #save transaction in bank_transactions table
+        isSavedBankTransaction = save_bank_transaction(transaction, bank_account_id, this_item_id, this_user_id)
+
+        if(isSavedBankTransaction == false)
+          puts "failed to save to bank_transactions table"
+          @bankTransFailedCounter+=1
+          @numberSaved-=1
+        end
+
+        #save transaction into transactions table
+        if(transaction["amount"] < 0)
+          isSavedIncome = save_income(transaction, this_user_id)
+          if(isSavedIncome == false)
+            puts "failed to save to incomes table"
+            @incomeFailedCounter+= 1
+          end
+        else
+          isSavedTransaction = save_transaction(transaction this_user_id)
+          if(isSavedTransaction == false)
+            puts "failed to save to transactions table"
+            @transFailedCounter+= 1
+          end
+        end #end of if/else statement
+      end #end of saved_transactions loop
+      pos+=1
+    end #end of account_id loop
+
+    failedTrans = []
+
+    failedTrans = [@bankTransFailedCounter, @transFailedCounter, @incomeFailedCounter, @numberFetched, @numberSaved]
+
+    puts "failedTrans = #{failedTrans}"
+    return failedTrans
+
+
   end
 
   def show_transactions
@@ -418,6 +596,8 @@ class BankSyncController < ApplicationController
       end
     end
 
+    @numberFetched = 0 #the number of transactions received from Plaid
+
     account_ids.each do |acc_id|
       #check if transactions are available from 24 months since the item creation date.
       #find the start date
@@ -436,7 +616,8 @@ class BankSyncController < ApplicationController
 
       this_account_id = this_account.id
       transactions_new = get_transactions(acc_id, access_token, start_date, end_date)
-      transactions_all = transactions_new
+      @numberFetched+=transactions_new[1]
+      transactions_all = transactions_new[0]
       bank_accounts = this_item.bank_accounts
 
       current_bank_account = bank_accounts.find_by account_id: acc_id
@@ -467,6 +648,7 @@ class BankSyncController < ApplicationController
 
       #save transactions_all into database
 
+      @numberSaved = @numberFetched
       transactions_all.each do |transaction|
         transaction_1 = transaction
 
@@ -476,6 +658,7 @@ class BankSyncController < ApplicationController
         if(isSavedBankTransaction == false)
           puts "failed to save to bank_transactions table"
           @bankTransFailedCounter+=1
+          @numberSaved-=1
         end
 
         #save transaction into transactions table
@@ -499,7 +682,7 @@ class BankSyncController < ApplicationController
 
     failedTrans = []
 
-    failedTrans = [@bankTransFailedCounter, @transFailedCounter, @incomeFailedCounter]
+    failedTrans = [@bankTransFailedCounter, @transFailedCounter, @incomeFailedCounter, @numberFetched, @numberSaved]
 
     puts "failedTrans = #{failedTrans}"
     return failedTrans
@@ -529,13 +712,14 @@ class BankSyncController < ApplicationController
     #check precondition
     start_date_copy = start_date.to_date
     end_date_copy = end_date.to_date
-    dateIsValid = start_date_copy < end_date_copy
+    dateIsValid = start_date_copy <= end_date_copy
 
     if(dateIsValid == false)
       puts "Error in get_transactions function, start_date must be older than end_date"
       return false
     end
 
+    @numberFetched = 0 #the number of transactions received from Plaid.
 
 
     if(account_id != nil)
@@ -560,11 +744,12 @@ class BankSyncController < ApplicationController
     retreived_transactions = []
 
     retreived_transactions = response["transactions"] #an array with many transactions
+    @numberFetched = retreived_transactions.length
 
     # continue fetching for new transactions, until start_date = end_date
     # AND, the previous transactions fetched are the same as the current transactions fetched.
 
-    return retreived_transactions
+    return [retreived_transactions, @numberFetched]
 
   end
 
@@ -575,14 +760,23 @@ class BankSyncController < ApplicationController
     #description: fetches all the transaction for the given account_id
       #and returns an array of transactions fetched.
 
-      pos = transactions_new.length - 1
+      puts "In remove_dupilicates"
+      puts "transactions_new = #{transactions_new}"
+      puts " "
+      puts "transactions_all = #{transactions_all}"
 
-      for i in 0..(transactions_new.length - 1)
+      pos = transactions_new.length - 1
+      puts "transactions_new.length = #{transactions_new.length}"
+      for i in 0..(transactions_new.length-1)
+        puts "WHATS UP DUDE"
         dupe = false
+        puts "dupe = #{dupe}"
         #loop through og trans to find the last transaction_id
         transactions_all.each do |og_trans|
           if(transactions_new[pos]["transaction_id"] == og_trans["transaction_id"])
+            puts "WHATS UP DUDE2"
             dupe = true
+            puts "dupe = #{dupe}"
             break #exit the loop if a duplicate has been found
           end
         end
@@ -607,8 +801,13 @@ class BankSyncController < ApplicationController
 
       # truncate all the duplication values in transactions_2
       # take all values from and including new_pos + 1 to the end of array
-
-      transactions_new_filtered = transactions_new[0..(new_pos+1)]
+      puts "new_pos = #{new_pos}"
+      #new_pos: the position of the first new element that is a not duplicate.
+      if(new_pos == nil)
+        transactions_new_filtered = []
+      else
+        transactions_new_filtered = transactions_new[0..(new_pos+1)]
+      end
       return transactions_new_filtered
 
   end
@@ -619,6 +818,20 @@ class BankSyncController < ApplicationController
       #is a valid access token, returns a boolean
     item = Item.all.find_by access_token: access_token
     if(item == nil)
+      return false
+    else
+      return true
+    end
+  end
+
+  def checkAccountID(acc_id, access_token)
+    #params: access_token, item_id
+    #description: takes in two strings, acc_id, and access_token, and checks whether the account_id
+      #belongs to the item.
+      #assumes that the access_token is valid
+    item = Item.all.find_by access_token: access_token
+    bank_account = item.bank_accounts.find_by account_id: acc_id
+    if(bank_account == nil)
       return false
     else
       return true

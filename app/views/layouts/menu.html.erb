@@ -27,7 +27,10 @@
           <li class="subpage-button" id="edit-account-info"><a onclick= "linkDelay('/account/edit')">Edit Account Details</a></li>
           <li class="subpage-button" id="change-password"><a onclick= "linkDelay('/account/change_password')">Change Password</a><li>
         <li><a onclick="linkDelay('/account_balance/index')">Balances</a></li>
-        <li><a onclick="linkDelay('/bank_sync/add_account')">Bank Sync</a></li>
+        <li><a onclick="linkDelay('/bank_sync/index')">Bank Sync</a></li>
+        <!-- <li><a onclick="showSubpages('new-institution', 'linked-institutions')">Bank Sync</a></li>
+          <li class="subpage-button" id="new-institution"><a onclick= "linkDelay('/bank_sync/add_account')">Link New Institution</a></li>
+          <li class="subpage-button" id="linked-institutions"><a onclick= "linkDelay('/bank_sync/index')">Linked Institutions</a></li> -->
         <li><a onclick="linkDelay('/access/logout')">Sign Out</a></li>
       </ul>
     </nav>
@@ -45,7 +48,7 @@
 
         <a href="/account/index">Account</a>
         <a href="/account_balance/index">Balances</a>
-        <a href="/bank_sync/add_account">Bank Sync</a>
+        <a href="/bank_sync/index">Bank Sync</a>
         <a href="/access/logout" style="float:right;">Sign Out</a> <!-- float this to the right -->
     </div>
 
