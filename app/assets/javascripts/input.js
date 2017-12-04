@@ -224,4 +224,99 @@ function verifyTransaction() {
 
 }
 
+
+// Validates that the transaction dollar amount is a valid input
+function validateIncome(key, input) {
+
+  var amount = input.value;
+  amount = amount.replace(/\./g, "");
+  amount = amount.replace(/^0*/, "");
+  var container = document.getElementsByClassName("transaction-icon-container")[0];
+
+  if (amount.length === 0) {
+    container.classList.remove("transaction-valid");
+    container.classList.remove("transaction-invalid");
+    input.value = "";
+    return false;
+  }
+
+  valid = isValidNum(amount);
+
+  if (key === 13 && valid) {
+    document.getElementsByClassName("transaction-name-input")[0].focus();
+    return true;
+  }
+
+  if (valid) {
+    container.classList.remove("transaction-invalid");
+    container.classList.add("transaction-valid");
+
+    var decimal = (parseInt(amount) / 100).toFixed(2);
+    input.value = decimal;
+
+    return true;
+
+  } else {
+    container.classList.remove("transaction-valid");
+    container.classList.add("transaction-invalid");
+
+    return false;
+  }
+
+}
+
+// Validates that the location name is a valid input
+function validateSource(key, input) {
+  var location_name = input.value;
+
+  var container = document.getElementsByClassName("transaction-icon-container")[1];
+
+  if (location_name.length === 0) {
+
+    container.classList.remove("transaction-valid");
+    container.classList.remove("transaction-invalid");
+    return false;
+
+  } else if (location_name.length > 25) {
+
+    container.classList.remove("transaction-valid");
+    container.classList.add("transaction-invalid");
+    return false;
+
+  } else {
+
+    container.classList.remove("transaction-invalid");
+    container.classList.add("transaction-valid");
+
+    if (key === 13) {
+       document.getElementById('income-form').submit();
+    }
+
+    return true;
+
+  }
+
+}
+
+
 // Validates all inputs before creating a new entry in the income table.
+function verifyIncome() {
+  var check = 3;
+  var incomeInput = document.getElementsByClassName("transaction-amount-input")[0];
+  var sourceInput = document.getElementsByClassName("transaction-name-input")[0];
+  alert(check);
+  if (validateIncome(0, incomeInput)) check -= 2;
+  alert(check);
+  if (validateSource(0, sourceInput)) check -= 1;
+  alert(check);
+  if (check === 0) {
+    return true;
+  } else if (check >= 3) {
+    incomeInput.focus();
+  } else {
+    sourceInput.focus();
+  }
+  alert("hey");
+  return false;
+
+}
