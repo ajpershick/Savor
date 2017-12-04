@@ -1,0 +1,78 @@
+{
+  "name": "Savor",
+  "short_name": "Savor",
+  "start_url": "/",
+  "icons": [
+  
+    {
+      "src": "/images/app/assets/images/loginlogobag36x36.png",
+      "sizes": "36x36",
+      "type": "image/png"
+    },
+  
+    {
+      "src": "/images/app/assets/images/loginlogobag48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+  
+    {
+      "src": "/images/app/assets/images/loginlogobag60x60.png",
+      "sizes": "60x60",
+      "type": "image/png"
+    },
+  
+    {
+      "src": "/images/app/assets/images/loginlogobag72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+  
+    {
+      "src": "/images/app/assets/images/loginlogobag76x76.png",
+      "sizes": "76x76",
+      "type": "image/png"
+    },
+  
+    {
+      "src": "/images/app/assets/images/loginlogobag96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+  
+    {
+      "src": "/images/app/assets/images/loginlogobag120x120.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    },
+  
+    {
+      "src": "/images/app/assets/images/loginlogobag152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+  
+    {
+      "src": "/images/app/assets/images/loginlogobag180x180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+  
+    {
+      "src": "/images/app/assets/images/loginlogobag192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+  
+    {
+      "src": "/images/app/assets/images/loginlogobag512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  
+  ],
+  "theme_color": "#000000",
+  "background_color": "#FFFFFF",
+  "display": "fullscreen",
+  "orientation": "portrait"
+}
