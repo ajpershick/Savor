@@ -29,7 +29,9 @@ class AccountController < ApplicationController
     @username = thisUser.username
     @first_name = thisUser.name
     @email = thisUser.email
+
     @message = params[:message]
+    @error = params[:error]
 
     if (session[:admin]) then render :layout => 'admin' end
 
@@ -47,13 +49,13 @@ class AccountController < ApplicationController
 
     if(!(newUsername.present? && newFirstName.present? && newEmail.present? && params[:password].present?)) then
 
-      @message = "Please fill in all fields"
-      redirect_to(:action => "edit", :message => @message) and return
+      @error = "Please fill in all fields"
+      redirect_to(:action => "edit", :error => @error) and return
 
     elsif !authenticated_user
 
-      @message = "Password Incorrect"
-      redirect_to(:action => "edit", :message => @message) and return
+      @error = "Password Incorrect"
+      redirect_to(:action => "edit", :error => @error) and return
 
     else
 
@@ -73,6 +75,7 @@ class AccountController < ApplicationController
   def change_password
 
     @message = params[:message]
+    @error = params[:error]
     authenticated_user = params[:authenticated_user]
 
     if (session[:admin]) then render :layout => 'admin' end
@@ -94,18 +97,18 @@ class AccountController < ApplicationController
     #redirect_to(:action => "change_password", :message => @message, :authenticated_user => @authenticated_user) and return
     if !(new_password.present? && confirm_password.present? && current_password.present?) then
 
-      @message = "Please fill in all required fields."
-      redirect_to(controller: "account", :action => "change_password", message: @message)
+      @error = "Please fill in all required fields."
+      redirect_to(controller: "account", :action => "change_password", error: @error)
 
     elsif !authenticated_user
 
-      @message = "Your current password is incorrect"
-      redirect_to(controller: "account", action: "change_password", message: @message)
+      @error = "Your current password is incorrect"
+      redirect_to(controller: "account", action: "change_password", error: @error)
 
     elsif new_password != confirm_password
 
-      @message = "Your new password and password confirmation do not match"
-      redirect_to(controller: "account", action: "change_password", message: @message)
+      @error = "Your new password and password confirmation do not match"
+      redirect_to(controller: "account", action: "change_password", error: @error)
 
     else
 

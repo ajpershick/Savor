@@ -52,7 +52,6 @@ function validateExisting(item, username) {
 }
 
 
-
 function verify_password() {
   var check = 3;
 
