@@ -16,12 +16,12 @@ feature 'Test login', type: :feature do
       fill_in 'Password', with: 'testpassword'
       click_button 'Log In'
     end
-    expect(page).to have_current_path('/')
+    expect(page).to have_current_path('/input/new')
   end
 
   scenario 'testing login helper' do
     login_feature(@user)
-    expect(page).to have_current_path('/')
+    expect(page).to have_current_path('/input/new')
   end
 
 end

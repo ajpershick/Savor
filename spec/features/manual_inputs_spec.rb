@@ -22,7 +22,7 @@ RSpec.feature "ManualInputs", type: :feature do
     @income = create(:random_income)
     @transaction = create(:random_transaction)
     login_feature(@user)
-    expect(page).to have_current_path('/')
+    expect(page).to have_current_path('/input/new')
     getsomemoney
     visit input_new_path
     expect(page).to have_current_path('/input/new')

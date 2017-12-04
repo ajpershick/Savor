@@ -27,7 +27,7 @@ module SpecTestHelper
     end
   end
 
-  def getsomemoney()
+  def getsomemoney
     # @income = create(:random_income)
     visit input_income_path
     expect(page).to have_current_path('/input/income')

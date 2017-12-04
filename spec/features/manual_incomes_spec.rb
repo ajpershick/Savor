@@ -6,7 +6,7 @@ RSpec.feature "ManualIncome", type: :feature do
     @income = create(:random_income)
     # @income = create(:random_income)
     login_feature(@user)
-    expect(page).to have_current_path('/')
+    expect(page).to have_current_path('/input/new')
     visit input_income_path
     expect(page).to have_current_path('/input/income')
     fill_in '0.00', with: @income.income_amount
