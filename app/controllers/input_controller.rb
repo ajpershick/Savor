@@ -163,7 +163,6 @@ class InputController < ApplicationController
         user_id: session[:user_id],
         income_amount: @income_float,
         source: params[:source],
-        date: Date.today
       )
 
       if new_income.save
