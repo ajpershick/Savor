@@ -30,7 +30,7 @@ div.transaction-input-container {
   text-align: center;
 }
 
-input.transaction-amount-input, input.transaction-name-input {
+input.transaction-amount-input, input.transaction-name-input, input.transaction-date-input {
   font-family: Helvetica;
   font-size: 26px;
   float: left;
@@ -48,7 +48,7 @@ input.transaction-amount-input {
   text-align: right;
 }
 
-input.transaction-name-input {
+input.transaction-name-input, input.transaction-date-input {
   width: 290px;
   padding-left: 10px;
 }

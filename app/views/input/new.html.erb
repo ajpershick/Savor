@@ -1,3 +1,10 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday@1.6.1/pikaday.min.js">
+<script src="https://cdn.jsdelivr.net/npm/pikaday@1.6.1"></script>
+
+<input type="text" id="datepicker">
+
+
+<div id="myID"></div>
 
 <p class="message" id="message">
   <%=@message%>
@@ -70,6 +77,13 @@
       <%= text_field_tag(:location_name, "" , class: "transaction-name-input", placeholder: "Location name", onkeydown: "if (event.which === 13) return false", onkeyup: "validateLocationName(event.which, this)", autocomplete: "off") %>
     </div>
 
+    <div class="transaction-input-container">
+      <div class="transaction-icon-container transaction-valid">
+        <i class="fa fa-calendar transaction-icon"></i>
+      </div>
+      <%= text_field_tag(:date, "" , class: "transaction-date-input", id: "transaction-date-input") %>
+    </div>
+
     <br></br>
 
     <table class="transaction-example">
@@ -99,3 +113,12 @@
   <% end %>
 
 </div>
+
+<script>
+    var datepicker = new Pikaday({
+        field: document.getElementById('transaction-date-input'),
+        format: 'D MMM YYYY',
+        maxDate: new Date()
+    });
+    datepicker.setDate(new Date());
+</script>

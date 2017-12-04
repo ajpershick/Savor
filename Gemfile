@@ -92,3 +92,4 @@ gem 'sinatra'
 gem 'rest-client'
 
 gem 'chartjs-ror'
+gem "pikaday-gem"
