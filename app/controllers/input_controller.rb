@@ -162,6 +162,7 @@ class InputController < ApplicationController
       new_income = Income.new(
         user_id: session[:user_id],
         income_amount: @income_float,
+        date: Date.today,
         source: params[:source],
       )
 
