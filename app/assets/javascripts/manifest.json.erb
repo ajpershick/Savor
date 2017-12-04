@@ -1,19 +1,24 @@
-<% icon_sizes = Rails.configuration.serviceworker.icon_sizes %>
 {
-  "name": "Savor",
   "short_name": "Savor",
-  "start_url": "/",
+  "name": "Savor",
   "icons": [
-  <% icon_sizes.map { |s| "#{s}x#{s}" }.each.with_index do |dim, i| %>
     {
-      "src": "<%= image_path "app/assets/images/android/android-launchericon-#{dim}-#{dim}.png" %>",
-      "sizes": "<%= dim %>",
+      "src": "/images/android/android-launchericon-96-96.png",
+      "sizes": "96x96",
       "type": "image/png"
-    }<%= i == (icon_sizes.length - 1) ? '' : ',' %>
-  <% end %>
+    },
+    {
+      "src": "/images/android/android-launchericon-144-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/android/android-launchericon-192-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
   ],
-  "theme_color": "#000000",
-  "background_color": "#FFFFFF",
-  "display": "fullscreen",
-  "orientation": "portrait"
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "landscape"
 }
