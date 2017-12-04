@@ -26,7 +26,7 @@ class AccessController < ApplicationController
         session[:admin] = true
         redirect_to(controller: "admin", action:"index")
       else
-        redirect_to(controller: "home", action: "index")
+        redirect_to(controller: "input", action: "new")
       end
     else
       flash[:invalid] = "Invalid username or password"
@@ -40,7 +40,7 @@ class AccessController < ApplicationController
       session[:user_id] = new_user.id
       new_account_balance = AccountBalance.new(user_id: new_user.id, cash_balance: 0.00, bank_balance: 0.00, total_balance: 0.00)
       if new_account_balance.save
-        redirect_to({controller: "home", action: "index", message: "Successfully created new account with account balance of 0."}) and return
+        redirect_to({controller: "input", action: "new", message: "Successfully created new account with account balance of 0."}) and return
       end
     else
       redirect_to({controller: "access", action: "login"})
