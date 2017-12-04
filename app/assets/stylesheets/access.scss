@@ -43,7 +43,8 @@ div.title{
   //background-color: purple;
   display: block ;
   text-align: center;
-  margin-top: 10%;
+  margin-top: 15%;
+  margin-left: 15%;
 }
 
 div.mobile-title{
@@ -61,7 +62,7 @@ div.writeup {
   //padding-right: 10%;
   //background-color: blue;
   text-align: left;
-  top: 45%;
+  top: 72%;
   position: absolute;
   left: 55%;
   min-width: 340px;
@@ -84,7 +85,7 @@ div.entry-left{ //left section of the screen
   //background-color: pink;
 }
 
-div.subsection-left{ //the middle of the left sectui
+div.subsection-left{ //the middle of the left section
   position: absolute;
   width: 50%;
   height: 60%;
@@ -92,7 +93,7 @@ div.subsection-left{ //the middle of the left sectui
   margin-right: auto;
   //margin-top: 20%;
   //margin-bottom: 20%;
-  top: 20%;
+  top: 10%;
   //background-color: green;
   text-align: center;
   display:block;
@@ -100,17 +101,17 @@ div.subsection-left{ //the middle of the left sectui
 
 img.login-logo{
   display: inline-block;
-  height: auto;
-  width: auto;
+  height: 250px;
+  width: 500px;
   //max-width: 300px;
   //max-height: 300px;
-  min-width: 40%;
+  min-width: 20%;
   min-height: 40%;
   //background-color: blue;
   text-align: center;
   position: absolute;
-  top: 35%;
-  left: 10%;
+  top: 1%;
+  left: 12%;
 }
 
 .entry-hidden {
