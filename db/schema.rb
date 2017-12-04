@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20171125055838) do
   create_table "bank_transactions", force: :cascade do |t|
     t.integer "user_id"
     t.string "item_id"
-    t.string "bank_account_id"
+    t.integer "bank_account_id"
     t.string "account_id"
     t.string "transaction_id"
     t.string "category", array: true
@@ -112,14 +112,6 @@ ActiveRecord::Schema.define(version: 20171125055838) do
     t.string "password_digest"
     t.string "email", limit: 255, null: false
     t.boolean "admin", default: false, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "widgets", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.integer "stock"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

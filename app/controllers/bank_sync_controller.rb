@@ -85,8 +85,12 @@ class BankSyncController < ApplicationController
         @message += "Successfully created item. "
         #redirect_to(:action => "index", :access_token => access_token, :item_id => item_id, :message => "Success, item created") and return
         #redirect_to(:action => "create_bank_account", :access_token => access_token, :item_id => item_id) and return
-        createdBankAccount = create_bank_account(access_token)
-        if(createdBankAccount == false)
+
+
+        message = @message
+        createdBankAccounts = create_bank_accounts(access_token, message)
+        @message = message
+        if(createdBankAccounts == false)
           puts "Error, failed to create bank_accounts for item. "
           @message += "Error, failed to create bank_accounts for item. "
           redirect_to(:action => "index", :message => @message) and return
@@ -274,7 +278,7 @@ class BankSyncController < ApplicationController
 
   #---------------------CONTROLLER FUNCTIONS-----------------------------------------------------------
 
-  def create_bank_account(access_token) #working
+  def create_bank_accounts(access_token, message) #working
     #parameters:
       #access_token
     #precondition:
@@ -286,6 +290,7 @@ class BankSyncController < ApplicationController
 
     #"access-sandbox-4abdcc4a-d38a-4298-9da9-354fd51009cc"
 
+
       #response from plaid servers, in the form of a hash {"accounts", "item", "request_id"}
     accounts_response = $client.accounts.get(access_token)
 
@@ -293,7 +298,7 @@ class BankSyncController < ApplicationController
     accounts_array = accounts_response["accounts"]
 
       #create an empty message for messages to be appended to it in the loop
-    @message = ''
+    #@message = ''
 
     this_item = Item.find_by access_token: access_token
     this_item_id = this_item.id
@@ -303,8 +308,9 @@ class BankSyncController < ApplicationController
 
     currentItem = this_item
 
-    newAccountSaved = nil
+    newAccountsSaved = nil
 
+    @message = ''
     total_balance = 0
     grand_total_balance = 0
     accounts_array.each do |acc|
@@ -312,25 +318,26 @@ class BankSyncController < ApplicationController
       newAccount.user_id = this_user_id
       newAccount.item_id = this_item_id
       newAccount.account_id = acc['account_id']
-      newAccount.available_balance = acc['balances']['available']
+      if(acc['balances']['available'] != nil)
+        newAccount.available_balance = acc['balances']['available']
+      end
       newAccount.current_balance = acc['balances']['current']
       newAccount.name = acc['name']
       newAccount.mask = acc['mask']
       newAccount.official_name = acc['official_name']
       newAccount.account_type = acc['type']
       newAccount.account_subtype = acc['subtype']
-
-      total_balance+=newAccount.current_balance
       if(newAccount.save)
+        total_balance+=newAccount.current_balance
         @message += "'#{newAccount.official_name}' successfully saved. "
         puts "#{newAccount.official_name}, successfully saved. "
         #redirect_to(controller: "bank_sync", action: "index", message: @message) and return
-        newAccountSaved = true
+        newAccountsSaved = true
       else
         @message += "'#{newAccount.official_name}' failed to be saved. "
         puts "#{newAccount.official_name}, failed to be saved. "
         #redirect_to(controller: "bank_sync", action: "index", message: @message) and return
-        return false
+        newAccountsSaved = false
       end
     end
 
@@ -370,7 +377,7 @@ class BankSyncController < ApplicationController
       puts "Failed to update TOTAL account balance. "
       return false
     else
-      return newAccountSaved
+      return newAccountsSaved
     end
 
   #redirect_to(controller: "bank_sync", action: "index", message: @message) and return
@@ -494,6 +501,7 @@ class BankSyncController < ApplicationController
 
     failedTrans = [@bankTransFailedCounter, @transFailedCounter, @incomeFailedCounter]
 
+    puts "failedTrans = #{failedTrans}"
     return failedTrans
 
   end # end of get_all_transactions
@@ -619,65 +627,200 @@ class BankSyncController < ApplicationController
 
   def save_bank_transaction(transaction, bank_account_id, item_id, user_id)
     bank_transaction = BankTransaction.new()
-    bank_transaction.user_id = user_id
-    bank_transaction.item_id = item_id
-    bank_transaction.account_id = transaction["account_id"]
-    bank_transaction.bank_account_id = bank_account_id
-    bank_transaction.transaction_id = transaction["transaction_id"]
-    bank_transaction.category = transaction["category"]
-    bank_transaction.category_id = transaction["category_id"]
-    bank_transaction.transaction_type = transaction["special"]
-    bank_transaction.amount = transaction["amount"]
-    bank_transaction.date = transaction["date"].to_date
+    bank_transaction.user_id = user_id.to_i
+    bank_transaction.item_id = item_id.to_s
+
+    if(transaction["account_id"] != nil)
+      bank_transaction.account_id = transaction["account_id"]
+    else
+      bank_transaction.account_id = "n/a"
+    end
+
+    bank_transaction.bank_account_id = bank_account_id.to_i
+
+    if(transaction["transaction_id"] != nil)
+      bank_transaction.transaction_id = transaction["transaction_id"]
+    else
+      bank_transaction.transaction_id = "n/a"
+    end
+
+    if(transaction["category"] != nil)
+      bank_transaction.category = transaction["category"]
+    else
+      bank_transaction.category = []
+      bank_transaction.category[0] = "n/a"
+    end
+
+    if(transaction["category_id"] != nil)
+      bank_transaction.category_id = transaction["category_id"]
+    else
+      bank_transaction.category_id = "n/a"
+    end
+
+    if(transaction["transaction_type"] != nil)
+      bank_transaction.transaction_type = transaction["transaction_type"]
+    else
+      bank_transaction.transaction_type = "n/a"
+    end
+
+    if(transaction["amount"] != nil)
+      bank_transaction.amount = transaction["amount"].to_f
+    else
+      bank_transaction.amount = 0
+    end
+
+    if(transaction["date"].to_date != nil)
+      bank_transaction.date = transaction["date"].to_date
+    else
+      bank_transaction.date = Date.today
+    end
+
+    if(transaction["name"] != nil)
+      bank_transaction.name = transaction["name"]
+    else
+      bank_transaction.name = "n/a"
+    end
+
     if(transaction["location"]["address"] == nil && transaction["location"]["lat"] == nil)
-      bank_transaction.location_bool == false
+      bank_transaction.location_bool = false
       bank_transaction.location = []
-      bank_transaction.location[0] = transaction["location"]["address"]
-      bank_transaction.location[1] = transaction["location"]["city"]
-      bank_transaction.location[2] = transaction["location"]["lat"]
-      bank_transaction.location[3] = transaction["location"]["lon"]
-      bank_transaction.location[4] = transaction["location"]["state"]
-      bank_transaction.location[5] = transaction["location"]["store_number"]
-      bank_transaction.location[6] = transaction["location"]["zip"]
+      bank_transaction.location[0] = "n/a"
+      bank_transaction.location[1] = "n/a"
+      bank_transaction.location[2] = "n/a"
+      bank_transaction.location[3] = "n/a"
+      bank_transaction.location[4] = "n/a"
+      bank_transaction.location[5] = "n/a"
+      bank_transaction.location[6] = "n/a"
     elsif(transaction["location"]["lat"] != nil && transaction["location"]["lon"] != nil)
       bank_transaction.location_bool = true
       bank_transaction.location = []
-      bank_transaction.location[0] = transaction["location"]["address"]
-      bank_transaction.location[1] = transaction["location"]["city"]
-      bank_transaction.location[2] = transaction["location"]["lat"]
-      bank_transaction.location[3] = transaction["location"]["lon"]
-      bank_transaction.location[4] = transaction["location"]["state"]
-      bank_transaction.location[5] = transaction["location"]["store_number"]
-      bank_transaction.location[6] = transaction["location"]["zip"]
+      if(transaction["location"]["address"] != nil)
+        bank_transaction.location[0] = transaction["location"]["address"]
+      else
+        bank_transaction.location[0] = "n/a"
+      end
+      if(transaction["location"]["city"] != nil)
+        bank_transaction.location[1] = transaction["location"]["city"]
+      else
+        bank_transaction.location[1] = "n/a"
+      end
+      if(transaction["location"]["lat"] != nil)
+        bank_transaction.location[2] = transaction["location"]["lat"]
+      else
+        bank_transaction.location[2] = "n/a"
+      end
+      if(transaction["location"]["lon"] != nil)
+        bank_transaction.location[3] = transaction["location"]["lon"]
+      else
+        bank_transaction.location[3] = "n/a"
+      end
+      if(transaction["location"]["state"] != nil)
+        bank_transaction.location[4] = transaction["location"]["state"]
+      else
+        bank_transaction.location[4] = "n/a"
+      end
+      if(transaction["location"]["store_number"] != nil)
+        bank_transaction.location[5] = transaction["location"]["store_number"]
+      else
+        bank_transaction.location[5] = "n/a"
+      end
+      if(transaction["location"]["zip"] != nil)
+        bank_transaction.location[6] = transaction["location"]["zip"]
+      else
+        bank_transaction.location[6] = "n/a"
+      end
     elsif(transaction["location"]["address"] != nil)
       bank_transaction.location_bool = true
       bank_transaction.location = []
-      bank_transaction.location[0] = transaction["location"]["address"]
-      bank_transaction.location[1] = transaction["location"]["city"]
-      bank_transaction.location[2] = transaction["location"]["lat"]
-      bank_transaction.location[3] = transaction["location"]["lon"]
-      bank_transaction.location[4] = transaction["location"]["state"]
-      bank_transaction.location[5] = transaction["location"]["store_number"]
-      bank_transaction.location[6] = transaction["location"]["zip"]
+      if(transaction["location"]["address"] != nil)
+        bank_transaction.location[0] = transaction["location"]["address"]
+      else
+        bank_transaction.location[0] = "n/a"
+      end
+      if(transaction["location"]["city"] != nil)
+        bank_transaction.location[1] = transaction["location"]["city"]
+      else
+        bank_transaction.location[1] = "n/a"
+      end
+      if(transaction["location"]["lat"] != nil)
+        bank_transaction.location[2] = transaction["location"]["lat"]
+      else
+        bank_transaction.location[2] = "n/a"
+      end
+      if(transaction["location"]["lon"] != nil)
+        bank_transaction.location[3] = transaction["location"]["lon"]
+      else
+        bank_transaction.location[3] = "n/a"
+      end
+      if(transaction["location"]["state"] != nil)
+        bank_transaction.location[4] = transaction["location"]["state"]
+      else
+        bank_transaction.location[4] = "n/a"
+      end
+      if(transaction["location"]["store_number"] != nil)
+        bank_transaction.location[5] = transaction["location"]["store_number"]
+      else
+        bank_transaction.location[5] = "n/a"
+      end
+      if(transaction["location"]["zip"] != nil)
+        bank_transaction.location[6] = transaction["location"]["zip"]
+      else
+        bank_transaction.location[6] = "n/a"
+      end
     else
-      bank_transaction.location_bool == false
+      bank_transaction.location_bool = false
       bank_transaction.location = []
-      bank_transaction.location[0] = transaction["location"]["address"]
-      bank_transaction.location[1] = transaction["location"]["city"]
-      bank_transaction.location[2] = transaction["location"]["lat"]
-      bank_transaction.location[3] = transaction["location"]["lon"]
-      bank_transaction.location[4] = transaction["location"]["state"]
-      bank_transaction.location[5] = transaction["location"]["store_number"]
-      bank_transaction.location[6] = transaction["location"]["zip"]
+      bank_transaction.location[0] = "n/a"
+      bank_transaction.location[1] = "n/a"
+      bank_transaction.location[2] = "n/a"
+      bank_transaction.location[3] = "n/a"
+      bank_transaction.location[4] = "n/a"
+      bank_transaction.location[5] = "n/a"
+      bank_transaction.location[6] = "n/a"
     end
 
-    bank_transaction.pending = transaction["pending"]
-    bank_transaction.pending_transaction_id = transaction["pending_transaction_id"]
+    if(transaction["pending"] != nil)
+      bank_transaction.pending = transaction["pending"]
+
+      if(transaction["pending_transaction_id"] != nil)
+        bank_transaction.pending_transaction_id = transaction["pending_transaction_id"]
+      else
+        bank_transaction.pending_transaction_id = "n/a"
+      end
+    else
+      bank_transaction.pending = false
+      if(transaction["pending_transaction_id"] != nil)
+        bank_transaction.pending_transaction_id = transaction["pending_transaction_id"]
+      else
+        bank_transaction.pending_transaction_id = "n/a"
+      end
+    end
     if(bank_transaction.save)
       puts "tx_id: #{transaction["transaction_id"]} saved successfully in bank_transactions table"
       return true
     else
       puts "tx_id: #{transaction["transaction_id"]} failed to save in bank_transactions table"
+      puts "bank_transaction = #{bank_transaction}"
+      puts "bank_transaction.user_id: #{bank_transaction.user_id}"
+      puts "bank_transaction.item_id: #{bank_transaction.item_id}"
+      puts "bank_transaction.bank_account_id: #{bank_transaction.bank_account_id}"
+      puts "bank_transaction.transaction_id: #{bank_transaction.transaction_id}"
+      puts "bank_transaction.category: #{bank_transaction.category}"
+      puts "bank_transaction.category_id: #{bank_transaction.category_id}"
+      puts "bank_transaction.transaction_type: #{bank_transaction.transaction_type}"
+      puts "bank_transaction.amount: #{bank_transaction.amount}"
+      puts "bank_transaction.date: #{bank_transaction.date}"
+      puts "bank_transaction.location_bool: #{bank_transaction.location_bool}"
+      puts "bank_transaction.location: #{bank_transaction.location}"
+      puts "bank_transaction.name: #{bank_transaction.name}"
+      puts "bank_transaction.pending: #{bank_transaction.pending}"
+      puts "bank_transaction.pending_transaction_id: #{bank_transaction.pending_transaction_id}"
+
+
+      puts "bank_transaction.errors = #{bank_transaction.errors}"
+      #puts "@messages: #{bank_transaction.errors[@messages]}"
+      #puts "@details:  #{bank_transaction.errors[@details]}"
+      puts "transaction = #{transaction}"
       return false
     end
   end
@@ -686,8 +829,14 @@ class BankSyncController < ApplicationController
     new_transaction = Transaction.new()
     new_transaction.user_id = user_id
     puts "user_id = #{user_id}"
-    new_transaction.amount = transaction["amount"]
+
+    if(transaction["amount"] != nil)
+      new_transaction.amount = transaction["amount"]
+    else
+      new_transaction.amount = 0
+    end
     puts "transaction['amount'] = #{transaction["amount"]}"
+
     if(transaction["date.to"] != nil)
       new_transaction.date = transaction["date"].to_date
       puts "transaction['date'].to_date = #{transaction["date"].to_date}"
@@ -696,12 +845,25 @@ class BankSyncController < ApplicationController
       puts "transaction['date'] == nil, new_transaction.date saved as Date.today"
     end
 
+
     if(transaction["category"] != nil)
       puts "transactions['category'] = #{transaction["category"]}"
       new_transaction.category = transaction["category"][0]
+    else
+      new_transaction.category = "miscellaneous"
     end
-    new_transaction.transaction_type = transaction["transaction_type"]
-    new_transaction.unique_id = transaction["transaction_id"]
+
+    if(transaction["transaction_type"] != nil)
+      new_transaction.transaction_type = transaction["transaction_type"]
+    else
+      new_transaction.transaction_type = "n/a"
+    end
+
+    if(transaction["transaction_id"] != nil)
+      new_transaction.unique_id = transaction["transaction_id"]
+    else
+      new_transaction.unique_id = "n/a"
+    end
 
     if(transaction["location"]["address"] == nil && transaction["location"]["lat"] == nil)
       new_transaction.location == false
@@ -736,7 +898,11 @@ class BankSyncController < ApplicationController
       new_transaction.latitude = nil
       new_transaction.longitude = nil
     end
-    new_transaction.location_name = transaction["payment_meta"]["payee"]
+
+    if(transaction["payment_meta"]["payee"])
+      new_transaction.location_name = transaction["payment_meta"]["payee"]
+    end
+
     if(new_transaction.save)
       puts "tx_id: #{transaction["transaction_id"]} saved successfully in transactions table"
       return true
@@ -750,9 +916,13 @@ class BankSyncController < ApplicationController
     new_income = Income.new()
     new_income.user_id = user_id
     puts "user_id = #{user_id}"
-    new_income.income_amount = income_entry["amount"].abs
+    if(income_entry["amount"].abs != nil)
+      new_income.income_amount = income_entry["amount"].abs
+    end
     puts "income_entry['amount'].abs = #{income_entry["amount"].abs}"
-    new_income.date = income_entry["date"].to_date
+    if(income_entry["date"].to_date != nil)
+      new_income.date = income_entry["date"].to_date
+    end
     puts "income_entry['date'].to_date = #{income_entry["date"].to_date}"
     if(income_entry["payment_meta"]["payee"] != nil)
       new_income.source = income_entry["payment_meta"]["payee"]
