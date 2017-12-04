@@ -19,7 +19,7 @@ feature 'Signup', type: :feature do
       fill_in 'Confirm password', with: 'password', :match => :prefer_exact
       click_button 'Sign up', :match => :prefer_exact
     end
-    expect(page).to have_current_path('/')
+    expect(page).to have_current_path('/?message=Successfully+created+new+account+with+account+balance+of+0.')
   end
 
 end
