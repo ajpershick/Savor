@@ -79,12 +79,15 @@
             map: map
         });
 
+        <% if !@none %>
         bounds = new google.maps.LatLngBounds(
           new google.maps.LatLng(<%= @min_lat %>, <%= @min_long %>),
           new google.maps.LatLng(<%= @max_lat %>, <%= @max_long %>)
         );
 
         centerMap();
+
+        <% end %>
     }
 
     function centerMap() {

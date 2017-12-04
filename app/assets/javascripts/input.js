@@ -146,8 +146,8 @@ function validateAmount(key, input) {
     container.classList.add("transaction-valid");
 
     var decimal = (parseInt(amount) / 100).toFixed(2);
-    input.value = String(decimal);
-    text.innerHTML = String(decimal);
+    input.value = decimal;
+    text.innerHTML = "$" + decimal;
 
     return true;
 
@@ -162,7 +162,7 @@ function validateAmount(key, input) {
 }
 
 // Validates that the location name is a valid input
-function validateLocationName(key, input) {
+function validateDescription(key, input) {
   var location_name = input.value;
 
   var container = document.getElementsByClassName("transaction-icon-container")[1];
@@ -207,7 +207,7 @@ function verifyTransaction() {
 
   if (validateAmount(0, amountInput)) check -= 4;
   if (categoryInput.value.length > 0) check -= 2;
-  if (validateLocationName(0, nameInput)) check -= 1;
+  if (validateDescription(0, nameInput)) check -= 1;
 
   if (check === 0) {
     return true;
