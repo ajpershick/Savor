@@ -81,8 +81,9 @@ class InputController < ApplicationController
      #checks the precondition that the user must have sufficient funds before making a transaction
      current_user = User.find(session[:user_id])
      if (params[:amount].to_f > current_user.account_balance.cash_balance.to_f)
-       @message = "Error, insufficient funds in your cash account balance to make this transaction"
-       redirect_to({controller: params[:last_controller], action: params[:last_action], message: @message}) and return
+       @message = "Error, insufficient funds in your cash account balance to make a cash transaction. Please submit a cash income entry."
+       #redirect_to({controller: params[:last_controller], action: params[:last_action], message: @message}) and return
+       redirect_to({controller: "input", action: "income", message: @message}) and return
      end
 
     new_transaction = Transaction.new(

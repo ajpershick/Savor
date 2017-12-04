@@ -900,8 +900,12 @@ class BankSyncController < ApplicationController
       new_transaction.longitude = nil
     end
 
-    if(transaction["payment_meta"]["payee"])
+    if(transaction["name"] != nil)
+      new_transaction.location_name = transaction["name"]
+    elsif(transaction["payment_meta"]["payee"] != nil)
       new_transaction.location_name = transaction["payment_meta"]["payee"]
+    else
+      new_transaction.location_name = "n/a"
     end
 
     if(new_transaction.save)
