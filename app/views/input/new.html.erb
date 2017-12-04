@@ -10,7 +10,7 @@
 <div class="input-center">
   <h1 class="transaction-title">New Transaction Input</h1>
 
-  <%= form_tag({controller: "input", action: "create"}, method: "post", id:"transaction-form", onsubmit:"alert()") do %>
+  <%= form_tag({controller: "input", action: "create"}, method: "post", id:"transaction-form", onsubmit:"return verifyTransaction()") do %>
 
     <div class="transaction-input-container">
       <div class="transaction-icon-container">
@@ -74,14 +74,14 @@
       <div class="transaction-icon-container transaction-valid" title="Optional">
         <i class="fa fa-map-marker transaction-icon"></i>
       </div>
-      <%= text_field_tag(:location, "" , class: "transaction-location-input", id: "transaction-location-input", placeholder: "Location", autocomplete: "off") %>
+      <%= text_field_tag(:location, "" , class: "transaction-location-input", id: "transaction-location-input", placeholder: "Location", autocomplete: "off", onkeydown: "if (event.which === 13) return false", onkeyup: "if (event.which === 13) document.getElementById('transaction-date-input').focus()") %>
     </div>
 
     <div class="transaction-input-container">
       <div class="transaction-icon-container transaction-valid" title="Optional">
         <i class="fa fa-calendar transaction-icon"></i>
       </div>
-      <%= text_field_tag(:date, "" , class: "transaction-date-input", id: "transaction-date-input") %>
+      <%= text_field_tag(:date, "" , class: "transaction-date-input", id: "transaction-date-input", readonly: true, onkeyup: "if (event.which === 13) document.getElementById('transaction-form').submit()") %>
     </div>
 
     <%= hidden_field_tag(:latitude, "", id: "transaction-latitude-input") %>

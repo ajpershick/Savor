@@ -189,7 +189,7 @@ function validateDescription(key, input) {
     text.innerHTML = capitalize(location_name);
 
     if (key === 13) {
-      document.getElementById("transaction-form").submit();
+       document.getElementById('transaction-location-input').focus();
     }
 
     return true;
@@ -204,10 +204,11 @@ function verifyTransaction() {
   var amountInput = document.getElementsByClassName("transaction-amount-input")[0];
   var categoryInput = document.getElementsByClassName("transaction-category-input")[0];
   var nameInput = document.getElementsByClassName("transaction-name-input")[0];
-  alert();
+  var locationInput = document.getElementById("transaction-latitude-input");
+
   if (validateAmount(0, amountInput)) check -= 4;
   if (categoryInput.value.length > 0) check -= 2;
-  if (validateDescription(0, nameInput)) check -= 1;
+  if (validateDescription(0, nameInput) || locationInput.value.length > 1) check -= 1;
 
   if (check === 0) {
     return true;
