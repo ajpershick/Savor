@@ -9,7 +9,7 @@ div.center {
   text-align: center;
 }
 
-h1.transaction-title {
+h1.account-balance-title {
 
   font-family: Helvetica;
   font-size: 40px;
@@ -17,7 +17,6 @@ h1.transaction-title {
   color: #95a5a6;
   display: inline-block;
   line-height: 40px; //added
-  text-align: center;
   margin:auto;
 }
 
@@ -57,4 +56,28 @@ p.account-balance-description {
   display: inline;
   position: auto;
   text-align: center;
+}
+
+@media screen and (max-width: 360px) {
+  div.center {
+    text-align: left;
+    background-color: transparent;
+  }
+
+  h1.account-balance-title {
+    margin-left: 20px;
+    float: left;
+    text-align: left;
+  }
+
+  div.description-container {
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 30px;
+  }
+
+  // p.account-balance-description {
+  //   margin-left: 20px;
+  // }
 }
