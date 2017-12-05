@@ -5,7 +5,8 @@
 div.history-center {
   margin: auto;
   width: 50%;
-  background-color: #FFFFFF;
+  //background-color: #FFFFFF;
+  background-color: transparent;
 }
 
 h1.history-heading {
@@ -13,6 +14,7 @@ h1.history-heading {
   font-size: 36px;
   text-align: center;
   line-height: 36px;
+  color: #95a5a6;
 }
 
 h1.history-empty {
@@ -209,7 +211,7 @@ h1#income-history{
   text-align: center;
 }
 
-.incomes-header td {
+.incomes-row td {
   border-style: none;
   font-family: Helvetica;
   font-size: 18px;
@@ -217,6 +219,7 @@ h1#income-history{
   //text-align: left;
   //margin-left: 50px;
   text-align: center;
+  height: 30px;
   }
 
 //media queries for mobile view

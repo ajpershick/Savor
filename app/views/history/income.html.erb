@@ -5,8 +5,8 @@
 
 <div class="table-container">
 <table class="transactions-day transactions-income-day">
-  <thead>
-    <tr>
+  <thead style="border-style: none;">
+    <tr style="height: 35px;">
       <th class="history-header">Date</th>
       <th class="history-header">Amount</th>
       <th class="history-header">Source</th>
@@ -16,7 +16,7 @@
   <tbody>
       <% if !@empty %>
       <% @incomes_sorted.each do |entry| %>
-        <tr class="incomes-header">
+        <tr class="incomes-row">
           <td class="income-date-data"><%= Date.parse(entry.created_at.to_s).strftime("%A, %B %d %Y").sub(/ 0/, ' ') %></td>
           <td class="income-amount-data"><%= number_to_currency(entry.income_amount) %></td>
           <td class="income-source-data"><%= entry.source %></td>

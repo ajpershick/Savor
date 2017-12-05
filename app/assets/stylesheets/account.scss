@@ -5,11 +5,18 @@
 div.account-center {
   margin: auto;
   width: 500px;
-  background-color: #FFFFFF;
+  //background-color: #FFFFFF;
+  background-color: transparent;
 }
 
-h1.account-header {
-  text-align: center
+h1.account-title {
+  font-family: Helvetica;
+  font-size: 40px;
+  text-align: center;
+  color: #95a5a6;
+  display: block;
+  line-height: 40px; //added
+  margin: 2.5%;
 }
 
 .green {

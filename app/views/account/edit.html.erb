@@ -14,7 +14,7 @@
 
 <div class="account-center">
   <br></br>
-  <h1 class="account-header">Edit Account</h1>
+  <h1 class="account-title">Edit Account</h1>
   <br></br>
 
   <%= form_tag({controller: "account", action: "make_edit"}, method: "post", onsubmit:"return verify_edit('" + @username + "')") do %>

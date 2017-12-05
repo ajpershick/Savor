@@ -70,7 +70,13 @@ a.item {
 table.show-account-details {
   border: none;
   padding: 5%;
-  margin: 5%;
+  //margin: 5%;
+  box-sizing: border-box;
+}
+
+tbody.show-account-details {
+  padding: 5%;
+  box-sizing: border-box;
 }
 
 td.show-account-details {
@@ -82,12 +88,16 @@ td.show-account-details {
   color: #7f8c8d;
   //margin-left: 5%;
   line-height: 25px;
+  padding-left: 30px;
+  height: 35px;
 }
 
 tr.show-account-details {
   border-bottom-style: solid;
   border-bottom-style: black;
   padding-bottom: 10px;
+  width: 90%;
+  padding-left: 10px;
 }
 
 //COPIED FROM ACCOUNTS.CSS
@@ -95,7 +105,7 @@ tr.show-account-details {
 div.banksync-center {
   margin: auto;
   width: 800px;
-  background-color: #FFFFFF;
+  background-color: transparent;
 }
 
 h1.account-header {
@@ -201,7 +211,7 @@ input.account-password-button {
   div.banksync-center {
     margin: auto;
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: transparent;
   }
 }
 

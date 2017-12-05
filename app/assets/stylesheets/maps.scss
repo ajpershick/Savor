@@ -6,6 +6,7 @@ div.map-center {
   margin: auto;
   width: 90%;
   background-color: #FFFFFF;
+  margin-top: 30px;
 }
 
 h1.map-empty {
@@ -153,5 +154,21 @@ div.map-dropdown:hover button.map-dropdown-button {
 @media screen and (max-width: 400px) {
   p#button1 {
     margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 970px) {
+
+  div.map-center {
+    margin: 0;
+    width: 100%;
+    background-color: transparent;
+    margin-top: 0;
+  }
+
+  #map {
+    margin: 0;
+    height: 100%;
+    width: 100%;
   }
 }
