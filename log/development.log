@@ -101,3 +101,188 @@ Processing by InputController#new as HTML
 Completed 200 OK in 704ms (Views: 627.1ms | ActiveRecord: 24.3ms)
 
 
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:64)
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 16:44:54 -0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by InputController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.8ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (16.1ms)
+Completed 200 OK in 843ms (Views: 709.2ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/bank_sync/index" for 127.0.0.1 at 2017-12-04 16:45:09 -0800
+Processing by BankSyncController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (2.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering bank_sync/index.html.erb within layouts/menu
+  Rendered bank_sync/index.html.erb within layouts/menu (2.5ms)
+Completed 200 OK in 202ms (Views: 118.9ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/bank_sync/show_item?item_id=pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9" for 127.0.0.1 at 2017-12-04 16:45:33 -0800
+Processing by BankSyncController#show_item as HTML
+  Parameters: {"item_id"=>"pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."user_id" = $1 AND "items"."item_id" = $2 LIMIT $3[0m  [["user_id", 1], ["item_id", "pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9"], ["LIMIT", 1]]
+  [1m[36mBankAccount Load (7.5ms)[0m  [1m[34mSELECT "bank_accounts".* FROM "bank_accounts" WHERE "bank_accounts"."item_id" = $1[0m  [["item_id", "pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9"]]
+  Rendering bank_sync/show_item.html.erb within layouts/menu
+  Rendered bank_sync/show_item.html.erb within layouts/menu (4.4ms)
+Completed 200 OK in 120ms (Views: 67.2ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/bank_sync/show_item?item_id=pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9" for 127.0.0.1 at 2017-12-04 16:50:00 -0800
+Processing by BankSyncController#show_item as HTML
+  Parameters: {"item_id"=>"pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."user_id" = $1 AND "items"."item_id" = $2 LIMIT $3[0m  [["user_id", 1], ["item_id", "pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9"], ["LIMIT", 1]]
+  [1m[36mBankAccount Load (2.7ms)[0m  [1m[34mSELECT "bank_accounts".* FROM "bank_accounts" WHERE "bank_accounts"."item_id" = $1[0m  [["item_id", "pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9"]]
+  Rendering bank_sync/show_item.html.erb within layouts/menu
+  Rendered bank_sync/show_item.html.erb within layouts/menu (4.8ms)
+Completed 200 OK in 99ms (Views: 76.8ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/bank_sync/show_item?item_id=pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9" for 127.0.0.1 at 2017-12-04 16:50:30 -0800
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BankSyncController#show_item as HTML
+  Parameters: {"item_id"=>"pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."user_id" = $1 AND "items"."item_id" = $2 LIMIT $3[0m  [["user_id", 1], ["item_id", "pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9"], ["LIMIT", 1]]
+  [1m[36mBankAccount Load (7.9ms)[0m  [1m[34mSELECT "bank_accounts".* FROM "bank_accounts" WHERE "bank_accounts"."item_id" = $1[0m  [["item_id", "pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9"]]
+  Rendering bank_sync/show_item.html.erb within layouts/menu
+  Rendered bank_sync/show_item.html.erb within layouts/menu (9.1ms)
+Completed 200 OK in 1233ms (Views: 1053.9ms | ActiveRecord: 25.4ms)
+
+
+Started GET "/bank_sync/show_item?item_id=pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9" for 127.0.0.1 at 2017-12-04 16:51:43 -0800
+Processing by BankSyncController#show_item as HTML
+  Parameters: {"item_id"=>"pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."user_id" = $1 AND "items"."item_id" = $2 LIMIT $3[0m  [["user_id", 1], ["item_id", "pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9"], ["LIMIT", 1]]
+  [1m[36mBankAccount Load (0.9ms)[0m  [1m[34mSELECT "bank_accounts".* FROM "bank_accounts" WHERE "bank_accounts"."item_id" = $1[0m  [["item_id", "pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9"]]
+  Rendering bank_sync/show_item.html.erb within layouts/menu
+  Rendered bank_sync/show_item.html.erb within layouts/menu (5.6ms)
+Completed 200 OK in 94ms (Views: 81.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/bank_sync/show_item?item_id=pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9" for 127.0.0.1 at 2017-12-04 16:55:57 -0800
+Processing by BankSyncController#show_item as HTML
+  Parameters: {"item_id"=>"pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."user_id" = $1 AND "items"."item_id" = $2 LIMIT $3[0m  [["user_id", 1], ["item_id", "pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9"], ["LIMIT", 1]]
+  [1m[36mBankAccount Load (0.6ms)[0m  [1m[34mSELECT "bank_accounts".* FROM "bank_accounts" WHERE "bank_accounts"."item_id" = $1[0m  [["item_id", "pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9"]]
+  Rendering bank_sync/show_item.html.erb within layouts/menu
+  Rendered bank_sync/show_item.html.erb within layouts/menu (18.1ms)
+Completed 200 OK in 149ms (Views: 125.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/bank_sync/show_account_details?bank_id=12&institution_name=TD+Bank" for 127.0.0.1 at 2017-12-04 16:56:02 -0800
+Processing by BankSyncController#show_account_details as HTML
+  Parameters: {"bank_id"=>"12", "institution_name"=>"TD Bank"}
+  [1m[36mBankAccount Load (0.9ms)[0m  [1m[34mSELECT  "bank_accounts".* FROM "bank_accounts" WHERE "bank_accounts"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering bank_sync/show_account_details.html.erb within layouts/menu
+  Rendered bank_sync/show_account_details.html.erb within layouts/menu (0.9ms)
+Completed 200 OK in 97ms (Views: 90.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 17:13:54 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:64)
+Processing by InputController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (1.2ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (14.8ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__744941889820686579_69818101074320 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__744941889820686579_69818101074320 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 7082ms (Views: 3466.2ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 17:14:01 -0800
+Processing by InputController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (1.9ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (28.2ms)
+Completed 200 OK in 338ms (Views: 317.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.self-cdc8eeaf11b0c6c1d605865aca86390e2d3c0dee79a15b50b4f35f1ad083cafc.css?body=1" for 127.0.0.1 at 2017-12-04 17:14:01 -0800
+Started GET "/bank_sync/index" for 127.0.0.1 at 2017-12-04 17:14:05 -0800
+Processing by BankSyncController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering bank_sync/index.html.erb within layouts/menu
+  Rendered bank_sync/index.html.erb within layouts/menu (2.0ms)
+Completed 200 OK in 163ms (Views: 104.2ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/bank_sync/show_item?item_id=pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9" for 127.0.0.1 at 2017-12-04 17:14:09 -0800
+Processing by BankSyncController#show_item as HTML
+  Parameters: {"item_id"=>"pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."user_id" = $1 AND "items"."item_id" = $2 LIMIT $3[0m  [["user_id", 1], ["item_id", "pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9"], ["LIMIT", 1]]
+  [1m[36mBankAccount Load (1.3ms)[0m  [1m[34mSELECT "bank_accounts".* FROM "bank_accounts" WHERE "bank_accounts"."item_id" = $1[0m  [["item_id", "pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9"]]
+  Rendering bank_sync/show_item.html.erb within layouts/menu
+  Rendered bank_sync/show_item.html.erb within layouts/menu (5.1ms)
+Completed 200 OK in 194ms (Views: 124.9ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/bank_sync/show_account_details?bank_id=12&institution_name=TD+Bank" for 127.0.0.1 at 2017-12-04 17:14:12 -0800
+Processing by BankSyncController#show_account_details as HTML
+  Parameters: {"bank_id"=>"12", "institution_name"=>"TD Bank"}
+  [1m[36mBankAccount Load (3.9ms)[0m  [1m[34mSELECT  "bank_accounts".* FROM "bank_accounts" WHERE "bank_accounts"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering bank_sync/show_account_details.html.erb within layouts/menu
+  Rendered bank_sync/show_account_details.html.erb within layouts/menu (1.5ms)
+Completed 200 OK in 150ms (Views: 134.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/bank_sync/show_account_details?bank_id=12&institution_name=TD+Bank" for 127.0.0.1 at 2017-12-04 17:15:34 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:64)
+Processing by BankSyncController#show_account_details as HTML
+  Parameters: {"bank_id"=>"12", "institution_name"=>"TD Bank"}
+  [1m[36mBankAccount Load (3.3ms)[0m  [1m[34mSELECT  "bank_accounts".* FROM "bank_accounts" WHERE "bank_accounts"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering bank_sync/show_account_details.html.erb within layouts/menu
+  Rendered bank_sync/show_account_details.html.erb within layouts/menu (1.4ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__744941889820686579_69818125082220 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__744941889820686579_69818125082220 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 3060ms (Views: 2988.1ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/assets/application.self-2f7ae6c27eca313780fc02518f1a2acf5ea9797f2593ee9d8fab27525e5cd459.css?body=1" for 127.0.0.1 at 2017-12-04 17:15:37 -0800
+Started GET "/bank_sync/show_account_details?bank_id=12&institution_name=TD+Bank" for 127.0.0.1 at 2017-12-04 17:16:29 -0800
+Processing by BankSyncController#show_account_details as HTML
+  Parameters: {"bank_id"=>"12", "institution_name"=>"TD Bank"}
+  [1m[36mBankAccount Load (0.8ms)[0m  [1m[34mSELECT  "bank_accounts".* FROM "bank_accounts" WHERE "bank_accounts"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering bank_sync/show_account_details.html.erb within layouts/menu
+  Rendered bank_sync/show_account_details.html.erb within layouts/menu (1.4ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__744941889820686579_69818129084500 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__744941889820686579_69818129084500 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 2112ms (Views: 2105.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-c5d3542a9338e5ef5228c00ea97a7b082911408ac9bc8c1a8d0b5194c45d99ec.css?body=1" for 127.0.0.1 at 2017-12-04 17:16:31 -0800
+Started GET "/bank_sync/show_account_details?bank_id=12&institution_name=TD+Bank" for 127.0.0.1 at 2017-12-04 17:17:46 -0800
+Processing by BankSyncController#show_account_details as HTML
+  Parameters: {"bank_id"=>"12", "institution_name"=>"TD Bank"}
+  [1m[36mBankAccount Load (0.8ms)[0m  [1m[34mSELECT  "bank_accounts".* FROM "bank_accounts" WHERE "bank_accounts"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering bank_sync/show_account_details.html.erb within layouts/menu
+  Rendered bank_sync/show_account_details.html.erb within layouts/menu (1.2ms)
+Completed 200 OK in 96ms (Views: 88.8ms | ActiveRecord: 0.8ms)
+
+

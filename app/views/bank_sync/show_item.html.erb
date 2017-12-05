@@ -4,8 +4,8 @@
 </p>
 <h1><%= @institution_name%></h1>
 <h1> Total Account Balance: <%= @total_account_balance %></h1>
-<p> Created At: <%= @created_at %></p>
-<%= button_to "Update Bank Transactions", {controller: "bank_sync", action: "load_new_transactions", account_ids: @account_ids, access_token: @access_token} %>
+<p style="padding-left: 2.5%;"> Created At: <%= @created_at %></p>
+<div style="padding-left: 2.5%;"><%= button_to "Update Bank Transactions", {controller: "bank_sync", action: "load_new_transactions", account_ids: @account_ids, access_token: @access_token} %></div>
 
 
 <div class="table-container">

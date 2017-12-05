@@ -276,7 +276,7 @@ class BankSyncController < ApplicationController
     #params: bank_account id, institution_name
     @institution_name = params[:institution_name]
     this_acc = BankAccount.find(params[:bank_id])
-    @account_id = this_acc.account_id
+    #@account_id = this_acc.account_id
     @available_balance = this_acc.available_balance
     @current_balance = this_acc.current_balance
     @name = this_acc.name
