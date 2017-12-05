@@ -208,3 +208,20 @@ div.month-dropdown:hover button.month-dropdown-button {
 h1#income-history{
   text-align: center;
 }
+
+.incomes-header td {
+  border-style: none;
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: normal;
+  //text-align: left;
+  //margin-left: 50px;
+  text-align: center;
+  }
+
+//media queries for mobile view
+@media screen and (max-width: 970px) {
+  div.history-center {
+    width: 95%;
+  }
+}

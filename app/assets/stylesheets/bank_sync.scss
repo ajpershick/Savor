@@ -2,12 +2,33 @@
 
 button#link-button {
   margin: 2.5%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 20px;
+}
+
+input#update-bank-transactions {
+  //margin: 2.5%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 20px;
 }
 
 
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+h1.bank-sync-title {
+
+  font-family: Helvetica;
+  font-size: 40px;
+  text-align: center;
+  color: #95a5a6;
+  display: block;
+  line-height: 40px; //added
+  margin: 2.5%;
+}
+
+h1.total-account-balance {
+  line-height: 25px;
+}
 
 
 li.bank-accounts-li {
@@ -16,7 +37,8 @@ li.bank-accounts-li {
   width: 95%;
   height: 100px;
   margin: 2.5%;
-  background-color: #98e7f2;
+  //background-color: #98e7f2;
+  background-color: #39bf75;
   //resize: vertical;
   //overflow: auto;
   text-align: center;
@@ -41,16 +63,44 @@ div.bank-account-container {
     padding-bottom: 33px;
 }
 
+a.item {
+  text-decoration: none !important;
+}
+
+table.show-account-details {
+  border: none;
+  padding: 5%;
+  margin: 5%;
+}
+
+td.show-account-details {
+  text-align: left;
+  font-family: Helvetica;
+  font-size: 26px;
+  //width: 100%;
+  //margin-bottom: 20px;
+  color: #7f8c8d;
+  //margin-left: 5%;
+  line-height: 25px;
+}
+
+tr.show-account-details {
+  border-bottom-style: solid;
+  border-bottom-style: black;
+  padding-bottom: 10px;
+}
+
 //COPIED FROM ACCOUNTS.CSS
 
 div.banksync-center {
   margin: auto;
-  width: 100%;
+  width: 800px;
   background-color: #FFFFFF;
 }
 
 h1.account-header {
-  text-align: center
+  text-align: center;
+  line-height: 25px;
 }
 
 .green {
@@ -74,11 +124,27 @@ div.account-info {
   text-align: left;
   font-family: Helvetica;
   font-size: 26px;
-  width: 45%;
+  width: 100%;
   float: left;
   margin-bottom: 20px;
   color: #7f8c8d;
   margin-left: 5%;
+  line-height: 25px;
+  display: block;
+}
+
+span.account-info {
+  float:right;
+  display: inline-block;
+  font-family: Helvetica;
+  font-size: 26px;
+  //width: 100%;
+  //float: left;
+  //margin-bottom: 20px;
+  color: #7f8c8d;
+  //margin-left: 5%;
+  line-height: 25px;
+  margin-right: 10%;
 }
 
 a.account-edit-button, a.account-password-button {
@@ -129,4 +195,16 @@ input.account-password-button {
   border: 0;
   background-color: #3598DC;
   color: #FFFFFF;
+}
+
+@media screen and (max-width: 800px) {
+  div.banksync-center {
+    margin: auto;
+    width: 100%;
+    background-color: #FFFFFF;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
 }

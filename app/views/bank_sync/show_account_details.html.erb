@@ -6,8 +6,8 @@
 <h1><%= @official_name%></h1> -->
 <!-- <p>account_id: <%=@account_id%></p> -->
 <div class="banksync-center">
-   <h1 class="account-header"><%=@institution_name%></h1>
-   <h1 class="account-header"><%=@official_name%></h1>
+   <h1 class="bank-sync-title"><%=@institution_name%></h1>
+   <h1 class="account-header"><%=@official_name%></h1><br><br>
 <!-- <p>Current Account Balance: <%=@current_balance%></p>
 <p>Name: <%=@name%></p>
 <p>Last Four Digits of Account ID: <%=@mask%></p>
@@ -16,13 +16,47 @@
 <p>Created at: <%=@created_at%></p>
 <p>Updated at: <%=@updated_at%></p> -->
 
-  <div class="account-info">Current Account Balance:</div><div class="account-info"><%=@current_balance%></div>
-  <div class="account-info">Name:</div><div class="account-info"><%=@name%></div>
-  <div class="account-info">Last Four Digits of Account ID:</div><div class="account-info"><%=@mask%></div>
-  <div class="account-info">Account Type:</div><div class="account-info"><%=@account_type%></div>
-  <div class="account-info">Account Subtype:</div><div class="account-info"><%=@account_subtype%></div>
-  <div class="account-info">Created at:</div><div class="account-info"><%=@created_at%></div>
-  <div class="account-info">Updated at:</div><div class="account-info"><%=@updated_at%></div>
+  <!-- <div class="account-info">Current Account Balance:<span class="account-info">$ <%=@current_balance%></span></div>
+  <div class="account-info">Name:<span class="account-info"><%=@name%></span></div>
+  <div class="account-info">Last Four Digits of Account ID:<span class="account-info"><%=@mask%></span></div>
+  <div class="account-info">Account Type:<span class="account-info"><%=@account_type%></span></div>
+  <div class="account-info">Account Sub Type:<span class="account-info"><%=@account_subtype%></span></div>
+  <div class="account-info">Created at:<span class="account-info"><%=@created_at%></span></div>
+  <div class="account-info">Updated at:<span class="account-info"><%=@updated_at%></span></div> -->
+
+<table class="show-account-details">
+  <tbody>
+    <tr class="show-account-details">
+      <td class="show-account-details">Current Account Balance:</td>
+      <td class="show-account-details">$ <%="%0.2f" % @current_balance%></td>
+    </tr>
+    <tr class="show-account-details">
+      <td class="show-account-details">Name:</td>
+      <td class="show-account-details"><%=@name%></td>
+    </tr>
+    <tr class="show-account-details">
+      <td class="show-account-details">Last Four Digits of Account ID:</td>
+      <td class="show-account-details"><%=@mask%></td>
+    </tr>
+    <tr class="show-account-details">
+      <td class="show-account-details">Account Type:</td>
+      <td class="show-account-details"><%=@account_type%></td>
+    </tr>
+    <tr class="show-account-details">
+      <td class="show-account-details">Account Sub Type:</td>
+      <td class="show-account-details"><%=@account_subtype%></td>
+    </tr>
+    <tr class="show-account-details">
+      <td class="show-account-details">Created at:</td>
+      <td class="show-account-details"><%=@created_at%></td>
+    </tr>
+    <tr class="show-account-details">
+      <td class="show-account-details">Updated at:</td>
+      <td class="show-account-details"><%=@updated_at%></td>
+    </tr>
+
+  </tbody>
+</table>
 </div>
 
 

@@ -1,16 +1,21 @@
 // Place all the styles related to the Input controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  min-width: 384px;
+}
+
 div.input-center {
   width: 75%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #FFFFFF;
+  //background-color: #FFFFFF;
+  background-color: transparent;
   text-align: center;
 }
 
 div.income-center {
-  width: 30%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   background-color: #FFFFFF;
@@ -59,6 +64,8 @@ div.transaction-location-container {
   margin-top: 10px;
   overflow: auto;
   text-align: center;
+  min-height: 52px;
+  min-width: 356px;
 }
 
 input.transaction-amount-input {
@@ -75,6 +82,7 @@ input.transaction-name-input, input.transaction-date-input {
 input.transaction-location-input {
   width: 700px;
   padding-left: 10px;
+  min-width: 290px;
 }
 
 input.transaction-category-input {
@@ -102,6 +110,7 @@ div.transaction-icon-container {
 div.transaction-submit-container {
   width: 65%;
   margin: auto;
+  max-width: 356px;
 }
 
 input.transaction-submit-button {
@@ -140,6 +149,11 @@ table.transaction-category-table {
   border-width: 5px;
   border-color: #FFFFFF;
   outline: none;
+  //overflow-x: scroll;
+}
+
+div.transaction-table-container {
+  overflow-x: scroll;
 }
 
 table.transaction-category-table:focus {
@@ -341,40 +355,130 @@ button#balance-edit {
 }
 
 //media queries for mobile view
-@media screen and (max-width: 380px) {
-  div.transaction-input-container {
-   width: 95%;
-  }
+// @media screen and (max-width: 380px) {
+//   div.transaction-input-container {
+//    width: 95%;
+//   }
+//
+//   input.transaction-amount-input, input.transaction-name-input {
+//     width: 200px;
+//   }
+//
+//   input.income-amount-input, input.income-name-input {
+//     width: 100%;
+//     border-left-width: 2px;
+//   }
+//
+//   div.income-input-container {
+//     width: 95%;
+//     text-align: center;
+//     position: relative;
+//   }
+//
+//   input.income-submit-button {
+//     width: 95%;
+//   }
+//
+//   div.income-icon-container {
+//     display: none;
+//   }
+//
+//   div.income-valid {
+//     background-color: #27ae60;
+//   }
+//
+//   div.income-invalid {
+//     background-color: #e74c3c;
+//   }
+//
+// }
 
-  input.transaction-amount-input, input.transaction-name-input {
-    width: 200px;
-  }
-
-  input.income-amount-input, input.income-name-input {
+@media screen and (max-width: 970px) {
+  div.location-input-container {
     width: 100%;
-    border-left-width: 2px;
   }
 
-  div.income-input-container {
-    width: 95%;
-    text-align: center;
-    position: relative;
+  input.transaction-location-input {
+    width: 650px;
   }
 
-  input.income-submit-button {
-    width: 95%;
+  div.input-center {
+    width: 100%;
+    min-width: 390px;
   }
 
-  div.income-icon-container {
-    display: none;
+  div.transaction-location-container {
+    height: 52px;
+    width: 716px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  input.transaction-location-input {
+    width: 600px;
   }
 
-  div.income-valid {
-    background-color: #27ae60;
+  div.transaction-location-container {
+    width: 674px;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  input.transaction-location-input {
+    width: 550px;
   }
 
-  div.income-invalid {
-    background-color: #e74c3c;
+  div.transaction-location-container {
+    width: 624px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  input.transaction-location-input {
+    width: 500px;
   }
 
+  div.transaction-location-container {
+    width: 574px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  input.transaction-location-input {
+    width: 450px;
+  }
+
+  div.transaction-location-container {
+    width: 524px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  input.transaction-location-input {
+    width: 400px;
+  }
+
+  div.transaction-location-container {
+    width: 474px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  input.transaction-location-input {
+    width: 350px;
+  }
+
+  div.transaction-location-container {
+    width: 424px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  input.transaction-location-input {
+    width: 290px;
+  }
+
+  div.transaction-location-container {
+    width: 356px;
+  }
 }
