@@ -12,12 +12,11 @@
   </thead>
 
   <tbody>
-      <% @incomes.each do |user| %>
+      <% @incomes_sorted.each do |user| %>
         <tr>
-          <td><%= user.created_at %></td>
-          <td>$ <%= "%.2f" % user.income_amount %></td>
-          <td><%= user.source %></td>
-
+          <td><center><%= user.created_at %></center></td>
+          <td><center>$ <%= "%.2f" % user.income_amount %></center></td>
+          <td><center><%= user.source %></center></td>
         </tr>
       <% end %>
   </tbody>

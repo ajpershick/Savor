@@ -125,7 +125,8 @@ class HistoryController < ApplicationController
 
   def income
     user = User.find(session[:user_id])
-    @incomes = user.incomes
+    #@incomes_sorted = user.incomes.sort_by {|income| income.created_at}
+    @incomes_sorted = user.incomes.order(created_at: :desc, source: :desc)
   end
 
 end

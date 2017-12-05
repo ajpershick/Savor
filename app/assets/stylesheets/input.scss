@@ -273,6 +273,65 @@ div.income-submit-container {
   text-align: center;
 }
 
+//account balance block -start
+div.element-container {
+  position: relative;
+  display: block;
+  width: 95%;
+  height: 300px;
+  margin: 2.5%;
+  background-color: transparent;
+  //resize: vertical;
+  overflow: auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+div#element1 {
+  width: 100%;
+  height: 100%;
+  background-color: #bee2cf;
+}
+
+p.home-headers {
+  float: left;
+  line-height: auto;
+  display: block;
+  padding: 0;
+  margin: 10px;
+  font-size: 15px;
+  position: absolute;
+}
+
+div.balance-container {
+  height: 60%;
+  width: 100%;
+  background-color: transparent;
+  //margin-top: 20%;
+  //margin-bottom: 20%;
+  position: relative;
+  top: 20%;
+  text-align: middle;
+  vertical-align:middle;
+}
+
+p#home-account-balance {
+  margins: 0;
+  font-size: 35px;
+  display: inline-block;
+  bottom: 5%;
+  //position: absolute;
+  position:inherit;
+  text-align: left;
+}
+
+button#balance-edit {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: none;
+}
+
 //media queries for mobile view
 @media screen and (max-width: 380px) {
   div.transaction-input-container {
