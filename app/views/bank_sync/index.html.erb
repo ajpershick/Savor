@@ -8,7 +8,7 @@
   <%=@message%>
   <i id="close-message" class="fa fa-times" aria-hidden="true" onclick="closeMessage()"></i>
 </p>
-<h1>Linked Institutions</h1>
+<h1 class="bank-sync-title">Linked Institutions</h1>
 
 <button id="link-button">Link New Institution</button>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
@@ -101,7 +101,7 @@
   <!-- Use an erb for-loop to loop through elements and create list -->
   <% pos = 0 %>
   <% @items.each do |i| %> <!-- loop through the user's items and create a link to the item -->
-    <li class ="bank-accounts-li"><div class="bank-account-container"><%= link_to i["institution_name"], controller: "bank_sync", action: "show_item", item_id: @item_id_array[pos] %></div></li>
+    <li class ="bank-accounts-li"><div class="bank-account-container"><%= link_to i["institution_name"], {controller: "bank_sync", action: "show_item", item_id: @item_id_array[pos]}, class: "item" %></div></li>
     <% pos+=1 %>
   <% end %>
 <!--
