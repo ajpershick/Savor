@@ -1,0 +1,202 @@
+<br></br>
+<div class="chart-center">
+
+  <% if !@empty then %>
+
+  <%= link_to "", {controller: "charts", action: "index", year: @selected_year, month: @selected_month, categories: @enabled_categories, chart: @chart_type}, visisble: true, id:"hidden-link" %>
+
+  <div class="chart-dropdown" id="yeardropdown">
+    <button class="chart-dropdown-button"><%= @selected_year.to_s %></button>
+    <div class="chart-dropdown-content">
+      <% @year_range.each do |year| %>
+        <%
+        if year == @selected_year then
+          next
+        end
+        %>
+        <%= link_to year, {controller: "charts", action: "index", year: year, month: @selected_month, categories: @enabled_categories, chart: @chart_type}%>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="chart-dropdown" id="refresh-button">
+    <button class="chart-dropdown-button" onmouseup="refreshPage()">
+      <span class="chart-category-icon fa fa-refresh" aria-hidden="true"></span>
+    </button>
+
+  </div>
+
+  <div class="chart-dropdown" id="monthdropdown">
+    <button class="chart-dropdown-button"><%= (@selected_month == "0") ? "Display entire year" : Date::MONTHNAMES[@selected_month.to_i] %></button>
+    <div class="chart-dropdown-content">
+      <% (0..12).each do |month| %>
+        <%
+        if month == 0 then
+          current_month = "Display entire year"
+        else
+          current_month = Date::MONTHNAMES[month]
+        end
+
+        if month == @selected_month.to_i then
+          next
+        end
+        %>
+        <%= link_to current_month, {controller: "charts", action: "index", year: @selected_year, month: month, categories: @enabled_categories, chart: @chart_type}%>
+      <% end %>
+    </div>
+  </div>
+
+
+  <div class="chart-categories">
+
+    <table class="chart-category-table">
+      <% (0..@category_order.length - 1).each do |index| %>
+
+        <% if index % 12 == 0 then %>
+          <tr class="chart-category-row">
+        <% end %>
+
+        <td class="chart-icon-data" title="<%= @category_order[index].capitalize %>">
+
+          <div
+            class="<%= 'chart-category-icon-container' + ((@binary[index] == '1') ? '' : ' disabled-category') %>"
+            id="category-type-<%= @category_order[index] %>"
+            style="background-color: <%= (@binary[index] == '1') ? @categories[@category_order[index]][:color] : '#bdc3c7' %>"
+            data-category="<%= @category_order[index] %>"
+            data-icon="<%= @categories[@category_order[index]][:icon] %>"
+            data-color="<%= @categories[@category_order[index]][:color] %>"
+            data-binary="<%= 2 ** (@category_order.length - 1 - index) %>"
+            onmouseover="conditionalLightenUp(this)"
+            onmouseout="conditionalRevertColor(this)"
+            onmouseup="toggleCategory(this)"
+          >
+
+            <span class="chart-category-icon fa fa-<%= @categories[@category_order[index]][:icon]%> " aria-hidden="true"></span>
+
+          </div>
+
+        </td>
+
+        <% if index == 11 then %>
+            <td class="chart-icon-data" title="Enable all">
+
+              <div
+                class="chart-category-icon-container"
+                id="category-type-disable"
+                style="background-color: #27ae60"
+                data-category="enable"
+                data-icon="times"
+                data-color="#27ae60"
+                onmouseover="conditionalLightenUp(this)"
+                onmouseout="conditionalRevertColor(this)"
+                onmouseup="enableAll()"
+              >
+
+                <span class="chart-category-icon fa fa-check" aria-hidden="true"></span>
+
+              </div>
+            </td>
+          </tr>
+        <% end %>
+
+        <% if index == 23 then %>
+            <td class="chart-icon-data" title="Disable all">
+
+              <div
+                class="chart-category-icon-container"
+                id="category-type-disable"
+                style="background-color: #e74c3c"
+                data-category="disable"
+                data-icon="times"
+                data-color="#e74c3c"
+                onmouseover="conditionalLightenUp(this)"
+                onmouseout="conditionalRevertColor(this)"
+                onmouseup="disableAll()"
+              >
+
+                <span class="chart-category-icon fa fa-times" aria-hidden="true"></span>
+
+              </div>
+            </td>
+          </tr>
+        <% end %>
+
+
+      <% end %>
+
+    </table>
+
+  </div>
+
+  <div class="chart-type-container">
+    <button class="<%= 'chart-type-button' + ((@chart_type == 'pie') ? ' chart-type-selected' : '') %>" id="pie-chart-button" title="Pie Chart" onclick="selectChart(this)">
+      <span class="chart-category-icon fa fa-pie-chart" aria-hidden="true"></span>
+    </button><!--
+
+    --><button class="<%= 'chart-type-button' + ((@chart_type == 'line') ? ' chart-type-selected' : '') %>" id="line-chart-button" title="Line Chart" onclick="selectChart(this)">
+      <span class="chart-category-icon fa fa-line-chart" aria-hidden="true"></span>
+    </button><!--
+
+    --><button class="<%= 'chart-type-button' + ((@chart_type == 'table') ? ' chart-type-selected' : '') %>" title="Stats Table" id="stats-table-button" onclick="selectChart(this)">
+      <span class="chart-category-icon fa fa-table" aria-hidden="true"></span>
+    </button>
+
+  </div>
+  <br></br>
+
+<div id="pie-chart-container" style="<%= 'display: ' + ((@chart_type == 'pie') ? 'block' : 'none') %>; width:100%; height: 500px" >
+  <%= pie_chart @pie_data, @pie_options %>
+</div>
+
+<div id="line-chart-container" style="<%= 'display: ' + ((@chart_type == 'line') ? 'block' : 'none') %>; width:100%; height: 500px">
+<%= line_chart @line_data, @line_options %>
+</div>
+
+<div id="stats-table-container" style="<%= 'display: ' + ((@chart_type == 'table') ? 'block' : 'none') %>">
+
+  <table id="stats-table">
+
+    <tr>
+      <th></th>
+      <th>Total amount</th>
+      <th><%= "Average per " + (@year_view ? "month" : "day") %></th>
+      <th><%= "Max in a " + (@year_view ? "month" : "day") %></th>
+      <th>% of total</th>
+    </tr>
+
+    <%
+    (1..@category_stats.length - 1).each do |index|
+    %>
+      <tr>
+        <td class="chart-icon-data" title="<%= @category_stats[index][:category].capitalize %>">
+
+          <div
+            class="<%= 'chart-table-icon-container' %>"
+            style="background-color: <%= @categories[@category_stats[index][:category]][:color] %>"
+          >
+
+            <span class="chart-category-icon fa fa-<%= @categories[@category_stats[index][:category]][:icon]%> " aria-hidden="true"></span>
+
+          </div>
+
+        </td>
+        <td><%= number_to_currency(@category_stats[index][:total]) %></td>
+        <td><%= number_to_currency(@category_stats[index][:total] / (@year_view ? 12 : @total_days)) %></td>
+        <td><%= number_to_currency(@category_stats[index][:max]) %></td>
+        <td><%= (@category_totals["total"] == 0) ? "0%" : number_to_percentage(@category_stats[index][:total] / @category_totals["total"] * 100, precision: 2) %></td>
+      </tr>
+
+    <% end %>
+
+  </table>
+
+  <% else %>
+    <h1 class="chart-empty">No transactions found</h1>
+    <h1 class="chart-empty">Add transactions using the input tab, or by syncing with Plaid</h1>
+  <% end %>
+
+</div>
+
+<br></br>
+
+</div>

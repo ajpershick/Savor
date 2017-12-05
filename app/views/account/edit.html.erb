@@ -1,32 +1,84 @@
-<h1>Edit Account</h1>
+<%= javascript_tag "usernames= #{@usernames.to_json.html_safe};" %>
 
-  <p><%=@message%></p>
-<div class="material-container">
-  <div class="admin_class">
+<p class="message green" id="message">
+  <%=@message%>
+  <i id="close-message" class="fa fa-times" aria-hidden="true" onclick="this.parentNode.innerHTML = ''"></i>
+</p>
 
-  <%= form_tag account_make_edit_path do %>
-    <label for="username">Username: </label>
-      <div class="field"><%= text_field_tag :username, @username%></div>
-    <label for="first_name">First Name: </label>
-      <div class="field"><%= text_field_tag :first_name, @first_name%></div>
-    <label for="email">Email: </label>
-      <div class="field"><%= text_field_tag :email, @email%></div>
-    <label for="password">Please enter your password to validate edits: </label>
-      <div class="field"><%= password_field_tag :password%></div>
+<p class="message red" id="message">
+  <%=@error%>
+  <i id="close-message" class="fa fa-times" aria-hidden="true" onclick="this.parentNode.innerHTML = ''"></i>
+</p>
 
 
-    <%= hidden_field_tag :userID, @id %>
 
-    <%= submit_tag "Submit", data: {confirm: "Are you sure?"}%>
+<div class="account-center">
+  <br></br>
+  <h1 class="account-header">Edit Account</h1>
+  <br></br>
+
+  <%= form_tag({controller: "account", action: "make_edit"}, method: "post", onsubmit:"return verify_edit('" + @username + "')") do %>
+
+
+    <div class="entry-input-container">
+
+      <div class="entry-icon-container entry-valid">
+        <div class="entry-tooltip">
+          <span id="entry-tooltip-username" class="entry-hidden"></span>
+        </div>
+        <img id="username-icon" src="<%= asset_path("username.svg") %>" class="entry-icon"></img>
+      </div>
+
+      <%= text_field_tag(:username, @username, id: "entry-input-username", class: "entry-input", placeholder: "Username", onchange: "validateExisting(this, '" + @username + "')", onkeyup: "delayedValidateExisting(this, '" + @username + "')") %>
+
+    </div>
+
+    <div class="entry-input-container">
+
+      <div class="entry-icon-container entry-valid">
+        <div class="entry-tooltip">
+          <span id="entry-tooltip-name" class="entry-hidden"></span>
+        </div>
+        <img id="name-icon" src="<%= asset_path("username.svg") %>" class="entry-icon"></img>
+      </div>
+
+      <%= text_field_tag(:first_name, @first_name, id: "entry-input-name", class: "entry-input", placeholder: "First Name", onchange: "validateInput(this, 'name')", onkeyup: "delayedValidateInput(this, 'name')") %>
+
+    </div>
+
+    <div class="entry-input-container">
+
+      <div class="entry-icon-container entry-valid">
+        <div class="entry-tooltip">
+          <span id="entry-tooltip-email" class="entry-hidden"></span>
+        </div>
+        <img id="email-icon" src="<%= asset_path("email.svg") %>" class="entry-icon"></img>
+      </div>
+
+      <%= text_field_tag(:email, @email, id: "entry-input-email", class: "entry-input", placeholder: "Email", onchange: "validateInput(this, 'email')", onkeyup: "delayedValidateInput(this, 'email')") %>
+
+    </div>
+
+    <div class="entry-input-container">
+
+      <div class="entry-icon-container">
+        <div class="entry-tooltip">
+          <span id="entry-tooltip-password" class="entry-hidden"></span>
+        </div>
+        <img id="password-icon" src="<%= asset_path("password.svg") %>" class="entry-icon"></img>
+      </div>
+
+      <%= password_field_tag(:password, nil, id: "entry-input-password", class: "entry-input", placeholder: "Enter password to confirm changes", onchange: "validateInput(this, 'password')", onkeyup: "delayedValidateInput(this, 'password')") %>
+
+    </div>
+
+    <div class="entry-input-container">
+      <input type="submit" name="commit" value="Save changes" id="entry-signup-button" class="entry-submit-button"></input>
+    </div>
+
+    <br></br>
+
   <% end %>
 
-
   </div>
-  <!--
-  <p>Current User ID = <%=@id%></p>
-  <p>Username = <%=@username%></p>
-  <p>First Name = <%=@first_name%></p>
-  <p>Email = <%=@email%></p>
-  -->
-
-<div class="material-container">
+</div>

@@ -2,7 +2,90 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+div.account-center {
+  margin: auto;
+  width: 30%;
+  background-color: #FFFFFF;
+}
 
-div.material-container {
-  margin: 2.5%;
+h1.account-header {
+  text-align: center
+}
+
+.green {
+  background-color: #27ae60;
+  color: white;
+}
+
+.red {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#account-message {
+  background-color: #27ae60;
+  color: #FFFFFF;
+  position: absolute;
+  width: 100%;
+}
+
+div.account-info {
+  text-align: left;
+  font-family: Helvetica;
+  font-size: 26px;
+  width: 45%;
+  float: left;
+  margin-bottom: 20px;
+  color: #7f8c8d;
+  margin-left: 5%;
+}
+
+a.account-edit-button, a.account-password-button {
+  font-family: Helvetica;
+  font-size: 18px;
+  color: #FFFFFF;
+  text-decoration: none;
+  width: 100%;
+  line-height: 35px;
+  display: inline-block;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+a.account-edit-button {
+  background-color: #3498db;
+}
+
+a.account-edit-button:hover {
+  background-color: #2980b9;
+}
+
+a.account-password-button {
+  background-color: #2ecc71;
+
+}
+
+a.account-password-button:hover {
+  background-color: #27ae60;
+}
+
+a.account-edit-button:visited, a.account-edit-button:active, a.account-password-button:visited, a.account-password-button:active {
+  color: #FFFFFF;
+}
+
+.button:hover, .link-heading:hover {
+  background-color: #4386FA;
+  color: #FFFFFF;
+}
+
+input.account-password-button {
+  font-family: Helvetica;
+  font-size: 18px;
+  width: 100%;
+  height: 50px;
+  border: 0;
+  background-color: #3598DC;
+  color: #FFFFFF;
 }

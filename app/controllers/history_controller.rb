@@ -15,9 +15,9 @@ class HistoryController < ApplicationController
       "recreation"    => {icon: "futbol-o",       color: "#16a085"},
       "transit"       => {icon: "bus",            color: "#59ABE3"},
       "utilities"     => {icon: "bolt",           color: "#f39c12"},
-      "maintenance"   => {icon: "wrench",         color: "#7f8c8d"},
+      "services"      => {icon: "cog",            color: "#7f8c8d"},
       "medical"       => {icon: "medkit",         color: "#c0392b"},
-      "debt"          => {icon: "university",     color: "#bdc3c7"},
+      "debt"          => {icon: "university",     color: "#95a5a6"},
       "luxury"        => {icon: "diamond",        color: "#9b59b6"},
       "education"     => {icon: "book",           color: "#2ecc71"},
       "pets"          => {icon: "paw",            color: "#795548"},
@@ -25,14 +25,13 @@ class HistoryController < ApplicationController
       "supplies"      => {icon: "paperclip",      color: "#F4D03F"},
       "housing"       => {icon: "home",           color: "#26A65B"},
       "charity"       => {icon: "heart",          color: "#E08283"},
-      "savings"       => {icon: "usd",            color: "#1E824C"},
+      "banking"       => {icon: "usd",            color: "#1E824C"},
       "travel"        => {icon: "plane",          color: "#e67e22"},
       "personal care" => {icon: "bath",           color: "#947CB0"},
-      "taxes"         => {icon: "envelope-open-o",color: "#d35400"},
+      "electronics"   => {icon: "camera",         color: "#d35400"},
       "miscellaneous" => {icon: "thumb-tack",     color: "#2c3e50"},
+      "total"         => {icon: "calculator",     color: "#1d1d1d"},
     }
-
-
 
     if params[:order].blank? then
       @order = "latest"
@@ -111,6 +110,11 @@ class HistoryController < ApplicationController
       @transaction_days.reverse!
     end
 
+    @transaction_days.each do |day|
+      day[:transactions].sort!{|x, y| x.created_at <=> y.created_at}
+      if @order == "latest" then day[:transactions].reverse! end
+    end
+
     @total_amount = 0
     @total_items = 0
 
@@ -125,8 +129,10 @@ class HistoryController < ApplicationController
   end
 
   def income
-    @user = User.find(session[:user_id])
-    @incomes = @user.incomes
+    user = User.find(session[:user_id])
+    #@incomes_sorted = user.incomes.sort_by {|income| income.created_at}
+    @incomes_sorted = user.incomes.order(created_at: :desc, source: :desc)
+    @empty = (@incomes_sorted == nil)
   end
 
 end

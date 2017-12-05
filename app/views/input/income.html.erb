@@ -4,36 +4,33 @@
   <i id="close-message" class="fa fa-times" aria-hidden="true" onclick="closeMessage()"></i>
 </p>
 
-<div class="center">
+<div class="income-center">
 
   <h1 class="transaction-title">Cash Income Input</h1>
 
   <%= form_tag({controller: "input", action: "create_income"}, method: "post", id:"income-form", onsubmit:"return verifyIncome()") do %>
 
-  <div class="income-input-container">
-    <div class="income-icon-container">
-      <i class="fa fa-usd transaction-icon"></i>
+    <div class="transaction-input-container">
+      <div class="transaction-icon-container">
+        <i class="fa fa-usd transaction-icon"></i>
+      </div>
+      <%= text_field_tag(:amount, "" , class: "transaction-amount-input", placeholder: "0.00", onkeydown: "if (event.which === 13) return false", onkeyup: "validateIncome(event.which, this)", autofocus: true, autocomplete: "off") %>
     </div>
-    <%= text_field_tag(:amount, "" , class: "income-amount-input", placeholder: "0.00", onkeydown: "if (event.which === 13) return false", onkeyup: "validateAmount(event.which, this)", autofocus: true) %>
-  </div>
 
 
-  <div class="income-input-container">
-    <div class="income-icon-container">
-      <i class="fa fa-handshake-o"></i>
-    </div>
-    <%= text_field_tag(:source, "" , class: "income-name-input", placeholder: "Source") %>
-  </div>
-
-<br>
-<br>
-
-    <div class="income-submit-container">
-      <input type="submit" name="commit" value="Save" id="entry-signup-button" class="income-submit-button"></input>
+    <div class="transaction-input-container">
+      <div class="transaction-icon-container">
+        <i class="fa fa-handshake-o transaction-icon"></i>
+      </div>
+      <%= text_field_tag(:source, "" , class: "transaction-name-input", placeholder: "Source", onkeydown: "if (event.which === 13) return false", onkeyup: "validateSource(event.which, this)", autofocus: true, autocomplete: "off") %>
     </div>
 
     <br></br>
 
-    <%end%>
+    <div class="transaction-submit-container">
+      <input type="submit" name="commit" value="Save transaction" id="entry-signup-button" class="transaction-submit-button"></input>
+    </div>
+
+  <%end%>
 
 </div>

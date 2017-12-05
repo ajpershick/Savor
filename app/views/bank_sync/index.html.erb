@@ -1,5 +1,112 @@
-<h1>BankSync#index</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
-<!-- remove these later, for testing purposes only -->
-<p>Access Token = <%=@access_token%></p>
-<p>Item ID = <%=@item_id%></p>
+
+<p class="message" id="message">
+  <%=@message%>
+  <i id="close-message" class="fa fa-times" aria-hidden="true" onclick="closeMessage()"></i>
+</p>
+<h1>Linked Institutions</h1>
+
+<button id="link-button">Link New Institution</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+<script type="text/javascript">
+(function($) {
+    var plaid_public_key = "<%= Rails.application.secrets.plaid_public_key %>";
+    var handler = Plaid.create({
+    clientName: 'Plaid Walkthrough Demo',
+    env: 'sandbox',
+    // Replace with your public_key from the Dashboard
+    key: plaid_public_key,
+    //key: "596188d345ee7774752317766e108c",
+    product: ['transactions'],
+    // Optional, use webhooks to get transaction and error updates
+    webhook: 'https://requestb.in',
+    onLoad: function() {
+      // Optional, called when Link loads
+    },
+    onSuccess: function(public_token, metadata) {
+      // A function that is called when a user has successfully onboarded an Item.
+      // The function should expect two arguments, the public_token and a metadata object.
+
+      // exchange public token for access token
+      // create a new item with access token and link it to the current user's id
+
+
+
+      // Send the public_token to your app server.
+      // The metadata object contains info about the institution the
+      // user selected and the account ID, if the Account Select view
+      // is enabled.
+
+      console.log("link_session_id = ", metadata.link_session_id);
+      console.log("institution = ", metadata.institution);
+      console.log("accounts = ", metadata.accounts);
+      //var parsed = JSON.parse(metadata);
+      //console.log("metadata = ", parsed);
+
+      var token = $.post('/get_access_token', {
+        public_token: public_token,
+      });
+
+      console.log("added item"); //successfully added item
+      console.log("public_token = "); //public_token generated
+      console.log(public_token);
+      console.log("token = ");
+      console.log(token);
+    },
+    onExit: function(err, metadata) {
+      // Optional
+      // A function that is called when a user has specifically exited the Link flow.
+      // The function should expect two arguments, a nullable error object and a metadata object.
+
+      // The user exited the Link flow.
+      if (err != null) {
+        // The user encountered a Plaid API error prior to exiting.
+      }
+      // metadata contains information about the institution
+      // that the user selected and the most recent API request IDs.
+      // Storing this information can be helpful for support.
+      console.log("exited plaid link");
+    },
+    onEvent: function(eventName, metadata) {
+      // Optional
+      // A function that is called when a user reaches certain points in the Link flow.
+      // The function should expect two arguments, an eventName string and a metadata object.
+
+      // Optionally capture Link flow events, streamed through
+      // this callback as your users connect an Item to Plaid.
+      // For example:
+      // eventName = "TRANSITION_VIEW"
+      // metadata  = {
+      //   link_session_id: "123-abc",
+      //   mfa_type:        "questions",
+      //   timestamp:       "2017-09-14T14:42:19.350Z",
+      //   view_name:       "MFA",
+      // }
+    }
+  });
+
+  $('#link-button').on('click', function(e) {
+    handler.open();
+  });
+})(jQuery);
+</script>
+
+
+<ul id="bank-accounts">
+  <!-- Use an erb for-loop to loop through elements and create list -->
+  <% pos = 0 %>
+  <% @items.each do |i| %> <!-- loop through the user's items and create a link to the item -->
+    <li class ="bank-accounts-li"><div class="bank-account-container"><%= link_to i["institution_name"], controller: "bank_sync", action: "show_item", item_id: @item_id_array[pos] %></div></li>
+    <% pos+=1 %>
+  <% end %>
+<!--
+  <li class ="bank-accounts-li"><div class="bank-account-container"><%= link_to "TD Bank", controller: "bank_sync", action: "show_item"%></div></li>
+  <li class ="bank-accounts-li"><div class="bank-account-container">Bank of Montreal</div></li>
+  <li class ="bank-accounts-li"><div class="bank-account-container">Royal Bank of Canada</div></li>
+-->
+</ul>

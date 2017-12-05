@@ -185,24 +185,30 @@ function verify() {
 
   } else {
 
-    var invalid_inputs = document.getElementsByClassName("entry-invalid");
-    var errors = [];
+    showTooltips();
+    return false;
 
-    for (var i = 0; i < invalid_inputs.length; i++) {
-      errors[i] = invalid_inputs[i].childNodes[1];
-    }
+  }
+}
 
+function showTooltips() {
+
+  var invalid_inputs = document.getElementsByClassName("entry-invalid");
+  var errors = [];
+
+  for (var i = 0; i < invalid_inputs.length; i++) {
+    errors[i] = invalid_inputs[i].childNodes[1];
+  }
+
+  for (var i = 0; i < errors.length; i++) {
+    errors[i].classList.remove("entry-tooltip-temporary");
+    errors[i].classList.add("entry-tooltip-temporary");
+  }
+
+  delay(function() {
     for (var i = 0; i < errors.length; i++) {
       errors[i].classList.remove("entry-tooltip-temporary");
-      errors[i].classList.add("entry-tooltip-temporary");
     }
+  }, 1500);
 
-    delay(function() {
-      for (var i = 0; i < errors.length; i++) {
-        errors[i].classList.remove("entry-tooltip-temporary");
-      }
-    }, 1500);
-
-    return false;
-  }
 }

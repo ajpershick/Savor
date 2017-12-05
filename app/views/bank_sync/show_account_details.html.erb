@@ -1,0 +1,37 @@
+<p class="message" id="message">
+  <%=@message%>
+  <i id="close-message" class="fa fa-times" aria-hidden="true" onclick="closeMessage()"></i>
+</p>
+<!-- <h1><%= @institution_name%></h1>
+<h1><%= @official_name%></h1> -->
+<!-- <p>account_id: <%=@account_id%></p> -->
+<div class="banksync-center">
+   <h1 class="account-header"><%=@institution_name%></h1>
+   <h1 class="account-header"><%=@official_name%></h1>
+<!-- <p>Current Account Balance: <%=@current_balance%></p>
+<p>Name: <%=@name%></p>
+<p>Last Four Digits of Account ID: <%=@mask%></p>
+<p>Account Type: <%=@account_type%></p>
+<p>Account Subtype: <%=@account_subtype%></p>
+<p>Created at: <%=@created_at%></p>
+<p>Updated at: <%=@updated_at%></p> -->
+
+  <div class="account-info">Current Account Balance:</div><div class="account-info"><%=@current_balance%></div>
+  <div class="account-info">Name:</div><div class="account-info"><%=@name%></div>
+  <div class="account-info">Last Four Digits of Account ID:</div><div class="account-info"><%=@mask%></div>
+  <div class="account-info">Account Type:</div><div class="account-info"><%=@account_type%></div>
+  <div class="account-info">Account Subtype:</div><div class="account-info"><%=@account_subtype%></div>
+  <div class="account-info">Created at:</div><div class="account-info"><%=@created_at%></div>
+  <div class="account-info">Updated at:</div><div class="account-info"><%=@updated_at%></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+ </div>

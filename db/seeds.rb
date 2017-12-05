@@ -16,26 +16,53 @@ categories = [
   "recreation",
   "transit",
   "utilities",
-  "maintenance",
+  "services",
   "medical",
   "debt",
-  "luxury",       #leisure?
+  "luxury",
   "education",
   "pets",
   "insurance",
   "supplies",
   "housing",
   "charity",
-  "savings",
+  "banking",
   "travel",
   "personal care",
-  "taxes",
+  "electronics",
   "miscellaneous",
+]
+
+examples = [
+  "dining"        => ["A&W", "McDonald's", "Tim Hortons", "Whitespot", ""],
+  "clothing"      => ["Amazon"],
+  "groceries"     => ["Costco", "Save on Foods", "Walmart", "Superstore", ""],
+  "automotive"    => ["Chevron", "Petro Canada", "Shell", ""],
+  "gifts"         => ["Birthday"],
+  "entertainment" => ["Netflix", "Cineplex", "Hollywood 3", "Cirque de Soleil", ],
+  "recreation"    => ["Gym pass", "Pool pass"],
+  "transit"       => ["Bus fare", "Westcoast Express", "SkyTrain fare"],
+  "utilities"     => ["Water bill", "Electricity bill", "Internet bill", "Natural gas bill"],
+  "services"      => ["Plumber", "Electrician"],
+  "medical"       => ["Pharmacy"],
+  "debt"          => ["Student loans", "Mastercard", "Visa"],
+  "luxury"        => [""],
+  "education"     => ["Tuition"],
+  "pets"          => ["Petsmart", "Vet bill"],
+  "insurance"     => ["Car insurance", "Home insurance"],
+  "supplies"      => ["Amazon", "Walmart"],
+  "housing"       => ["Rent payment", "Mortgage payment"],
+  "charity"       => [""],
+  "banking"       => ["Long term savings"],
+  "travel"        => ["BC Ferries", "Air Canada", "WestJet"],
+  "personal care" => ["Spa", "Barber Shop"],
+  "electronics"   => [""],
+  "miscellaneous" => [""],
 ]
 
 (0..categories.length - 1).each do |i|
   Transaction.create(
-    user_id: 1,
+    user_id: 10000,
     amount: (rand * 1000).round(2),
     date: Date.today - 1,
     category: categories[i],
@@ -45,20 +72,22 @@ categories = [
     unique_id: "1")
 end
 
-(0..1000).each do
+(0..2000).each do
   Transaction.create(
-    user_id: 1,
+    user_id: 10000,
     amount: (rand * 1000).round(2),
-    date: Date.today - 2 - rand(300),
+    date: Date.today - 2 - rand(900),
     category: categories[rand(0..categories.length - 1)],
     location_name: (0...3).map { (97 + rand(26)).chr }.join,
     transaction_type: "place",
-    location: false,
+    location: true,
+    longitude: rand * ((-123.0) - (-123.1)) + (-123.1),
+    latitude: rand * (49.27 - 49.23) + 49.23,
     unique_id: "1")
 end
 
 user = User.new
-user.id = 1
+user.id = 10000
 user.username = "testing"
 user.name = "Test"
 user.password = "testing"
@@ -67,7 +96,7 @@ user.admin = false
 user.save
 
 admin = User.new
-admin.id = 2
+admin.id = 10001
 admin.username = "admintest"
 admin.name = "Admin"
 admin.password = "admintest"
@@ -76,7 +105,7 @@ admin.admin = true
 admin.save
 
 balance = AccountBalance.new
-balance.user_id = 1
+balance.user_id = 10000
 balance.bank_balance = 0 #add up balances in bank account, once user has created item
 balance.cash_balance = 9001.00
 balance.total_balance = balance.cash_balance + balance.bank_balance

@@ -17,9 +17,9 @@ class InputController < ApplicationController
       "recreation"    => {icon: "futbol-o",       color: "#16a085"},
       "transit"       => {icon: "bus",            color: "#59ABE3"},
       "utilities"     => {icon: "bolt",           color: "#f39c12"},
-      "maintenance"   => {icon: "wrench",         color: "#7f8c8d"},
+      "services"      => {icon: "cog",            color: "#7f8c8d"},
       "medical"       => {icon: "medkit",         color: "#c0392b"},
-      "debt"          => {icon: "university",     color: "#bdc3c7"},
+      "debt"          => {icon: "university",     color: "#95a5a6"},
       "luxury"        => {icon: "diamond",        color: "#9b59b6"},
       "education"     => {icon: "book",           color: "#2ecc71"},
       "pets"          => {icon: "paw",            color: "#795548"},
@@ -27,11 +27,12 @@ class InputController < ApplicationController
       "supplies"      => {icon: "paperclip",      color: "#F4D03F"},
       "housing"       => {icon: "home",           color: "#26A65B"},
       "charity"       => {icon: "heart",          color: "#E08283"},
-      "savings"       => {icon: "usd",            color: "#1E824C"},
+      "banking"       => {icon: "usd",            color: "#1E824C"},
       "travel"        => {icon: "plane",          color: "#e67e22"},
       "personal care" => {icon: "bath",           color: "#947CB0"},
-      "taxes"         => {icon: "envelope-open-o",color: "#d35400"},
+      "electronics"   => {icon: "camera",         color: "#d35400"},
       "miscellaneous" => {icon: "thumb-tack",     color: "#2c3e50"},
+      "total"         => {icon: "calculator",     color: "#1d1d1d"},
     }
 
     @char = [
@@ -50,39 +51,94 @@ class InputController < ApplicationController
       "recreation",
       "transit",
       "utilities",
-      "maintenance",
+      "services",
       "medical",
       "debt",
-      "luxury",       #leisure?
+      "luxury",
       "education",
       "pets",
       "insurance",
       "supplies",
       "housing",
       "charity",
-      "savings",
+      "banking",
       "travel",
       "personal care",
-      "taxes",
+      "electronics",
       "miscellaneous",
     ]
+
+    #account balance block
+    currentUser = User.find(session[:user_id])
+
+    #@name = User.where(id: session[:user_id]).first.name
+    @name = currentUser.name
+
+    #account balance block -- start
+    #if the current user has not created an account_balance, create one
+    if(currentUser.account_balance == nil)
+      new_balance = AccountBalance.new()
+      new_balance.user_id = session[:user_id]
+      new_balance.cash_balance = 0.00
+      new_balance.bank_balance = 0.00
+      new_balance.total_balance = 0.00
+      new_balance.save
+
+      if(currentUser.account_balance != nil)
+        @message = "Successfully created new account_balance record"
+      else
+        @message = "Failed to create new account_balance record"
+      end
+    else
+      @account_balance = currentUser.account_balance.total_balance
+    end
+    #account balance block -- end
 
   end
 
   def create
+
+    #checks the precondition that the user must have sufficient funds before making a transaction
+    current_user = User.find(session[:user_id])
+
+    if (params[:amount].to_f > current_user.account_balance.cash_balance.to_f)
+      @message = "Error, insufficient funds in your cash account balance to make this transaction"
+      #redirect_to({controller: params[:last_controller], action: params[:last_action], message: @message}) and return
+      redirect_to({controller: "input", action: "income", message: @message}) and return
+    end
+
+    if params[:latitude] == "" || params[:longitude] == "" then
+      lat = nil
+      long = nil
+      location = false
+    else
+      lat = params[:latitude]
+      long = params[:longitude]
+      location = true
+    end
+
+    # Guaranteed to have either description, or location filled out
+    if params[:description].present? then
+      location_name = params[:description]
+    else
+      location_name = params[:location].split(/,/).first
+    end
+
     new_transaction = Transaction.new(
       user_id: session[:user_id],
       amount: params[:amount],
-      date: Date.today,
+      date: Date.parse(params[:date]),
       category: params[:category],
       transaction_type: "place",
       unique_id: rand(0..100000).to_s,
-      location_name: params[:location_name]
+      location_name: location_name,
+      location: location,
+      latitude: lat,
+      longitude: long
     )
     @amount = params[:amount]
 
     if new_transaction.save
-      puts "Cash transaction successfully saved, redirecting to account_balance/update"
       redirect_to({controller: "account_balance", action: "update", amount: @amount, next_controller:"input", next_action: "new", trans_type: "cash"})
       #redirect_to({controller: "input", action: "new"})
     end
@@ -90,19 +146,40 @@ class InputController < ApplicationController
 
 #creates a new income in database with params: income_amount, source
   def create_income
+
+    #checks precondition that the income amount must be a positive value;
+     if (params[:amount].to_f < 0)
+       @message = "Error, please enter a positive income value."
+       redirect_to({controller: params[:last_controller], action: params[:last_action], message: @message}) and return
+     end
+
     @income_amount = params[:amount]
+    puts "@income_amount = #{@income_amount}"
+
     @source = params[:source]
 
-    #check that it was a valid income entry
-    income_float = @income_amount.to_f
-    income_string_round2 = "%0.2f" % income_float #rounds income_float to two decimal places and converts to string form
-    income_is_valid = income_string_round2 == @income_amount.to_s
+    #check if @income_amount is a number.
+    amountIsNumber = isNumber(@income_amount)
+    # if (amountIsNumber == false)
+    #   @message = "Error, amount is not a number."
+    #   redirect_to({controller: params[:last_controller], action: params[:last_action], message: @message}) and return
+    # end
+
+    #rounds input to two decimal places
+    #income_float = @income_amount.to_f
+    #puts "income_float = #{income_float}"
+    income_string_round2 = "%0.2f" % @income_amount #rounds income_float to two decimal places and converts to string form
+    puts "income_string_round2 = #{income_string_round2}"
+    #income_is_valid = income_string_round2 == @income_amount.to_s
 
     #check that source is less than 30 characters
     source_is_too_big = @source.length > 30
 
+    #converted rounded number in string form, back to float form.
+    @income_float = income_string_round2.to_f
+
     #if our checks return false, then redirect back to input/income with error message
-    if(income_is_valid == false)
+    if(amountIsNumber == false)
       puts "income is not a number"
       redirect_to({controller: "input", action: "income", message: "Failed to enter income entry, income amount is not invalid. Please try again."}) and return
     elsif (source_is_too_big == true)
@@ -111,19 +188,25 @@ class InputController < ApplicationController
     else
       new_income = Income.new(
         user_id: session[:user_id],
-        income_amount: params[:amount],
-        source: params[:source]
+        income_amount: @income_float,
+        date: Date.today,
+        source: params[:source],
       )
 
       if new_income.save
         puts "Cash income successfully saved, redirecting to account_balance/update"
-        redirect_to({controller: "account_balance", action: "update", amount: @income_amount, next_controller:"input", next_action: "income", trans_type: "income-cash"}) and return
+        redirect_to({controller: "account_balance", action: "update", amount: @income_amount, next_controller:"input", next_action: "income", trans_type: "income-cash", message: "Income entry saved successfully."}) and return
       end
     end
   end
 
   def income
     @message = params[:message]
+  end
+
+  def isNumber(string)
+      #takes in a string and checks whether the string contains a numeric
+     true if Float(string) rescue false
   end
 
 end

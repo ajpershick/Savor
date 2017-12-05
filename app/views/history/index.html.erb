@@ -1,12 +1,12 @@
 <p><%=@message%></p>
-<center><h1 id="transaction-history">Transaction History</h1></center>
+<!-- <center><h1 id="transaction-history">Transaction History</h1></center> -->
 
 
-<div class="center">
+<div class="history-center">
 
   <% if !@empty then %>
 
-  <table>
+  <table class="history-button-table">
   <tr>
 
   <div class="month-dropdown">
@@ -39,8 +39,8 @@
   </tr>
   </table>
   <% if @transaction_days.length > 0 then %>
-    <h1>Month transactions: <%= @total_items %></h2>
-      <h1>Month total: <%= number_to_currency(@total_amount) %></h2>
+    <h1 class="history-header">Month transactions: <%= @total_items %></h2>
+      <h1 class="history-header">Month total: <%= number_to_currency(@total_amount) %></h2>
   <% else %>
     <h1>No transactions recorded for this month</h1>
     <h1>Add transactions using the input tab, or by syncing with Plaid</h1>
@@ -72,6 +72,7 @@
 
           <tr>
             <td class="icon-data">
+              <% puts"transaction['category'] =  #{transaction.category}" %>
               <div class="category-icon-container" style="background-color: <%= @categories[transaction.category][:color] %>">
                 <span class="category-icon fa fa-<%= @categories[transaction.category][:icon]%> " aria-hidden="true"></span>
               </div>
@@ -98,8 +99,9 @@
   <% end %>
 
   <% else %>
-    <h1>No transactions found</h1>
-    <h1>Add transactions using the input tab, or by syncing with Plaid</h1>
+    <h1 class="history-empty">No transactions found</h1>
+    <h1 class="history-empty">Add transactions using the input tab, or by syncing with Plaid</h1>
   <% end %>
 
+  <br></br>
 </div>

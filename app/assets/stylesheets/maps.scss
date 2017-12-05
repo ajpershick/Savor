@@ -2,9 +2,122 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+div.map-center {
+  margin: auto;
+  width: 90%;
+  background-color: #FFFFFF;
+}
 
-div#googleMap {
-  width: 95%;
-  height: 95%;
-  margin: 2.5%;
+h1.map-empty {
+  text-align: center;
+}
+
+#map {
+  margin: auto;
+  height: 80%;
+  width: 90%;
+}
+
+html, body {
+  height: 100%;
+}
+
+div.map-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 20%;
+  float: left;
+}
+
+button.map-dropdown-button {
+  font-family: Helvetica;
+  color: white;
+  height: 50px;
+  // padding: 16px;
+  font-size: 16px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+div.map-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100%;
+  // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  max-height: 300px;
+  overflow: auto;
+}
+
+div.map-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    font-family: Helvetica;
+}
+
+/* Change color of dropdown links on hover */
+div.map-dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+/* Show the dropdown menu on hover */
+div.map-dropdown:hover div.map-dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+div.map-dropdown:hover button.map-dropdown-button {
+
+}
+
+#yeardropdown button.map-dropdown-button {
+  background-color: #3498db;
+}
+
+#yeardropdown:hover button.map-dropdown-button  {
+  background-color: #2980b9;
+}
+
+#monthdropdown button.map-dropdown-button {
+  background-color: #f4d03f;
+}
+
+#monthdropdown:hover button.map-dropdown-button {
+  background-color: #f1c40f;
+}
+
+#heatmap-button button.map-dropdown-button {
+  font-size: 16px;
+  line-height: 0px;
+  background-color: #4CAF50;
+}
+
+#heatmap-button:hover button.map-dropdown-button {
+  background-color: #3e8e41;
+}
+
+#opacity-button button.map-dropdown-button {
+  font-size: 16px;
+  line-height: 0px;
+  background-color: #e74c3c;
+}
+
+#opacity-button:hover button.map-dropdown-button {
+  background-color: #c0392b;
+}
+
+#center-button button.map-dropdown-button {
+  font-size: 16px;
+  line-height: 0px;
+  background-color: #9b59b6;
+}
+
+#center-button:hover button.map-dropdown-button {
+  background-color: #8e44ad;
 }

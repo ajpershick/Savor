@@ -2,7 +2,7 @@ class AdminController < ApplicationController
 
   before_action :confirm_admin_logged_in
 
-  layout "admin";
+  layout "admin"
 
   def index # list of all users, where admin can select users to perform operations
     @users = User.all
@@ -17,6 +17,7 @@ class AdminController < ApplicationController
     @username = params[:username]
     @first_name = params[:first_name]
     # add last_name
+
     #@password = params:[:password]
     @email = params[:email]
     @admin = params[:admin]

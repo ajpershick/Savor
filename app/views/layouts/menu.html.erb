@@ -20,17 +20,17 @@
         <li><a onclick="showSubpages('transactions', 'income')">History</a></li>
           <li class="subpage-button" id="transactions"><a onclick= "linkDelay('/history/index')">Transactions</a></li>
           <li class="subpage-button" id="income"><a onclick= "linkDelay('/history/income')">Income</a></li>
-        <li><a onclick="linkDelay('/spending_history/charts')">Charts</a></li>
-        <li><a onclick="showSubpages('restaurants', 'events')">Recommendations</a></li>
-          <li class="subpage-button" id="restaurants"><a onclick= "linkDelay('/recommendations/restaurants')">Restaurants</a></li>
-          <li class="subpage-button" id="events"><a onclick= "linkDelay('/recommendations/events')">Events</a><li>
+        <li><a onclick="linkDelay('/charts')">Charts</a></li>
         <li><a onclick="linkDelay('/maps/index')">Maps</a></li>
         <li><a onclick="showSubpages('show-account-info', 'edit-account-info', 'change-password')">Account</a></li>
           <li class="subpage-button" id="show-account-info"><a onclick= "linkDelay('/account/index')">Show Account Details</a></li>
           <li class="subpage-button" id="edit-account-info"><a onclick= "linkDelay('/account/edit')">Edit Account Details</a></li>
           <li class="subpage-button" id="change-password"><a onclick= "linkDelay('/account/change_password')">Change Password</a><li>
         <li><a onclick="linkDelay('/account_balance/index')">Balances</a></li>
-        <li><a onclick="linkDelay('/bank_sync/add_account')">Bank Sync</a></li>
+        <li><a onclick="linkDelay('/bank_sync/index')">Bank Sync</a></li>
+        <!-- <li><a onclick="showSubpages('new-institution', 'linked-institutions')">Bank Sync</a></li>
+          <li class="subpage-button" id="new-institution"><a onclick= "linkDelay('/bank_sync/add_account')">Link New Institution</a></li>
+          <li class="subpage-button" id="linked-institutions"><a onclick= "linkDelay('/bank_sync/index')">Linked Institutions</a></li> -->
         <li><a onclick="linkDelay('/access/logout')">Sign Out</a></li>
       </ul>
     </nav>
@@ -40,22 +40,18 @@
   <body>
     <div class="topnav" id="myTopnav">
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-        <a href="/home/index">Home</a> <!--add icons next to links later, using font-awesome -->
+        <!--<a href="/home/index">Home</a> <!--add icons next to links later, using font-awesome -->
         <a href="/input/new">Input</a>
+        <a href="/input/income">Income</a>
         <a href="/history/index">History</a> <!-- collapse the side bar, then go to link, make js link to the link. -->
-        <a href="/spending_history/charts">Charts</a>
-        <a href="/recommendations/index">Recommendations</a>
+        <a href="/history/income">Deposits</a> <!-- collapse the side bar, then go to link, make js link to the link. -->
+        <a href="/charts">Charts</a>
         <a href="/maps/index">Maps</a>
-
-        <!--<a class="dropdown-button" onclick = "openDropdown(dropdown)">Recommendations</a>
-          <div id="dropdown" class="dropdown-content">
-            <a href="/">Restaurants</a>
-            <a href="/">Events</a>
-          </div>-->
-        <a href="/account/index">Account</a>
         <a href="/account_balance/index">Balances</a>
-        <a href="/bank_sync/add_account">Bank Sync</a>
+
         <a href="/access/logout" style="float:right;">Sign Out</a> <!-- float this to the right -->
+        <a href="/account/index" style="float:right;">Account</a>
+        <a href="/bank_sync/index" style="float:right;">Bank Sync</a>
     </div>
 
 

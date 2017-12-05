@@ -1,24 +1,26 @@
 
-<p class="message" id="message">
+<p class="message green" id="message">
   <%=@message%>
   <i id="close-message" class="fa fa-times" aria-hidden="true" onclick="closeMessage()"></i>
 </p>
 
-<div class="center">
+<div class="input-center">
 
   <h1 class="transaction-title">New Transaction Input</h1>
 
-  <%= form_tag({controller: "input", action: "create"}, method: "post", id:"transaction-form", onsubmit:"return verifyTransaction()") do %>
+
+
+  <%= form_tag({controller: "input", action: "create"}, method: "post", id:"transaction-form", onsubmit:"return verifyTransaction()", last_controller: "input", last_action: "new") do %>
 
     <div class="transaction-input-container">
       <div class="transaction-icon-container">
         <i class="fa fa-usd transaction-icon"></i>
       </div>
-      <%= text_field_tag(:amount, "" , class: "transaction-amount-input", placeholder: "0.00", onkeydown: "if (event.which === 13) return false", onkeyup: "validateAmount(event.which, this)", autofocus: true) %>
+      <%= text_field_tag(:amount, "" , class: "transaction-amount-input", placeholder: "0.00", onkeydown: "if (event.which === 13) return false", onkeyup: "validateAmount(event.which, this)", autofocus: true, autocomplete: "off") %>
     </div>
 
     <br></br>
-    <div class="table-container">
+    <div class="transaction-table-container">
     <table tabindex="0", class="transaction-category-table" onkeydown="selectCategoryByKey(event.which, 'down')" onkeyup="selectCategoryByKey(event.which, 'up')">
 
       <% (0..@category_order.length - 1).each do |index| %>
@@ -61,14 +63,29 @@
 
     <%= text_field_tag(:category, "", class: "transaction-category-input") %>
 
-    <br></br>
-
     <div class="transaction-input-container">
       <div class="transaction-icon-container">
+        <i class="fa fa-tag transaction-icon"></i>
+      </div>
+      <%= text_field_tag(:description, "" , class: "transaction-name-input", placeholder: "Description", onkeydown: "if (event.which === 13) return false", onkeyup: "validateDescription(event.which, this)", autocomplete: "off") %>
+    </div>
+
+    <div class="transaction-location-container">
+      <div class="transaction-icon-container transaction-valid" title="Optional">
         <i class="fa fa-map-marker transaction-icon"></i>
       </div>
-      <%= text_field_tag(:location_name, "" , class: "transaction-name-input", placeholder: "Location name", onkeydown: "if (event.which === 13) return false", onkeyup: "validateLocationName(event.which, this)") %>
+      <%= text_field_tag(:location, "" , class: "transaction-location-input", id: "transaction-location-input", placeholder: "Location", autocomplete: "off", onkeydown: "if (event.which === 13) return false", onkeyup: "if (event.which === 13) document.getElementById('transaction-date-input').focus()") %>
     </div>
+
+    <div class="transaction-input-container">
+      <div class="transaction-icon-container transaction-valid" title="Optional">
+        <i class="fa fa-calendar transaction-icon"></i>
+      </div>
+      <%= text_field_tag(:date, "" , class: "transaction-date-input", id: "transaction-date-input", readonly: true, onkeyup: "if (event.which === 13) document.getElementById('transaction-form').submit()") %>
+    </div>
+
+    <%= hidden_field_tag(:latitude, "", id: "transaction-latitude-input") %>
+    <%= hidden_field_tag(:longitude, "", id: "transaction-longitude-input") %>
 
     <br></br>
 
@@ -86,7 +103,7 @@
           <td><div class="amount-data"><%= number_to_currency(0) %></div></td>
         </tr>
 
-    <table>
+    </table>
 
     <br></br>
 
@@ -99,3 +116,73 @@
   <% end %>
 
 </div>
+
+<script>
+  var datepicker = new Pikaday({
+      field: document.getElementById('transaction-date-input'),
+      format: 'D MMM YYYY',
+      maxDate: new Date()
+  });
+  datepicker.setDate(new Date());
+</script>
+
+<script>
+var autocomplete, geocoder, initial_location;
+
+function initAutocomplete() {
+
+  geocoder = new google.maps.Geocoder();
+  autocomplete = new google.maps.places.Autocomplete(
+    (document.getElementById('transaction-location-input')), {
+      types: ['establishment']
+    });
+
+  autocomplete.addListener('place_changed', fillInAddress);
+
+  var default_circle = new google.maps.Circle({
+    center: {lat: 49.2827, lng: -123.1207},
+    radius: 1000
+  })
+  autocomplete.setBounds(default_circle.getBounds());
+  currentLocation();
+}
+
+function currentLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var geolocation = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+      var circle = new google.maps.Circle({
+        center: geolocation,
+        radius: 1000
+      });
+      autocomplete.setBounds(circle.getBounds());
+    });
+  }
+}
+
+function codeAddress(address) {
+  geocoder.geocode({
+    'address': address
+  }, function(results, status) {
+    if (status == 'OK') {
+      document.getElementById("transaction-latitude-input").value = results[0].geometry.location.lat();
+      document.getElementById("transaction-longitude-input").value = results[0].geometry.location.lng();
+    } else {
+      document.getElementById("transaction-latitude-input").value = "";
+      document.getElementById("transaction-longitude-input").value = "";
+    }
+  });
+}
+
+function fillInAddress() {
+  var place = autocomplete.getPlace();
+  codeAddress(document.getElementById('transaction-location-input').value);
+}
+
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ3wyaZIOpGodrpSDMQ5WGLDLTNgHibcI&libraries=places&callback=initAutocomplete">
+</script>

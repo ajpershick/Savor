@@ -1,22 +1,30 @@
 // Place all the styles related to the Input controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-div.center {
-  margin: 5%;
-  width: 90%;
+div.input-center {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #FFFFFF;
   text-align: center;
 }
 
+div.income-center {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFFFFF;
+  text-align:center;
+}
+
 h1.transaction-title {
-  padding: 20px;
   font-family: Helvetica;
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
-  color: #bdc3c7;
+  color: #95a5a6;
   display: inline-block;
   line-height: 40px; //added
-  padding-top: 0px;
+  margin-top: 30px;
 }
 
 div.transaction-input-container {
@@ -30,7 +38,7 @@ div.transaction-input-container {
   text-align: center;
 }
 
-input.transaction-amount-input, input.transaction-name-input {
+input.transaction-amount-input, input.transaction-name-input, input.transaction-date-input, input.transaction-location-input {
   font-family: Helvetica;
   font-size: 26px;
   float: left;
@@ -42,14 +50,30 @@ input.transaction-amount-input, input.transaction-name-input {
   position: relative;
 }
 
+div.transaction-location-container {
+  height: 52px;
+  width: 766px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  overflow: auto;
+  text-align: center;
+}
+
 input.transaction-amount-input {
   width: 270px;
   padding-right: 30px;
   text-align: right;
 }
 
-input.transaction-name-input {
+input.transaction-name-input, input.transaction-date-input {
   width: 290px;
+  padding-left: 10px;
+}
+
+input.transaction-location-input {
+  width: 700px;
   padding-left: 10px;
 }
 
@@ -103,10 +127,15 @@ div.transaction-invalid {
   background-color: #e74c3c;
 }
 
+div.transaction-optional {
+  background-color: #f1c40f;
+}
+
 
 table.transaction-category-table {
   width: 0;
   margin: auto;
+  border-collapse: collapse;
   border-style: solid;
   border-width: 5px;
   border-color: #FFFFFF;
@@ -156,6 +185,8 @@ tr.transaction-category-row {
 }
 
 .transaction-example {
+  width: 100%;
+  border-collapse: collapse;
   border-style: none;
 }
 
@@ -248,6 +279,65 @@ input.income-amount-input, input.income-name-input {
 div.income-submit-container {
   width: 100%;
   text-align: center;
+}
+
+//account balance block -start
+div.element-container {
+  position: relative;
+  display: block;
+  width: 95%;
+  height: 300px;
+  margin: 2.5%;
+  background-color: transparent;
+  //resize: vertical;
+  overflow: auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+div#element1 {
+  width: 100%;
+  height: 100%;
+  background-color: #bee2cf;
+}
+
+p.home-headers {
+  float: left;
+  line-height: auto;
+  display: block;
+  padding: 0;
+  margin: 10px;
+  font-size: 15px;
+  position: absolute;
+}
+
+div.balance-container {
+  height: 60%;
+  width: 100%;
+  background-color: transparent;
+  //margin-top: 20%;
+  //margin-bottom: 20%;
+  position: relative;
+  top: 20%;
+  text-align: middle;
+  vertical-align:middle;
+}
+
+p#home-account-balance {
+  margins: 0;
+  font-size: 35px;
+  display: inline-block;
+  bottom: 5%;
+  //position: absolute;
+  position:inherit;
+  text-align: left;
+}
+
+button#balance-edit {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: none;
 }
 
 //media queries for mobile view

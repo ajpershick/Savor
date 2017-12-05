@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  # resources :admin
+  # resources :home
+  # resources :access
 
   post 'account_balance/update'
   get 'account_balance/index'
@@ -14,19 +17,6 @@ Rails.application.routes.draw do
   match	':controller(/:action(/:id))',	:via	=>	:post
 
   get 'maps/index' => "maps#index"
-
-  get 'spending_history/charts' => "spending_history"
-  get 'spending_history/index' => "spending_history#index"
-  get 'recommendations/index' => "recommendations#index"
-  get 'recommendations/restaurants' => "recommendations#restaurants"
-  get 'recommendations/events' => "recommendations#events"
-
-  root 'home#index'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  #resources :admin
-  #resources :home
-  #resources :access
 
   get "access/login" => "access#login"
   post "access/attempt_login" => "access#attempt_login"
@@ -53,6 +43,15 @@ Rails.application.routes.draw do
   get 'bank_sync/create_item'
   get 'bank_sync/add_account'
   post 'bank_sync/get_access_token'
+  post 'bank_sync/delete_access_token'
+  post 'bank_sync/unsync_bank_accounts'
+  get 'bank_sync/load_transactions'
+  get 'bank_sync/get_bank_account_info'
+  get 'bank_sync/get_account_balance'
+  get 'bank_sync/show_bank_account'
+  get 'bank_sync/show_item'
+  get 'bank_sync/show_account_details'
+  get 'bank_sync/show_transactions'
 
   get "home/index" =>"home#index"
 
