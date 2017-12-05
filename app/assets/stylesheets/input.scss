@@ -9,12 +9,13 @@ div.input-center {
   width: 75%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #FFFFFF;
+  //background-color: #FFFFFF;
+  background-color: transparent;
   text-align: center;
 }
 
 div.income-center {
-  width: 30%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   background-color: #FFFFFF;
@@ -109,6 +110,7 @@ div.transaction-icon-container {
 div.transaction-submit-container {
   width: 65%;
   margin: auto;
+  max-width: 356px;
 }
 
 input.transaction-submit-button {

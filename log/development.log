@@ -1308,3 +1308,174 @@ Completed 200 OK in 1616ms (Views: 1608.8ms | ActiveRecord: 1.5ms)
 
 
 Started GET "/assets/application.self-6c6491de146df5322bdf985bc89af54da0d9af65f38380de63b879be3a216294.css?body=1" for 127.0.0.1 at 2017-12-05 01:13:14 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:64)
+Started GET "/input/income" for 127.0.0.1 at 2017-12-05 01:16:32 -0800
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by InputController#income as HTML
+  Rendering input/income.html.erb within layouts/menu
+  Rendered input/income.html.erb within layouts/menu (8.8ms)
+Completed 200 OK in 4500ms (Views: 923.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/input/income" for 127.0.0.1 at 2017-12-05 01:16:39 -0800
+Processing by InputController#income as HTML
+  Rendering input/income.html.erb within layouts/menu
+  Rendered input/income.html.erb within layouts/menu (2.9ms)
+Completed 200 OK in 93ms (Views: 88.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/input/new" for 127.0.0.1 at 2017-12-05 01:17:20 -0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by InputController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.6ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (17.1ms)
+Started GET "/input/income" for 127.0.0.1 at 2017-12-05 01:17:20 -0800
+Processing by InputController#income as HTML
+  Rendering input/income.html.erb within layouts/menu
+  Rendered input/income.html.erb within layouts/menu (2.2ms)
+Completed 200 OK in 99ms (Views: 94.0ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 735ms (Views: 621.4ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/history/index" for 127.0.0.1 at 2017-12-05 01:17:21 -0800
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (25.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (4.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  Rendering history/index.html.erb within layouts/menu
+  Rendered history/index.html.erb within layouts/menu (27.5ms)
+Completed 200 OK in 464ms (Views: 93.7ms | ActiveRecord: 43.4ms)
+
+
+Started GET "/input/income" for 127.0.0.1 at 2017-12-05 01:17:22 -0800
+Processing by InputController#income as HTML
+  Rendering input/income.html.erb within layouts/menu
+  Rendered input/income.html.erb within layouts/menu (2.1ms)
+Completed 200 OK in 84ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/input/new" for 127.0.0.1 at 2017-12-05 01:17:23 -0800
+Processing by InputController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.6ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (5.7ms)
+Completed 200 OK in 113ms (Views: 81.9ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/input/income" for 127.0.0.1 at 2017-12-05 01:17:23 -0800
+Processing by InputController#income as HTML
+  Rendering input/income.html.erb within layouts/menu
+  Rendered input/income.html.erb within layouts/menu (2.7ms)
+Completed 200 OK in 90ms (Views: 87.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/history/index" for 127.0.0.1 at 2017-12-05 01:17:24 -0800
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (36.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (7.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  Rendering history/index.html.erb within layouts/menu
+  Rendered history/index.html.erb within layouts/menu (29.1ms)
+Completed 200 OK in 471ms (Views: 112.8ms | ActiveRecord: 44.9ms)
+
+
+Started GET "/input/income" for 127.0.0.1 at 2017-12-05 01:17:25 -0800
+Processing by InputController#income as HTML
+  Rendering input/income.html.erb within layouts/menu
+  Rendered input/income.html.erb within layouts/menu (1.7ms)
+Completed 200 OK in 82ms (Views: 80.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/input/income" for 127.0.0.1 at 2017-12-05 01:18:18 -0800
+Processing by InputController#income as HTML
+  Rendering input/income.html.erb within layouts/menu
+  Rendered input/income.html.erb within layouts/menu (1.9ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb___3078920063648739168_70108563201480 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb___3078920063648739168_70108563201480 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 2512ms (Views: 2509.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-b00fb7ad6d5ae4f03536d6d2aadd1e729275daa71e01207f3cec2891c7bb1403.css?body=1" for 127.0.0.1 at 2017-12-05 01:18:20 -0800
+Started GET "/input/income" for 127.0.0.1 at 2017-12-05 01:19:45 -0800
+Processing by InputController#income as HTML
+  Rendering input/income.html.erb within layouts/menu
+  Rendered input/income.html.erb within layouts/menu (2.7ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb___3078920063648739168_70108588736640 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb___3078920063648739168_70108588736640 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 2317ms (Views: 2315.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-30b93ca84a888ae1851d06909e28ef46b8112b4b23d9035330d43904eaa83090.css?body=1" for 127.0.0.1 at 2017-12-05 01:19:48 -0800
+Started GET "/input/new" for 127.0.0.1 at 2017-12-05 01:19:56 -0800
+Processing by InputController#new as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.9ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (7.5ms)
+Completed 200 OK in 103ms (Views: 87.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/input/income" for 127.0.0.1 at 2017-12-05 01:20:03 -0800
+Processing by InputController#income as HTML
+  Rendering input/income.html.erb within layouts/menu
+  Rendered input/income.html.erb within layouts/menu (2.0ms)
+Completed 200 OK in 109ms (Views: 106.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/input/new" for 127.0.0.1 at 2017-12-05 01:20:26 -0800
+Processing by InputController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (1.2ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (4.5ms)
+Completed 200 OK in 99ms (Views: 91.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/input/new" for 127.0.0.1 at 2017-12-05 01:20:59 -0800
+Processing by InputController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (1.4ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (7.0ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb___3078920063648739168_70108584895420 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb___3078920063648739168_70108584895420 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1837ms (Views: 1823.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.self-87496e542005501ae3ccffe940112c36298668ce5a00a5e1c7c7c3297557c92f.css?body=1" for 127.0.0.1 at 2017-12-05 01:21:01 -0800
+Started GET "/input/income" for 127.0.0.1 at 2017-12-05 01:21:13 -0800
+Processing by InputController#income as HTML
+  Rendering input/income.html.erb within layouts/menu
+  Rendered input/income.html.erb within layouts/menu (1.6ms)
+Completed 200 OK in 76ms (Views: 74.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/input/new" for 127.0.0.1 at 2017-12-05 01:21:17 -0800
+Processing by InputController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (1.1ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (5.6ms)
+Completed 200 OK in 82ms (Views: 72.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/history/index" for 127.0.0.1 at 2017-12-05 01:21:31 -0800
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (28.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (2.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  Rendering history/index.html.erb within layouts/menu
+  Rendered history/index.html.erb within layouts/menu (21.4ms)
+Completed 200 OK in 390ms (Views: 87.8ms | ActiveRecord: 31.9ms)
+
+
