@@ -16,7 +16,7 @@
   <tbody>
       <% if !@empty %>
       <% @incomes_sorted.each do |entry| %>
-        <tr class="transactions-header">
+        <tr class="incomes-header">
           <td class="income-date-data"><%= Date.parse(entry.created_at.to_s).strftime("%A, %B %d %Y").sub(/ 0/, ' ') %></td>
           <td class="income-amount-data"><%= number_to_currency(entry.income_amount) %></td>
           <td class="income-source-data"><%= entry.source %></td>
