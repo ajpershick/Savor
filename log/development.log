@@ -367,3 +367,60 @@ Processing by ChartsController#index as HTML
 Completed 200 OK in 193ms (Views: 132.0ms | ActiveRecord: 6.1ms)
 
 
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:64)
+Started GET "/" for 127.0.0.1 at 2017-12-04 19:17:53 -0800
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.6ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (8.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb___3130527418881052953_47177691385100 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb___3130527418881052953_47177691385100 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 6808ms (Views: 3103.2ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/assets/application.self-2f45974dafc303230f37c56caf83a59fd6039f34bd6b1f9e5cdce2ef2748d568.css?body=1" for 127.0.0.1 at 2017-12-04 19:18:00 -0800
+Started GET "/assets/input.self-9676c1e81940a3b1054c3f4d74c69eac4e0ac6c26d21f5c217253ddeb6cebc27.js?body=1" for 127.0.0.1 at 2017-12-04 19:18:00 -0800
+Started GET "/bank_sync/index" for 127.0.0.1 at 2017-12-04 19:18:05 -0800
+Processing by BankSyncController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering bank_sync/index.html.erb within layouts/menu
+  Rendered bank_sync/index.html.erb within layouts/menu (2.9ms)
+Completed 200 OK in 139ms (Views: 93.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/bank_sync/index" for 127.0.0.1 at 2017-12-04 19:18:11 -0800
+Processing by BankSyncController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering bank_sync/index.html.erb within layouts/menu
+  Rendered bank_sync/index.html.erb within layouts/menu (3.4ms)
+Completed 200 OK in 116ms (Views: 106.3ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/get_access_token" for 127.0.0.1 at 2017-12-04 19:18:46 -0800
+Processing by BankSyncController#get_access_token as */*
+  Parameters: {"public_token"=>"public-sandbox-cd1f46d4-3c76-4110-abd8-6966ffd869e5"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (3.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."user_id" = $1[0m  [["user_id", 1]]
+Redirected to http://localhost:3000/bank_sync/index?message=Error%2C+you+have+already+added+this+institution+to+your+Savor+account.+
+Completed 200 OK in 2523ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/bank_sync/index?message=Error%2C+you+have+already+added+this+institution+to+your+Savor+account.+" for 127.0.0.1 at 2017-12-04 19:18:49 -0800
+Processing by BankSyncController#index as HTML
+  Parameters: {"message"=>"Error, you have already added this institution to your Savor account. "}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering bank_sync/index.html.erb within layouts/menu
+  Rendered bank_sync/index.html.erb within layouts/menu (2.4ms)
+Completed 200 OK in 75ms (Views: 67.4ms | ActiveRecord: 1.6ms)
+
+

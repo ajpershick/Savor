@@ -68,6 +68,18 @@ class BankSyncController < ApplicationController
     item_response = $client.item.get(access_token)
 
     institution = $client.institutions.get_by_id(item_response["item"]["institution_id"])
+
+    #checks whether the institution has already been saved
+    currentUser = User.find(session[:user_id])
+    items = currentUser.items.all
+    items.all.each do |i|
+      if(institution["institution"]["name"] == i["institution_name"])
+        @message = "Error, you have already added this institution to your Savor account. "
+        redirect_to({controller: "bank_sync", action: "index", message: @message}) and return
+        break
+      end
+    end
+
     #if save the access_token in database (create a new item)
     if(access_token != nil)
       new_item = Item.new()
