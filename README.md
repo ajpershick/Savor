@@ -1,4 +1,18 @@
 # README
+TEST ACCOUNTS FOR ITERATION 3  
+Regular user:  
+username: testing  
+password: testing  
+
+Admin user:  
+username: admintest  
+password: admintest
+
+Plaid user:  
+To sync test transactions from plaid, while signed in to an account, use the following credentials for any bank in the Bank Sync tab  
+username: user_good  
+password: pass_good  
+
 Staging: [![Build Status](https://semaphoreci.com/api/v1/ajpershick/savor/branches/staging/badge.svg)](https://semaphoreci.com/ajpershick/savor)
 
 Production: [![Build Status](https://semaphoreci.com/api/v1/ajpershick/savor/branches/production/badge.svg)](https://semaphoreci.com/ajpershick/savor)
