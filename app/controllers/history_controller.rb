@@ -110,6 +110,11 @@ class HistoryController < ApplicationController
       @transaction_days.reverse!
     end
 
+    @transaction_days.each do |day|
+      day[:transactions].sort!{|x, y| x.created_at <=> y.created_at}
+      if @order == "latest" then day[:transactions].reverse! end
+    end
+
     @total_amount = 0
     @total_items = 0
 
@@ -127,6 +132,7 @@ class HistoryController < ApplicationController
     user = User.find(session[:user_id])
     #@incomes_sorted = user.incomes.sort_by {|income| income.created_at}
     @incomes_sorted = user.incomes.order(created_at: :desc, source: :desc)
+    @empty = (@incomes_sorted == nil)
   end
 
 end
