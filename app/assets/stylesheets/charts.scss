@@ -99,6 +99,12 @@ div.chart-dropdown:hover button.chart-dropdown-button {
   background-color: #3e8e41;
 }
 
+div.chart-category-table-container {
+  height: 164px;
+  width: 100%;
+  overflow-x: scroll;
+}
+
 
 table.chart-category-table {
   width: 0;
@@ -216,4 +222,59 @@ table#stats-table td:nth-child(2), table#stats-table td:nth-child(3), table#stat
   font-size: 25px;
   text-align: center;
   line-height: 35px;
+}
+
+//media queries for mobile view
+@media screen and (max-width: 1125px) {
+  div.chart-center {
+    background-color: transparent;
+  }
+
+  button.chart-type-button {
+    width: 33.3333%;
+  }
+
+  .chart-type-container {
+    width: 100%;
+
+  }
+
+  canvas#line-chart-canvas {
+    min-width: 700px;
+    max-width: 700px;
+    min-height: 485px;
+    max-height: 485px;
+
+    //width: 1200px;
+  }
+
+}
+
+@media screen and (max-width: 1200px) {
+  div#line-chart-container {
+    overflow-x: scroll;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  div#stats-table-container {
+    margin: auto;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  table#stats-table th {
+    font-family: Helvetica;
+    font-size: 15px;
+    padding: 5px;
+    text-align: left;
+  }
+
+  table#stats-table td:nth-child(2), table#stats-table td:nth-child(3), table#stats-table td:nth-child(4), table#stats-table td:nth-child(5) {
+    width: 25%;
+    font-family: Helvetica;
+    font-size: 15px;
+    padding-left: 5px;
+  }
 }

@@ -1612,3 +1612,553 @@ Completed 200 OK in 1682ms (Views: 1657.3ms | ActiveRecord: 2.9ms)
 
 
 Started GET "/assets/application.self-ca5c549376aa048d8c32b863d3b958b44eb05b065a992d372066927ed15119da.css?body=1" for 127.0.0.1 at 2017-12-05 01:37:10 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:64)
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 01:38:50 -0800
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (24.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (4.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (49.6ms)
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 01:38:51 -0800
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225173509320 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (22.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225173509320 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+  [1m[36mTransaction Load (3.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (52.0ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225139955040 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225139955040 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 3820ms (Views: 3320.7ms | ActiveRecord: 45.5ms)
+
+
+Completed 200 OK in 3685ms (Views: 3260.0ms | ActiveRecord: 42.9ms)
+
+
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 01:43:01 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (24.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (3.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (87.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225189117520 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225189117520 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 2270ms (Views: 1854.9ms | ActiveRecord: 28.9ms)
+
+
+Started GET "/assets/application.self-76fdeef28cc74b1f9b51c4776e47375d67713a888fe9d1e3b20af878d3259358.css?body=1" for 127.0.0.1 at 2017-12-05 01:43:03 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 01:44:06 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (27.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (3.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (48.5ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225188563900 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225188563900 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1942ms (Views: 1624.1ms | ActiveRecord: 32.3ms)
+
+
+Started GET "/assets/application.self-9e6418c6fb9be69475ebdf8b20af296dcbdf449de1571d2892ef989b81415b98.css?body=1" for 127.0.0.1 at 2017-12-05 01:44:08 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 01:45:48 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (23.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (3.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (44.6ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225189326060 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225189326060 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1912ms (Views: 1554.0ms | ActiveRecord: 28.6ms)
+
+
+Started GET "/assets/application.self-9b22549b8401c11ed373f1ae92e871970dcf35f33eca9bf7ee0df1c9f5ad6874.css?body=1" for 127.0.0.1 at 2017-12-05 01:45:50 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 01:46:10 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (26.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (3.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (45.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225187575100 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225187575100 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 2151ms (Views: 1831.0ms | ActiveRecord: 30.8ms)
+
+
+Started GET "/assets/application.self-6366e9c6fcdc110f1a7ec2f0f77d6c918877c6aa36331a6838e493f8421c66db.css?body=1" for 127.0.0.1 at 2017-12-05 01:46:12 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 01:48:33 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (26.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (6.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (78.4ms)
+Completed 200 OK in 437ms (Views: 154.5ms | ActiveRecord: 33.8ms)
+
+
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 01:52:14 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (22.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (5.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (37.8ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225104372920 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225104372920 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1854ms (Views: 1574.0ms | ActiveRecord: 28.7ms)
+
+
+Started GET "/assets/application.self-4cecba4091eee597e8a581a270327122925c78ffb6dd402f0c0369d011d5f586.css?body=1" for 127.0.0.1 at 2017-12-05 01:52:16 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 01:53:13 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (23.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (4.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (55.7ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225148117580 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225148117580 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 2424ms (Views: 2129.3ms | ActiveRecord: 28.4ms)
+
+
+Started GET "/assets/application.self-edcd1e085d042f8fe73e6f769e39dd1fcb806d401bbc0e0ca694dbae2a1cb29d.css?body=1" for 127.0.0.1 at 2017-12-05 01:53:16 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 01:54:54 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (24.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (3.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (37.6ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225151307160 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225151307160 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1754ms (Views: 1497.2ms | ActiveRecord: 29.1ms)
+
+
+Started GET "/assets/application.self-bdad6d47edb3ae12a8c3ef665eb22b503e866037220ab8b15be4baf7534c998b.css?body=1" for 127.0.0.1 at 2017-12-05 01:54:56 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 01:55:15 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (23.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (5.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (50.5ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225085570260 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225085570260 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 6287ms (Views: 2455.4ms | ActiveRecord: 29.4ms)
+
+
+Started GET "/assets/application.self-c2731150471f6af2a0740fd2bf40dcb017f1a2298d33fd16d38f8851e37132a2.css?body=1" for 127.0.0.1 at 2017-12-05 01:55:21 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 01:55:34 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (26.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (3.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (55.0ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225162255240 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225162255240 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 2571ms (Views: 2286.3ms | ActiveRecord: 30.0ms)
+
+
+Started GET "/assets/application.self-287664a8adf000d64a326e1828b21e3783cfa3b67c2ce6d7f53193af2ce3f984.css?body=1" for 127.0.0.1 at 2017-12-05 01:55:36 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 01:55:57 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (23.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (3.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (60.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_47010321277420 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_47010321277420 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1960ms (Views: 1674.7ms | ActiveRecord: 28.2ms)
+
+
+Started GET "/assets/application.self-e45db9f434dedfa575a7aa89e58859e45417bededac934e526eaed2b1e442f7e.css?body=1" for 127.0.0.1 at 2017-12-05 01:55:59 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 01:56:06 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (25.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (3.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (42.6ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225147226980 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225147226980 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1892ms (Views: 1638.5ms | ActiveRecord: 30.2ms)
+
+
+Started GET "/assets/application.self-c90b36c63c1aa82458941e07cd0cb654d62a8440d19cfc0be47548f5c23293bc.css?body=1" for 127.0.0.1 at 2017-12-05 01:56:08 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 01:56:14 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (23.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (4.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (37.8ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225083088740 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225083088740 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1855ms (Views: 1560.1ms | ActiveRecord: 29.9ms)
+
+
+Started GET "/assets/application.self-511dae6ebbadb9ff6e1b6f5c2618d5efe63deaf58ed1b3f19e10a15c036243a1.css?body=1" for 127.0.0.1 at 2017-12-05 01:56:16 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 01:56:22 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (24.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (3.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (45.8ms)
+Completed 200 OK in 406ms (Views: 144.3ms | ActiveRecord: 28.9ms)
+
+
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 01:56:28 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (26.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (2.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (42.7ms)
+Completed 200 OK in 389ms (Views: 113.0ms | ActiveRecord: 31.1ms)
+
+
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 01:56:39 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (24.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (8.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (43.6ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225149617120 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225149617120 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1988ms (Views: 1643.9ms | ActiveRecord: 33.9ms)
+
+
+Started GET "/assets/application.self-7c0a3d9f8734c7e9eb31b08ccd06bf06fb5ce5070ea995e9a681cf49487ad3ae.css?body=1" for 127.0.0.1 at 2017-12-05 01:56:41 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 01:56:48 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (28.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (3.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (36.7ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225150867920 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225150867920 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 2192ms (Views: 1917.1ms | ActiveRecord: 32.0ms)
+
+
+Started GET "/assets/application.self-db98020bbc5b3f1068d945b006a47601e58ca8528db6a833901e3378f8f9d2ff.css?body=1" for 127.0.0.1 at 2017-12-05 01:56:50 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:06:43 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (26.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (4.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (42.7ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225207394860 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225207394860 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1973ms (Views: 1685.1ms | ActiveRecord: 31.5ms)
+
+
+Started GET "/assets/application.self-9de2ba5bdcd20ecf8c6940f7eb1ecb6c79b24d00079dc7d36c28fe57eea3055c.css?body=1" for 127.0.0.1 at 2017-12-05 02:06:45 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:09:06 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (26.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (3.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (44.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225109179380 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225109179380 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 2128ms (Views: 1780.4ms | ActiveRecord: 31.4ms)
+
+
+Started GET "/assets/application.self-4a141237565c824ca6530f863cada9f71af4bbc307599c22f153da920c8b2f84.css?body=1" for 127.0.0.1 at 2017-12-05 02:09:08 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:14:06 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (23.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (3.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (42.6ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225186177120 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225186177120 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1870ms (Views: 1551.8ms | ActiveRecord: 28.2ms)
+
+
+Started GET "/assets/application.self-8e021b0b192d17d6c6635df65f70bc41084fc6db3349644c404657b6fed2e575.css?body=1" for 127.0.0.1 at 2017-12-05 02:14:08 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:15:05 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (25.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (2.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (42.6ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225076618720 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225076618720 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 2058ms (Views: 1735.5ms | ActiveRecord: 29.3ms)
+
+
+Started GET "/assets/application.self-c61f343b82ee01155eba7c5cd86d70202ab9a98ee68df0ab8923743fc6ebd6bf.css?body=1" for 127.0.0.1 at 2017-12-05 02:15:07 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:15:29 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (24.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (3.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (38.7ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225086609340 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225086609340 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 2636ms (Views: 2181.3ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/assets/application.self-beee353d9e5760711c4deca55aa4e4af9faf66a5c6b2f6999c6ee338c1c2076f.css?body=1" for 127.0.0.1 at 2017-12-05 02:15:32 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:15:57 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (31.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (2.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (36.8ms)
+Completed 200 OK in 423ms (Views: 94.7ms | ActiveRecord: 35.2ms)
+
+
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:16:29 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (23.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (3.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (44.1ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225159107320 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225159107320 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1904ms (Views: 1627.2ms | ActiveRecord: 27.2ms)
+
+
+Started GET "/assets/application.self-a2ba4bc3b3bbdcc9560362c8ec7a48154f9efa020f5a949d1e4227adab48fdea.css?body=1" for 127.0.0.1 at 2017-12-05 02:16:31 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:20:26 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (23.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (3.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (40.9ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225106791500 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225106791500 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1881ms (Views: 1610.9ms | ActiveRecord: 28.5ms)
+
+
+Started GET "/assets/application.self-0e33033bf8b74a549bf3ed6f3e2d5bb11501ce2f0e4e4e2529fbcc1e1341af31.css?body=1" for 127.0.0.1 at 2017-12-05 02:20:28 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:20:59 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (22.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (2.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (42.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225134163260 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225134163260 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1875ms (Views: 1601.1ms | ActiveRecord: 27.6ms)
+
+
+Started GET "/assets/application.self-a0b510c6555a157a48aee2f033e6ac6e00ff08ecc8be65782b27357d8784480a.css?body=1" for 127.0.0.1 at 2017-12-05 02:21:01 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:25:25 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (21.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (4.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (45.5ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225187669260 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225187669260 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1869ms (Views: 1595.3ms | ActiveRecord: 26.8ms)
+
+
+Started GET "/assets/application.self-a02d926f58df9aac9e4125f0ffc7d1c960446fafdf63d1c0a5282da353daebbd.css?body=1" for 127.0.0.1 at 2017-12-05 02:25:27 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:26:07 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (26.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (3.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (42.0ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225077507000 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225077507000 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1850ms (Views: 1581.2ms | ActiveRecord: 31.6ms)
+
+
+Started GET "/assets/application.self-fcea8927817c3b81c84403d2d46a107f0ab9c6458037a1932220c077d924a040.css?body=1" for 127.0.0.1 at 2017-12-05 02:26:09 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:26:28 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (25.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (4.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (46.0ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225148154060 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225148154060 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1986ms (Views: 1686.6ms | ActiveRecord: 31.0ms)
+
+
+Started GET "/assets/application.self-5fcbb0a46fbce6de8faa6e6134750b0eeee8d06acf68052f428db6cc65cec2c3.css?body=1" for 127.0.0.1 at 2017-12-05 02:26:30 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:26:55 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (34.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (2.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (36.4ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225111529520 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225111529520 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1898ms (Views: 1590.9ms | ActiveRecord: 38.1ms)
+
+
+Started GET "/assets/application.self-0c2c33dcc8704caae91908b1cd65d1852fb33bfb129299eca6f58b7f7117945f.css?body=1" for 127.0.0.1 at 2017-12-05 02:26:57 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:29:05 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (24.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (4.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (35.7ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225159071180 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225159071180 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1984ms (Views: 1698.0ms | ActiveRecord: 29.6ms)
+
+
+Started GET "/assets/application.self-dd19e80da104522974efce5cbeedf94223d1d6e211602078d22e2ebbfab047ad.css?body=1" for 127.0.0.1 at 2017-12-05 02:29:07 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:30:03 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (25.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (3.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (42.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225082509000 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225082509000 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1938ms (Views: 1590.6ms | ActiveRecord: 29.9ms)
+
+
+Started GET "/assets/application.self-db24cf9eeed1eddd3294fa276531496bc0c494af2d45136e8f7dbb50e617e135.css?body=1" for 127.0.0.1 at 2017-12-05 02:30:05 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:31:20 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (25.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (4.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (51.9ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225189187740 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225189187740 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1982ms (Views: 1687.7ms | ActiveRecord: 31.4ms)
+
+
+Started GET "/assets/application.self-a560aecb0275190a0b390e4fbf78c3ea3c7b2c19021105a761ba3a1d95d47935.css?body=1" for 127.0.0.1 at 2017-12-05 02:31:22 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:33:50 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (24.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (3.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (39.4ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225207586540 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225207586540 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1951ms (Views: 1634.6ms | ActiveRecord: 30.6ms)
+
+
+Started GET "/assets/application.self-fa37cc9b41bd4e336905bbd35082d4c5ddeb252b28f8b29d1c4e3aa66345c7db.css?body=1" for 127.0.0.1 at 2017-12-05 02:33:52 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:35:51 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (24.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (4.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (37.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225109257580 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225109257580 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1956ms (Views: 1692.2ms | ActiveRecord: 29.9ms)
+
+
+Started GET "/assets/application.self-e066703cb77a580734302bcc9e5b651a125b7b3a839cd9736e942aa2d84e7530.css?body=1" for 127.0.0.1 at 2017-12-05 02:35:53 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:36:37 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (21.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (2.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (57.0ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225178378340 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225178378340 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 2014ms (Views: 1740.5ms | ActiveRecord: 25.3ms)
+
+
+Started GET "/assets/application.self-8ef2a72f738a36b476ad77b2181838c99e3faedd153fb65d0f06678d48d9aa99.css?body=1" for 127.0.0.1 at 2017-12-05 02:36:39 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:37:39 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (27.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (4.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (57.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225078568200 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225078568200 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 2019ms (Views: 1665.8ms | ActiveRecord: 32.8ms)
+
+
+Started GET "/assets/application.self-e9e715683cee212bf558d15a02c3e82cde50c8fdfc31accd21cc422bc4118e69.css?body=1" for 127.0.0.1 at 2017-12-05 02:37:41 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:38:13 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (24.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (4.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (38.5ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225184725160 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225184725160 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1947ms (Views: 1667.9ms | ActiveRecord: 29.6ms)
+
+
+Started GET "/assets/application.self-b4db8e86821795a43b71c00e532d94024f9ae0bcbcb16724867093e057c34655.css?body=1" for 127.0.0.1 at 2017-12-05 02:38:15 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:40:48 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (24.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (3.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (44.9ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225183581100 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225183581100 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1948ms (Views: 1662.9ms | ActiveRecord: 28.4ms)
+
+
+Started GET "/assets/application.self-5dcb7d7eda4d31503fc90fd4a279316380321c0dcff2bee150975db1e1066ce9.css?body=1" for 127.0.0.1 at 2017-12-05 02:40:50 -0800
+Started GET "/charts" for 127.0.0.1 at 2017-12-05 02:42:12 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (26.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (3.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (40.8ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225156925600 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__109919979875229390_70225156925600 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1946ms (Views: 1669.0ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/assets/application.self-31c6787b7a153e9d7782f5359ddc16a43a53fbc0810e600d94e4eeb85bcb21a1.css?body=1" for 127.0.0.1 at 2017-12-05 02:42:14 -0800
+Started GET "/maps/index" for 127.0.0.1 at 2017-12-05 02:43:20 -0800
+Processing by MapsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (19.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  [1m[36mTransaction Load (3.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  Rendering maps/index.html.erb within layouts/menu
+  Rendered maps/index.html.erb within layouts/menu (4.1ms)
+Completed 200 OK in 309ms (Views: 77.6ms | ActiveRecord: 23.9ms)
+
+
