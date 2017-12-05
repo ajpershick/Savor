@@ -2369,3 +2369,97 @@ Completed 200 OK in 1879ms (Views: 1631.9ms | ActiveRecord: 27.7ms)
 
 
 Started GET "/assets/application.self-7d55f0b1d83a6a960cf8796c7807f351b16da5fd8ea7e5c47a294f5f930ff5cd.css?body=1" for 127.0.0.1 at 2017-12-05 03:01:53 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:64)
+Started GET "/account/index" for 127.0.0.1 at 2017-12-05 03:03:24 -0800
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AccountController#index as HTML
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  Rendering account/index.html.erb within layouts/menu
+  Rendered account/index.html.erb within layouts/menu (5.0ms)
+Completed 200 OK in 847ms (Views: 785.9ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/account/index" for 127.0.0.1 at 2017-12-05 03:05:58 -0800
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AccountController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  Rendering account/index.html.erb within layouts/menu
+  Rendered account/index.html.erb within layouts/menu (4.5ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb___2578651325051767735_47231742779300 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb___2578651325051767735_47231742779300 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 3141ms (Views: 3092.5ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/assets/application.self-0cad1544113f0aa4ce3b4cf77b00f1792227783579787667e030522021026554.css?body=1" for 127.0.0.1 at 2017-12-05 03:06:01 -0800
+Started GET "/account/index" for 127.0.0.1 at 2017-12-05 03:06:19 -0800
+Processing by AccountController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  Rendering account/index.html.erb within layouts/menu
+  Rendered account/index.html.erb within layouts/menu (1.9ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb___2578651325051767735_70166560488200 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb___2578651325051767735_70166560488200 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1907ms (Views: 1899.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.self-da259d6efbea29e3c4f1815a5918da3bdfdb348ae23c4ed995c0e3ea336e9dd0.css?body=1" for 127.0.0.1 at 2017-12-05 03:06:21 -0800
+Started GET "/account/index" for 127.0.0.1 at 2017-12-05 03:06:58 -0800
+Processing by AccountController#index as HTML
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  Rendering account/index.html.erb within layouts/menu
+  Rendered account/index.html.erb within layouts/menu (1.7ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb___2578651325051767735_70166561138200 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb___2578651325051767735_70166561138200 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1838ms (Views: 1823.6ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/application.self-131bcb4a7e3ef98709b6ffd16e70c4005b935199c2b1447c71a9d78ea9f081d9.css?body=1" for 127.0.0.1 at 2017-12-05 03:07:00 -0800
+Started GET "/account/index" for 127.0.0.1 at 2017-12-05 03:07:17 -0800
+Processing by AccountController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  Rendering account/index.html.erb within layouts/menu
+  Rendered account/index.html.erb within layouts/menu (2.1ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb___2578651325051767735_70166569272580 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb___2578651325051767735_70166569272580 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 4400ms (Views: 1964.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-be695f0f101672b03dfee7ed24cc567eca939171e606c549bebd284027d751da.css?body=1" for 127.0.0.1 at 2017-12-05 03:07:21 -0800
+Started GET "/account/index" for 127.0.0.1 at 2017-12-05 03:07:56 -0800
+Processing by AccountController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  Rendering account/index.html.erb within layouts/menu
+  Rendered account/index.html.erb within layouts/menu (3.2ms)
+Completed 200 OK in 136ms (Views: 130.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/account/edit" for 127.0.0.1 at 2017-12-05 03:08:01 -0800
+Processing by AccountController#edit as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  Rendering account/edit.html.erb within layouts/menu
+  Rendered account/edit.html.erb within layouts/menu (8.0ms)
+Completed 200 OK in 222ms (Views: 213.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/account/change_password" for 127.0.0.1 at 2017-12-05 03:08:13 -0800
+Processing by AccountController#change_password as HTML
+  Rendering account/change_password.html.erb within layouts/menu
+  Rendered account/change_password.html.erb within layouts/menu (10.4ms)
+Completed 200 OK in 147ms (Views: 137.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account/change_password" for 127.0.0.1 at 2017-12-05 03:08:34 -0800
+Processing by AccountController#change_password as HTML
+  Rendering account/change_password.html.erb within layouts/menu
+  Rendered account/change_password.html.erb within layouts/menu (22.8ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb___2578651325051767735_70166603915400 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb___2578651325051767735_70166603915400 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 2458ms (Views: 2453.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-9880ea8eef29fd59356f17e008d4f18734f042f0f2fc70300b6aa8ffc47cb7bf.css?body=1" for 127.0.0.1 at 2017-12-05 03:08:37 -0800
