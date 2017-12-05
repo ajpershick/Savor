@@ -304,11 +304,10 @@ function verifyIncome() {
   var check = 3;
   var incomeInput = document.getElementsByClassName("transaction-amount-input")[0];
   var sourceInput = document.getElementsByClassName("transaction-name-input")[0];
-  alert(check);
+
   if (validateIncome(0, incomeInput)) check -= 2;
-  alert(check);
   if (validateSource(0, sourceInput)) check -= 1;
-  alert(check);
+
   if (check === 0) {
     return true;
   } else if (check >= 3) {
@@ -316,7 +315,7 @@ function verifyIncome() {
   } else {
     sourceInput.focus();
   }
-  alert("hey");
+
   return false;
 
 }

@@ -1,25 +1,28 @@
 <p><%=@message%></p>
-<center><h1 id="income-history">Income History</h1></center>
+
+<div class="history-center">
+<center><h1 class="history-heading">Income History</h1></center>
 
 <div class="table-container">
-<table>
+<table class="transactions-day transactions-income-day">
   <thead>
     <tr>
-      <th>Submission Date</th>
-      <th>Amount</th>
-      <th>Source</th>
+      <th class="history-header">Date</th>
+      <th class="history-header">Amount</th>
+      <th class="history-header">Source</th>
     </tr>
   </thead>
 
   <tbody>
-      <% @incomes.each do |user| %>
-        <tr>
-          <td><%= user.created_at %></td>
-          <td>$ <%= "%.2f" % user.income_amount %></td>
-          <td><%= user.source %></td>
-
+      <% @incomes.each do |entry| %>
+        <tr class="transactions-header">
+          <td class="income-date-data"><%= Date.parse(entry.created_at.to_s).strftime("%A, %B %d %Y").sub(/ 0/, ' ') %></td>
+          <td class="income-amount-data"><%= number_to_currency(entry.income_amount) %></td>
+          <td class="income-source-data"><%= entry.source %></td>
         </tr>
       <% end %>
   </tbody>
 </table>
+</div>
+
 </div>
