@@ -286,3 +286,84 @@ Processing by BankSyncController#show_account_details as HTML
 Completed 200 OK in 96ms (Views: 88.8ms | ActiveRecord: 0.8ms)
 
 
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:64)
+Started GET "/" for 127.0.0.1 at 2017-12-04 17:19:46 -0800
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (1.1ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/menu
+  Rendered home/index.html.erb within layouts/menu (14.1ms)
+Completed 200 OK in 918ms (Views: 808.3ms | ActiveRecord: 24.8ms)
+
+
+Started GET "/bank_sync/index" for 127.0.0.1 at 2017-12-04 17:19:50 -0800
+Processing by BankSyncController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering bank_sync/index.html.erb within layouts/menu
+  Rendered bank_sync/index.html.erb within layouts/menu (4.4ms)
+Completed 200 OK in 142ms (Views: 86.0ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/bank_sync/show_item?item_id=pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9" for 127.0.0.1 at 2017-12-04 17:20:00 -0800
+Processing by BankSyncController#show_item as HTML
+  Parameters: {"item_id"=>"pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."user_id" = $1 AND "items"."item_id" = $2 LIMIT $3[0m  [["user_id", 1], ["item_id", "pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9"], ["LIMIT", 1]]
+  [1m[36mBankAccount Load (2.0ms)[0m  [1m[34mSELECT "bank_accounts".* FROM "bank_accounts" WHERE "bank_accounts"."item_id" = $1[0m  [["item_id", "pBWD3gwZgzSd3Xxr4alkc6ynd7moAxFLaKvy9"]]
+  Rendering bank_sync/show_item.html.erb within layouts/menu
+  Rendered bank_sync/show_item.html.erb within layouts/menu (10.3ms)
+Completed 200 OK in 223ms (Views: 129.3ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/bank_sync/show_account_details?bank_id=12&institution_name=TD+Bank" for 127.0.0.1 at 2017-12-04 17:20:02 -0800
+Processing by BankSyncController#show_account_details as HTML
+  Parameters: {"bank_id"=>"12", "institution_name"=>"TD Bank"}
+  [1m[36mBankAccount Load (0.7ms)[0m  [1m[34mSELECT  "bank_accounts".* FROM "bank_accounts" WHERE "bank_accounts"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering bank_sync/show_account_details.html.erb within layouts/menu
+  Rendered bank_sync/show_account_details.html.erb within layouts/menu (3.5ms)
+Completed 200 OK in 154ms (Views: 141.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/history/index" for 127.0.0.1 at 2017-12-04 17:20:04 -0800
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTransaction Load (3.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 1]]
+  [1m[36mTransaction Load (1.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '11') ORDER BY "transactions"."date" DESC[0m  [["user_id", 1]]
+  Rendering history/index.html.erb within layouts/menu
+  Rendered history/index.html.erb within layouts/menu (13.9ms)
+Completed 200 OK in 183ms (Views: 79.4ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/history/income" for 127.0.0.1 at 2017-12-04 17:20:06 -0800
+Processing by HistoryController#income as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering history/income.html.erb within layouts/menu
+  [1m[36mIncome Load (9.9ms)[0m  [1m[34mSELECT "incomes".* FROM "incomes" WHERE "incomes"."user_id" = $1 ORDER BY "incomes"."created_at" DESC, "incomes"."source" DESC[0m  [["user_id", 1]]
+  Rendered history/income.html.erb within layouts/menu (43.9ms)
+Completed 200 OK in 160ms (Views: 131.7ms | ActiveRecord: 18.6ms)
+
+
+Started GET "/input/income" for 127.0.0.1 at 2017-12-04 17:20:08 -0800
+Processing by InputController#income as HTML
+  Rendering input/income.html.erb within layouts/menu
+  Rendered input/income.html.erb within layouts/menu (2.6ms)
+Completed 200 OK in 82ms (Views: 79.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charts" for 127.0.0.1 at 2017-12-04 17:20:09 -0800
+Processing by ChartsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTransaction Load (3.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" ASC[0m  [["user_id", 1]]
+  [1m[36mTransaction Load (2.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '11') ORDER BY "transactions"."date" ASC[0m  [["user_id", 1]]
+  Rendering charts/index.html.erb within layouts/menu
+  Rendered charts/index.html.erb within layouts/menu (42.7ms)
+Completed 200 OK in 193ms (Views: 132.0ms | ActiveRecord: 6.1ms)
+
+
