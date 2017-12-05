@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   get 'maps/index' => "maps#index"
 
-  root 'home#index'
+  #root 'input#new'
 
   get "access/login" => "access#login"
   post "access/attempt_login" => "access#attempt_login"

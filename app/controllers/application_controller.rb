@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
     if !session[:user_id]
       redirect_to({controller: "access", action: "login"})
     elsif !session[:admin]
-      redirect_to({controller: "home", action: "index"})
+      redirect_to({controller: "input", action: "new"})
     end
   end
 
@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
       if session[:admin]
         redirect_to({controller: "admin", action: "index"})
       else
-        redirect_to({controller: "home", action: "index"})
+        redirect_to({controller: "input", action: "new"})
       end
 
     end
