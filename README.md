@@ -1,4 +1,18 @@
 # README
+TEST ACCOUNTS FOR ITERATION 3
+Regular user:
+username: testing
+password: testing
+
+Admin user:
+username: admintest
+password: admintest
+
+Plaid user:
+To sync test transactions from plaid, while signed in to an account, use the following credentials for any bank in the Bank Sync tab
+username: user_good
+password: pass_good
+
 Staging: [![Build Status](https://semaphoreci.com/api/v1/ajpershick/savor/branches/staging/badge.svg)](https://semaphoreci.com/ajpershick/savor)
 
 Production: [![Build Status](https://semaphoreci.com/api/v1/ajpershick/savor/branches/production/badge.svg)](https://semaphoreci.com/ajpershick/savor)
@@ -19,7 +33,7 @@ Git: https://github.com/ajpershick/Savor
 Overview
 
 
-Savor will be a user-friendly budget tracking web application. By keeping a history of users’ transactions, it will provide detailed spending feedback through graphs and statistics, allow users to create financial goals and budgets for themselves, and suggest local deals on products, services, and events relevant to the user’s interests and spending habits. 
+Savor will be a user-friendly budget tracking web application. By keeping a history of users’ transactions, it will provide detailed spending feedback through graphs and statistics, allow users to create financial goals and budgets for themselves, and suggest local deals on products, services, and events relevant to the user’s interests and spending habits.
 
 
 Features
@@ -29,12 +43,12 @@ Our web application will feature many small elements, but its main features will
 The Problem, Our Solution
 
 
-As of December 7, 2016, the average Canadian’s debt was up to $22,081 and rose 3.6% since the previous year, according to CBC News. Everyone makes a variety of purchases in different areas of their lives, and it can be difficult to keep track of how much money you are spending, and how it is allocated to different types of expenses. Our web application aims to solve this common problem by providing a budget tracking interface that is intuitive and easy to use, but also powerful and productive. Additionally, we aim to use data collected from the user’s transaction history and declared personal preferences to feed them recommendations on services and events. 
+As of December 7, 2016, the average Canadian’s debt was up to $22,081 and rose 3.6% since the previous year, according to CBC News. Everyone makes a variety of purchases in different areas of their lives, and it can be difficult to keep track of how much money you are spending, and how it is allocated to different types of expenses. Our web application aims to solve this common problem by providing a budget tracking interface that is intuitive and easy to use, but also powerful and productive. Additionally, we aim to use data collected from the user’s transaction history and declared personal preferences to feed them recommendations on services and events.
 
 
 The market is inundated with budget and finance tracking websites and mobile applications, however, many suffer from several common problems. Many applications are overly-complicated; although they provide many useful features, the user interface is complex, and the learning curve is too steep and discouraging. Additionally, many applications are too simplistic, providing only transaction tracking and basic statistical feedback. With this application we aim to provide a service in between these extremes; a user who wants only basic budgeting features will not need to concern themselves with features like a spending heatmap, but a financial power user will have those options available to them, all while using an interface that is easily comprehensible by every type of user. Some budget trackers also lack any syncing functionalities with the user’s bank account, which makes recording all expenses an arduous task. Furthermore, we were unable to find any budgeting applications which contained features for a spending heat map, or for local deals tailored towards the user’s spending history and interests, thus giving our product a competitive edge. Given the multitude of spending tracker apps available on the market, there are many that are effective in what they are designed for: keeping a record of the user’s spendings and aiding the user in staying within their desired budget. To improve on these basic features, we have decided to base our web app off this highly marketable idea but with a slight twist. Savor aims to help users live frugally, but comfortably. We plan to bridge the gap between the domains of finance and lifestyle by using using data collected from the aforementioned APIs and parsing it into a custom algorithm that predicts and give suggestions to users for economical restaurants, with positive customer reviews, based on their spending history at certain types of restaurants, as well as other local services. Additionally, low-cost or free events around the area will be recommended to the user based on their spending history, or declared personal interests.
 
 
 Target Audience
- 
+
 The target demographic for our product consists of anyone who would want to learn more about their spending habits, and would like to improve them. A university student budgeting for the first time can accurately track their expenses, and observe how much they spend around campus, and how much they spend elsewhere through the spending heatmap, and use the local deals feature to find affordable food and entertainment. A young couple living paycheck to paycheck can use the detailed statistics to find out how they are allocating their money to various categories such as groceries, utilities, gas, and rent, to find out where they can reduce expenses and begin to save their money.  A family can use the financial calendar to keep track of their bills, and create budgets and goals to save money towards their summer vacation. Regardless of age or income, Savor will be an extremely beneficial tool to help anyone manage their finances.
