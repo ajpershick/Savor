@@ -2162,3 +2162,210 @@ Processing by MapsController#index as HTML
 Completed 200 OK in 309ms (Views: 77.6ms | ActiveRecord: 23.9ms)
 
 
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:64)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/vinsonly/CMPT276/276-project/config/routes.rb:64)
+Started GET "/maps/index" for 127.0.0.1 at 2017-12-05 02:44:59 -0800
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MapsController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (25.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  [1m[36mTransaction Load (3.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  Rendering maps/index.html.erb within layouts/menu
+  Rendered maps/index.html.erb within layouts/menu (7.3ms)
+Completed 200 OK in 1593ms (Views: 1154.2ms | ActiveRecord: 68.7ms)
+
+
+Started GET "/maps/index" for 127.0.0.1 at 2017-12-05 02:48:35 -0800
+Processing by MapsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (25.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  [1m[36mTransaction Load (3.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  Rendering maps/index.html.erb within layouts/menu
+  Rendered maps/index.html.erb within layouts/menu (4.0ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906704240000 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906704240000 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 2889ms (Views: 2664.4ms | ActiveRecord: 30.3ms)
+
+
+Started GET "/assets/application.self-bebd70f725c612fd5a8e3c4909037e87999f94ab870bb1280c986046b4d92c8f.css?body=1" for 127.0.0.1 at 2017-12-05 02:48:38 -0800
+Started GET "/maps/index" for 127.0.0.1 at 2017-12-05 02:49:37 -0800
+Processing by MapsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (19.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  [1m[36mTransaction Load (3.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  Rendering maps/index.html.erb within layouts/menu
+  Rendered maps/index.html.erb within layouts/menu (5.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906813837960 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906813837960 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 2009ms (Views: 1736.3ms | ActiveRecord: 23.7ms)
+
+
+Started GET "/assets/application.self-41ae6c907859d66929af6c57b665d64b153d5ddce74fdbcf11cde17ae8b04326.css?body=1" for 127.0.0.1 at 2017-12-05 02:49:39 -0800
+Started GET "/maps/index" for 127.0.0.1 at 2017-12-05 02:51:11 -0800
+Processing by MapsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (23.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  [1m[36mTransaction Load (4.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  Rendering maps/index.html.erb within layouts/menu
+  Rendered maps/index.html.erb within layouts/menu (5.1ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906815742820 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906815742820 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1927ms (Views: 1679.9ms | ActiveRecord: 29.5ms)
+
+
+Started GET "/assets/application.self-152fbb0931f3b897a7ce8bba61e445095904a6f4f51227f7891386195cfbc78b.css?body=1" for 127.0.0.1 at 2017-12-05 02:51:13 -0800
+Started GET "/maps/index" for 127.0.0.1 at 2017-12-05 02:52:09 -0800
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MapsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (18.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  [1m[36mTransaction Load (4.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  Rendering maps/index.html.erb within layouts/menu
+  Rendered maps/index.html.erb within layouts/menu (5.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_47053980989480 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_47053980989480 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 3432ms (Views: 3007.5ms | ActiveRecord: 41.8ms)
+
+
+Started GET "/assets/application.self-9d05e5df6f092034620e254ab53921bb59e31710cc81876794fdcaf0a8606a87.css?body=1" for 127.0.0.1 at 2017-12-05 02:52:12 -0800
+Started GET "/maps/index" for 127.0.0.1 at 2017-12-05 02:53:10 -0800
+Processing by MapsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (18.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  [1m[36mTransaction Load (4.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  Rendering maps/index.html.erb within layouts/menu
+  Rendered maps/index.html.erb within layouts/menu (3.5ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906883533160 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906883533160 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 2028ms (Views: 1811.2ms | ActiveRecord: 23.5ms)
+
+
+Started GET "/assets/application.self-8d402a93fd5978ca0fa750d233880dfd9a3d2e995f3e4739ed690f8ec8070730.css?body=1" for 127.0.0.1 at 2017-12-05 02:53:12 -0800
+Started GET "/maps/index" for 127.0.0.1 at 2017-12-05 02:55:18 -0800
+Processing by MapsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (20.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  [1m[36mTransaction Load (2.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  Rendering maps/index.html.erb within layouts/menu
+  Rendered maps/index.html.erb within layouts/menu (5.5ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906883801900 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906883801900 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1781ms (Views: 1573.2ms | ActiveRecord: 24.3ms)
+
+
+Started GET "/assets/application.self-14962e6626322ddbfb094ea2b4beb97acd240f48650d0e074d678b722b8c4e24.css?body=1" for 127.0.0.1 at 2017-12-05 02:55:20 -0800
+Started GET "/maps/index" for 127.0.0.1 at 2017-12-05 02:56:25 -0800
+Processing by MapsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (18.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  [1m[36mTransaction Load (3.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  Rendering maps/index.html.erb within layouts/menu
+  Rendered maps/index.html.erb within layouts/menu (4.6ms)
+Completed 200 OK in 314ms (Views: 84.1ms | ActiveRecord: 23.2ms)
+
+
+Started GET "/maps/index" for 127.0.0.1 at 2017-12-05 02:57:00 -0800
+Processing by MapsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (31.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  [1m[36mTransaction Load (5.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  Rendering maps/index.html.erb within layouts/menu
+  Rendered maps/index.html.erb within layouts/menu (4.1ms)
+Completed 200 OK in 332ms (Views: 96.1ms | ActiveRecord: 37.4ms)
+
+
+Started GET "/maps/index" for 127.0.0.1 at 2017-12-05 02:57:17 -0800
+Processing by MapsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (27.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  [1m[36mTransaction Load (3.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  Rendering maps/index.html.erb within layouts/menu
+  Rendered maps/index.html.erb within layouts/menu (3.7ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906879428060 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906879428060 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1873ms (Views: 1657.4ms | ActiveRecord: 31.0ms)
+
+
+Started GET "/assets/application.self-345892a8317f4be03dc493c7c3eb867aafb81cd72618b3a4bb554e0910d470ed.css?body=1" for 127.0.0.1 at 2017-12-05 02:57:19 -0800
+Started GET "/maps/index" for 127.0.0.1 at 2017-12-05 02:57:41 -0800
+Processing by MapsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (18.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  [1m[36mTransaction Load (3.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  Rendering maps/index.html.erb within layouts/menu
+  Rendered maps/index.html.erb within layouts/menu (2.9ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906781535680 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906781535680 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1829ms (Views: 1610.1ms | ActiveRecord: 22.5ms)
+
+
+Started GET "/assets/application.self-fa424cef3895ead638c8fafb9fcc6a4beba06e4c41fc6553ba9d4485c4a48bac.css?body=1" for 127.0.0.1 at 2017-12-05 02:57:43 -0800
+Started GET "/maps/index" for 127.0.0.1 at 2017-12-05 02:58:00 -0800
+Processing by MapsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (18.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  [1m[36mTransaction Load (4.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  Rendering maps/index.html.erb within layouts/menu
+  Rendered maps/index.html.erb within layouts/menu (4.5ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906709786200 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906709786200 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1803ms (Views: 1592.0ms | ActiveRecord: 23.4ms)
+
+
+Started GET "/assets/application.self-be78a8d1ecfc55e98bbf46bf4cf536cdbfe5fe09bc4ba40914b04570cb568dfa.css?body=1" for 127.0.0.1 at 2017-12-05 02:58:02 -0800
+Started GET "/maps/index" for 127.0.0.1 at 2017-12-05 03:00:38 -0800
+Processing by MapsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (19.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  [1m[36mTransaction Load (2.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  Rendering maps/index.html.erb within layouts/menu
+  Rendered maps/index.html.erb within layouts/menu (8.6ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906886901000 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906886901000 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 2096ms (Views: 1852.1ms | ActiveRecord: 23.1ms)
+
+
+Started GET "/assets/application.self-2ad9da4ea3ee4e8fb04ad67c4ed3b86f5416b3b55da776569552c1ee412ef3c9.css?body=1" for 127.0.0.1 at 2017-12-05 03:00:40 -0800
+Started GET "/maps/index" for 127.0.0.1 at 2017-12-05 03:00:56 -0800
+Processing by MapsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (16.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  [1m[36mTransaction Load (3.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  Rendering maps/index.html.erb within layouts/menu
+  Rendered maps/index.html.erb within layouts/menu (4.0ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906886658020 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906886658020 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1898ms (Views: 1692.2ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/assets/application.self-5b0a373d9848a480ae33dc3ead8a18c9e2b5f3f9bc3d7518bc4ea56d4aab7000.css?body=1" for 127.0.0.1 at 2017-12-05 03:00:58 -0800
+Started GET "/maps/index" for 127.0.0.1 at 2017-12-05 03:01:05 -0800
+Processing by MapsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (20.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  [1m[36mTransaction Load (4.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  Rendering maps/index.html.erb within layouts/menu
+  Rendered maps/index.html.erb within layouts/menu (6.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906882532900 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906882532900 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 2017ms (Views: 1768.7ms | ActiveRecord: 25.1ms)
+
+
+Started GET "/assets/application.self-a388a0378104ff1493cc427e1f32491a176a49b7a3023bf1e66a93ee860fbef6.css?body=1" for 127.0.0.1 at 2017-12-05 03:01:07 -0800
+Started GET "/maps/index" for 127.0.0.1 at 2017-12-05 03:01:52 -0800
+Processing by MapsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (23.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  [1m[36mTransaction Load (3.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND "transactions"."location" = $2 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" ASC[0m  [["user_id", 10000], ["location", "t"]]
+  Rendering maps/index.html.erb within layouts/menu
+  Rendered maps/index.html.erb within layouts/menu (4.8ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906781718680 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.css.scss to /home/vinsonly/CMPT276/276-project/app/assets/stylesheets/scaffolds.scss. (called from _app_views_layouts_menu_html_erb__344683318174681029_69906781718680 at /home/vinsonly/CMPT276/276-project/app/views/layouts/menu.html.erb:7)
+Completed 200 OK in 1879ms (Views: 1631.9ms | ActiveRecord: 27.7ms)
+
+
+Started GET "/assets/application.self-7d55f0b1d83a6a960cf8796c7807f351b16da5fd8ea7e5c47a294f5f930ff5cd.css?body=1" for 127.0.0.1 at 2017-12-05 03:01:53 -0800

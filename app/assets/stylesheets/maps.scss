@@ -121,3 +121,37 @@ div.map-dropdown:hover button.map-dropdown-button {
 #center-button:hover button.map-dropdown-button {
   background-color: #8e44ad;
 }
+
+//media queries for mobile view
+
+@media screen and (max-width: 716px) {
+  button.map-dropdown-button {
+    font-size: 15px;
+  }
+
+  // #heatmap-button button.map-dropdown-button {
+  //   font-size: 10px;
+  // }
+  //
+  // #opacity-button button.map-dropdown-button {
+  //   font-size: 10px;
+  // }
+  //
+  // #center-button button.map-dropdown-button {
+  //   font-size: 10px;
+  // }
+
+  div.map-center {
+    width: 100%;
+  }
+
+  p#button1 {
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  p#button1 {
+    margin-top: 5px;
+  }
+}
