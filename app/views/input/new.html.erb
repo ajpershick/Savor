@@ -10,7 +10,7 @@
 
 
 
-  <%= form_tag({controller: "input", action: "create", method: "post", id:"transaction-form", onsubmit:"return verifyTransaction()", last_controller: "input", last_action: "new"}) do %>
+  <%= form_tag({controller: "input", action: "create"}, method: "post", id:"transaction-form", onsubmit:"return verifyTransaction()", last_controller: "input", last_action: "new") do %>
 
     <div class="transaction-input-container">
       <div class="transaction-icon-container">

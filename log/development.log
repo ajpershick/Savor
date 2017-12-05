@@ -2981,3 +2981,830 @@ Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde45
 Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 23:32:53 -0800
 Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 23:32:53 -0800
 Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 23:32:53 -0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:62)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:62)
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 23:34:00 -0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by InputController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.4ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (7.8ms)
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by InputController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.4ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (7.8ms)
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Processing by InputController#new as HTML
+Completed 200 OK in 415ms (Views: 340.4ms | ActiveRecord: 6.8ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.6ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.6ms)
+Completed 200 OK in 116ms (Views: 56.0ms | ActiveRecord: 25.5ms)
+
+
+Started GET "/assets/application.self-c8942ddeb231b63353a76da3c8defcad4800596719bfad9fd2e70ba1f7543c0e.css?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/input.self-9676c1e81940a3b1054c3f4d74c69eac4e0ac6c26d21f5c217253ddeb6cebc27.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 23:34:01 -0800
+Completed 200 OK in 503ms (Views: 426.1ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 23:34:04 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ejd4eipkb3MAZYI4ntxS1VwuF6AYSBg61aAbd0pYhAzyf9SV133IM1TwJNhbPPQDD077CpWtskTqn9YLYW2AXQ==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 38ms (ActiveRecord: 3.7ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 23:34:07 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ejd4eipkb3MAZYI4ntxS1VwuF6AYSBg61aAbd0pYhAzyf9SV133IM1TwJNhbPPQDD077CpWtskTqn9YLYW2AXQ==", "amount"=>"", "category"=>"travel", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.6ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 22ms (ActiveRecord: 1.9ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 23:34:07 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ejd4eipkb3MAZYI4ntxS1VwuF6AYSBg61aAbd0pYhAzyf9SV133IM1TwJNhbPPQDD077CpWtskTqn9YLYW2AXQ==", "amount"=>"", "category"=>"travel", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.7ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 24ms (ActiveRecord: 2.1ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 23:34:11 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ejd4eipkb3MAZYI4ntxS1VwuF6AYSBg61aAbd0pYhAzyf9SV133IM1TwJNhbPPQDD077CpWtskTqn9YLYW2AXQ==", "amount"=>"0.05", "category"=>"travel", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.9ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount", "date", "category", "transaction_type", "unique_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 10000], ["amount", "0.05"], ["date", "2017-12-04"], ["category", "travel"], ["transaction_type", "place"], ["unique_id", "25860"], ["created_at", "2017-12-05 07:34:11.471092"], ["updated_at", "2017-12-05 07:34:11.471092"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/account_balance/update?amount=0.05&next_action=new&next_controller=input&trans_type=cash
+Completed 302 Found in 24ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/account_balance/update?amount=0.05&next_action=new&next_controller=input&trans_type=cash" for 127.0.0.1 at 2017-12-04 23:34:11 -0800
+Processing by AccountBalanceController#update as HTML
+  Parameters: {"amount"=>"0.05", "next_action"=>"new", "next_controller"=>"input", "trans_type"=>"cash"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.4ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "account_balances" SET "cash_balance" = $1, "total_balance" = $2, "updated_at" = $3 WHERE "account_balances"."id" = $4[0m  [["cash_balance", "69623.3"], ["total_balance", "69623.3"], ["updated_at", "2017-12-05 07:34:11.508722"], ["id", 1]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/input/new?message=Transaction+saved%2C+successfully+updated+account+balance
+Completed 302 Found in 11ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/input/new?message=Transaction+saved%2C+successfully+updated+account+balance" for 127.0.0.1 at 2017-12-04 23:34:11 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Transaction saved, successfully updated account balance"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.2ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (7.5ms)
+Completed 200 OK in 66ms (Views: 61.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/input/new?message=Transaction+saved%2C+successfully+updated+account+balance" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Transaction saved, successfully updated account balance"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.9ms)
+Completed 200 OK in 163ms (Views: 159.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/application.self-c8942ddeb231b63353a76da3c8defcad4800596719bfad9fd2e70ba1f7543c0e.css?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/input.self-56f5417699ed631271c3b517893395e4818ebad810ecf4461c8e072251af29d5.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:04 -0800
+Started GET "/input/new?message=Transaction+saved%2C+successfully+updated+account+balance" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Transaction saved, successfully updated account balance"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.5ms)
+Completed 200 OK in 42ms (Views: 38.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-c8942ddeb231b63353a76da3c8defcad4800596719bfad9fd2e70ba1f7543c0e.css?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/input.self-56f5417699ed631271c3b517893395e4818ebad810ecf4461c8e072251af29d5.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 23:35:37 -0800
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 23:35:42 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gcAwZz2g4PnR4xqW5C39CVug0dnCJzDeyn+H0BpvsJphiJyIwLlHuYV2vHYhzVvfCMA9c0/CmqD1QEqsMVq0yw==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 15ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 23:35:43 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gcAwZz2g4PnR4xqW5C39CVug0dnCJzDeyn+H0BpvsJphiJyIwLlHuYV2vHYhzVvfCMA9c0/CmqD1QEqsMVq0yw==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.2ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 18ms (ActiveRecord: 0.9ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 23:35:44 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gcAwZz2g4PnR4xqW5C39CVug0dnCJzDeyn+H0BpvsJphiJyIwLlHuYV2vHYhzVvfCMA9c0/CmqD1QEqsMVq0yw==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.5ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 31ms (ActiveRecord: 1.7ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 23:35:44 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gcAwZz2g4PnR4xqW5C39CVug0dnCJzDeyn+H0BpvsJphiJyIwLlHuYV2vHYhzVvfCMA9c0/CmqD1QEqsMVq0yw==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.4ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 1.4ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 23:35:51 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gcAwZz2g4PnR4xqW5C39CVug0dnCJzDeyn+H0BpvsJphiJyIwLlHuYV2vHYhzVvfCMA9c0/CmqD1QEqsMVq0yw==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (1.0ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 26ms (ActiveRecord: 2.2ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 23:35:56 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gcAwZz2g4PnR4xqW5C39CVug0dnCJzDeyn+H0BpvsJphiJyIwLlHuYV2vHYhzVvfCMA9c0/CmqD1QEqsMVq0yw==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.2ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 13ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 23:35:56 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gcAwZz2g4PnR4xqW5C39CVug0dnCJzDeyn+H0BpvsJphiJyIwLlHuYV2vHYhzVvfCMA9c0/CmqD1QEqsMVq0yw==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.5ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 29ms (ActiveRecord: 2.0ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 23:35:57 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gcAwZz2g4PnR4xqW5C39CVug0dnCJzDeyn+H0BpvsJphiJyIwLlHuYV2vHYhzVvfCMA9c0/CmqD1QEqsMVq0yw==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.4ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 1.3ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 23:35:57 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gcAwZz2g4PnR4xqW5C39CVug0dnCJzDeyn+H0BpvsJphiJyIwLlHuYV2vHYhzVvfCMA9c0/CmqD1QEqsMVq0yw==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.7ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 29ms (ActiveRecord: 2.2ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 23:35:57 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gcAwZz2g4PnR4xqW5C39CVug0dnCJzDeyn+H0BpvsJphiJyIwLlHuYV2vHYhzVvfCMA9c0/CmqD1QEqsMVq0yw==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.6ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 33ms (ActiveRecord: 2.1ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 23:36:00 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gcAwZz2g4PnR4xqW5C39CVug0dnCJzDeyn+H0BpvsJphiJyIwLlHuYV2vHYhzVvfCMA9c0/CmqD1QEqsMVq0yw==", "amount"=>"0.05", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.7ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 32ms (ActiveRecord: 2.2ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 23:36:01 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gcAwZz2g4PnR4xqW5C39CVug0dnCJzDeyn+H0BpvsJphiJyIwLlHuYV2vHYhzVvfCMA9c0/CmqD1QEqsMVq0yw==", "amount"=>"0.05", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 13ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 23:36:02 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gcAwZz2g4PnR4xqW5C39CVug0dnCJzDeyn+H0BpvsJphiJyIwLlHuYV2vHYhzVvfCMA9c0/CmqD1QEqsMVq0yw==", "amount"=>"0.05", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.1ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 12ms (ActiveRecord: 0.5ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 23:36:02 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gcAwZz2g4PnR4xqW5C39CVug0dnCJzDeyn+H0BpvsJphiJyIwLlHuYV2vHYhzVvfCMA9c0/CmqD1QEqsMVq0yw==", "amount"=>"0.05", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.2ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 15ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/input/new?message=Transaction+saved%2C+successfully+updated+account+balance" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Transaction saved, successfully updated account balance"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.6ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (5.4ms)
+Completed 200 OK in 129ms (Views: 119.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/application.self-c8942ddeb231b63353a76da3c8defcad4800596719bfad9fd2e70ba1f7543c0e.css?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/input.self-1855dbfaca17cb8f26af6099780ae06620d429090c27c237fce8c1c3651f84f8.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 23:36:13 -0800
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 23:36:14 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9PKjL2MtqpR907oTO+O1N4axcptVgYRprzrERhYA1xEUug/AnjQN1ClGHPP+AxPh1dGeMdhkLheQBQk6PTXTQA==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.2ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 16ms (ActiveRecord: 1.1ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 23:36:15 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9PKjL2MtqpR907oTO+O1N4axcptVgYRprzrERhYA1xEUug/AnjQN1ClGHPP+AxPh1dGeMdhkLheQBQk6PTXTQA==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 13ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/input/create/transaction-form?last_action=new&last_controller=input&method=post&onsubmit=return+verifyTransaction%28%29" for 127.0.0.1 at 2017-12-04 23:36:15 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9PKjL2MtqpR907oTO+O1N4axcptVgYRprzrERhYA1xEUug/AnjQN1ClGHPP+AxPh1dGeMdhkLheQBQk6PTXTQA==", "amount"=>"", "category"=>"", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction", "last_action"=>"new", "last_controller"=>"input", "method"=>"post", "onsubmit"=>"return verifyTransaction()", "id"=>"transaction-form"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.6ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+No template found for InputController#create, rendering head :no_content
+Completed 204 No Content in 27ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/input/new?message=Transaction+saved%2C+successfully+updated+account+balance" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Transaction saved, successfully updated account balance"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (4.5ms)
+Completed 200 OK in 79ms (Views: 75.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/application.self-c8942ddeb231b63353a76da3c8defcad4800596719bfad9fd2e70ba1f7543c0e.css?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/assets/input.self-1855dbfaca17cb8f26af6099780ae06620d429090c27c237fce8c1c3651f84f8.js?body=1" for 127.0.0.1 at 2017-12-04 23:37:56 -0800
+Started GET "/input/new?message=Transaction+saved%2C+successfully+updated+account+balance" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Transaction saved, successfully updated account balance"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (3.3ms)
+Completed 200 OK in 45ms (Views: 41.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/application.self-c8942ddeb231b63353a76da3c8defcad4800596719bfad9fd2e70ba1f7543c0e.css?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/input.self-9676c1e81940a3b1054c3f4d74c69eac4e0ac6c26d21f5c217253ddeb6cebc27.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:17 -0800
+Started POST "/input/create" for 127.0.0.1 at 2017-12-04 23:38:44 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CJtR5x+E7jtb0A3SGk1mXkrZ0q8JCmei5nK+vrWIa6zo0/0I4p1Jew9FqzLfrcCIGbk+BYTvzdzZTXPCnr1v/Q==", "amount"=>"0.05", "category"=>"charity", "description"=>"", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"49.28059709999999", "longitude"=>"-123.11744679999998", "commit"=>"Save transaction"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.5ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount", "date", "category", "transaction_type", "unique_id", "location", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["user_id", 10000], ["amount", "0.05"], ["date", "2017-12-04"], ["category", "charity"], ["transaction_type", "place"], ["unique_id", "45486"], ["location", "t"], ["latitude", "49.28059709999999"], ["longitude", "-123.11744679999998"], ["created_at", "2017-12-05 07:38:44.854177"], ["updated_at", "2017-12-05 07:38:44.854177"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/account_balance/update?amount=0.05&next_action=new&next_controller=input&trans_type=cash
+Completed 302 Found in 35ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/account_balance/update?amount=0.05&next_action=new&next_controller=input&trans_type=cash" for 127.0.0.1 at 2017-12-04 23:38:44 -0800
+Processing by AccountBalanceController#update as HTML
+  Parameters: {"amount"=>"0.05", "next_action"=>"new", "next_controller"=>"input", "trans_type"=>"cash"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "account_balances" SET "cash_balance" = $1, "total_balance" = $2, "updated_at" = $3 WHERE "account_balances"."id" = $4[0m  [["cash_balance", "69623.25"], ["total_balance", "69623.25"], ["updated_at", "2017-12-05 07:38:44.869126"], ["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/input/new?message=Transaction+saved%2C+successfully+updated+account+balance
+Completed 302 Found in 8ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/input/new?message=Transaction+saved%2C+successfully+updated+account+balance" for 127.0.0.1 at 2017-12-04 23:38:44 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Transaction saved, successfully updated account balance"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.4ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.1ms)
+Completed 200 OK in 43ms (Views: 38.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/input/new?message=Transaction+saved%2C+successfully+updated+account+balance" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Transaction saved, successfully updated account balance"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.1ms)
+Completed 200 OK in 42ms (Views: 38.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/application.self-c8942ddeb231b63353a76da3c8defcad4800596719bfad9fd2e70ba1f7543c0e.css?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/input.self-9676c1e81940a3b1054c3f4d74c69eac4e0ac6c26d21f5c217253ddeb6cebc27.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 23:38:51 -0800
+Started POST "/input/create" for 127.0.0.1 at 2017-12-04 23:39:30 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uIcf8clmMJt9/rGehl49ieyToVENayBMiHVQR981J0FYz7MeNH+X2ylrF35Dvptfv/NN+4COijK3Sp079AAjEA==", "amount"=>"6.54", "category"=>"travel", "description"=>"55454", "location"=>"", "date"=>"Mon Dec 04 2017", "latitude"=>"", "longitude"=>"", "commit"=>"Save transaction"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount", "date", "category", "transaction_type", "unique_id", "location_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["user_id", 10000], ["amount", "6.54"], ["date", "2017-12-04"], ["category", "travel"], ["transaction_type", "place"], ["unique_id", "10195"], ["location_name", "55454"], ["created_at", "2017-12-05 07:39:30.897875"], ["updated_at", "2017-12-05 07:39:30.897875"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/account_balance/update?amount=6.54&next_action=new&next_controller=input&trans_type=cash
+Completed 302 Found in 11ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/account_balance/update?amount=6.54&next_action=new&next_controller=input&trans_type=cash" for 127.0.0.1 at 2017-12-04 23:39:30 -0800
+Processing by AccountBalanceController#update as HTML
+  Parameters: {"amount"=>"6.54", "next_action"=>"new", "next_controller"=>"input", "trans_type"=>"cash"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "account_balances" SET "cash_balance" = $1, "total_balance" = $2, "updated_at" = $3 WHERE "account_balances"."id" = $4[0m  [["cash_balance", "69616.71"], ["total_balance", "69616.71"], ["updated_at", "2017-12-05 07:39:30.914957"], ["id", 1]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/input/new?message=Transaction+saved%2C+successfully+updated+account+balance
+Completed 302 Found in 10ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/input/new?message=Transaction+saved%2C+successfully+updated+account+balance" for 127.0.0.1 at 2017-12-04 23:39:30 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Transaction saved, successfully updated account balance"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (3.1ms)
+Completed 200 OK in 47ms (Views: 42.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/input/create" for 127.0.0.1 at 2017-12-04 23:39:55 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wCRGMVQ++zZ9QdvBXs4/mhNFKHocA5Se/86Oxzsn+nggbOreqSdcdinUfSGbLplMQCXE0JHmPuDA8UO7EBL+KQ==", "amount"=>"0.54", "category"=>"medical", "description"=>"", "location"=>"fsdfsd", "date"=>"Mon Dec 04 2017", "latitude"=>"49.281626", "longitude"=>"-123.12369230000002", "commit"=>"Save transaction"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.2ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount", "date", "category", "transaction_type", "unique_id", "location", "location_name", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["user_id", 10000], ["amount", "0.54"], ["date", "2017-12-04"], ["category", "medical"], ["transaction_type", "place"], ["unique_id", "32592"], ["location", "t"], ["location_name", "fsdfsd"], ["latitude", "49.281626"], ["longitude", "-123.12369230000002"], ["created_at", "2017-12-05 07:39:55.342076"], ["updated_at", "2017-12-05 07:39:55.342076"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/account_balance/update?amount=0.54&next_action=new&next_controller=input&trans_type=cash
+Completed 302 Found in 6ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/account_balance/update?amount=0.54&next_action=new&next_controller=input&trans_type=cash" for 127.0.0.1 at 2017-12-04 23:39:55 -0800
+Processing by AccountBalanceController#update as HTML
+  Parameters: {"amount"=>"0.54", "next_action"=>"new", "next_controller"=>"input", "trans_type"=>"cash"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.2ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "account_balances" SET "cash_balance" = $1, "total_balance" = $2, "updated_at" = $3 WHERE "account_balances"."id" = $4[0m  [["cash_balance", "69616.17"], ["total_balance", "69616.17"], ["updated_at", "2017-12-05 07:39:55.357779"], ["id", 1]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/input/new?message=Transaction+saved%2C+successfully+updated+account+balance
+Completed 302 Found in 7ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/input/new?message=Transaction+saved%2C+successfully+updated+account+balance" for 127.0.0.1 at 2017-12-04 23:39:55 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Transaction saved, successfully updated account balance"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.1ms)
+Completed 200 OK in 51ms (Views: 47.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/input/new?message=Transaction+saved%2C+successfully+updated+account+balance" for 127.0.0.1 at 2017-12-04 23:42:16 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Transaction saved, successfully updated account balance"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.2ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (3.1ms)
+Completed 200 OK in 43ms (Views: 39.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/application.self-c8942ddeb231b63353a76da3c8defcad4800596719bfad9fd2e70ba1f7543c0e.css?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/input.self-9676c1e81940a3b1054c3f4d74c69eac4e0ac6c26d21f5c217253ddeb6cebc27.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 23:42:17 -0800
+Started GET "/input/new?message=Transaction+saved%2C+successfully+updated+account+balance" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Transaction saved, successfully updated account balance"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.3ms)
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/application.self-c8942ddeb231b63353a76da3c8defcad4800596719bfad9fd2e70ba1f7543c0e.css?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/input.self-9676c1e81940a3b1054c3f4d74c69eac4e0ac6c26d21f5c217253ddeb6cebc27.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2017-12-04 23:44:15 -0800
+Started POST "/input/create" for 127.0.0.1 at 2017-12-04 23:44:30 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/eqquQit3Bfdi58xwAOUQw8YNw74VEjNIpb5jol1zC0dogZW9bR7V4keOdEF4zKVXHjbpHWx4rMdqTTyokDIfA==", "amount"=>"0.45", "category"=>"travel", "description"=>"", "location"=>"Sheraton Vancouver Wall Centre, Burrard Street, Vancouver, BC, Canada", "date"=>"Mon Dec 04 2017", "latitude"=>"49.2801402", "longitude"=>"-123.12711059999998", "commit"=>"Save transaction"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.6ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount", "date", "category", "transaction_type", "unique_id", "location", "location_name", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["user_id", 10000], ["amount", "0.45"], ["date", "2017-12-04"], ["category", "travel"], ["transaction_type", "place"], ["unique_id", "95601"], ["location", "t"], ["location_name", "Sheraton Vancouver Wall Centre"], ["latitude", "49.2801402"], ["longitude", "-123.12711059999998"], ["created_at", "2017-12-05 07:44:30.540366"], ["updated_at", "2017-12-05 07:44:30.540366"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/account_balance/update?amount=0.45&next_action=new&next_controller=input&trans_type=cash
+Completed 302 Found in 17ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/account_balance/update?amount=0.45&next_action=new&next_controller=input&trans_type=cash" for 127.0.0.1 at 2017-12-04 23:44:30 -0800
+Processing by AccountBalanceController#update as HTML
+  Parameters: {"amount"=>"0.45", "next_action"=>"new", "next_controller"=>"input", "trans_type"=>"cash"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "account_balances" SET "cash_balance" = $1, "total_balance" = $2, "updated_at" = $3 WHERE "account_balances"."id" = $4[0m  [["cash_balance", "69615.72"], ["total_balance", "69615.72"], ["updated_at", "2017-12-05 07:44:30.562713"], ["id", 1]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/input/new?message=Transaction+saved%2C+successfully+updated+account+balance
+Completed 302 Found in 9ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/input/new?message=Transaction+saved%2C+successfully+updated+account+balance" for 127.0.0.1 at 2017-12-04 23:44:30 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Transaction saved, successfully updated account balance"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.4ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (3.4ms)
+Completed 200 OK in 55ms (Views: 51.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/history/index" for 127.0.0.1 at 2017-12-04 23:44:32 -0800
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (11.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  Rendering history/index.html.erb within layouts/menu
+  Rendered history/index.html.erb within layouts/menu (11.8ms)
+Completed 200 OK in 169ms (Views: 41.9ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/input/income" for 127.0.0.1 at 2017-12-04 23:44:37 -0800
+Processing by InputController#income as HTML
+  Rendering input/income.html.erb within layouts/menu
+  Rendered input/income.html.erb within layouts/menu (2.7ms)
+Completed 200 OK in 52ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 23:44:38 -0800
+Processing by InputController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.9ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (6.9ms)
+Completed 200 OK in 63ms (Views: 53.6ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/input/create" for 127.0.0.1 at 2017-12-04 23:44:49 -0800
+Processing by InputController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fP3JoXPwDuh3tV74cM+Xmn44Ttfa4jVCX9eSyrIntOOctWVOjumpqCMg+Bi1LzFMLViifVcHnzxg6F+2mRKwsg==", "amount"=>"53.45", "category"=>"gifts", "description"=>"", "location"=>"Test Kitchen Earls, Smithe Street, Vancouver, BC, Canada", "date"=>"Mon Dec 04 2017", "latitude"=>"49.281626", "longitude"=>"-123.12369230000002", "commit"=>"Save transaction"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (1.1ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "amount", "date", "category", "transaction_type", "unique_id", "location", "location_name", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["user_id", 10000], ["amount", "53.45"], ["date", "2017-12-04"], ["category", "gifts"], ["transaction_type", "place"], ["unique_id", "90285"], ["location", "t"], ["location_name", "Test Kitchen Earls"], ["latitude", "49.281626"], ["longitude", "-123.12369230000002"], ["created_at", "2017-12-05 07:44:49.843300"], ["updated_at", "2017-12-05 07:44:49.843300"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/account_balance/update?amount=53.45&next_action=new&next_controller=input&trans_type=cash
+Completed 302 Found in 14ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/account_balance/update?amount=53.45&next_action=new&next_controller=input&trans_type=cash" for 127.0.0.1 at 2017-12-04 23:44:49 -0800
+Processing by AccountBalanceController#update as HTML
+  Parameters: {"amount"=>"53.45", "next_action"=>"new", "next_controller"=>"input", "trans_type"=>"cash"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "account_balances" SET "cash_balance" = $1, "total_balance" = $2, "updated_at" = $3 WHERE "account_balances"."id" = $4[0m  [["cash_balance", "69562.27"], ["total_balance", "69562.27"], ["updated_at", "2017-12-05 07:44:49.858286"], ["id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/input/new?message=Transaction+saved%2C+successfully+updated+account+balance
+Completed 302 Found in 10ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/input/new?message=Transaction+saved%2C+successfully+updated+account+balance" for 127.0.0.1 at 2017-12-04 23:44:49 -0800
+Processing by InputController#new as HTML
+  Parameters: {"message"=>"Transaction saved, successfully updated account balance"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.2ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (3.6ms)
+Completed 200 OK in 50ms (Views: 46.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/history/index" for 127.0.0.1 at 2017-12-04 23:44:51 -0800
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (20.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  Rendering history/index.html.erb within layouts/menu
+  Rendered history/index.html.erb within layouts/menu (11.7ms)
+Completed 200 OK in 172ms (Views: 41.2ms | ActiveRecord: 22.6ms)
+
+
+Started GET "/input/new" for 127.0.0.1 at 2017-12-04 23:44:54 -0800
+Processing by InputController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.3ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (2.6ms)
+Completed 200 OK in 45ms (Views: 41.3ms | ActiveRecord: 0.7ms)
+
+
