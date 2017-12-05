@@ -110,6 +110,11 @@ class HistoryController < ApplicationController
       @transaction_days.reverse!
     end
 
+    @transaction_days.each do |day|
+      day[:transactions].sort!{|x, y| x.created_at <=> y.created_at}
+      if @order == "latest" then day[:transactions].reverse! end
+    end
+
     @total_amount = 0
     @total_items = 0
 

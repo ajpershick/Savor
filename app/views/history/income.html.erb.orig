@@ -14,11 +14,19 @@
   </thead>
 
   <tbody>
+<<<<<<< HEAD
+      <% @incomes_sorted.each do |user| %>
+        <tr>
+          <td><center><%= user.created_at %></center></td>
+          <td><center>$ <%= "%.2f" % user.income_amount %></center></td>
+          <td><center><%= user.source %></center></td>
+=======
       <% @incomes.each do |entry| %>
         <tr class="transactions-header">
           <td class="income-date-data"><%= Date.parse(entry.created_at.to_s).strftime("%A, %B %d %Y").sub(/ 0/, ' ') %></td>
           <td class="income-amount-data"><%= number_to_currency(entry.income_amount) %></td>
           <td class="income-source-data"><%= entry.source %></td>
+>>>>>>> bugfix/performance-fixes
         </tr>
       <% end %>
   </tbody>

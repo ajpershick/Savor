@@ -4,6 +4,11 @@
 
 <div class="history-center">
 
+<<<<<<< HEAD
+  <%= button_to "Update Bank Transactions", {controller: "bank_sync", action: "index"} %>
+
+=======
+>>>>>>> bugfix/performance-fixes
   <% if !@empty then %>
 
   <table class="history-button-table">
