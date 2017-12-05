@@ -4,6 +4,6 @@ FactoryGirl.define do
     user_id {FactoryGirl.generate :user_id}
     income_amount {Faker::Number.decimal}
     source {Faker::StarTrek.character}
-    date {Date.today.to_s}
+    date {Date.today}
   end
 end

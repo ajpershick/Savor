@@ -9,3 +9,4 @@ tmp/
 log/
 yarn-error.log
 secrets_backup.yml
+log/development.log
