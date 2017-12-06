@@ -9,17 +9,16 @@ div.input-center {
   width: 75%;
   margin-left: auto;
   margin-right: auto;
-  //background-color: #FFFFFF;
-  background-color: transparent;
+  background-color: #FFFFFF;
   text-align: center;
 }
 
 div.income-center {
-  width: 100%;
+  width: 30%;
   margin-left: auto;
   margin-right: auto;
-  //background-color: #FFFFFF;
-  background-color: transparent;
+  background-color: #FFFFFF;
+  //background-color: transparent;
   text-align:center;
 }
 
@@ -151,10 +150,6 @@ table.transaction-category-table {
   border-color: #FFFFFF;
   outline: none;
   //overflow-x: scroll;
-}
-
-div.transaction-table-container {
-  overflow-x: scroll;
 }
 
 table.transaction-category-table:focus {
@@ -481,5 +476,22 @@ button#balance-edit {
 
   div.transaction-location-container {
     width: 356px;
+  }
+}
+
+@media screen and (max-width:970px) {
+  div.input-center {
+    background-color: transparent;
+  }
+}
+
+@media screen and (max-width:970px) {
+  div.transaction-table-container {
+    overflow-x: scroll;
+  }
+
+  div.income-center {
+    width: 100%;
+    background-color: transparent;
   }
 }

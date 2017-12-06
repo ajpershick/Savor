@@ -105,7 +105,7 @@ tr.show-account-details {
 div.banksync-center {
   margin: auto;
   width: 800px;
-  background-color: transparent;
+  background-color: #FFFFFF;
 }
 
 h1.account-header {
@@ -217,4 +217,11 @@ input.account-password-button {
 
 @media screen and (max-width: 500px) {
 
+}
+
+
+@media screen and (max-width:970px) {
+  div.banksync-center {
+    background-color: transparent;
+  }
 }

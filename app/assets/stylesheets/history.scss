@@ -5,8 +5,7 @@
 div.history-center {
   margin: auto;
   width: 50%;
-  //background-color: #FFFFFF;
-  background-color: transparent;
+  background-color: #FFFFFF;
 }
 
 h1.history-heading {
@@ -226,5 +225,11 @@ h1#income-history{
 @media screen and (max-width: 970px) {
   div.history-center {
     width: 95%;
+  }
+}
+
+@media screen and (max-width:970px) {
+  div.history-center {
+    background-color: transparent;
   }
 }

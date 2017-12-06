@@ -5,8 +5,8 @@
 div.account-center {
   margin: auto;
   width: 500px;
-  //background-color: #FFFFFF;
-  background-color: transparent;
+  background-color: #FFFFFF;
+  //background-color: transparent;
 }
 
 h1.account-title {
@@ -102,6 +102,12 @@ input.account-password-button {
   div.account-center {
     margin: auto;
     width: 100%;
+    background-color: transparent;
+  }
+}
+
+@media screen and (max-width:970px) {
+  div.account-center {
     background-color: transparent;
   }
 }

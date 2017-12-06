@@ -99,11 +99,7 @@ div.chart-dropdown:hover button.chart-dropdown-button {
   background-color: #3e8e41;
 }
 
-div.chart-category-table-container {
-  height: 164px;
-  width: 100%;
-  overflow-x: scroll;
-}
+
 
 
 table.chart-category-table {
@@ -276,5 +272,14 @@ table#stats-table td:nth-child(2), table#stats-table td:nth-child(3), table#stat
     font-family: Helvetica;
     font-size: 15px;
     padding-left: 5px;
+  }
+}
+
+
+@media screen and (max-width:970px) {
+  div.chart-category-table-container {
+    height: 164px;
+    width: 100%;
+    overflow-x: scroll;
   }
 }

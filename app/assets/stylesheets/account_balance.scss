@@ -5,7 +5,7 @@
 div.center {
   margin: 5%;
   width: 90%;
-  background-color: transparent;
+  background-color: #FFFFFF;
   text-align: center;
 }
 
@@ -80,4 +80,10 @@ p.account-balance-description {
   // p.account-balance-description {
   //   margin-left: 20px;
   // }
+}
+
+@media screen and (max-width:970px) {
+  div.center {
+    background-color: transparent;
+  }
 }
