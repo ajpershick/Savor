@@ -3808,3 +3808,340 @@ Processing by InputController#new as HTML
 Completed 200 OK in 45ms (Views: 41.3ms | ActiveRecord: 0.7ms)
 
 
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:16)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:17)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:62)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /home/jeremy/Savor/config/routes.rb:62)
+Started GET "/" for 127.0.0.1 at 2018-01-31 09:16:53 -0800
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (1439.9ms)
+Completed 200 OK in 1593ms (Views: 1559.4ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/pikaday.self-382ab967e2fca7d24ec04409ddb0d3d08300ebc43649408f5707851497220706.css?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/rails-ujs.self-817d9a8cb641f7125060cb18fefada3f35339170767c4e003105f92d4c204e39.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/jquery3.self-06c43429d1047ce3f355da574d8a9750209971b8b1b8f264f91f5518c5fcc060.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/bootstrap/util.self-f64fb4a9ddda386776cfb37d9db2a7841d5002250d6e841590f43a2c9045f4a4.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/bootstrap/alert.self-999461eed3fb98db5a4abfad3ef5dd8b56e4c1be9a4569ffbe91b1c254ec24be.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/bootstrap/dropdown.self-7f4d46a58ed9cac9e01cb79ac98562a6e3e30ab52f1da681e940fdf395fca73c.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/bootstrap/tab.self-3954947559bc2580b68d1fb39a5113ead434b993d6e70dde3c043452cc67f8ca.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/bootstrap/modal.self-baefb87c5382cb409c8b63554106035e3845e6c53dd8ccfab6046984409d5924.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/bootstrap/tooltip.self-5f3a07d4901d37246128140dc5212a246c480acc5f7b5be9bb0ad53bcc75b1e7.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/bootstrap/popover.self-a58bf55b8a920640c6030a961c201155089d5fcf54909e913850fa4a1168e7d7.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/bootstrap/button.self-9661b25732647e2840cd97e9952681f15cbfddfc172927f1b1dead50a862ab54.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/bootstrap/carousel.self-d86dc633e1adaf9312708af2ec4222e406e66eaf48b1138d7b832d271dc9dff8.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/bootstrap/scrollspy.self-15ab1200f1ceeb1c39da55ac143f91ebfe48de7d0e60c0359c62788e1a8706c8.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/bootstrap/collapse.self-f4a202a127611263446f28d66c219a759545634c7b73c41b5caf6fef73711c01.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/access.self-3321454955f0a30f051228d64ec6e3fab32e1ce58c87c9571806cb3020fbc343.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/account.self-a58d3298b142125cb3ba119d3e438cd2dc7e146a7ed5c90a6ec4b36fcdc92c14.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/home.self-80742ffc5477ba43f8512b4b60694d8ddcc061e992e0cb341620b9d085c8abeb.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/input.self-9676c1e81940a3b1054c3f4d74c69eac4e0ac6c26d21f5c217253ddeb6cebc27.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/popper.self-7cef4fc3261fb0f37f4ae78984d8d818c26878b57c46aa18963ba91d7b5c161e.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/charts.self-2e6d149630a9d9a1c0cf4be70aa4e50f4a6ed2039e4126495ce2c856f58c1012.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/Chart.min.self-975c5c8d256ebb4204b6a86b63917f8fdae516ddc131c0ab086fd43770a290cb.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/application.self-c8942ddeb231b63353a76da3c8defcad4800596719bfad9fd2e70ba1f7543c0e.css?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/pikaday.self-3406d7f36c350b3dc797b2e364b0384cd4c2e77c12958f5d4ad4a4966d4a4f7b.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+Started GET "/assets/application.self-5bc7a370c3a42168d96d8956639065f4254980e4f3311c64d347c31555ad1053.js?body=1" for 127.0.0.1 at 2018-01-31 09:16:55 -0800
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-01-31 09:18:23 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (105.3ms)
+Completed 200 OK in 195ms (Views: 170.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 09:18:23 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 74ms (Views: 68.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 09:19:16 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 55ms (Views: 51.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 09:19:16 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 65ms (Views: 60.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 09:19:16 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 83ms (Views: 74.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 09:19:16 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 85ms (Views: 77.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 09:19:17 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 73ms (Views: 68.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 09:19:17 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 70ms (Views: 67.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 09:19:24 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 55ms (Views: 53.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 09:19:25 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 73ms (Views: 65.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 09:19:25 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 77ms (Views: 73.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 09:19:25 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 70ms (Views: 66.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 09:19:44 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 67ms (Views: 63.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 09:19:45 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 71ms (Views: 67.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 09:19:45 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 70ms (Views: 67.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 09:19:45 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 89ms (Views: 80.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 09:19:56 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 72ms (Views: 68.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 09:19:56 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 74ms (Views: 68.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-31 09:19:57 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 76ms (Views: 68.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/access/attempt_login" for 127.0.0.1 at 2018-01-31 09:20:09 -0800
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HF1XFxy9GbgkjBtJqsFgBujo5dsFeF5v0/59sWP90S90YgTPl9OYrFDrM+wRedVQqtf7jfFpMFF5bE4V7F7UDg==", "username"=>"testing", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["username", "testing"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/input/new
+Completed 302 Found in 85ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/input/new" for 127.0.0.1 at 2018-01-31 09:20:09 -0800
+Processing by InputController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (1.5ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (8.1ms)
+Completed 200 OK in 94ms (Views: 64.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/history/index" for 127.0.0.1 at 2018-01-31 09:20:12 -0800
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (12.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  Rendering history/index.html.erb within layouts/menu
+  Rendered history/index.html.erb within layouts/menu (12.0ms)
+Completed 200 OK in 186ms (Views: 40.7ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/input/income" for 127.0.0.1 at 2018-01-31 09:20:18 -0800
+Processing by InputController#income as HTML
+  Rendering input/income.html.erb within layouts/menu
+  Rendered input/income.html.erb within layouts/menu (1.1ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/history/index" for 127.0.0.1 at 2018-01-31 09:20:19 -0800
+Processing by HistoryController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mTransaction Load (18.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  [1m[36mTransaction Load (1.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1 AND (extract(year from date) = '2017') AND (extract(month from date) = '12') ORDER BY "transactions"."date" DESC[0m  [["user_id", 10000]]
+  Rendering history/index.html.erb within layouts/menu
+  Rendered history/index.html.erb within layouts/menu (10.5ms)
+Completed 200 OK in 194ms (Views: 45.1ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/history/income" for 127.0.0.1 at 2018-01-31 09:20:21 -0800
+Processing by HistoryController#income as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mIncome Load (2.0ms)[0m  [1m[34mSELECT "incomes".* FROM "incomes" WHERE "incomes"."user_id" = $1 ORDER BY "incomes"."created_at" DESC, "incomes"."source" DESC[0m  [["user_id", 10000]]
+  Rendering history/income.html.erb within layouts/menu
+  Rendered history/income.html.erb within layouts/menu (3.2ms)
+Completed 200 OK in 65ms (Views: 42.7ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/input/new" for 127.0.0.1 at 2018-01-31 09:20:23 -0800
+Processing by InputController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10000], ["LIMIT", 1]]
+  [1m[36mAccountBalance Load (0.5ms)[0m  [1m[34mSELECT  "account_balances".* FROM "account_balances" WHERE "account_balances"."user_id" = $1 LIMIT $2[0m  [["user_id", 10000], ["LIMIT", 1]]
+  Rendering input/new.html.erb within layouts/menu
+  Rendered input/new.html.erb within layouts/menu (3.2ms)
+Completed 200 OK in 67ms (Views: 62.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/access/logout" for 127.0.0.1 at 2018-01-31 09:20:26 -0800
+Processing by AccessController#logout as HTML
+Redirected to http://localhost:3000/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2018-01-31 09:20:26 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 59ms (Views: 56.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2018-01-31 09:21:08 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 58ms (Views: 55.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2018-01-31 09:21:09 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 56ms (Views: 54.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2018-01-31 09:21:09 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2018-01-31 09:21:09 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 85ms (Views: 80.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2018-01-31 09:21:47 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 73ms (Views: 67.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2018-01-31 09:21:47 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 67ms (Views: 65.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2018-01-31 09:21:48 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 87ms (Views: 81.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/access/login" for 127.0.0.1 at 2018-01-31 09:21:48 -0800
+Processing by AccessController#login as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 91ms (Views: 86.4ms | ActiveRecord: 0.6ms)
+
+
